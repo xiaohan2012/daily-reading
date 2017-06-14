@@ -49,9 +49,14 @@
 
 They are node-typed networks. 
 
+# statistics for multilayer networks
+
+- degree
+- connectec components, to be continued
 
 
 # further reading
 
 - 138, 139 visualization of multilayer networks
+- [56,118,119,126,129], [49,50], [57], [65,115], [151–153]
 
