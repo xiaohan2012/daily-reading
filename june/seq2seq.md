@@ -1,5 +1,7 @@
 # problems with existing models
 
+[video]()
+
 ## fully connected perceptron
 
 - length of input and output are fixed: cannot be adapted to arbrary length input (machine translation)
@@ -24,6 +26,7 @@
   - the first input is simply a literal denoting START
   - but when to stop? some STOP symbol?
 - deep LSTM: multiple layers of LSTM
+  - to increase the memory capacity by using multiple layers of hidden states
 
 
 ## representation
@@ -38,6 +41,11 @@
 - initial guess
 - clip the gradient
 
+## training
+
+- two  RNN models to train
+  - encoder
+  - decoder
 
 ## questions
 
