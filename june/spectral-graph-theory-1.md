@@ -46,3 +46,10 @@ the smallest non-zero eigen value is the lower bound on the uniform sparsest cut
 
 
 uniform sparsest cut: min E(S, V-S) / (|S|x|V-S|)
+
+interpretation:
+
+- if this value is quite small, then the graph is easily separable
+
+
+
