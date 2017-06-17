@@ -38,6 +38,27 @@ basic idea of proof (follows the proof of the previous one):
   - `sqrt(k)` proved by Lemma 1
 
 
+# factor-k proof for greedy
+
+algorithm:
+
+sort the terminals by time and add a path from one terminal to the tree at each iteration
+
+proof idea:
+
+- for each added path, its length is smaller than `c(T*)`
+- at most `k` paths are added
+- so factor-k
+
+# factor-k proof for delay-bfs
+
+algorithm:
+
+proof idea:
+
+- tree cost <= sum of tree depth at each iteration (iteration i is during ith node being added)
+- to be continued
+
 
 # learned
 
@@ -46,4 +67,4 @@ basic idea of proof (follows the proof of the previous one):
 - Eulerian graph: graph that contains Eulerian trial
 - Hamiltonian trial: path that visists each **node** in graph exactly once
 - one way to deal with variant of steiner tree problems using the MST heuristic
-
+- to prove factor-k, decompose into each iteration and prove the cost added by each iteration is smaller than OPT
