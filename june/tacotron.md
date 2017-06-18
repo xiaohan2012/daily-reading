@@ -30,8 +30,11 @@ decoder:
   - input: attention RNN output and previous state vector (concatenated)
   - output: new state vector and target 
   - with residual connections
-  - the target is 80-band mel-scale spectrogram **(what? and why?)**  
-5. to be continued
+  - the target is 80-band mel-scale spectrogram **(why?)**
+5. post-processing
+  - convert the seq2seq target to a target that can be synthesized into waveforms
+6. waveform synthesis
+  - Griffin-Lim algorithm
 
 
 # questions
@@ -39,3 +42,4 @@ decoder:
 - [sample rate, frame rate](https://sound.stackexchange.com/questions/5022/how-many-samples-are-in-a-frame)
 - why is it faster?
 - what is mel-scale spectrogram?
+  - [mel-scale, perceptual scale](https://en.wikipedia.org/wiki/Mel_scale)  
