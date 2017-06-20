@@ -12,6 +12,7 @@ basic idea:
   - because MST is the **minimum** spanning tree
 3. `c(Hamiltonian path)`
   - by short cutting and metric property of metric closure
+  - short cutting uses the edges in metric closure
 4. `c(Eulerian trail that visits each terminal)`
   - because of edge removal
 5. `c(Eulerian graph that repeats each edge in T* twice)`
