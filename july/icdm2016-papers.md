@@ -1,0 +1,100 @@
+# interesting papers of ICDM 2016
+
+- Heterogeneous Representation Learning with Structured Sparsity Regularization
+    - http://ieeexplore.ieee.org/document/7837878/
+    - multi label classification
+- Vote-and-Comment: Modeling the Coevolution of User Interactions in Social Voting Web Sites
+    - http://www.alceufc.com/assets/papers/Costa_ICDM_2016.pdf
+    - time series model on number of votes (shape of increase and prediction)
+    - related question: why people up-vote? social effect or internal effect
+- Recommending Packages to Groups
+    - http://ieeexplore.ieee.org/document/7837869/
+    - recommendation to groups considering fairness
+- The Optimism Distribution of Electric-Vehicle Chargers across A City
+    - related: http://www.kdd.org/kdd2016/papers/files/rfp0553-liuAemb.pdf
+- Auditing Black-box Models for Indirect Influence
+    - http://sorelle.friedler.net/papers/auditing_icdm_2016.pdf
+    - which features are more/less useful for a ML model
+    - do not need to know how this model works nor re-train it
+- What Will You Gain By Rounding: Theory and Algorithms for Rounding Rank
+    - https://arxiv.org/abs/1609.05034
+- Subspace Outlier Detection in Linear Time with Randomized Hashing
+    - http://saketsathe.net/papers/rshash.pdf
+    - linear time and constant memory
+    - randomised hashing to score data points (how?)
+    - keywords: hashing and outlier detection
+- Causal Inference by Compression
+    - http://eda.mmci.uni-saarland.de/pubs/2016/origo-budhathoki,vreeken.pdf
+- Asynchronous Multi-Task Learning
+    - https://arxiv.org/pdf/1609.09563.pdf
+    - example: learn predictive models for different hospitals
+    - distributed and asynchronous gradient descent
+    - keywords: knowledge transfer, asynchronous learning
+- Inferring latent network from cascade data for dynamic social recommendation
+    - http://ieeexplore.ieee.org/document/7837891/
+    - social recommendation that considers dynamics of the social network
+    - dynamics are inferred by cascade data
+    - how to do recommendation based on social network?
+- Interactive Multi-Task Relationship Learning
+    - http://0xmachine.com/papers/klinICDM16.pdf
+    - how relatedness of tasks are modelled to facilitate knowledge transfer
+    - multi-task relation learning: learn the relations between tasks, suffers from poor training data quality 
+    - keyword: interactive
+- Group Preference Aggregation: A Nash Equilibrium Approach
+    - http://ieeexplore.ieee.org/document/7837892/
+- HogWild++: A New Mechanism for Decentralized Asynchronous Stochastic Gradient Descent
+    - http://www.stat.ucdavis.edu/~chohsieh/wildSGD.pdf
+- ADAGIO: Fast Data-aware Near-Isometric Linear Embeddings
+    - https://arxiv.org/abs/1609.05388
+    - a fast linear embedding with worst case analysis
+    - what is linear embedding? why preserve pairwise distances for all pairs?
+    - keywords: scalability
+- From Sets of Good Redescriptions to Good Sets of Redescriptions
+    - http://ieeexplore.ieee.org/document/7837845/
+- Learning Hierarchically Decomposable Concepts with Active Over-Labeling
+    - http://ieeexplore.ieee.org/document/7837858/
+    - setting: hierarchical label classification and active learning
+    - however, active learning on the finer grained labels (instead of the top-level ones)
+    - uses multi-armed bandit to address the different cost of labels (by their specificity)
+- Communities in Preference Networks: Refined Axioms and Beyond
+    - http://ieeexplore.ieee.org/document/7837884/
+    - preceding paper: https://arxiv.org/abs/1410.5152
+    - social choice theory, preference network
+- Binding Pairwise Preferences of the Crowd into Rankings: A Thurstonian Approach
+    - https://lecospa.ntu.edu.tw/symposium/2015/uploads/56193aac6398b123f6e9a9e2f936d3fd602f2d2c.pdf
+    - Thurstonian model: latent variable model
+    - address quality issue of crowd souring tasks (IR) caused by annotators’ less-trained nature
+    - from a set of partial annotations (given some query) from multiple workers into a unified ranked list
+- Visualization of Salient Subsequences in Time Series
+    - http://www.cs.ucr.edu/~eamonn/MatrixProfile.html
+    - a whole project: claims to make most time series problem trivial
+    - scalable all-pairs similarity search for time series: http://www.cs.ucr.edu/~eamonn/PID4481997_extend_Matrix%20Profile_I.pdf
+    - shapelet: time series subsequence that is maximally representative
+    - other problems: motif discovery, anomaly detection, segmentation, classification, clustering (just like graphs), visualisation
+- A Scalable and Generic framework to Mine Top-k Representative Subgraph Patterns
+    - http://ieeexplore.ieee.org/document/7837861/
+    - focuses on top-k, instead of all (so some coverage function or ranking is used)
+    - generalizes to any subgraph importance function
+    - quite scalable
+- CoreScope: Graph Mining Using k-Core Analysis – Patterns, Anomalies, and Algorithms”
+    - https://www.cs.cmu.edu/~kijungs/papers/kcoreICDM2016.pdf
+    - patterns of k-core
+    - k-core to find anomalies
+    - fast (streaming)
+
+
+# interesting topics:
+
+- recommendation:
+  - group %
+  - social % considering dynamics
+- learning:
+  - decentralized, asychronous
+  - hierarchical classification using active learning/labeling (related to multi-armed bandit)
+  - what feature is good? treat the learning algorithm as black box
+- time series analysis
+  - different problems: similarity, motif detection, visualization, etc
+- subgraph mining:
+  - different quality function (?)
+
+
