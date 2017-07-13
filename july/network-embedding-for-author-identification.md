@@ -1,4 +1,4 @@
-# 
+# Task-Guided and Path-Augmented Heterogeneous Network Embedding for Author Identification
 
 [paper](http://dl.acm.org/citation.cfm?id=3018735)
 
