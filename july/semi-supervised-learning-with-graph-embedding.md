@@ -63,6 +63,13 @@ embedding is derived from a hidden layer with the input feature as input (Figure
 - sampling procedure
   - why inject label information if there is supervised part?
 
+# difference to author identification paper
+
+- problem definition
+  - this paper: classification problem
+  - chen's paper: ranking problem thus different objective function
+
+
 # learned
 
 - transductive vs inductive:
