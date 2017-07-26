@@ -39,7 +39,7 @@ why should it work?
 
 length-l tuple (consecutive words), maximize the *difference* between:
 
-- `exp(v_w 1/l \sum_i v_wi)`: `v_wi` are the contextual words
+- `exp(v_w \dot 1/l \sum_i v_wi)`: `v_wi` are the contextual words
 - same formula but for negative samples (randomly selected words as tuples)
 
 # non-linear embedding models
@@ -52,7 +52,7 @@ how are they related? what are the commonality and differences?
 
 # learned
 
-- the bigger picture: many embedding models are based on coccorrence statistics
+- the bigger picture: many embedding models are based on co-occurrence statistics
   - differences might lie in: how the statistics are reweighted
   - what model is used? linear? non-linear?
 - LSI and LSA: variants of SVD

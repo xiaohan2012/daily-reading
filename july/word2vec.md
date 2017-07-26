@@ -31,7 +31,6 @@ apply `- \log` gives:
 
 `p(w_j | w_i) = exp(u_j u_i) / \sum exp(u_j', u_i)` (softmax function)
 
-
 however, the denominator can be costly to compute. 
 
 ## negative sampling

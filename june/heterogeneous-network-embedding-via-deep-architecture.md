@@ -30,7 +30,11 @@
 - [softmax](https://en.wikipedia.org/wiki/Softmax_function): exponential normalized by sum of exponentials
 - content + link + non-linearity gives better result
 - application of embedding: classification, clustering , information retrieval (similarity function)
-- it can address out-of-samples: because of the neural networks, the method can calculate embedding for unseen samples
+- it can address out-of-samples: because of the neural networks, the method can calculate embedding for unseen samples (inductive learning)
+
+# difference to skipgram-style papers
+
+- random walk is constrained to be 1-hop (edges)
 
 # questions
 
