@@ -31,3 +31,17 @@ s.t. `\sum_j x_ij = 1` for each i and \sum_i x_ij = 1` for each j
 3. uncertainty for each is defined from the above frequency map
    - intuitively, a node that are matched to another node most of times is quite certain
 4. definition of certainty is `max_i frequency_i`
+
+# learned
+
+first, the integer program of network alignment and it's NP-hard
+
+
+second, we can apply similar idea for our active network reconstruction paper
+
+- similar to generating top-l matchings, we generate top-l reconstructed trees
+- each node will a list of feasible infection periods
+- we need to define some certainty/uncertainty score on the above list of periods.
+  - naive approach, take the mean of each period so we get a list of numbers, then use standard deviation
+  
+
