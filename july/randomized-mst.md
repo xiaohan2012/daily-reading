@@ -1,0 +1,1 @@
+- [paper](http://cs.brown.edu/research/pubs/pdfs/1995/Karger-1995-RLT.pdf)
