@@ -32,3 +32,7 @@ in spirit with line, new adj matrix is defined to be 1st-order adj + 2nd-order a
 
 with theoretical guarantee (some math here)
 
+# Non-transitive Hashing with Latent Similarity Components Mingdong
+
+# Asymmetric Transitivity Preserving Graph Embedding Mingdong
+

@@ -32,7 +32,7 @@ thus, the problem becomes a maximization problem.
 
 in other words, it's the maximum-cut problem (without normalization).
 
-it can be shown, this term is <= 2.
+it can be shown that `\lambda_n <= 2`.
 
 - if a graph is bipartite, equality holds.
 - however, the other direction does not hold.
