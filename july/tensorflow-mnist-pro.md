@@ -1,0 +1,24 @@
+# learned
+
+- `tf.nn.conv2d(input, filter, strides, padding)`
+  - `input`: input from previous layer, `[batch, height, width, depth]`
+  - `filter`: [height, width, in_depth, out_depth]`
+  - `strides`: same dim as filter
+- bias term has same dim as `out_depth`
+  - one bias per output image
+- `max_pool_2x2(value, ksize, strides, padding)`
+  - `value`: the input, 4d
+  - `ksize`: `[.., height, width, depth]` why 4d not 3d?
+- `tf.truncated_normal`: normalization with head and tail truncated
+- nesting `tf.Variable(tf.constant(...))`
+- `tf.reshape(tensor, shape)`: if entries in shape is `-1`, the dim is calculated to make total size correct
+  - use `tf.reshape(x, [-1, 28, 28, 1])` to reshape the 1d image into 2d of depth 1
+- naming convention for weight variables
+  - `{type of variable}_{type of layer}{number of the variable type}`
+    - type of variable: `W` (weight), `b` (bias), `h` (hidden layer output)
+    - type of layer: `conv`, `fc`
+    - `conv_1`, `conv_2`, `fc_1` and `fc_2`, etc
+- size of the output image after `conv` and `max_pool`
+  - depends on the `max_pool` `ksize`
+  - for example, if it's `[., k, k, ..]`, then height and width are divived by `k`
+- `tf.Operation.run` such as `train_step` and `tf.Variable.eval`
