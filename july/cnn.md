@@ -12,3 +12,6 @@
 - convolution layer: apply k filters to the image. Each filter generates a new "image" of certain depths (called activation/feature map). So together, it generates k feature maps (or 2D image of depth k)
 
 - stride: how fast the filter moves. If stride is k, it moves k pixels a time.
+
+- pooling: from a feature map to one real number
+  - example, max-pooling, takes the max value in the feature map
