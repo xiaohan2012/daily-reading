@@ -22,3 +22,6 @@
   - depends on the `max_pool` `ksize`
   - for example, if it's `[., k, k, ..]`, then height and width are divived by `k`
 - `tf.Operation.run` such as `train_step` and `tf.Variable.eval`
+- dropout probability < 1 when training and =1 when evaluating
+  - use placeholder `keep_prob` to control dropout
+  - when `keep_prob=1`, equal to dropout disabled
