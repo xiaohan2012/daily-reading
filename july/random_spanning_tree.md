@@ -1,5 +1,9 @@
+- [Generating random spanning trees more quickly than the cover time](http://dl.acm.org/citation.cfm?id=237880)
 - [Faster generation of random spanning trees](https://people.csail.mit.edu/madry/docs/randtreegen_full.pdf)
 - [Random Walks and Random Spanning Trees](https://math.dartmouth.edu/~pw/math100w13/kothari.pdf): contains Wilson algorithm
+- [How to Get a Perfectly Random Sample from a Generic Markov Chain and Generate a Random Spanning Tree of a Directed Graph](http://www.sciencedirect.com/science/article/pii/S0196677497909172)
+  - [exact sampling with coupled markov chains](https://www.stat.berkeley.edu/~aldous/206-RWG/RWGpapers/propp_wilson.pdf)
+- [Non-uniform random spanning trees on weighted graphs](http://www.sciencedirect.com/science/article/pii/S0304397598003259)
 
 # intro
 
