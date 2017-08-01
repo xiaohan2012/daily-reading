@@ -97,7 +97,9 @@ paper's solution:
   - in other words, there is *small autocorrelation* on the chain samples
 - one method to sample over it using techniques:
   - hierarchical bridging: the higher the bridge (smaller `k`), the more abstract (more values removed) and easier to jump
+    - a useful way to view it: it higher level bridges facilates faster jump. however it requires evaluation of `\mu_k(y)` accurately
   - dynamic construction of the sampling chain
+  - a key problem: evaluating marginal distribution `\mu_k(y)` efficiently. 
 
 ## evaluating sample quality
 
@@ -109,7 +111,6 @@ paper's solution:
   - high autocorrelation means chain mixes slowly
 - evaluating samples quality 2: correlation on sampled data and true distribution
   - needs to know the true distribution (feasible only for small problem size)
-
 
 # questions
 
