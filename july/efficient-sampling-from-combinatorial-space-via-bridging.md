@@ -45,12 +45,73 @@ challenges:
   - how to calculate the upperbound on mixing time
   - stated by theorem 1: related to *absolute spectral gap*: `min{1-\lambda_2, 1+\lambda_n}`, where `\lambda_i` is the `i`th largest eigen value.
 
+# algorithm
+
+## bridge construction
+
+1. choose the collection of state subsets, `{S_1, ..., S_m}`
+   - each state in `X` is covered by at least one subset `S_i`
+   - **how** to choose the collection of state subsets, `{S_1, ..., S_m}`
+2. for each subset, `S_i`, create new state `y_i`. this gives `{y_1, ..., y_m}`
+3. create a transition from `x` to `S_i` if `x \in S_i` and vice-versa
+   - the probabilities are set according to Lemma 1 (Eq 3)
+
+bridge: by `x-y` and `y-y`, `x` links to  `x`
+
+## hierarchical bridging
+
+motivation: the clustering structure of the sample space is largely unknown
+
+def: k-th level bridge -- vector of length `K-k` 
+  - assuming the initial vector length is `K`
+  - `0-th` level corresponds to `X`
+
+at some level `k`, the sampler has three sets of probabilities:
+
+- going up: to one of its parents `k+1`-th by randomly removing one element
+  - the probability is uniform (`b_k / (K-k)`)
+- going down: to one of its children, probability `\mu_k(y)` proportional to `\mu` (the density function)
+  - evaluating `\mu_k(y)` exactly can be exponential
+- for `k != 0`, intra-level transition is not allowed.
+
+## dynamic construction
+
+the sampler builds the chain progressively. 
+
+**key issue**: how to evaluating `\mu_k(y)` efficiently
+
+paper's solution:
+
+- cache intermediate result `\mu_k(y)`
+- initially over-estimate it (to encourage exploration)
+- later udpate it if it's visited again
+
 # learned
 
 - an general and intersting problem: sampling over combinatorial space
 - key properties to check for a MCMC algorithm:
   1. whether it gives stationary distribution
   2. mixing time
+- interpretation of "chain mixes":
+  - samples are taken as *independently*
+  - in other words, there is *small autocorrelation* on the chain samples
+- one method to sample over it using techniques:
+  - hierarchical bridging: the higher the bridge (smaller `k`), the more abstract (more values removed) and easier to jump
+  - dynamic construction of the sampling chain
+
+## evaluating sample quality
+
+- autocorrelation function
+  - a time series compared with itself but with time k lag behind
+  - according to the [formula](http://www.itl.nist.gov/div898/handbook/eda/section3/eda35c.htm): essentially covariance normlaized by variance
+- evaluating samples quality 1: autocorrelation on energy trajectories
+  - energy trajectory: time series of energies by each sample
+  - high autocorrelation means chain mixes slowly
+- evaluating samples quality 2: correlation on sampled data and true distribution
+  - needs to know the true distribution (feasible only for small problem size)
+
+
 # questions
 
-- what's the bridging state for our problem
+- how to evaluate `\mu_k(y)` efficiently for our problem?
+- don't quite understand the paper's evaluation method for `\mu_k(y)`
