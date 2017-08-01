@@ -25,3 +25,4 @@
 - dropout probability < 1 when training and =1 when evaluating
   - use placeholder `keep_prob` to control dropout
   - when `keep_prob=1`, equal to dropout disabled
+- place the evalution of next batch **before** its training (for more fair evaluation)
