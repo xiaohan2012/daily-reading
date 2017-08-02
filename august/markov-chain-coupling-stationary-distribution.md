@@ -91,6 +91,11 @@ intuitively, `w` is a joint distribution whose marginal distribution is the appr
   - like a decomposition of x and y into a joint space?
   - `w` is like a 2D matrix for MC
 
+example: two independent markov chains
+
+- easily verifiable that the marginal distribution satisfy the requirement (because of independence)
+
+
 ## usefulness
 
 coupling bounds the *variation distance* between two distributions
@@ -104,6 +109,13 @@ important theorem:
 1. let `(X, Y) ~ w` for *some* `w`, then `d_TV(u, v) <= Pr(X \neq Y)`
   - upperbound on `d_TV(u, v)`
 2. there always exists  a coupling `w` s.t. the above equality holds
+
+interpretation of both sides
+
+1. distance between two distributions 
+2. probability that X and Y are different?
+3. seems to be relevant.
+   - if X are always equal to Y, then distance = 0
 
 questions:
 
