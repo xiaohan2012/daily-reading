@@ -1,79 +1,73 @@
+# resources
+
 - lecture 6 note
 - [video](https://www.youtube.com/watch?v=8jU5tpoS7VE): with good illustrations
+- [slides](http://www.cs.tau.ac.il/~amnon/Classes/2010-Seminar-Random-Walk/Presentations/Propp-Wilson.pdf)
 
-# notations
+# goal
 
-- `F_t1^t2(x)` evolution from t1 to t2 starting from x in t1
-  - in other words, `f_{t2-1}(f_{t2-2}(...f_t1(x)))`
+two goals:
 
-- `F_0^t(\Delta)` is a set
-  - the set of states at time `t` collected by running a chain starting from `x \in \Delta`
-  - when its cardinality is 1, all chains coalesced (reached to the same state)
+- perfect sampling: repects the desired distribution
+- automatic termination:  determines when the chain stops automatically
 
-- `M` the first time when `|F_{-M}^0(\Delta)|=1`
-  - `F_{-M}^0`, e.g, "run the chain from the past"?
-  - can be seen as running time for the chain to mix
-
-# main idea
-
-1. run `|\Delta|` copies of markov chain starting from each state in `\Delta`
-2. if all chain reaches the same state (coupled, e.g, `|F_0^t(\Delta)|=1`), output the resulting state
-3. is the output from stationary distribution? no
-4. however, if the process is done "backwards", **it is**
-  - how to do it backwards? reverse? e.g, `P'(X, Y) = P(Y, X)`
-
-theorem: `F_{-M}^0(\Delta)` has the same distribution as `\pi`
-
-  - importance: using coupling from the past, we can sample from stationary distribution 
-
-# challenges
-
-- efficiently evaluating if `|F_{-t}^0(\Delta)|=1` (even though `\Delta` is exponential in size)
-
-- how to pick coupling `f` so that `E[M]` is small (expected running time)
-
-# example: ising model
-
-partial ordering:
-
-- define configuration A >= B if for all `e \in E`, `A(e) >= B(e)`
-
-- what's the `f` in this case?
-- where is coupling from the past used?
-
-# learned
-
-## bigger picture
-
-problems with many MCMC methods (for example, Gibbs sampler)
+because of problems with many MCMC methods (for example, Gibbs sampler)
 
 - approximate sampling
 - upperbound not easy to find
 
-Propp-Wilson (coupling from the past)
+# main idea
 
-- perfect sampling
-- stops automatically
-  - when chains coalesce, it stops
+- coupling: two chains *couple* if they arrive at the same state at some time `t`
 
-questions:
 
-- proving the chain will *terminate* within finite time is another question
-- how to design a markov chain whose stationary distribution is the desired one?
+## coupling from the past
 
+1. prepare chain length `N1, N2, ...` (increasing order, usualy `2^i`)
+2. simulate a set of chains for length `Ni` from time `-Ni` to time 0 (from the past)
+  - `i=1` intially
+3. if states at time 0 coaelsced, output the sample
+4. otherwise, increment `i`
+
+note that:
+
+- random uniform numbers are re-used across all runs
+  - aka "coupling"
+- for example: simulation from -N_i+1 reuses result between time -N_i to 0.
+- [another example](https://youtu.be/8jU5tpoS7VE?t=7m3s)
+
+## main theorem
+
+theorem: the output has the *same* distribution as `\pi`
+
+# challenges
+
+- efficiently evaluating if the chains coalesed (because state space is usually exponential)
+
+- how to pick coupling so that the time to terminate is small
+
+# example: ising model
+
+utilizes partial ordering (aka sandwiching technique)
+
+- define configuration order (partia) A >= B if for all `e \in E`, `A(e) >= B(e)`
+- only need to evaluate two chains (max and min)
+
+# learned
+
+- how coupling from the past work
+- its usefulness: perfect sampling and automatic stop
 - idea of sandwiching: instead of running all states, run only the top and bottom ones
+  - if both chains coalecsed, other chains coalecsed as well
   - requires some "ordering"
   - chain in higher state cannot cross a chain in lower state
-- if both chains coalecsed, other chains coalecsed as well
-- efficient
+  
+# further questions
 
-# QA
-
-- what's function `f`? how is it related to coupling from last lecture?
-- interpretation of the seed `r`?
-  - determines the random acceptance (coin toss)
-  - see the Ising model example
-- monotone system
-  - partial order of the state
+1. proving the main theorem: when all chains reach at the same state, the output sample is from the desired distribution?
+2. how to prove the termination time (within finite time)?
+   - like the one for ising model in the lecture note
+3. how to design such chain (preserving the desired distribution)?
+4. why and when sandwiching techniques work?
 
 
