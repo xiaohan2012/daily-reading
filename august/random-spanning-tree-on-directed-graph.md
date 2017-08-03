@@ -14,20 +14,6 @@ the paper's contribution:
   - *loop-erased random walk* (implementing *cycle popping*)
   - one technique for one type of algorithm
 
-# notations
-
-refer to: Table 2 (page 10)
-
-- `\mu`: stationary distribution
-
-- `\tau`: mean hitting time of markov chain, expected number of steps to travel from one state to another
-
-- `h`: maximum hitting time
-
-# cycle popping
-
-
-
 # quick link
 
 - section 2: review of coupling from the past
@@ -39,6 +25,41 @@ refer to: Table 2 (page 10)
 - section 6, 7: cycle popping-based algorithm for CFTP
   - another class of algorithm with running time bounded by *hitting time*
 
+
+# notations
+
+refer to: Table 2 (page 10)
+
+- `\mu`: stationary distribution
+
+- `\tau`: mean hitting time of markov chain, expected number of steps to travel from one state to another
+
+- `h`: maximum hitting time
+
+# rooted random spanning tree via coupling from the past
+
+in short, given some rooted tree, perform multiple random walks until the root restored to the original one (coupled). 
+  - the resulting spanning tree (of the same root) is the next state of the markov chain `M_r`.
+
+one random walk step:
+
+1. given some tree `T` and root `r`
+2. randomly pick the successor of `r`, say `s`, make it the new root
+3. add edge `(r, s)`
+4. delete outgoing edges `(s, *)` 
+
+questions:
+
+- prove that `M_r` is ergodic
+- prove that `M_r` preserves the desired distribution
+- how is it related to coupling from the past
+
+related to our problem:
+
+- how to avoid constraint violation
+
+# cycle popping
+
 # coupling from the past
 
 what is it?
@@ -48,8 +69,7 @@ what is it?
   - in contrast, many MCMC algorithms, which give imperfect samples
 
 "If we can figure out the state at time 0 by looking at the outcomes of a finite number of these tosses in the recent past, then the result is an unbiased sample"
--  how can we figure it out?
-
+- how can w
 - composition of random maps?
 
 
@@ -80,6 +100,5 @@ what is it?
 # questions
 
 - sect 1.1: what is the two-dimensional array `M`?
-  - the chain and state matrix
-
+  - the matrix where one dimention is time and the other is chain, entry value is the  state.
 -  passive vs active? examples?
