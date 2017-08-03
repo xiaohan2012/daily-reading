@@ -61,6 +61,9 @@ utilizes partial ordering (aka sandwiching technique)
   - if both chains coalecsed, other chains coalecsed as well
   - requires some "ordering"
   - chain in higher state cannot cross a chain in lower state
+- once the chains coalesce:
+  - it's fine to throw away the previous states
+  - continue the evolution and collect all output samples (the chains already mixed to the stationary distribution)
   
 # further questions
 
