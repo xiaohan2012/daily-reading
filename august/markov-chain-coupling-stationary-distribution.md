@@ -44,6 +44,7 @@ usefulness of ergodicity by theorem 2.1: regardless of the initial state, the ma
 in other words, when designing a markov chain to sample from a stationary distribution, make sure it is ergodic.
 
 *questions*: why does global reachability (`P^t(x, y)>0`) implies stationary distribution?
+
   - dues to the nature of matrix multiplication?
 
 ## ergodic MC with symmetric transition matrix
@@ -53,7 +54,7 @@ MC is reversible if there exists `\pi` s.t. for all x and y, `\pi(x) P(x, y) = \
 
 given reversbility, if transition matrix is symmetric `P(x, y)=P(y, x)`, then `\pi(x) = \pi(y)`, thus `\pi` is **uniform**. 
 
-when is a MC reversible?
+- when is a MC reversible?
 
 in summary, any irreducible and ergodic Markov chain with a symmetric transition matrix has uniform stationary distribution. 
   - [ref](http://people.math.gatech.edu/~randall/McmS10/riffle.pdf)
@@ -88,6 +89,7 @@ coupling `w(x, y)` (on `(x, y) \in \Delta \times \Delta`) of `u(x)` and `v(y)` (
 - `\sum_x w(x, y) = v(y)` for all `y`
 
 intuitively, `w` is a joint distribution whose marginal distribution is the appropriate distribution (u and v)
+
   - like a decomposition of x and y into a joint space?
   - `w` is like a 2D matrix for MC
 
@@ -115,7 +117,7 @@ interpretation of both sides
 1. distance between two distributions 
 2. probability that X and Y are different?
 3. seems to be relevant.
-   - if X are always equal to Y, then distance = 0
+   - if X are always equal to Y, then distance = 0, which means they are the same distribution
 
 questions:
 
@@ -123,6 +125,17 @@ questions:
 - how to evaluate `Pr(X \neq Y)`? 
   - sum up the the off-diagonal entries?
 
+# learned
+
+- basic concepts of markov chain, transition matrix, ergodicity, stationary distribution
+  - a markov chain: a sequence of data
+  - transition matrix defines a markov chain
+  - ergodicity gives stationary distribution
+- symmetric transition (with ergodicity) gives uniform stationary distribution
+  - how to prove?
+- coupling:
+  - can be used to bound the mixing time
+  - the definition is a bit strange in the lecture note
 
 # thinking
 
