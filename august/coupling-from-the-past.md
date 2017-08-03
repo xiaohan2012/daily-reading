@@ -1,8 +1,8 @@
 # resources
 
-- lecture 6 note
+- lecture 6 note: hard to understand the motivation actually
 - [video](https://www.youtube.com/watch?v=8jU5tpoS7VE): with good illustrations
-- [slides](http://www.cs.tau.ac.il/~amnon/Classes/2010-Seminar-Random-Walk/Presentations/Propp-Wilson.pdf)
+- [slides](http://www.cs.tau.ac.il/~amnon/Classes/2010-Seminar-Random-Walk/Presentations/Propp-Wilson.pdf): haven't read yet
 
 # goal
 
