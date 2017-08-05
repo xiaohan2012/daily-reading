@@ -89,6 +89,8 @@ basic idea:
 
 # comment of the paper
 
+- why two sets of embedding? one for structure and one for text
+  - why not just text embedding and combine it with the structural information?
 - experiment not very strong
   - for node classification, only cora dataset and does not beat it strongly
 
