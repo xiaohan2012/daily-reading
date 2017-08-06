@@ -133,6 +133,7 @@ questions:
   - ergodicity gives stationary distribution
 - symmetric transition (with ergodicity) gives uniform stationary distribution
   - how to prove?
+  - an example: uniform random graph matching
 - coupling:
   - can be used to bound the mixing time
   - the definition is a bit strange in the lecture note
