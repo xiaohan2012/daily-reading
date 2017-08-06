@@ -23,6 +23,7 @@ a distribution `\pi` is stationary if it's **invariant** w.r.t `P(x, y)`.
 - interpretation: 
   - after one transition on `\pi`, the new distribution remains the unchanged
   - in other words, after arbitrary number of transitions, the distriution is fixed
+- in other words, reaches *equilibrium*
 
 ## ergodicity
 
@@ -38,6 +39,7 @@ equivalent properties to ergodicity:
    - a sequence of `t` like `{2, 4, 6, 8, ...}` is not allowed, the gcd is 2 in this case
    - why this? imagine `x` and `y`. one with period 2 and the other with period 3. there are some `t` that `P^t(x, x) = 0` while `P^t(y, y) > 0` or the other way around.
      - this does not satisfy ergodicity
+   - in other words, if `P(x, x)>0`, then it's aperiodic (sufficient but not necessary condition)
 
 usefulness of ergodicity by theorem 2.1: regardless of the initial state, the markov chain reaches *unique* stationary distribution
 
