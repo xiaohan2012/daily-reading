@@ -67,10 +67,10 @@ simple algorithm:
 
 1. random select an edge `e`
 2. if `e` is in the current matching `X_t` (a state), exclude it, otherwise include it. 
-  - denote the new state as `X'`
+   - denote the new state as `X'`
 3. if `X'` is feasible (in `\Delta`), set `X_{t+1}` with proba 1/2. otherwise, keep `X_t` unchanged
 4. follow the transition until we are close enough to the stationary distribution
-  - related to convergence rate analysis
+   - related to convergence rate analysis
 
 property of this algorithm:
 
