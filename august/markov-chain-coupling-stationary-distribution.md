@@ -104,12 +104,12 @@ coupling bounds the *variation distance* between two distributions
 
 variation distance:
 
-- `d_TV(u, v) = 1/2 \sum_{x \in \Delta} |u(x) - v(x)|
+- `d_TV(u, v) = 1/2 \sum_{x \in \Delta} |u(x) - v(x)|`
 
 important theorem:
 
 1. let `(X, Y) ~ w` for *some* `w`, then `d_TV(u, v) <= Pr(X \neq Y)`
-  - upperbound on `d_TV(u, v)`
+   - upperbound on `d_TV(u, v)`
 2. there always exists  a coupling `w` s.t. the above equality holds
 
 interpretation of both sides
