@@ -58,20 +58,31 @@ related to our problem:
 
 - how to avoid constraint violation
 
-# cycle popping
 
-# coupling from the past
+# coupling from the past and random tree sampling
 
-what is it?
+1. what's the random map here?
+2. what's the composition? 
+3. why returning to the root gives collapsing? 
 
-- a method for sampling from stationary distribution of a markov chain
-- it gives *perfect* sampling
-  - in contrast, many MCMC algorithms, which give imperfect samples
+- a tree can be represented by a vector `T` (length `N`) where `T[i]` represents the parent of node `i`
+- a random map can be represented by a vector `U` (length `N`) where `U[i]` is the last successor of `i` by random walk if `i` is visited, otherwise it's `nil`
+  - **question 1** done
+- the new tree `T'` (from `U` and `T`) has `T'[i] = U[i]` if `U[i] != nil` and otherwise `T'[i] = T[i]`
 
-"If we can figure out the state at time 0 by looking at the outcomes of a finite number of these tosses in the recent past, then the result is an unbiased sample"
-- how can w
-- composition of random maps?
+composition of two random maps, `U1` and `U2`:  `U2` overrides the entries of `U1` if the entry in `U2` is not `nil`
 
+- running time `O(n)`
+- **question 2** done
+
+**question 3**
+
+seems to be inaccurate as the more precise condition is: if the **only** nil in entry `U` is at the root. in other words:
+
+- `M` returns back to root
+- all other nodes are visited during the excursion
+- each visited node can be seen as a state at a different root
+  - they all collapse to one tree with the same root
 
 
 # learned
@@ -99,6 +110,4 @@ what is it?
 
 # questions
 
-- sect 1.1: what is the two-dimensional array `M`?
-  - the matrix where one dimention is time and the other is chain, entry value is the  state.
 -  passive vs active? examples?
