@@ -6,6 +6,9 @@
 
 given an anonymized paper, return a ranked list of authors of the paper.
 
+# basic approach
+
+
 # prelimilary
 
 in a heterogenous network, a paper is represented by:
@@ -13,9 +16,15 @@ in a heterogenous network, a paper is represented by:
 - a set of neighbouring nodes grouped by their type, such as keyword, venue, year, etc
 - and a list of authors of the paper
 
-notations:
+# general approach
 
-- `U`: embedding
+learn embeddings for:
+
+- authors
+- keywords, venue, authors that "define" the papers
+  - paper's embedding is derived from its properties
+
+retrieve the top ranked authors based on the embedding similarity
 
 # problem
 
