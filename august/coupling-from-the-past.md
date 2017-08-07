@@ -108,5 +108,5 @@ implication:
    - a more general question, how to determine if a chain mixes?
 2. how to prove the termination time (within finite time)?
    - like the one for ising model in the lecture note
-3. how to design such chain (preserving the desired distribution)?
+3. how to design such chain (preserving the desired distribution, irreducible and aperiodic)?
 4. why and when sandwiching techniques work?
