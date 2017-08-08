@@ -1,6 +1,6 @@
 # CANE: Context-Aware Network Embedding for Relation Modeling.
 
-(paper)(http://nlp.csai.tsinghua.edu.cn/~tcc/publications/acl2017_cane.pdf)
+[paper](http://nlp.csai.tsinghua.edu.cn/~tcc/publications/acl2017_cane.pdf)
 
 # motivation
 
@@ -63,12 +63,12 @@ weighted sum of the above three terms
 1. given word sequence (length `n`), extract the embedding (dim `d'`) for each word and concat them into a 2d matrix
   - matrix dim: `n x d`
   - row: embedding, column: word
-1. convolution of the matrix using filters `d x l x d'`
+2. convolution of the matrix using filters `d x l x d'`
   - `d` filters
   - output dim: `d x n` 
-1. max-pooling and tanh
+3. max-pooling and tanh
   - column-wise max-pooling to make sure output vector is of length `d`
-  - in contrast to dynamic pooling mentioned [here](http://www.aclweb.org/anthology/P14-1062)
+  - in contrast to dynamic pooling mentioned [here](http://www.aclweb.org/anthology/P14-1062), where **max-k** values are extracted
 
 ## context-aware text embedding
 
@@ -124,3 +124,9 @@ however, the reasoning behind method is unclear.
 
 - interacts with vertex? why not interacts with topic or aspect?
   - via topic transformation? 
+
+# question
+
+- how to derive the node's embedding if context is absent?
+  - input empty document?
+  - for node classification, this might be a problem
