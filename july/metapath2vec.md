@@ -17,15 +17,21 @@ by distinguishing nodes by types, the bias might be mitigated
 
 for example, in panama-paper dataset, there are far many entities than officers and intermediaries.
 
+
 # meta-path based random walk (heterogenous approach)
 
-- Equation 3: transition probability is zero if edge type does not match
+similar to skip-gram and deepwalk, but:
+
+- the random walk process is guided by meta-path,
+  - in other words, the visited node sequence should match type sequence encoded by the meta-path
+  - for example, in Equation 3, transition probability is zero if edge type does not match
 
 difference between metapath2vec and metapath2vec++: 
 
-- metapath2vec: the normlizing function conditions on **type**
-- metapath2vec++: does not condition on type
-- `P_t(u_t)` in Equation (6) for ++ while `P(u_t)` for normal version. (negative sampling part)
+- lies in softmax function
+- metapath2vec, the normalization term involve *all nodes* regardless of their types
+- metapath2vec++: normalization term involve only nodes *with the same type*
+  - `P_t(u_t)` in Equation (6) for ++ while `P(u_t)` for normal version. (negative sampling part)
 
 # algorithm
 
@@ -57,12 +63,16 @@ difference between metapath2vec and metapath2vec++:
 # learned
 
 - network representation learning: 
-  - common ingredients: skip-gram model
+  - common ingredients of NRL: skip-gram model
   - difference: how to define "neighbours"
   - example: 
     - deepwalk: random walk on homogenous graph
     - metapath2vec: add bias/guide to walk by constraining edge type
+
 - another way to use sampled meta path: treats as document (as what's done in deepwalk)
+
 - [hogwild-parallize SGD without locking](https://people.eecs.berkeley.edu/~brecht/papers/hogwildTR.pdf)
   - with theoretical analysis
   - used by this paper, however is not shown to work well with word2vec, may suffer from writing to the same piece of memory
+
+- metapath2vec++ is not necessarily good than metapath2vec
