@@ -99,15 +99,15 @@ cane
 
 # comparison
 
-|                       | learning problem | paradigm | network heterogenous? | with text modeling? | methodology                                      |
-|-----------------------|------------------|----------|:---------------------:|:-------------------:|--------------------------------------------------|
-| author-identification | supervised       |          | yes                   | no                  | skip-gram + ranking loss                         |
-| CANE                  | unsupervised     |          | no                    | yes                 | skip-gram + attentive pooling                    |
-| deep-architecture     | unsupervised     |          | yes                   | yes                 | representation learning with network regularizer |
-| revisiting            | semi-supervised  |          | no                    | yes                 | semi-supervised graph learning + neural network  |
-| metapath2vec          | unsupervised     |          | yes                   | no                  | skip-gram with guided random walk                |
-| pte                   | semi-supervised  |          | no                    | yes                 | skip-gram on transformed graphs                  |
-| our                   | supervised       |          | yes                   | yes                 |                                                  |
+|                       | learning problem | network heterogenous? | with text modeling? | methodology                                      |
+|-------------------------------------------:---------------------:-:-------------------:--------------------------------------------------|
+| author-identification | supervised       | yes                   | no                  | skip-gram + ranking loss                         |
+| CANE                  | unsupervised     | no                    | yes                 | skip-gram + attentive pooling                    |
+| deep-architecture     | unsupervised     | yes                   | yes                 | representation learning with network regularizer |
+| revisiting            | semi-supervised  | no                    | yes                 | skip-gram + labeled signal                       |
+| metapath2vec          | unsupervised     | yes                   | no                  | skip-gram with guided random walk                |
+| pte                   | semi-supervised  | no                    | yes                 | skip-gram on transformed graphs                  |
+| our                   | supervised       | yes                   | yes                 |                                                  |
 
 
 # thinking

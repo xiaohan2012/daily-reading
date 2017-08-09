@@ -6,11 +6,13 @@
 
 *multiple* embedding vectors for each vertex, to capture various aspect/context of the vertex
 
-embedding of a node depends on its neighbor (dynamic)
+embedding of a node depends on its neighbor
 
-# innovation
+# summary
 
-context-aware text embedding
+embedding = structural embedding `concat` text embedding
+
+- text embedding is context-aware (taking into account of the edges)
 
 # setting
 
