@@ -107,7 +107,7 @@ cane
 | revisiting            | semi-supervised  | no                    | yes                 | skip-gram + labeled signal                       |
 | metapath2vec          | unsupervised     | yes                   | no                  | skip-gram with guided random walk                |
 | pte                   | semi-supervised  | no                    | yes                 | skip-gram on transformed graphs                  |
-| our                   | supervised       | yes                   | yes                 |                                                  |
+| our                   | supervised (multi-label)       | yes                   | yes                 |                                                  |
 
 
 # thinking
