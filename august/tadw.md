@@ -6,6 +6,8 @@ now how to add text and still model it as a MF problem?
 
 - take one of the two factor matrices
 - factor it further into a feature matrix and another smaller matrix
+  - this actualy give us two representations for each node
+  - this paper concatenate them into length `2k` vector
 
 benefits:
 
