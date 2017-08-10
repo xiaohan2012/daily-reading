@@ -20,4 +20,4 @@ benefits:
 
 - deepwalk using to sets of representations and latter concatenate them
 - a way to incorporate features into MF model
-
+- [imagebin](https://imagebin.ca/) is cool
