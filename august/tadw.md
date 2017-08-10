@@ -1,3 +1,5 @@
+# idea
+
 ![illustration](https://ibin.co/3WP23iEkxulU.png)
 
 proved deepwalk can be viewed a matrix factorization problem
@@ -14,4 +16,8 @@ benefits:
 - a way to incorporate text features
 - reduces parameter size as well
 
+# leared
+
+- deepwalk using to sets of representations and latter concatenate them
+- a way to incorporate features into MF model
 
