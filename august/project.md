@@ -82,6 +82,10 @@ however, if  tag predicts user?
 
 **BP**
 
+# auto-encoder for heterogenous network
+
+?
+
 # proximity definition
 
 meta-path guided random walk
