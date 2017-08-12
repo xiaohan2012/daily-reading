@@ -99,7 +99,13 @@ to get summary, needs to run it in session:
 
 ## gradient summary
 
-remember to add 
+    for g, v in grad_and_vars:
+    	if g is not None:
+	   # add summary
+
+
+remember `if g is not None`
+
 ----------------------
 
 # learned/to-learn
