@@ -108,12 +108,49 @@ remember `if g is not None`
 
 ----------------------
 
-# learned/to-learn
+# checkpoints
+
+- initialize saver object: `tf.train.Saver(tf.global_variables(), max_to_keep=some_number)`
+  - `tf.train.Saver`
+  - `tf.global_variables`
+- do checkpoint: `saver.save(sess, checkpoint_prefix, global_step=global_step)`
 
 
-- `device`: constrain the computation to run only on certain devices
-- checkpoints and plot training process 
+# evaluation workflow
 
+1. load `vocab_processor`
+   1. `learn.preprocessing.VocabularyProcessor.restore(vocab_path)`
+1. transform the input text into matrix
+   1. `vocab_processor.transform(x_raw)`
+1. restore session using:
+   1. load `saver = tf.train.import_meta_graph()` from checkpoint file
+   1. restore session `saver.restore(session, checkpoint_file)`
+      - get `checkpoint_file`: `tf.train.latest_checkpoint(FLAGS.checkpoint_dir)`
+      - a string
+1. get placeholder variables and prediction variable
+1. `sess.run` to get result
+1. evaluate
+
+## MetaGraph
+
+- contains definition of a graph and other metadata
+- contains the information required to:
+  - **continue training**
+  - **perform evaluation**
+  - **run inference on a previously trained graph**
+- [ref](https://www.tensorflow.org/programmers_guide/meta_graph)
+
+## get variables
+
+use:
+
+    	
+    variable = graph.get_operation_by_name("name_scope/variable_name").outputs[0]
+
+## misc
+
+- accumulate result: `np.concatenate([acc, new_rows)`
+- stack columns: `np.stack_column(columns, columns)`
 
 # autoreload
 
@@ -123,3 +160,8 @@ add
     c.InteractiveShellApp.exec_lines = ['%autoreload 2']
 
 to `ipython_config.py`
+
+# mistakes
+
+- to evaluate **single** variable, run `sess.eval(var)`, **no** bracket
+- to evaluate **multiple** variables, run `sess.eval([var1, var2, ...])`, **with** bracket
