@@ -15,6 +15,12 @@ for most sites:
 - `Votes`: if `TypeId=5`, it means favourite
   - upvote and downvote are anonymous
 
+## Post
+
+- `PostType`:
+  - 1: Question
+  - 2: Answer
+
 # links
 
 - [datascience query](https://data.stackexchange.com/datascience/)
