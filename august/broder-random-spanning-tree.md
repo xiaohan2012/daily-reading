@@ -1,3 +1,9 @@
+# summary
+
+- proof of markov matrix tree theorem using backward chain
+- uniform random spanning tree generation
+  - proof using forward/backward chain and chain reversibility
+
 # introduction
 
 define a random walk on a graph:
@@ -178,6 +184,19 @@ note:
 
 - rooted at `i`
 - probability is `d_i / \sum_v d_v`: for edges in the tree, their weights are `1/d_v` (`v!=i`)
+
+# swap-edge technique
+
+## basic idea
+
+- given some tree `S_t`, randomly add an edge `e` in from `E-S_t`, and randomly remove an edge `f` from `S_t`. 
+- if the new tree is `S_t + {e} - {f}` is a tree, update it with `S_{t+1}`, otherwise, `S_{t+1}=S_t`
+
+## theoretical results
+
+the chain `{S_t}` is mixing rapidly in polynomial time
+
+mixing time is proved using: ergodic flow and second largest eigen value
 
 # other topics
 
