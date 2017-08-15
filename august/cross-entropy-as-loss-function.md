@@ -10,7 +10,7 @@ to see why cross entropy is a good loss function, we consider:
 
 # quadratic loss function
 
-- derivative on `w`: $`(\detal(z)-y)\delta^{'}(z))=\delta(z) \delta^{'}(z)$` by substiting with the ground with
+- derivative on `w`: $`(\detal(z)-y)\delta^{'}(z))=\delta(z) \delta^{'}(z)`$ by substiting with the ground truth
 - derivative on `b`: $`\delta(z) \delta^{'}(z)`$
 
 recall the figure of sigmoid function:
@@ -44,6 +44,12 @@ $`x (\delta(z)-y)`$
 intuition:
 
 - the **larger** the error, the **steeper** the gradient (measured by absolute value), the faster it learns
+
+## cross entropy for more than one neurons
+
+suppose there are `n` neurons, with correct output `y_1, ..., y_n`, then:
+
+$`C(y_1, \ldots, y_n, a_1, \ldots, a_n) = \sum\limits_{i=1}^n y_i \ln a_i + (1-y_)\ln (1-a_i)`$
 
 # source
 
