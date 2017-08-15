@@ -198,6 +198,8 @@ the chain `{S_t}` is mixing rapidly in polynomial time
 
 mixing time is proved using: ergodic flow and second largest eigen value
 
+- further readingf: [mixing time and eigen value](https://math.dartmouth.edu/~pw/math100w13/kale.pdf)
+
 # other topics
 
 - quasi uniform generation for directed graphs
