@@ -13,3 +13,25 @@
    - the larger the `x`, the closer to 1
    - the smaller the `x`, the closer to 0
    - 0.5 is the threshold between 0 and 1 by default
+
+
+# computing precision and recall
+
+using `tf.metrics.precision` and `tf.metrics.recall`. 
+
+actually computes the "micro" version (takes into account of label imbalance). 
+
+remember to initialize local variables as well because the above two functions using
+
+`sess.run(tf.local_variables_initializer())`
+
+see mu (my post)[https://stackoverflow.com/questions/45720291/failedpreconditionerror-while-using-tensorlfow-metrics-recall/45720460#45720460] 
+for more
+
+# where to put variable initializer
+
+I mean this: `sess.run(tf.global_variables_initializer())`
+
+- **after** all variables are defiend
+- or **before** actual training begins
+
