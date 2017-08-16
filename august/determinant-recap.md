@@ -71,7 +71,7 @@ using triangular facrorization:
 
 formula:
 
-$`A^{-1} = \frac{C^T}/\text{det} A`$
+$`A^{-1} = \frac{C^T}{\text{det}} A`$
 
 to see why:
 
