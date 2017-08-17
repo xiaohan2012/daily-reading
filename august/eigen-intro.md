@@ -45,5 +45,40 @@ denote `x=[y z]` and canceling out the common terms give us:
 
 $`Ax=\lambda x`$
 
+**what is this?**
+
+note there are two unknowns:
+
+- $`\lambda`$
+- $`x`$
+
+so it's not a linear equation, otherwise it would be easy to solve.
+
+# solving $`Ax=\lambda x`$
+
+in other words,  we solve $`(A - \lambda I) x= 0`$. 
+
+this means:
+
+1. `x` is in the *null space** of $`A - \lambda I`$
+2. $`\lambda`$ needs to make $`A - \lambda I`$ **singular**
+
+the singular matrix satisfies the following
+
+$`\text{det}(A - \lambda I)=0`$
+
+which gives a polynomial whose roots are the eigen values $`\lambda`$.
+
+for each root, we solve one linear equation, in which the solution `x` is called eigenvector. 
+
+together, the form the null space of $`A-\lambdaI`$, such space is also called **eigenspace**.
+
+in summary, steps are:
+
+1. find the polynomial by $`\text{det}(A - \lambda I)=0`$
+2. find the roots $`\lambda`$
+3. for each root, solve $`(A - \lambda I)x=0`$
+
+
 
 
