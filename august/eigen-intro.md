@@ -11,7 +11,7 @@ the question is: **then what's exactly `v(t)` and `w(t)`?**
 to represent in matrix form, denote:
 
 - `u(t) = [v(t) w(t)]`
-- $`\frac{du}{dt}` = [\frac{dv}{dt} \frac{dw}{dt}]$
+- $`\frac{du}{dt}` = [\frac{dv}{dt} \frac{dw}{dt}]`$
 
 and 
 
