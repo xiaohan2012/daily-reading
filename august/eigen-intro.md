@@ -133,3 +133,15 @@ however, no explicit formula to do that for `n>5` (because no explict formula fo
 
 pivot, diagonal entries and eigenvalues are usualy completely different, except for upper-triangular matrices
 
+## prove that product of n eigenvalues = determinant
+
+by definition of eigenvalues (root of characteristic polynomial):
+
+$`det(A-\lambda I) = \prod_i (\lambda - \lambda_i)`$
+
+by setting $`\lambda=0`$, we get:
+
+$`det(A) = \prod_i \lambda_i`$
+
+
+
