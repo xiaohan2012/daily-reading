@@ -11,7 +11,7 @@ the question is: **then what's exactly `v(t)` and `w(t)`?**
 to represent in matrix form, denote:
 
 - `u(t) = [v(t) w(t)]`
-- $`\frac{du}{dt}` = [\frac{dv}{dt} \frac{dw}{dt}]`$
+- $`\frac{du}{dt} = [\frac{dv}{dt} \frac{dw}{dt}]`$
 
 and 
 
@@ -145,3 +145,10 @@ $`det(A) = \prod_i \lambda_i`$
 
 
 
+# learned
+
+- motivation of eigenvalue/vector from the perspective of sovling linear differential equation
+  - in core: exponential function
+- mathematically, eigenvalue makes $`A-\lambda I`$ singular and eigenvector is simply in nullspace of $`A-\lambda I`$ 
+- how to find eigenvalues/vectors using characteristic polynomial (defined by determinant)
+- interpretation of eigenvalue: rate of decay/growth

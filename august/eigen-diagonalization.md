@@ -16,7 +16,7 @@ note that:
 
 1. in order to have $`S^{-1}`$, $`S`$ needs to contain `n` **independent** columns. in other words, the eigenvalues need to be distinct.
 2. non-uniqueness of `S`: because any eigenvector multiplied by any non-zero constant is still a eigenvector
-   - a special case, for `A=I`, eigenvalues are all 1s, eigenvectors spans the whole space of $`\mathbb{R}$n`$
+   - a special case, for `A=I`, eigenvalues are all 1s, eigenvectors spans the whole space of $`\mathbb{R}`$
    - therefore $`S^{-1}IS=I`$ for any invertible `S`
 
 
@@ -33,7 +33,7 @@ note that repeated eigenvalues is a **necessary but insufficient** cause for suc
 
 $`\lambda=0`$ does not mean such failure. for example:
 
-$`\begin{matrix} 1 && 0\\ 0 && 0 \end{matrix}`$
+$`\begin{pmatrix} 1 && 0\\ 0 && 0 \end{pmatrix}`$
 
 - eigevalues: `[1, 0]`
 - eigenvectors: `[1 0]` and `[0 1]`
@@ -46,3 +46,12 @@ invertibility and diagonalizability: not directed actually
 - invertibibility depends on non-zero eigenvalues
   - $`det(A) \neq 0`$ leads to invertibibility
   - $`det(A)=\prod_i \lambda_i`$
+
+
+# learned
+
+- eigenvalue diagonalization $`S^{-1}AS=\Lambda`$
+- **necessary** condition for undiagonalizability -- repeated eigenvalues
+  - however, repeated eigenvalues is not sufficient (identity matrix as a special case)
+  - typical case for diagonalizability: distinct eigenvalues
+- condition for invertibility, nonzero eigenvalues
