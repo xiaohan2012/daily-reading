@@ -16,26 +16,26 @@ probability distribution for each word as center
 
 objective function (for one document) to maximize: 
 
-`\prod_{i=1..T} \prod_{-m <= j <= m} p(w_j | w_i; \theta)`
+$`\prod_{i=1 \ldots T} \prod_{-m \le j \le  m} p(w_j | w_i; \theta)`$
 
-- document length: `T`
-- window size: `m`
-- embedding matrix: `\theta`
+- document length: $`T`$
+- window size: $`m`$
+- embedding matrix: $`\theta`$
 
-apply `- \log` gives:
+apply $`- \log`$ gives:
 
-- `-\sum_i \sum_j \log p`
+- $`-\sum_i \sum_j \log p`$
 - to minimize
 
 # computing `p(w_j | w_i)`
 
-`p(w_j | w_i) = exp(u_j u_i) / \sum exp(u_j', u_i)` (softmax function)
+$`p(w_j | w_i) = \frac{exp(u_j u_i)}{\sum exp(u_j', u_i)}`$ (softmax function)
 
 however, the denominator can be costly to compute. 
 
 ## negative sampling
 
-just sample a few `w_j'` instead of use all. 
+just sample a few $`w_j^'`$ instead of use all. 
 
 ## hierarchical softmax
 
