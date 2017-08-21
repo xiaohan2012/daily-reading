@@ -11,7 +11,7 @@ need to sort the array, otherwise, will miss certain combinations.
 
 for example:
 
-`[(2, 3), (1, 2)]` if unsorted, returns 1
+`[(3, 4), (1, 2)]` if unsorted, returns 1, but the true answer is 2
 
 # code
 
