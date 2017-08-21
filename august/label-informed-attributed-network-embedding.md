@@ -1,3 +1,4 @@
+# Label Informed Attributed Network Embedding, WSDM 2017
 # overview
 
 - input: graph $`G`$ with node attribute matrix $`A`$, node label matrix $`Y`$
