@@ -124,4 +124,7 @@ therefore `Bx` is a multiple of `x`, in other words, `x` is eigenvector for `B` 
 - **necessary** condition for undiagonalizability -- repeated eigenvalues
   - however, repeated eigenvalues is not sufficient (identity matrix as a special case)
   - typical case for diagonalizability: distinct eigenvalues
+- distinct eigenvalues lead to distinct independent eigenvectors
 - condition for invertibility, nonzero eigenvalues
+- eigenvalue for $`A^{k}, A^{-1}, AB`$
+  - special treatment for `AB`, `AB=BA` to make sure the same eigenvectors are shared
