@@ -11,7 +11,7 @@ deepwalk + multiclass SVM
 
 # deepwalk as matrix factorization (MF)
 
-$`M_ij = \log \frac{e_i (A + A^2 + \ldots + A^t)}{t}`$
+$`M_{ij} = \log [\frac{e_i (A + A^2 + \ldots + A^t)}{t}]_j`$
 
 $`e_i`$ indicator vector.
 
@@ -23,7 +23,7 @@ why dropping the $`\log`$? author claims adding log gives more non-zero entries 
 
 ## objective function
 
-parameter: $X, Y \in \mathbb{R}^{k\times|V|}$
+parameter: $`X, Y \in \mathbb{R}^{k\times|V|}`$
 
 goal: minimize
 
