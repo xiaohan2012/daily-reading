@@ -48,7 +48,7 @@ for fibonacci numbers, $`\lambda_1 = \frac{1+\sqrt{5}}{2}`$ and $`\lambda_2 = \f
 
 then, $`F_k=\frac{1}{\sqrt{5}} [\lambda_1^k - \lambda_2^k]`$
 
-note that $`\frac{F_{k+1}}{F_k} \approx \lambda_1`$ for $`k \rightarrow \infnty`$ (because $`0<\lambda_2<1`$)
+note that $`\frac{F_{k+1}}{F_k} \approx \lambda_1`$ for $`k \rightarrow \infty`$ (because $`0<\lambda_2<1`$)
 
 comment: $`\lambda_1`$ captures the rate of growth. 
 
@@ -59,6 +59,6 @@ if $`u_0`$ is an eigenvector $`x`$ of $`A`$, then $`u_k=\lambda^k x`$
 if $`u_0`$ is a linear combination of eigenvectors of $`A`$, $`\sum_i c_i x_i`$, 
 then $`u_k = \sum_i c_i \lambda^k x_i`$
 
-to get vector `c`: `Sc=u_0`, then `c=S^{-1}u_0`
+to get vector $`c`$: $`Sc=u_0`$, then $`c=S^{-1}u_0`$
 
 what if neither?
