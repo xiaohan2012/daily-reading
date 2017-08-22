@@ -63,22 +63,22 @@ utilizes partial ordering (aka sandwiching technique)
    - $`RandomMap`$ outputs such materialization 
 2. a method of composing random maps: essentially, function composition
    - each random map is a function
-     - compoition of random maps: $`f_1 \circle f_2, ..., f_n = f_1(f_2(...f_n(...)))`$
+     - compoition of random maps: $`f_1 \circ f_2, ..., f_n = f_1(f_2(...f_n(...)))`$
 3. a test to determine if a composition of random maps is collapsing
    - whether the composition sends every state to the same state
 
 ## two conditions
 
-1. $`f_{0} \circle f_{-1}, ..., f_{-t}`$ converges to constant function with positive probability
+1. $`f_{0} \circ f_{-1}, ..., f_{-t}`$ converges to constant function with positive probability
    - how to make it happen?
 2. $`f`$ preserves the stationary distribution
 
 ## coupling from the past VS coupling from the future 
 
-- past: $`F_{-t}^0 \circle f_{-t-1}`$
+- past: $`F_{-t}^0 \circ f_{-t-1}`$
   - add to right
   - know the future because living in the past
-- future: $`f_{t+1} \circle F_0^t`$
+- future: $`f_{t+1} \circ F_0^t`$
   - add to right
   - oblivious of the future because living in the present
 
