@@ -33,9 +33,9 @@ $`u_{k+1} = \begin{bmatrix} 1 && 1 \\ 1 && 0\end{bmatrix} \begin{bmatrix} F_{k+1
 
 ## solving $`u_k = A^k u_0`$
 
-in general, by eigen decomposition $`A=S^{-1}\Delta S`$, we get 
+in general, by eigen decomposition $`A=S^{-1}\Lambda S`$, we get 
 
-$`u_k = S^{-1} \Delta^{k} S u_0`$
+$`u_k = S^{-1} \Lambda^{k} S u_0`$
 
 denote $`c=S u_0`$ and columns in $`S^{-1}`$ as $`\begin{pmatrix} x_1, \ldots, x_n \end{pmatrix}`$, then 
 
