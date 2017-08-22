@@ -7,7 +7,7 @@
 input: network $`G=(V, E)`$, labels on some nodes (single label)
 output: embedding of nodes that is learned for the labels
 
-deepwalk + multiclass SVM
+**deepwalk + multiclass SVM**
 
 # deepwalk as matrix factorization (MF)
 
@@ -35,9 +35,9 @@ $`X`$ serves as the node embedding
 
 ## SVM
 
-using the embedding $`X`$ on $T$ labeled nodes. 
+using the embedding $`X`$ on $`T`$ labeled nodes. 
 
-suppose there are $`m`$ classes, then the linear classifier is $`W=[w_1, \ldots, w_m`$.
+suppose there are $`m`$ classes, then the linear classifier is $`W=[w_1, \ldots, w_m`]$.
 
 for the $`i`$th example, we need the classifier to give large margin:
 
