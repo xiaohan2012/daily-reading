@@ -5,7 +5,7 @@
 
 a markov chain is reversible if:
 
-$`\pi_i p_ij = \pi_j p_ji`$ for all $`i, j`$
+$`\pi_i p_{ij} = \pi_j p_{ji}`$ for all $`i, j`$
 
 also called *detalied balance equation*
 
@@ -17,7 +17,7 @@ this implies that:
 
 a chain $`X_1, X_2, ..., X_n`$ has the same distribution as $`X_n, X_{n-1}, ..., X_1`$ (**reversed!**)
 
-proof by showing $`\pi_1 p_12 p_23 ... p_(n-1)n = \pi_n p_n(n-1) ... p_21`$
+proof by showing $`\pi_1 p_{12} p_{23} ... p_{(n-1)n} = \pi_n p_{n(n-1)} ... p_{21}`$
 
 ## 2
 
