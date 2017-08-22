@@ -1,10 +1,10 @@
 # goal
 
-replace `\`....\`` into `$\`....\`$`
+replace ```....``` into ``$`....`$`` to render math
 
-# code in emacs lisp
+# code in elisp
 
-```lisp
+```elisp
 (defun katex-mathify ()
   (interactive)
   (goto-char (point-min))
