@@ -41,10 +41,10 @@ ground truth labels are missed **uniformly** at random
 
 ## label notations
 
-1. $`y^{*} \in {0, 1}^L`$: the ground truth label
-1. $`y \in {0, 1}^L`$: the observed label
+1. $`y^{*} \in \{0, 1\}^L`$: the ground truth label
+1. $`y \in \{0, 1\}^L`$: the observed label
   - missing labels (1) are 0
-1. $`\hat{y} \in {0, 1}^L`$: predictions
+1. $`\hat{y} \in \{0, 1\}^L`$: predictions
 
 ## propensity
 
@@ -67,8 +67,8 @@ propensity scored loss functions:
 
 propensity scored version:
 
-1. $`\mathcal{L}^{*}(y^{*}, \hat{y}) = \sum\limits^L_{l: y_l=1} \mathcal{L}^{*}_l(1, \hat{u}_l)`$
-1. $`\mathcal{L}(y^{*}, \hat{y})=\sum\limits^L_{l: y_l=1} \mathcal{L}_l(1, \hat{u}_l) / p_l`$ ($`i`$ dropped for convenience)
+1. $`\mathcal{L}^{*}(y^{*}, \hat{y}) = \sum\limits^L_{l: y_l=1} \mathcal{L}^{*}_l(1, \hat{y}_l)`$
+1. $`\mathcal{L}(y^{*}, \hat{y})=\sum\limits^L_{l: y_l=1} \mathcal{L}_l(1, \hat{y}_l) / p_l`$ ($`i`$ dropped for convenience)
    - **note**: the $`p_l`$ term
 
 in this way, we value over relevant variables?
