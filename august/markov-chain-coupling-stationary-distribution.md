@@ -49,6 +49,15 @@ in other words, when designing a markov chain to sample from a stationary distri
 
   - dues to the nature of matrix multiplication?
 
+## important theorem
+
+For a **finite ergodic** Markov chain, there exists a **unique** stationary distrib $`\pi`$ such that:
+
+for all $`x, y \in \Delta`$, $`\text{lim}_{t \rightarrow \infty} P^t(x, y) = \pi(y)`$
+
+meaning, starting from any state $`x`$, there is probability $`\pi(y)`$ to get to $`y`$ for any $`y`$.
+
+
 ## ergodic MC with symmetric transition matrix
 
 MC is reversible if there exists $`\pi`$ s.t. for all x and y, $`\pi(x) P(x, y) = \pi(y) P(y, x)`$
