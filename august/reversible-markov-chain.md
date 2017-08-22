@@ -17,7 +17,7 @@ this implies that:
 
 a chain $`X_1, X_2, ..., X_n`$ has the same distribution as $`X_n, X_{n-1}, ..., X_1`$ (**reversed!**)
 
-proof by showing $`\pi_1 p_{12} p_{23} ... p_{(n-1)n} = \pi_n p_{n(n-1)} ... p_{21}`$
+proof by showing $`p_{12} p_{23} ... p_{(n-1)n} = p_{n(n-1)} ... p_{21}`$
 
 ## 2
 
