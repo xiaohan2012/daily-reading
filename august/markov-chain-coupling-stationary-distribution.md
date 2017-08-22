@@ -33,7 +33,7 @@ a MC is ergodic if there exists some $`t`$ s.t. for all $`x, y`$, $`P^t(x, y) > 
 
 equivalent properties to ergodicity:
 
-1. irreducible: for all $`x, y`$, there some exists some $`t`$ such that `P^t(x, y) > 0 `$
+1. irreducible: for all $`x, y`$, there some exists some $`t`$ such that $`P^t(x, y) > 0 `$
    - note that the $`t`$ can be different for different $`x`$ and $`y`$ pairs
 2. aperiodic: $`gcd({t: P^t(x, x) > 0}) = 1`$
    - a sequence of $`t`$ like $`{2, 4, 6, 8, ...}`$ is not allowed, the gcd is 2 in this case
