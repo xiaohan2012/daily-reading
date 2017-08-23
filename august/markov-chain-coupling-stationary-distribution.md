@@ -55,7 +55,7 @@ For a **finite ergodic** Markov chain, there exists a **unique** stationary dist
 
 for all $`x, y \in \Delta`$, $`\text{lim}_{t \rightarrow \infty} P^t(x, y) = \pi(y)`$
 
-meaning, starting from any state $`x`$, there is probability $`\pi(y)`$ to get to $`y`$ for any $`y`$.
+meaning, starting from **any** state $`x`$, there is probability $`\pi(y)`$ to get to $`y`$ for **any** $`y`$.
 
 
 ## ergodic MC with symmetric transition matrix
@@ -135,6 +135,22 @@ questions:
 - how to find such coupling?
 - how to evaluate $`Pr(X \neq Y)`$? 
   - sum up the the off-diagonal entries?
+
+# proof of main theorem 1
+
+aka, for ergodic markov chain, starting from any $`x`$, it reaches unique stationary distribution $`\pi(y)`$, where $`x, y \in \Pi`$. 
+
+sketch of proof:
+
+1. design a coupling for chain $`X`$ and $`Y`$ starting from arbitrary $`X_0`$ and $`Y_0`$
+   - such coupling requries $`X_t`$ and $`Y_t`$ be indenpendent before they coelesed (aka $`X_t \neq Y_t`$)and after coelesion, output the same state ($`X_t=Y_t`$)
+2. because of ergodicity, $`P(x, y)=\epsilon>0`$, therefore using the coupling result after coelesion at $`t`$, $`P(X_t != Y_t) \le 1-\epsilon`$
+3. after $`kt`$ steps, $`P(X_{kt} != Y_{kt}) \le (1-\epsilon)^k`$, in other words, $`P(X_{\infty} != Y_{\infty}) \le (1-\epsilon)^{\infty} = 0`$
+4. using the coupling theorem, $`d(P^t(X_0,\dot), P^t(Y_0, \dot)) = 0`$ as $`t \rightarrow \infty`$, which means $`X`$ and $`Y`$ approaches the same distribution. 
+5. in other words, we have $`\lim\limits_{t \rightarrow \infty} P^t(x, y) = \delta(y)`$ for any $`x`$ and $`y`$. $`\delta`$ is the **limiting distribution**.
+
+
+
 
 # learned
 
