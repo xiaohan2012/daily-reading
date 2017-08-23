@@ -115,12 +115,12 @@ coupling bounds the *variation distance* between two distributions
 
 variation distance:
 
-- $`d_TV(u, v) = 1/2 \sum_{x \in \Delta} |u(x) - v(x)|`$
+- $`d_{TV}(u, v) = 1/2 \sum_{x \in \Delta} |u(x) - v(x)|`$
 
 important theorem:
 
-1. let $`(X, Y) ~ w`$ for *some* $`w`$, then $`d_TV(u, v) <= Pr(X \neq Y)`$
-   - upperbound on $`d_TV(u, v)`$
+1. let $`(X, Y) ~ w`$ for *some* $`w`$, then $`d_{TV}(u, v) <= Pr(X \neq Y)`$
+   - upperbound on $`d_{TV}(u, v)`$
 2. there always exists  a coupling $`w`$ s.t. the above equality holds
 
 interpretation of both sides
@@ -145,8 +145,8 @@ sketch of proof:
 1. design a coupling for chain $`X`$ and $`Y`$ starting from arbitrary $`X_0`$ and $`Y_0`$
    - such coupling requries $`X_t`$ and $`Y_t`$ be indenpendent before they coelesed (aka $`X_t \neq Y_t`$)and after coelesion, output the same state ($`X_t=Y_t`$)
 2. because of ergodicity, $`P(x, y)=\epsilon>0`$, therefore after coelesion at $`t`$, $`P(X_t \neq Y_t) \le 1-\epsilon^2`$
-   - because `P(X_t = Y_t) \ge \epsilon^2`
-3. after $`kt`$ steps, $`P(X_{kt} != Y_{kt}) \le (1-\epsilon^2)^k`$, in other words, $`P(X_{\infty} \neq Y_{\infty}) \le (1-\epsilon^2)^{\infty} = 0`$
+   - because $`P(X_t = Y_t) \ge \epsilon^2`$
+3. after $`kt`$ steps, $`P(X_{kt} \neq Y_{kt}) \le (1-\epsilon^2)^k`$, in other words, $`P(X_{\infty} \neq Y_{\infty}) \le (1-\epsilon^2)^{\infty} = 0`$
 4. using the coupling theorem, $`d(P^t(X_0,\cdot), P^t(Y_0, \cdot)) = 0`$ as $`t \rightarrow \infty`$, which means $`X`$ and $`Y`$ approaches the same distribution. 
 5. in other words, we have $`\lim\limits_{t \rightarrow \infty} P^t(x, y) = \delta(y)`$ for any $`x`$ and $`y`$. $`\delta`$ is the **limiting distribution**.
 
