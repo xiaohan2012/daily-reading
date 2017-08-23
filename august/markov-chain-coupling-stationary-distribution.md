@@ -159,6 +159,8 @@ sketch of proof:
 2. after coelesion, $`w(x, y) = \begin{cases} \mu(x) & \text{if} y=x \\ 0 & \text{otherwise} \end{cases}`$. also satifying the definition. 
    - in other words, $`w`$ is a diagonal matrix with diagonal entries equal to $`\mu(x)`$
 
+note: "coupling" means, outputing the same state for different chains
+
 
 # learned
 
@@ -172,6 +174,7 @@ sketch of proof:
 - coupling:
   - can be used to bound the mixing time
   - the definition is a bit strange in the lecture note
+- proof of theorem 1
 
 # thinking
 
