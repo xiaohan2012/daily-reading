@@ -4,7 +4,7 @@ each year, $`1/10`$ people outside of California move in and $`2/10`$ of people 
 
 captured by the **markov matrix**:
 
-$`A=\begin{cmatrix}0.9 && 0.2 \\ 0.1 && 0.8 \end{cmatrix}`$
+$`A=\begin{bmatrix}0.9 && 0.2 \\ 0.1 && 0.8 \end{bmatrix}`$
 
 then the process is:
 
@@ -27,17 +27,17 @@ caputured by markov matrices, with two properties:
 # solving $`u_{k} = A^k u_0`$
 
 1. solving $`det(A-\lambda I) = \lambda_2 - 1.7 \lambda +0.7`$ gives $`\lambda_1=1, \lambda_2=0.7`$
-2. this gives $`S=\begin{cmatrix} 2 & 1 \\ 1 & -1 \end{cmatrix}`$ and $`S^{-1}=\begin{cmatrix} 1/3  & 1/3 \\ 1/3 & -2/3 \end{cmatrix}`$
+2. this gives $`S=\begin{bmatrix} 2 & 1 \\ 1 & -1 \end{bmatrix}`$ and $`S^{-1}=\begin{bmatrix} 1/3  & 1/3 \\ 1/3 & -2/3 \end{bmatrix}`$
 
 **note** that the text book gives different $`S`$, still, the decomposision $`S \Lambda S^{-1}`$ gives the same result $`A`$. (it take me a while to verify)
 
 substituting $`A=S \Lambda S^{-1}`$, $`u_k = S \Lambda^k S^{-1}`$ gives
 
-$`(y_0 + z_0) \begin{cmatrix} 2/3 \\ 1/3 \end{cmatrix} + (y_0 - 2 z_0) (0.7)^k  \begin{cmatrix} 1/3 \\ -1/3 \end{cmatrix}`$ 
+$`(y_0 + z_0) \begin{bmatrix} 2/3 \\ 1/3 \end{bmatrix} + (y_0 - 2 z_0) (0.7)^k  \begin{bmatrix} 1/3 \\ -1/3 \end{bmatrix}`$ 
 
 the second term diminishes, therefore, 
 
-$`\begin{cmatrix} y_{\infty} \\ z_{\infty} \end{cmatrix} = (y_0 + z_0) \begin{cmatrix} 2/3 \\ 1/3 \end{cmatrix}`$ (**steady state**)
+$`\begin{bmatrix} y_{\infty} \\ z_{\infty} \end{bmatrix} = (y_0 + z_0) \begin{bmatrix} 2/3 \\ 1/3 \end{bmatrix}`$ (**steady state**)
 
 
 
