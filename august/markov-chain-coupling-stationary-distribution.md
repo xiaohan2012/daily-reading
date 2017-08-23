@@ -138,19 +138,26 @@ questions:
 
 # proof of main theorem 1
 
-aka, for ergodic markov chain, starting from any $`x`$, it reaches unique stationary distribution $`\pi(y)`$, where $`x, y \in \Pi`$. 
+aka, for ergodic markov chain, starting from any $`x`$, it reaches unique stationary distribution $`\pi(y)`$, where $`x, y \in \Delta`$. 
 
 sketch of proof:
 
 1. design a coupling for chain $`X`$ and $`Y`$ starting from arbitrary $`X_0`$ and $`Y_0`$
-   - such coupling requries $`X_t`$ and $`Y_t`$ be indenpendent before they coelesed (aka $`X_t \neq Y_t`$)and after coelesion, output the same state ($`X_t=Y_t`$)
+   - such coupling requries $`X_t`$ and $`Y_t`$ be indenpendently generated before they coelesed ($`X_t \neq Y_t`$)
+   - after coelesion, output the same state ($`X_t=Y_t`$)
 2. because of ergodicity, $`P(x, y)=\epsilon>0`$, therefore after coelesion at $`t`$, $`P(X_t \neq Y_t) \le 1-\epsilon^2`$
    - because $`P(X_t = Y_t) \ge \epsilon^2`$
 3. after $`kt`$ steps, $`P(X_{kt} \neq Y_{kt}) \le (1-\epsilon^2)^k`$, in other words, $`P(X_{\infty} \neq Y_{\infty}) \le (1-\epsilon^2)^{\infty} = 0`$
 4. using the coupling theorem, $`d(P^t(X_0,\cdot), P^t(Y_0, \cdot)) = 0`$ as $`t \rightarrow \infty`$, which means $`X`$ and $`Y`$ approaches the same distribution. 
 5. in other words, we have $`\lim\limits_{t \rightarrow \infty} P^t(x, y) = \delta(y)`$ for any $`x`$ and $`y`$. $`\delta`$ is the **limiting distribution**.
+   - note that the distribution is characterized by $`P^t`$
 
 
+## why is such coupling a valid one?
+
+1. before coelesion, they are generately independently, so it's a valid coupling by definition. 
+2. after coelesion, $`w(x, y) = \begin{cases} \mu(x) & \text{if} y=x \\ 0 & \text{otherwise} \end{cases}`$. also satifying the definition. 
+   - in other words, $`w`$ is a diagonal matrix with diagonal entries equal to $`\mu(x)`$
 
 
 # learned
