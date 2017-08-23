@@ -183,7 +183,17 @@ note: "coupling" means, outputing the same state for different chains
 
 - if the transition matrix is symmetric and the MC is ergodic, then the sampling is uniform
   - this "coincides" with the problem, uniform random spanning tree
-  - the question is, how to design such MC?
+  - however, we do not want **uniform** sampling, so the chain should not be symmetric
+
+## coupling from the past
+
+- why the sample is a perfect sample?
+
+consider starting from every states, after `k` steps, they all transit to the same state. 
+
+in other words, starting from `t` (inclusive), all chains give the same distribution (it becomes stationary using the coupling technique), therefore, the sample at `t` is drawn from the stationry distribution. 
+
+definition of stationarity: starting from **any** state, the output state is distributed according to the **same** distribution.
 
 
-  
+
