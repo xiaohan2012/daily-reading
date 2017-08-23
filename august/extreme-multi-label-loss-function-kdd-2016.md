@@ -17,7 +17,10 @@
 
 contributions:
 
-- a loss function
+- a loss function: `\mathcal{L}(y, \hat{y})=\sum\limits^L_{l: y_l=1} \mathcal{L}_l(1, \hat{y}_l) / p_l`
+  - it considers relevant labels `l: y_l=1`
+  - weights labels by its propensity `p_l`, the more frequent, the smaller `1/p_l`
+  - `L` can be nDCG, precision@k, etcj
 - a fast learning algorithm
 
 propensity scored loss function: precision@k, nDCG@k: unbiased estimates (vs biased estimates)
@@ -68,7 +71,7 @@ propensity scored loss functions:
 propensity scored version:
 
 1. $`\mathcal{L}^{*}(y^{*}, \hat{y}) = \sum\limits^L_{l: y_l=1} \mathcal{L}^{*}_l(1, \hat{y}_l)`$
-1. $`\mathcal{L}(y^{*}, \hat{y})=\sum\limits^L_{l: y_l=1} \mathcal{L}_l(1, \hat{y}_l) / p_l`$ ($`i`$ dropped for convenience)
+1. $`\mathcal{L}(y, \hat{y})=\sum\limits^L_{l: y_l=1} \mathcal{L}_l(1, \hat{y}_l) / p_l`$ ($`i`$ dropped for convenience)
    - **note**: the $`p_l`$ term
 
 in this way, we value over relevant variables?
@@ -78,6 +81,27 @@ in this way, we value over relevant variables?
 **4.1**: $`\mathcal{L}(y^{*}, \hat{y})`$ is an unbiased estimator for $`\mathcal{L}^{*}(y^{*}, \hat{y})`$.
 
 this means we can use $`\mathcal{L}`$ as the loss function for a learning problem, instead of the unobtainable $`\mathcal{L}^{*}`$
+
+
+# propensity estimation
+
+calculating $`p_{il} = P(y_{il} = 1 \mid y_{il}^{*}=1)`$ is impossible because `y^{*}` is unobtainable. 
+
+however for dataset with appropriate meta information, propensity can be estimated. 
+
+for example, in wikipedia, labels have hierarchy (`animal` is an ancestor of `dog`). therefore, for any descendants of `animal`, if it's labled as itself but not animal, then for this data point, `animal` has `l^{*}=1` but `l=0`. 
+
+as an example, 45 objects are descendants of `animals` while only 10 are labled as `animals`, then `p_{animal}=10/45`. 
+
+and they found the propensity score can be fitted by the following:\
+
+`\frac{1}{1 + C e^{-A \log (N_l +B)}}`
+
+where `N_l` is the frequency of data points being labeled as `l`. 
+
+# learning algorithm
+
+related to ensemble tree learning. suspended for now.
 
 
 # IR evaluation methods
