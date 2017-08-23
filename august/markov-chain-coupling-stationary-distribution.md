@@ -144,9 +144,10 @@ sketch of proof:
 
 1. design a coupling for chain $`X`$ and $`Y`$ starting from arbitrary $`X_0`$ and $`Y_0`$
    - such coupling requries $`X_t`$ and $`Y_t`$ be indenpendent before they coelesed (aka $`X_t \neq Y_t`$)and after coelesion, output the same state ($`X_t=Y_t`$)
-2. because of ergodicity, $`P(x, y)=\epsilon>0`$, therefore using the coupling result after coelesion at $`t`$, $`P(X_t != Y_t) \le 1-\epsilon`$
-3. after $`kt`$ steps, $`P(X_{kt} != Y_{kt}) \le (1-\epsilon)^k`$, in other words, $`P(X_{\infty} != Y_{\infty}) \le (1-\epsilon)^{\infty} = 0`$
-4. using the coupling theorem, $`d(P^t(X_0,\dot), P^t(Y_0, \dot)) = 0`$ as $`t \rightarrow \infty`$, which means $`X`$ and $`Y`$ approaches the same distribution. 
+2. because of ergodicity, $`P(x, y)=\epsilon>0`$, therefore after coelesion at $`t`$, $`P(X_t \neq Y_t) \le 1-\epsilon^2`$
+   - because `P(X_t = Y_t) \ge \epsilon^2`
+3. after $`kt`$ steps, $`P(X_{kt} != Y_{kt}) \le (1-\epsilon^2)^k`$, in other words, $`P(X_{\infty} \neq Y_{\infty}) \le (1-\epsilon^2)^{\infty} = 0`$
+4. using the coupling theorem, $`d(P^t(X_0,\cdot), P^t(Y_0, \cdot)) = 0`$ as $`t \rightarrow \infty`$, which means $`X`$ and $`Y`$ approaches the same distribution. 
 5. in other words, we have $`\lim\limits_{t \rightarrow \infty} P^t(x, y) = \delta(y)`$ for any $`x`$ and $`y`$. $`\delta`$ is the **limiting distribution**.
 
 
