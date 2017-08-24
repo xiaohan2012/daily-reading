@@ -126,7 +126,11 @@ by the induction from $`X_i`$ to $`B_i`$
 
 ## connecting $`\delta(T)`$ to $`w(T)`$
 
-by stationary distribution, $`\delta(T) = P \delta(T)`$ should hold, where $`P`$ is the transition matrix. 
+we found `w=\delta`. to prove so, we need to show `w` satisfy stationarity. 
+
+by def of stationarity, $`\delta(T) = P \delta(T)`$ should hold, where $`P`$ is the transition matrix. 
+
+next, we eleborate what is exactly `P`.
 
 define *precursor* of tree $`T_i`$: another tree *from which* it transits to $`T_i`$.
 
