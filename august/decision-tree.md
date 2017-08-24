@@ -49,5 +49,25 @@ in other words, we minimize the square loss at **each** region.
 
 then, we do this recursively at each partition.
 
+## issue: when to stop growing?
+
+more than one ideas, for example:
+
+1. avoid growing the tree when region is only one or less than some number
+
+
 # growing classification tree
+
+similarly, we need to define a error function.
+
+intuitivel, given a region/partition $`R`$, the error is the fraction of nodes that are misclassified by majority voiting
+
+$`E_R = \min_y \frac{1}{N_R} \sum_{i \in R} {\text{I}(y \neq y_i)}`$ (assuming it's binary classification)
+
+then the splitting is done by searching dim $`j \in \{1,\ldots,d \}`$ and value $`s \in R`$
+
+in other words, we choose $`j`$ an $`s`$ that minimizes:
+
+$`N_{R(j,s)} E_{R(j,s)} + N_{R^{'}(j,s)} E_{R^{'}(j,s)}`$
+
 
