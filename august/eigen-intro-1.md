@@ -39,7 +39,7 @@ suppose `v(t)` and `w(t)` have similar form:
 substituting it in gives:
 
 
-$`\lambda e^{\lambda t} \begin{pmatrix} y \\ z \end{pmatrix} = \lambda e^{\lambda t} A \begin{pmatrix} y \\ z \end{pmatrix}`$
+$`\lambda e^{\lambda t} \begin{pmatrix} y \\ z \end{pmatrix} = e^{\lambda t} A \begin{pmatrix} y \\ z \end{pmatrix}`$
 
 denote `x=[y z]` and canceling out the common terms give us:
 
