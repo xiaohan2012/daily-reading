@@ -64,7 +64,7 @@ utilizes partial ordering (aka sandwiching technique)
    - $`RandomMap`$ outputs such materialization 
 2. a method of composing random maps: essentially, function composition
    - each random map is a function
-     - compoition of random maps: $`F_1^n(x) = f_n \circ f_{n-1} \circ \ldots \circ f_1 = f_n(f_{n_1}( \ldots f_1(x)))`$
+     - compoition of random maps: $`F_1^n(x) = f_n \circ f_{n-1} \circ \ldots \circ f_1 = f_n(f_{n-1}( \ldots f_1(x)))`$
 3. a test to determine if a composition of random maps is collapsing
    - whether the composition sends every state to the same state
 
