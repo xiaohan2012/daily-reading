@@ -71,3 +71,26 @@ in other words, we choose $`j`$ an $`s`$ that minimizes:
 $`N_{R(j,s)} E_{R(j,s)} + N_{R^{'}(j,s)} E_{R^{'}(j,s)}`$
 
 $`R`$ and $`R^{'}`$ are the regions that are split by $`y`$ and $`s`$
+
+namely, **inpurity** measure
+
+## other measures
+
+1. entropy: `- \sum_i p_i \log p_i`
+2. gini index: `1 - \sum_i p_i^2`
+
+tends to perform better than misclassification rate ([example](https://github.com/rasbt/python-machine-learning-book/blob/master/faq/decision-tree-binary.md))
+
+# issues
+
+1. feature data type
+2. error cost matrix
+3. missing value
+   - one way: surrogate variable (replace it withd default?)
+4. sensitive to data (instability): one data point change might lead to a totally different tree
+
+
+# bootstrap aggregation (bagging)
+
+https://www.youtube.com/watch?v=5Lu1eTiX7qM
+
