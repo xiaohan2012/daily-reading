@@ -17,7 +17,7 @@ internally, its a tree structure
 
 # for regression
 
-suppose given a set of 1d points, `(x_1, y_1), \ldots, (x_n, y_n)`, where `x_i, y_i \in \mathbb{R}`
+suppose given a set of 1d points, $`(x_1, y_1), \ldots, (x_n, y_n)`$, where $`x_i, y_i \in \mathbb{R}`$
 
 like the following:
 
