@@ -43,7 +43,7 @@ suppose training data points $`(x_1, y_1), \ldots, (x_n, y_n)`$, where $`x_i \in
 
 then at each step, we select a dimension $`j \in \{1, \ldots, d\}`$ and $`s \in \mathbb{R}`$ such the following is **minimized**:
 
-$`\text{min}_y \sum\limits_{i: x_ij < s} (y_i - y)^2 + \text{min}_y \sum\limits_{i: x_ij \ge s} (y_i - y)^2`$
+$`\text{min}_y \sum\limits_{i: x_{ij} < s} (y_i - y)^2 + \text{min}_y \sum\limits_{i: x_{ij} \ge s} (y_i - y)^2`$
 
 in other words, we minimize the square loss at **each** region. 
 
