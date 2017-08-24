@@ -6,12 +6,14 @@
 
 # introduction
 
+## random tree generation algorithm
+
 define a random walk on a graph:
 
 - imagine a particle moving on the vertices on a graph via the edges
 - at each time point, it moves from the current vertex to one of its neighbours uniformly randomly
 
-**first main result**
+**the algorithm:**
 
 - simulation of a *simple random walk* on a (connected undirected) graph can be used to **uniformaly** generate a random spanning tree
 
@@ -21,6 +23,8 @@ the tree is collected as follows from the random walk:
   - why "first"?
 - then $`T`$ is the collection of edges
 - note: a vertex might be visited multiple times
+
+## running time
 
 running time: expected cover time of graph $`G`$, $`E(C)`$
 
@@ -51,16 +55,17 @@ two sets of spanning trees:
 - spanning trees rooted at $`i`$: $`T_i(G)`$
 - all spanning trees regardless of root: $`T(G)`$
 
-the theorem states:
+**markov chain theorem**:
 
-- **the stationary distribution $`\pi(i) = \sum_{T \in T_i(G)} w(T) / \sum_{T \in T} w(T)`$**
+- **the stationary distribution $`\pi(i) = \sum_{T \in T_i(G)} w(T) / \sum_{T \in T} w(T) = \sum_{T \in T_i(G)} \delta(T)`$**
+  - $`\delta(T)`$ is the normalized weight of $`T`$
 - in other words, stationary distribution on node $`i`$ is proportional to the sum of weights of all spanning trees rooted at $`i`$
 
 what does it tell?
 
 1. the relationship between $`\pi`$ and $`\delta`$, the stationary distribution for random walk chain and back tree chain
    - what does it further tell?
-2. stationary distribution of back tree chain: the recursive definition, something like $`\delta(T_i) = \sum \detal(T_j) P(j, i)`$
+2. stationary distribution of back tree chain: the recursive definition, something like $`\delta(T_i) = \sum \delta(T_j) P(j, i)`$
    - proportional to tree weight
 3. what else?
 
@@ -81,8 +86,17 @@ some concepts first
 
 the chain $`M=X_0, X_1, ...`$ induces another chain, named *backward tree* chain $`B_0, B_1, ...`$.
 
-  - backward tree $`B_t`$: a random walk sequence until time $`t`$ defines a directed tree by taking the edges of the latest visited vertex
-  - if $`t > C`$ (cover time), then $`B_t`$ is a directed spanning tree of $`G`$
+- backward tree $`B_t`$: a random walk sequence until time $`t`$ defines a directed tree by:
+  - $`X_t`$ is the root
+  - for the rest visited nodes $`u`$, taking the edge $`(u, v)`$ where $`u`$ is last visited.
+
+example: 
+
+![](figs/backward-tree-example.png)
+
+for $`t = 6`$, root is $`X_6=1`$, $`I_6 - \{X_6\} =\{2, 8, 7\}`$, then edges are $`\{(8, 1), (2, 8), (7, 1)\}`$. 
+
+if $`t > C`$ (cover time), then $`B_t`$ is a directed spanning tree of $`G`$ (because all nodes are visited)
 
 the stationary distribution denoted by $`\delta(T)`$
 
@@ -92,13 +106,12 @@ what's the relationship between $`\pi(i)`$ and $`\delta(T)`$
 
 by def on $`\pi(i)`$:
 
-- $`\pi(i) = limit_{N -> infinity} (1/N \sum_{i=1...N} Pr[X_t=i])`$
+- $`\pi(i) = \lim_{N \rightarrow \infty} (1/N \sum_{i=1...N} Pr[X_t=i])`$
   - probability that $`i`$ is visited in the long run
-
 
 by the induction from $`X_i`$ to $`B_i`$
 
-- $`Pr[X_t=i]`$ equals to $`Pr[B_t is rooted at i]`$
+- $`Pr[X_t=i]`$ equals to $`Pr[B_t \text{ is rooted at } i]`$
 - in other words, $`\pi(i) = \sum_{T \in T_i(G)} \delta(T)`$
   - probability that the spanning tree is rooted at $`i`$
 
