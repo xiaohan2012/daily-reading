@@ -70,4 +70,4 @@ in other words, we choose $`j`$ an $`s`$ that minimizes:
 
 $`N_{R(j,s)} E_{R(j,s)} + N_{R^{'}(j,s)} E_{R^{'}(j,s)}`$
 
-
+$`R`$ and $`R^{'}`$ are the regions that are split by $`y`$ and $`s`$
