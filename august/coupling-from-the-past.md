@@ -9,13 +9,14 @@
 
 two goals:
 
-- perfect sampling: repects the desired distribution
+- perfect sampling: repects the desired distribution, $`\pi(x)`$
 - automatic termination:  determines when the chain stops automatically
+  - no need to analyze the *convergence properties* of the MC
 
 because of problems with many MCMC methods (for example, Gibbs sampler)
 
 - approximate sampling
-- upperbound not easy to find
+- convergence property difficult to analyze
 
 # main idea
 
@@ -23,8 +24,8 @@ because of problems with many MCMC methods (for example, Gibbs sampler)
 
 ## coupling from the past
 
-1. prepare chain length $`N1, N2, ...`$ (increasing order, usualy $`2^i`$)
-2. simulate a set of chains for length $`Ni`$ from time $`-Ni`$ to time 0 (from the past)
+1. prepare chain length $`N_1, N_2, ...`$ (increasing order, usualy $`2^i`$)
+2. simulate a set of chains for length $`Ni`$ from time $`-N_i`$ to time 0 (from the past)
   - $`i=1`$ intially
 3. if states at time 0 coaelsced, output the sample
 4. otherwise, increment $`i`$
@@ -34,7 +35,7 @@ note that:
 - random uniform numbers are re-used across all runs
   - aka "coupling"
   - different to forward approach
-- for example: simulation from -N_i+1 reuses result between time -N_i to 0.
+- for example: simulation from $`-N_i+1`$ reuses result between time $`-N_i`$ to 0.
 - [another example](https://youtu.be/8jU5tpoS7VE?t=7m3s)
 
 ## main theorem
@@ -63,23 +64,23 @@ utilizes partial ordering (aka sandwiching technique)
    - $`RandomMap`$ outputs such materialization 
 2. a method of composing random maps: essentially, function composition
    - each random map is a function
-     - compoition of random maps: $`f_1 \circ f_2, ..., f_n = f_1(f_2(...f_n(...)))`$
+     - compoition of random maps: $`F_1^n(x) = f_n \circ f_{n-1} \circ \ldots \circ f_1 = f_n(f_{n_1}( \ldots f_1(x)))`$
 3. a test to determine if a composition of random maps is collapsing
    - whether the composition sends every state to the same state
 
 ## two conditions
 
-1. $`f_{0} \circ f_{-1}, ..., f_{-t}`$ converges to constant function with positive probability
+1. $`F_{-t}^0 = f_{0} \circ f_{-1} \circ \ldots \circ f_{-t}`$ converges to constant function with positive probability
    - how to make it happen?
 2. $`f`$ preserves the stationary distribution
 
 ## coupling from the past VS coupling from the future 
 
-- past: $`F_{-t}^0 \circ f_{-t-1}`$
-  - add to right
-  - know the future because living in the past
+- past: $`f_{-t-1} \circ F_{-t}^0`$
+  - injecting $`f_{-t-1}`$ inside $`f_0(\ldots f_{-t+1}(f_{-t}(\text{here})))`$
+  - know the future because living "backwards" (back to the future)
 - future: $`f_{t+1} \circ F_0^t`$
-  - add to right
+  - $`f_{t+1}(f_t(\ldots f_0(x) \ldots )`$
   - oblivious of the future because living in the present
 
 implication:
