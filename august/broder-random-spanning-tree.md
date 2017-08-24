@@ -122,20 +122,22 @@ by the induction from $`X_i`$ to $`B_i`$
 - in other words, $`\pi(i) = \sum_{T \in T_i(G)} \delta(T)`$
   - probability that the spanning tree is rooted at $`i`$
 
-
+**a new question**: what is the form of stationary distribution, $`\delta(T)`$?
 
 ## connecting $`\delta(T)`$ to $`w(T)`$
+
+by stationary distribution, $`\delta(T) = P \delta(T)`$ should hold, where $`P`$ is the transition matrix. 
 
 define *precursor* of tree $`T_i`$: another tree *from which* it transits to $`T_i`$.
 
 then what does a precursor of $`T_i`$ look like? denote $`T_k`$ as one precursor, it should satisfy:
 
-- $`i`$ has some parent, say $`j`$, in other words, an edge $`(i, j)`$
-- precursor's root can reach to $`i`$ within one step, say the old root is $`k`$
+- $`i`$ has some parent (because it's not root in $`T_k`$), say $`j`$, in other words, an edge $`(i, j)`$
+- precursor's root, say $`k`$, is connected to $`i`$, so the particle can reach from $`k`$ to $`i`$ by edge $`(k, i)`$
 
 the transition probability to arrive at $`T_i`$ can be defined recursively:
 
-- $`\delta(T_i) = \sum_{T_k} \delta(T_k) Pr(k, i)`$
+- $`\delta(T_i) = \sum_{T_k} \delta(T_k) Pr(k, i)`$ (by def of stationarity)
 - note that $`T_k=T_i + (i, j) - (k, i)`$
 
 if we substitue $`\delta`$ by $`w`$, then:
