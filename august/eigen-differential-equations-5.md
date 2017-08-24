@@ -45,4 +45,4 @@ then $`e^{At} = S e^{\Lambda t} S^{-1}`$ must hold.
 
 proof: by diagonalization and def of matrix exp, we have
 
-`e^{At} = I + S \Lambda S^{-1} t + \frac{S \Lambda^2 S^{-1}}{2!} + \frac{S \Lambda^3 S^{-1}}{3!} = S(I + \Lambda t + \frac{\Lambda^2}{2!} + \frac{\Lambda^3}{3!})S^{-1} = S e^{\Lambda t} S^{-1}`
+$`e^{At} = I + S \Lambda S^{-1} t + \frac{S \Lambda^2 S^{-1}}{2!} + \frac{S \Lambda^3 S^{-1}}{3!} = S(I + \Lambda t + \frac{\Lambda^2}{2!} + \frac{\Lambda^3}{3!})S^{-1} = S e^{\Lambda t} S^{-1}`$
