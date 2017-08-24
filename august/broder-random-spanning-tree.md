@@ -84,6 +84,8 @@ some concepts first
 
 ## backward tree chain
 
+now, we have a **second** chain. 
+
 the chain $`M=X_0, X_1, ...`$ induces another chain, named *backward tree* chain $`B_0, B_1, ...`$.
 
 - backward tree $`B_t`$: a random walk sequence until time $`t`$ defines a directed tree by:
@@ -98,7 +100,13 @@ for $`t = 6`$, root is $`X_6=1`$, $`I_6 - \{X_6\} =\{2, 8, 7\}`$, then edges are
 
 if $`t > C`$ (cover time), then $`B_t`$ is a directed spanning tree of $`G`$ (because all nodes are visited)
 
-the stationary distribution denoted by $`\delta(T)`$
+note that in this case:
+
+- transient state: non-spanning trees (because they are eventually transit to spanning trees and neve go back(
+- recurrent state: spanning trees
+
+
+denote the stationary distribution of such chain by $`\delta(T)`$
 
 ## "connecting" the two chains
 
@@ -108,12 +116,13 @@ by def on $`\pi(i)`$:
 
 - $`\pi(i) = \lim_{N \rightarrow \infty} (1/N \sum_{i=1...N} Pr[X_t=i])`$
   - probability that $`i`$ is visited in the long run
-
 by the induction from $`X_i`$ to $`B_i`$
 
 - $`Pr[X_t=i]`$ equals to $`Pr[B_t \text{ is rooted at } i]`$
 - in other words, $`\pi(i) = \sum_{T \in T_i(G)} \delta(T)`$
   - probability that the spanning tree is rooted at $`i`$
+
+
 
 ## connecting $`\delta(T)`$ to $`w(T)`$
 
@@ -126,15 +135,15 @@ then what does a precursor of $`T_i`$ look like? denote $`T_k`$ as one precursor
 
 the transition probability to arrive at $`T_i`$ can be defined recursively:
 
-- $`\delta(T_i) = sum_{T_k} \delta(T_k) Pr(k, i)`$
+- $`\delta(T_i) = \sum_{T_k} \delta(T_k) Pr(k, i)`$
 - note that $`T_k=T_i + (i, j) - (k, i)`$
 
 if we substitue $`\delta`$ by $`w`$, then:
 
 - $`w(T_k)=w(T_i + (i, j) - (k, i))=w(T_i) Pr(i, j) / Pr(k, i)`$
-- $`w(T_i) = sum_{T_k} w(T_i) Pr(i, j) / Pr(k, i) Pr(k, i)`$
-  - $`=sum_{T_k} w(T_i) Pr(i, j)`$
-  - $`=sum_{(i, j)} w(T_i) Pr(i, j)`$
+- $`w(T_i) = \sum_{T_k} w(T_i) Pr(i, j) / Pr(k, i) Pr(k, i)`$
+  - $`=\sum_{T_k} w(T_i) Pr(i, j)`$
+  - $`=\sum_{(i, j)} w(T_i) Pr(i, j)`$
   - $`=w(T_i) \sum_(i, j) Pr(i, j)`$
   - $`=w(T_i)`$
 
