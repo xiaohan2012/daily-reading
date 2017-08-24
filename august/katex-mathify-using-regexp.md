@@ -1,6 +1,6 @@
 # goal
 
-replace ```....``` into ``$`....`$`` to render math
+replace `` `....` `` into ``$`....`$`` to render math
 
 # code in elisp
 

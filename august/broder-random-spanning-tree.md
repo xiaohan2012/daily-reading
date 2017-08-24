@@ -17,15 +17,15 @@ define a random walk on a graph:
 
 the tree is collected as follows from the random walk:
 
-- for each vertex `i`, collect the edge `(j, i)` that **first** enters `i`
+- for each vertex $`i`$, collect the edge $`(j, i)`$ that **first** enters $`i`$
   - why "first"?
-- then `T` is the collection of edges
+- then $`T`$ is the collection of edges
 - note: a vertex might be visited multiple times
 
-running time: expected cover time of graph `G`, `E(C)`
+running time: expected cover time of graph $`G`$, $`E(C)`$
 
-- `O(n^3)` worst case
-- usually `O(n logn)`
+- $`O(n^3)`$ worst case
+- usually $`O(n logn)`$
   - if the transition probability matrix of the simple random walk has a **second largest eigenvalue bounded away from 1**
   - reference: **BK89**
 
@@ -34,33 +34,33 @@ running time: expected cover time of graph `G`, `E(C)`
 
 # markov chain tree theorem
 
-define a markov chain `M=X_0, X_1, ...` on *directed* graph `G` where:
+define a markov chain $`M=X_0, X_1, ...`$ on *directed* graph $`G`$ where:
 
-- state space is `V`
+- state space is $`V`$
 - transition matrix is given by the adjacency matrix
-- assume it's irreducible (in other words, `G` is *strongly* connected)
+- assume it's irreducible (in other words, $`G`$ is *strongly* connected)
 
-the spanning tree `T` on `G`:
+the spanning tree $`T`$ on $`G`$:
 
-- all edges in `T` point towards root 
+- all edges in $`T`$ point towards root 
 - weight is **product** of edge weight
   - note: egge weight is normalized into probabilities
 
 two sets of spanning trees:
 
-- spanning trees rooted at `i`: `T_i(G)`
-- all spanning trees regardless of root: `T(G)`
+- spanning trees rooted at $`i`$: $`T_i(G)`$
+- all spanning trees regardless of root: $`T(G)`$
 
 the theorem states:
 
-- **the stationary distribution `\pi(i) = \sum_{T \in T_i(G)} w(T) / \sum_{T \in T} w(T)`**
-- in other words, stationary distribution on node `i` is proportional to the sum of weights of all spanning trees rooted at `i`
+- **the stationary distribution $`\pi(i) = \sum_{T \in T_i(G)} w(T) / \sum_{T \in T} w(T)`$**
+- in other words, stationary distribution on node $`i`$ is proportional to the sum of weights of all spanning trees rooted at $`i`$
 
 what does it tell?
 
-1. the relationship between `\pi` and `\delta`, the stationary distribution for random walk chain and back tree chain
+1. the relationship between $`\pi`$ and $`\delta`$, the stationary distribution for random walk chain and back tree chain
    - what does it further tell?
-2. stationary distribution of back tree chain: the recursive definition, something like `\delta(T_i) = \sum \detal(T_j) P(j, i)`
+2. stationary distribution of back tree chain: the recursive definition, something like $`\delta(T_i) = \sum \detal(T_j) P(j, i)`$
    - proportional to tree weight
 3. what else?
 
@@ -79,55 +79,55 @@ some concepts first
 
 ## backward tree chain
 
-the chain `M=X_0, X_1, ...` induces another chain, named *backward tree* chain `B_0, B_1, ...`.
+the chain $`M=X_0, X_1, ...`$ induces another chain, named *backward tree* chain $`B_0, B_1, ...`$.
 
-  - backward tree `B_t`: a random walk sequence until time `t` defines a directed tree by taking the edges of the latest visited vertex
-  - if `t > C` (cover time), then `B_t` is a directed spanning tree of `G`
+  - backward tree $`B_t`$: a random walk sequence until time $`t`$ defines a directed tree by taking the edges of the latest visited vertex
+  - if $`t > C`$ (cover time), then $`B_t`$ is a directed spanning tree of $`G`$
 
-the stationary distribution denoted by `\delta(T)`
+the stationary distribution denoted by $`\delta(T)`$
 
 ## "connecting" the two chains
 
-what's the relationship between `\pi(i)` and `\delta(T)`
+what's the relationship between $`\pi(i)`$ and $`\delta(T)`$
 
-by def on `\pi(i)`:
+by def on $`\pi(i)`$:
 
-- `\pi(i) = limit_{N -> infinity} (1/N \sum_{i=1...N} Pr[X_t=i])`
-  - probability that `i` is visited in the long run
+- $`\pi(i) = limit_{N -> infinity} (1/N \sum_{i=1...N} Pr[X_t=i])`$
+  - probability that $`i`$ is visited in the long run
 
 
-by the induction from `X_i` to `B_i`
+by the induction from $`X_i`$ to $`B_i`$
 
-- `Pr[X_t=i]` equals to `Pr[B_t is rooted at i]`
-- in other words, `\pi(i) = \sum_{T \in T_i(G)} \delta(T)`
-  - probability that the spanning tree is rooted at `i`
+- $`Pr[X_t=i]`$ equals to $`Pr[B_t is rooted at i]`$
+- in other words, $`\pi(i) = \sum_{T \in T_i(G)} \delta(T)`$
+  - probability that the spanning tree is rooted at $`i`$
 
-## connecting `\delta(T)` to `w(T)`
+## connecting $`\delta(T)`$ to $`w(T)`$
 
-define *precursor* of tree `T_i`: another tree *from which* it transits to `T_i`.
+define *precursor* of tree $`T_i`$: another tree *from which* it transits to $`T_i`$.
 
-then what does a precursor of `T_i` look like? denote `T_k` as one precursor, it should satisfy:
+then what does a precursor of $`T_i`$ look like? denote $`T_k`$ as one precursor, it should satisfy:
 
-- `i` has some parent, say `j`, in other words, an edge `(i, j)`
-- precursor's root can reach to `i` within one step, say the old root is `k`
+- $`i`$ has some parent, say $`j`$, in other words, an edge $`(i, j)`$
+- precursor's root can reach to $`i`$ within one step, say the old root is $`k`$
 
-the transition probability to arrive at `T_i` can be defined recursively:
+the transition probability to arrive at $`T_i`$ can be defined recursively:
 
-- `\delta(T_i) = sum_{T_k} \delta(T_k) Pr(k, i)`
-- note that `T_k=T_i + (i, j) - (k, i)`
+- $`\delta(T_i) = sum_{T_k} \delta(T_k) Pr(k, i)`$
+- note that $`T_k=T_i + (i, j) - (k, i)`$
 
-if we substitue `\delta` by `w`, then:
+if we substitue $`\delta`$ by $`w`$, then:
 
-- `w(T_k)=w(T_i + (i, j) - (k, i))=w(T_i) Pr(i, j) / Pr(k, i)`
-- `w(T_i) = sum_{T_k} w(T_i) Pr(i, j) / Pr(k, i) Pr(k, i)`
-  - `=sum_{T_k} w(T_i) Pr(i, j)`
-  - `=sum_{(i, j)} w(T_i) Pr(i, j)`
-  - `=w(T_i) \sum_(i, j) Pr(i, j)`
-  - `=w(T_i)`
+- $`w(T_k)=w(T_i + (i, j) - (k, i))=w(T_i) Pr(i, j) / Pr(k, i)`$
+- $`w(T_i) = sum_{T_k} w(T_i) Pr(i, j) / Pr(k, i) Pr(k, i)`$
+  - $`=sum_{T_k} w(T_i) Pr(i, j)`$
+  - $`=sum_{(i, j)} w(T_i) Pr(i, j)`$
+  - $`=w(T_i) \sum_(i, j) Pr(i, j)`$
+  - $`=w(T_i)`$
 
-in other words, `w(T)` satisfy the recursive transition probability (also stationary distribution), `\delta(T)`.
+in other words, $`w(T)`$ satisfy the recursive transition probability (also stationary distribution), $`\delta(T)`$.
 
-  - `\delta=w`
+  - $`\delta=w`$
 
 thus, proof is done.
 
@@ -145,7 +145,7 @@ definition: forward tree
 
 - given a random walk chain
 - for each vertex, take the vertex and its first entrance into the vertex and reverse the direction
-  - example: visiting order of `2->7->1->8->2->8` gives tree, `(7, 2), (1, 7), (8, 1)`
+  - example: visiting order of $`2->7->1->8->2->8`$ gives tree, $`(7, 2), (1, 7), (8, 1)`$
   - for 8, 1 is the first entrance
 
 - non-spanning trees: transient states
@@ -153,24 +153,24 @@ definition: forward tree
 
 ## theorem
 
-for forward tree chain, denote the state at cover time as `F_C`, then for any spanning tree `T`, 
+for forward tree chain, denote the state at cover time as $`F_C`$, then for any spanning tree $`T`$, 
 
-- `Pr[F_C=T] = w(T) / sum_T' w(T')`
-- in other words, `F_C` is distributed according to the stionary distribution of **back tree chain**
-- or `\delta_F = \delta_B`
+- $`Pr[F_C=T] = w(T) / sum_T' w(T')`$
+- in other words, $`F_C`$ is distributed according to the stionary distribution of **back tree chain**
+- or $`\delta_F = \delta_B`$
 
 ## proof
 
-using reversibility, given a chain `X_1, ..., X_k` and its reverse `X_k, ..., X_1`, they have the same probability of being generated.
+using reversibility, given a chain $`X_1, ..., X_k`$ and its reverse $`X_k, ..., X_1`$, they have the same probability of being generated.
 
-`Pr(X_1, ..., X_k) = Pr(X_k, ..., X_1)`
+$`Pr(X_1, ..., X_k) = Pr(X_k, ..., X_1)`$
 
 denote:
 
-- back tree given the first chain as `T`, then 
-- forward tree given the second chain is `T` as well
+- back tree given the first chain as $`T`$, then 
+- forward tree given the second chain is $`T`$ as well
 
-in other words, `Pr(B_k=T) = Pr(F_k=T)`
+in other words, $`Pr(B_k=T) = Pr(F_k=T)`$
 
 using the definition of stationary distribution, proof is done
 
@@ -178,23 +178,23 @@ using the definition of stationary distribution, proof is done
 
 def of simple random walk on graphs: unweighted graph, e.g, each neighbor has equal probability of being visited.
 
-corollary: let `M` be an simple random walk on `G` starting from `i`, and let `F_C` be the forward tree from `M`, the `F_C` is uniformly distributed for all spanning trees rooted at `i`
+corollary: let $`M`$ be an simple random walk on $`G`$ starting from $`i`$, and let $`F_C`$ be the forward tree from $`M`$, the $`F_C`$ is uniformly distributed for all spanning trees rooted at $`i`$
 
 note:
 
-- rooted at `i`
-- probability is `d_i / \sum_v d_v`: for edges in the tree, their weights are `1/d_v` (`v!=i`)
+- rooted at $`i`$
+- probability is $`d_i / \sum_v d_v`$: for edges in the tree, their weights are $`1/d_v`$ ($`v!=i`$)
 
 # swap-edge technique
 
 ## basic idea
 
-- given some tree `S_t`, randomly add an edge `e` in from `E-S_t`, and randomly remove an edge `f` from `S_t`. 
-- if the new tree is `S_t + {e} - {f}` is a tree, update it with `S_{t+1}`, otherwise, `S_{t+1}=S_t`
+- given some tree $`S_t`$, randomly add an edge $`e`$ in from $`E-S_t`$, and randomly remove an edge $`f`$ from $`S_t`$. 
+- if the new tree is $`S_t + {e} - {f}`$ is a tree, update it with $`S_{t+1}`$, otherwise, $`S_{t+1}=S_t`$
 
 ## theoretical results
 
-the chain `{S_t}` is mixing rapidly in polynomial time
+the chain $`{S_t}`$ is mixing rapidly in polynomial time
 
 mixing time is proved using: ergodic flow and second largest eigen value
 
@@ -248,5 +248,5 @@ third:
 
 1. tree probability should be related to its weight: the larger the weight, the less likely to be generated
    - what's the probability formula like?
-   - `-exp(w(T))`
+   - $`-exp(w(T))`$
 2. we can design two chains? one for random walk, one for tree generation?
