@@ -74,20 +74,23 @@ utilizes partial ordering (aka sandwiching technique)
    - how to make it happen?
 2. $`f`$ preserves the stationary distribution
 
-## coupling from the past VS coupling from the future 
+## coupling from the past (viewed in function)
 
-- past: $`f_{-t-1} \circ F_{-t}^0`$
-  - injecting $`f_{-t-1}`$ inside $`f_0(\ldots f_{-t+1}(f_{-t}(\text{here})))`$
+- couping from the past: 
+  - injecting $`f_{-t-1}`$ inside $`f_0(f_1(\ldots f_{-t+1}(f_{-t}(\text{here}))\ldots)`$
   - know the future because living "backwards" (back to the future)
-- future: $`f_{t+1} \circ F_0^t`$
-  - $`f_{t+1}(f_t(\ldots f_0(x) \ldots )`$
+- future version:
+  - chains are run independently and simultaneously
   - oblivious of the future because living in the present
+  - not sure how to express it in one line function
 
 implication:
 
 - "past" gives constant function after certain iterations with **probability 1**
+  - because chains are coupled
+  - "coupled" means transition must respect what have happened
 - "future" gives constant function after certain iterations with **probability 0**
-- not sure why
+  - because chains are not coupled
 
 # learned
 
