@@ -62,7 +62,7 @@ similarly, we need to define a error function.
 
 intuitivel, given a region/partition $`R`$, the error is the fraction of nodes that are misclassified by majority voiting
 
-$`E_R = \min_y \frac{1}{N_R} \sum_{i \in R} {\text{I}(y \neq y_i)}`$ (assuming it's binary classification)
+$`E_R = \min_y \frac{1}{N_R} \sum_{i \in R} {\text{1}(y \neq y_i)}`$ (assuming it's binary classification)
 
 then the splitting is done by searching dim $`j \in \{1,\ldots,d \}`$ and value $`s \in R`$
 
