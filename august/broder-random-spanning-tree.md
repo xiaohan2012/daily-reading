@@ -1,7 +1,7 @@
 # summary
 
 - proof of markov matrix tree theorem using backward chain
-- backward chain produces random spanning with stationary distribution `\delta(T) = \prod_{e \in T} w(e)`, where `w(e)` is normalized to be stochastic
+- backward chain produces random spanning with stationary distribution $`\delta(T) = \prod_{e \in T} w(e)`$, where $`w(e)`$ is normalized to be stochastic
 - uniform random spanning tree generation using another type of tree by forward chain
   - proof using forward/backward chain and chain reversibility
 
