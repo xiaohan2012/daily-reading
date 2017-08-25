@@ -1,7 +1,8 @@
 # summary
 
 - proof of markov matrix tree theorem using backward chain
-- uniform random spanning tree generation
+- backward chain produces random spanning with stationary distribution `\delta(T) = \prod_{e \in T} w(e)`, where `w(e)` is normalized to be stochastic
+- uniform random spanning tree generation using another type of tree by forward chain
   - proof using forward/backward chain and chain reversibility
 
 # introduction
@@ -126,11 +127,11 @@ by the induction from $`X_i`$ to $`B_i`$
 
 ## connecting $`\delta(T)`$ to $`w(T)`$
 
-we found `w=\delta`. to prove so, we need to show `w` satisfy stationarity. 
+we found $`w=\delta`$. to prove so, we need to show $`w`$ satisfy stationarity. 
 
 by def of stationarity, $`\delta(T) = P \delta(T)`$ should hold, where $`P`$ is the transition matrix. 
 
-next, we eleborate what is exactly `P`.
+next, we eleborate what is exactly $`P`$.
 
 define *precursor* of tree $`T_i`$: another tree *from which* it transits to $`T_i`$.
 
@@ -150,7 +151,7 @@ if we substitue $`\delta`$ by $`w`$, then:
 - $`w(T_i) = \sum_{T_k} w(T_i) Pr(i, j) / Pr(k, i) Pr(k, i)`$
   - $`=\sum_{T_k} w(T_i) Pr(i, j)`$
   - $`=\sum_{(i, j)} w(T_i) Pr(i, j)`$
-  - $`=w(T_i) \sum_(i, j) Pr(i, j)`$
+  - $`=w(T_i) \sum_i Pr(i, j)`$
   - $`=w(T_i)`$
 
 in other words, $`w(T)`$ satisfy the recursive transition probability (also stationary distribution), $`\delta(T)`$.
