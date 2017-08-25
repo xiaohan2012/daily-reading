@@ -10,6 +10,8 @@ specifically, given some learning algorithm:
 
 algorithm:
 
+from [these slides](http://www.cs.nyu.edu/~mohri/mls/lecture_6.pdf)
+
 ![](figs/boosting-algo.png)
 
 # example (using decision tree stump)
