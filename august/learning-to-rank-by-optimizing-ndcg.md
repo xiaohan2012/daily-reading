@@ -2,7 +2,8 @@
 
 for learning to rank tasks, learn a loss function defined by nDCG, because that is the evaluation metric.
 
-however, optimizing by nDCG involves the **rank position**, thus not very easy. 
+however, optimizing by nDCG involves the **rank position**, not a continuous variable, thus not very easy. 
+
 main idea:
 
 - relax the objective by expected nDCG loss thus, providing a lower bound
@@ -20,6 +21,6 @@ the input to the learner is just a set of features between $`d`$ and $`q`$
 - bound optimizing method: define a lower/upper bound of an objective function, and optimize the bound
 - a pointer for direction on relaxing nDCG objectives
 - different learning to rank approach:
-  - point-wise: $`F(q, d)`$
-  - pair-wise: $`F(q, d_1, d_2)`$
-  - list-wise approach: $`F(q, d_1, \ldots, d_m)`$, nDCG belongs here.
+  - point-wise: $`F(q, d)`$, regression or classification (probabilities)
+  - pair-wise: $`F(q, d_1, d_2)`$: whether $`d_1`$ is better than $`d_2`$
+  - list-wise approach: $`F(q, d_1, \ldots, d_m)`$, nDCG belongs here.  
