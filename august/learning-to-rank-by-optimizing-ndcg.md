@@ -13,6 +13,8 @@ further, adaboost is used
 
 the weak learner is just a binary classifer: $`f(d, q) \rightarrow \{0, 1\}`$. 
 
+the input to the learner is just a set of features between $`d`$ and $`q`$
+
 # learned
 
 - bound optimizing method: define a lower/upper bound of an objective function, and optimize the bound
