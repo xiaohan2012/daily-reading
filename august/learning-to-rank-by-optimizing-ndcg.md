@@ -11,13 +11,13 @@ main idea:
 
 further, adaboost is used
 
-the weak learner is just a binary classifer: `f(d, q) \rightarrow \{0, 1\}`. 
+the weak learner is just a binary classifer: $`f(d, q) \rightarrow \{0, 1\}`$. 
 
 # learned
 
 - bound optimizing method: define a lower/upper bound of an objective function, and optimize the bound
 - a pointer for direction on relaxing nDCG objectives
 - different learning to rank approach:
-  - point-wise: `F(q, d)`
-  - pair-wise: `F(q, d_1, d_2)`
-  - list-wise approach: `F(q, d_1, \ldots, d_m)`, nDCG belongs here.
+  - point-wise: $`F(q, d)`$
+  - pair-wise: $`F(q, d_1, d_2)`$
+  - list-wise approach: $`F(q, d_1, \ldots, d_m)`$, nDCG belongs here.
