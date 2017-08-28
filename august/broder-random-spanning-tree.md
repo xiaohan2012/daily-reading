@@ -160,8 +160,8 @@ if we substitue $`\delta`$ by $`w`$, then:
   - $`=w(T_i) \sum_j Pr(i, j)`$
   - $`=w(T_i)`$
 
-note that the index `j` indicates the predecessor. 
-- all `\{j \mid (j, i) \in E\}` can be ancestor of `i`
+note that the index $`j`$ indicates the predecessor. 
+- all $`\{j \mid (j, i) \in E\}`$ can be ancestor of $`i`$
 
 in other words, $`w(T)`$ satisfy the recursive transition probability (also stationary distribution), $`\delta(T)`$.
 
@@ -214,28 +214,33 @@ using the definition of stationary distribution, proof is done
 
 example:
 
-- for the node visiting sequence `2, 7, 1, 8, 2, 8, 1, 8, 2, 8`, the forward tree is `(7, 2), (1, 7), (8, 1)`
+- for the node visiting sequence $`2, 7, 1, 8, 2, 8, 1, 8, 2, 8`$, the forward tree is $`(7, 2), (1, 7), (8, 1)`$
 - if we reverse the sequence, the backward tree is the **same**!
 
-this means, if we run a forward tree chain, it is equivalent to a backward tree chain with some stationary distribution `\delta`. this also says `\delta` is the stationary distribution for the forward chain.
+this means, if we run a forward tree chain, it is equivalent to a backward tree chain with some stationary distribution $`\delta`$. this also says $`\delta`$ is the stationary distribution for the forward chain.
 
 ## uniform generation
 
 def of simple random walk on graphs: unweighted graph, e.g, each neighbor has equal probability of being visited.
 
-**corollary**
+**corollary 1**
 
  let $`M`$ be an simple random walk on $`G`$ starting from $`i`$, and let $`F_C`$ be the forward tree from $`M`$, the $`F_C`$ is uniformly distributed for all spanning trees rooted at $`i`$
 
 proof: 
 
-for a tree rooted at $`i`$, its probability of being generated is $`d_i / \sum_v d_v`$ because for each node `j` in the tree, the edge `(j, i)` has weight $`1/d_j`
+for a tree rooted at $`i`$, its probability of being generated is $`d_i / \sum_v d_v`$ because for each node $`j`$ in the tree, the edge $`(j, i)`$ has weight $$`1/d_j`$
 
 note: 
 
-- only equally likely for trees rooted at `i`
+- only equally likely for trees rooted at $`i`$
 - for directed tree
 
+**corollary 2**
+
+GENERATE gives uniform random undirected spanning trees.
+
+proof: the proba of gen a tree is $`\sum_i d_i / \prod_{j \in V} d_j`$ (spanning trees at all roots). the numerator is $`2|E|`$
 
 # swap-edge technique
 
