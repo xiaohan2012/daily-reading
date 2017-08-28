@@ -1,9 +1,11 @@
 # summary
 
+- uniform random spanning tree (undirected) generation for undirected unweighted graph
 - proof of markov matrix tree theorem using backward chain
-- backward chain produces random spanning with stationary distribution $`\delta(T) = \prod_{e \in T} w(e)`$, where $`w(e)`$ is normalized to be stochastic
+- backward chain produces random spanning with stationary distribution $`\delta(T) = \prod_{e \in T} w(e)`$
+  - $`w(e)`$ is normalized to be stochastic accoding to node degree
 - uniform random spanning tree generation using another type of tree by forward chain
-  - proof using forward/backward chain and chain reversibility
+  - proof using equivalence to backward chain and chain reversibility
 
 # introduction
 
@@ -20,10 +22,14 @@ define a random walk on a graph:
 
 the tree is collected as follows from the random walk:
 
-- for each vertex $`i`$, collect the edge $`(j, i)`$ that **first** enters $`i`$
+- for each vertex $`i`$, collect the edge $`\{j, i\}`$ that **first** enters $`i`$
   - why "first"?
 - then $`T`$ is the collection of edges
-- note: a vertex might be visited multiple times
+
+note: 
+- a vertex might be visited multiple times
+- the tree is **undirected**
+
 
 ## running time
 
@@ -151,8 +157,11 @@ if we substitue $`\delta`$ by $`w`$, then:
 - $`w(T_i) = \sum_{T_k} w(T_i) Pr(i, j) / Pr(k, i) Pr(k, i)`$
   - $`=\sum_{T_k} w(T_i) Pr(i, j)`$
   - $`=\sum_{(i, j)} w(T_i) Pr(i, j)`$
-  - $`=w(T_i) \sum_i Pr(i, j)`$
+  - $`=w(T_i) \sum_j Pr(i, j)`$
   - $`=w(T_i)`$
+
+note that the index `j` indicates the predecessor. 
+- all `\{j \mid (j, i) \in E\}` can be ancestor of `i`
 
 in other words, $`w(T)`$ satisfy the recursive transition probability (also stationary distribution), $`\delta(T)`$.
 
@@ -184,7 +193,7 @@ definition: forward tree
 
 for forward tree chain, denote the state at cover time as $`F_C`$, then for any spanning tree $`T`$, 
 
-- $`Pr[F_C=T] = w(T) / sum_T' w(T')`$
+- $`Pr[F_C=T] = w(T) / \sum_{T^{'}} w(T^{'})`$
 - in other words, $`F_C`$ is distributed according to the stionary distribution of **back tree chain**
 - or $`\delta_F = \delta_B`$
 
@@ -203,16 +212,30 @@ in other words, $`Pr(B_k=T) = Pr(F_k=T)`$
 
 using the definition of stationary distribution, proof is done
 
+example:
+
+- for the node visiting sequence `2, 7, 1, 8, 2, 8, 1, 8, 2, 8`, the forward tree is `(7, 2), (1, 7), (8, 1)`
+- if we reverse the sequence, the backward tree is the **same**!
+
+this means, if we run a forward tree chain, it is equivalent to a backward tree chain with some stationary distribution `\delta`. this also says `\delta` is the stationary distribution for the forward chain.
+
 ## uniform generation
 
 def of simple random walk on graphs: unweighted graph, e.g, each neighbor has equal probability of being visited.
 
-corollary: let $`M`$ be an simple random walk on $`G`$ starting from $`i`$, and let $`F_C`$ be the forward tree from $`M`$, the $`F_C`$ is uniformly distributed for all spanning trees rooted at $`i`$
+**corollary**
 
-note:
+ let $`M`$ be an simple random walk on $`G`$ starting from $`i`$, and let $`F_C`$ be the forward tree from $`M`$, the $`F_C`$ is uniformly distributed for all spanning trees rooted at $`i`$
 
-- rooted at $`i`$
-- probability is $`d_i / \sum_v d_v`$: for edges in the tree, their weights are $`1/d_v`$ ($`v!=i`$)
+proof: 
+
+for a tree rooted at $`i`$, its probability of being generated is $`d_i / \sum_v d_v`$ because for each node `j` in the tree, the edge `(j, i)` has weight $`1/d_j`
+
+note: 
+
+- only equally likely for trees rooted at `i`
+- for directed tree
+
 
 # swap-edge technique
 
@@ -250,13 +273,16 @@ second:
 - proof skeleton for uniform randomness:
   - uses the stationary distribution of backward tree chain
   - reversibility finishes the proof
-- theorem 2 should also imply generating random spanning tree by tree weight (product of edge weight)
+- ~~theorem 2 should also imply generating random spanning tree by tree weight (product of edge weight)~~
   
 
 third:
 
 - for general directed graph, reversibility does not hold. therefore GENERATE does not give uniform random tree
 
+fourth:
+
+- it works for unweighted graph, weights are assigned to ensure stochasticity.
 
 # questions
 
@@ -269,9 +295,9 @@ third:
   - GENERATE works for undirected graph on random uniform spanning tree
     - perfect sampling (but only for uniform)
     - automatic stopping
-  - coupling-to-past works for directed and weighted graph
+  - coupling-from-past works for directed and weighted graph
 
-- can we use backward tree chain generate (uniform) random trees?
+- can we use backward tree chain to generate (uniform) random trees?
 
 # relation to random generation of steiner trees
 
