@@ -238,7 +238,7 @@ note:
 
 **corollary 2**
 
-GENERATE gives uniform random undirected spanning trees.
+GENERATE gives uniform random **undirected** spanning trees.
 
 proof: the proba of gen a tree is $`\sum_i d_i / \prod_{j \in V} d_j`$ (spanning trees at all roots). the numerator is $`2|E|`$
 
