@@ -81,14 +81,14 @@ main results:
 
 # rooted random spanning tree via coupling from the past
 
-- $`\Xi`$: set of spanning trees on $`G`$
-- $`\Gamma`$: probability measure on $`\Xi`$, where $`\Gamma(T)=\prod_e w(e)`$
-  - $`\Gamma_r`$: on spanning trees at root $`r`$
+- $`\xi`$: set of spanning trees on $`G`$
+- $`\Upsilon`$: probability measure on $`\xi`$, where $`\Upsilon(T)=\prod_e w(e)`$
+  - $`\Upsilon_r`$: on spanning trees at root $`r`$
 - $`M`$: the backward chain described in Broder's paper
-  - $`M`$ maintains $`\Gamma`$ and for rooted version as well (lemma 10). 
+  - $`M`$ maintains $`\Upsilon`$ and for rooted version as well (lemma 10). 
 - $`M_r`$: a chain where each state is a $`r`$-rooted ST
   - in other words, transition between states requires multiple steps of random walk
-  - $`M_r`$ preserves $`\Gamma_r`$
+  - $`M_r`$ preserves $`\Upsilon_r`$
 
 
 
