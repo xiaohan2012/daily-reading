@@ -109,11 +109,6 @@ questions:
 - prove that $`M_r`$ preserves the desired distribution
 - how is it related to coupling from the past
 
-related to our problem:
-
-- how to avoid constraint violation
-
-
 # coupling from the past and random tree sampling
 
 1. what's the random map here?
@@ -122,7 +117,6 @@ related to our problem:
   - $`U`$ is not the random map, but one element ($`x \rightarrow y`$) in the mapping
 
 2. what's the composition? 
-
   - the new tree $`T^{'}`$ (from $`U`$ and $`T`$) has $`T^{'}[i] = U[i]`$ if $`U[i] \neq nil`$ or $`i`$ is root, otherwise $`T^{'}[i] = T[i]`$
   - composition of two random maps, $`U1`$ and $`U2`$:  $`U2`$ overrides the entries of $`U1`$ if the entry in $`U2`$ is not $`nil`$
   - running time $`O(n)`$
@@ -171,3 +165,7 @@ but they do not necessarily collaspe to the same **state** (root is not the stat
 - $`voter-CFTP`$ $`monotone-CFTP`$ vs $`coalescing-CFTP`$, what are they?
   - voter-CFTP: the graph figure (fig 2) described in sec 1.1 and analyzed in sec 4
   - coalescing-CFTP: in sec 4
+
+- about the algorithm:
+  - why collapsing to root corresponds to coupling?
+  - what is the backward chain here?
