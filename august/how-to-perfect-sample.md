@@ -36,13 +36,16 @@ refer to: Table 2 (page 10)
 
 - $`h`$: maximum hitting time
 
+- cover time: expected time of a random walk starting  starting at vertex `x` in the graph `G` to reach each vertex at least once:
+  - the markov process can be modeled as a graph with stochastic adj matrix
+
 # CFTP
 
 3 ingredients:
 
 1. a procedure for **randomly generating maps**: $`f: X \rightarrow X`$ (state space)
    - $`f = RandomMap()`$: $`RandomMap`$ instantiates random mapping
-2. a method of **composing** random maps: composing means $`F_{-t}^0(x) = f_0(f_{-1}, \ldots, f_{-t}(x))`$
+2. a method of **composing** random maps: composing means $`F_{-t}^0(x) = f_0(f_{-1}(\ldots f_{-t}(x))`$
 3. a test to determine if a composition of random maps is **collapsing**: for exponentially large state space $`X`$, it's inefficient to enumerate them all. efficient techniques such as "sandwiching" is an example. 
 
 two requirements for $`f`$:
@@ -57,12 +60,38 @@ two requirements for $`f`$:
 
 1. $`f_0 \circ f_{-1} \circ \ldots \circ f_{-t}`$ is a constant function with proba 1 given $`t \rightarrow \infty`$
 2. $`f_t \circ f_{t-1} \circ \ldots \circ f_{0}`$ is a constant function with proba 0 given $`t \rightarrow \infty`$
+   - is it `n` *independent* chains?
+   - "copies" of the chain?
+   - "unique elements" would change?
 
 in orther words, BC is [well-defined](https://en.wikipedia.org/wiki/Well-defined) while FC is not. 
 
+# COVER-TIME algorithm
+
+a method for `RandomMAP`
+
+main results:
+
+1. running time bounded by cover time, `T_c`
+2. `f(X)` satisfies `\pi` if `X` is distributed according to `\pi`
+3. proba that RandomMap( ) is a constant map is at least 3/8.
+   - bounds the running time for coelascing 
+4. Theorem 4
 
 
 # rooted random spanning tree via coupling from the past
+
+- `\Chi`: set of spanning trees on `G`
+- `\Gamma`: probability measure on `\Chi`, where `\Gamma(T)=\prod_e w(e)`
+  - `\Gamma_r`: on spanning trees at root `r`
+- `M`: the backward chain described in Broder's paper
+  - `M` maintains `\Gamma` and for rooted version as well (lemma 10). 
+- `M_r`: a chain where each state is a `r`-rooted ST
+  - in other words, transition between states requires multiple steps of random walk
+  - `M_r` preserves `\Gamma_r`
+
+
+
 
 in short, given some rooted tree, perform multiple random walks until the root restored to the original one (coupled). 
   - the resulting spanning tree (of the same root) is the next state of the markov chain $`M_r`$.
@@ -88,27 +117,26 @@ related to our problem:
 # coupling from the past and random tree sampling
 
 1. what's the random map here?
+  - a tree can be represented by a vector $`T`$ (length $`N`$) where $`T[i]`$ represents the parent of node $`i`$
+  - a random map that sends `T` to `T^{'}` by a vector $`U`$ (length $`N`$) where $`U[i]`$ is the last successor of $`i`$ by random walk if $`i`$ is visited, otherwise it's $`nil`$
+  - `U` is not the random map, but one element (`x \rightarrow y`) in the mapping
+
 2. what's the composition? 
+
+  - the new tree $`T^{'}`$ (from $`U`$ and $`T`$) has $`T^{'}[i] = U[i]`$ if $`U[i] \neq nil`$ or `i` is root, otherwise $`T^{'}[i] = T[i]`$
+  - composition of two random maps, $`U1`$ and $`U2`$:  $`U2`$ overrides the entries of $`U1`$ if the entry in $`U2`$ is not $`nil`$
+  - running time $`O(n)`$
+
 3. why returning to the root gives collapsing? 
 
-- a tree can be represented by a vector $`T`$ (length $`N`$) where $`T[i]`$ represents the parent of node $`i`$
-- a random map can be represented by a vector $`U`$ (length $`N`$) where $`U[i]`$ is the last successor of $`i`$ by random walk if $`i`$ is visited, otherwise it's $`nil`$
-  - **question 1** done
-- the new tree $`T'`$ (from $`U`$ and $`T`$) has $`T'[i] = U[i]`$ if $`U[i] != nil`$ and otherwise $`T'[i] = T[i]`$
-
-composition of two random maps, $`U1`$ and $`U2`$:  $`U2`$ overrides the entries of $`U1`$ if the entry in $`U2`$ is not $`nil`$
-
-- running time $`O(n)`$
-- **question 2** done
-
-**question 3**
-
-seems to be inaccurate as the more precise condition is: if the **only** nil in entry $`U`$ is at the root. in other words:
+seems to be inaccurate as the more precise condition is: if the **only** nil entry in $`U`$ is at the root. in other words:
 
 - $`M`$ returns back to root
 - all other nodes are visited during the excursion
 - each visited node can be seen as a state at a different root
   - they all collapse to one tree with the same root
+
+but they do not necessarily collaspe to the same **state** (root is not the state)
 
 
 # learned
