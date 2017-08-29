@@ -81,8 +81,8 @@ main results:
 
 # rooted random spanning tree via coupling from the past
 
-- $`\Chi`$: set of spanning trees on $`G`$
-- $`\Gamma`$: probability measure on $`\Chi`$, where $`\Gamma(T)=\prod_e w(e)`$
+- $`\Xi`$: set of spanning trees on $`G`$
+- $`\Gamma`$: probability measure on $`\Xi`$, where $`\Gamma(T)=\prod_e w(e)`$
   - $`\Gamma_r`$: on spanning trees at root $`r`$
 - $`M`$: the backward chain described in Broder's paper
   - $`M`$ maintains $`\Gamma`$ and for rooted version as well (lemma 10). 
