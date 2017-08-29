@@ -40,23 +40,23 @@ refer to: Table 2 (page 10)
 
 3 ingredients:
 
-1. a procedure for **randomly generating maps**: `f: X \rightarrow X` (state space)
-   - `f = RandomMap()`: `RandomMap` instantiates random mapping
-2. a method of **composing** random maps: composing means `F_{-t}^0(x) = f_0(f_{-1}, \ldots, f_{-t}(x))`
-3. a test to determine if a composition of random maps is **collapsing**: for exponentially large state space `X`, it's inefficient to enumerate them all. efficient techniques such as "sandwiching" is an example. 
+1. a procedure for **randomly generating maps**: $`f: X \rightarrow X`$ (state space)
+   - $`f = RandomMap()`$: $`RandomMap`$ instantiates random mapping
+2. a method of **composing** random maps: composing means $`F_{-t}^0(x) = f_0(f_{-1}, \ldots, f_{-t}(x))`$
+3. a test to determine if a composition of random maps is **collapsing**: for exponentially large state space $`X`$, it's inefficient to enumerate them all. efficient techniques such as "sandwiching" is an example. 
 
-two requirements for `f`:
+two requirements for $`f`$:
 
-1. `f` must preserve the target distribution
+1. $`f`$ must preserve the target distribution
 
-2. the composition of random maps `f_0 \circ f_{-1} \circ \ldots \circ f_{-t}` has non-zero proba of being constant-valued function
+2. the composition of random maps $`f_0 \circ f_{-1} \circ \ldots \circ f_{-t}`$ has non-zero proba of being constant-valued function
   - constant-valued function: outputs a **single** value for **all** inputs
   - just to make sure the chains can collapse
 
 ## backward coupling vs forward coupling
 
-1. `f_0 \circ f_{-1} \circ \ldots \circ f_{-t}` is a constant function with proba 1 given `t \rightarrow \infty`
-2. `f_t \circ f_{t-1} \circ \ldots \circ f_{0}` is a constant function with proba 0 given `t \rightarrow \infty`
+1. $`f_0 \circ f_{-1} \circ \ldots \circ f_{-t}`$ is a constant function with proba 1 given $`t \rightarrow \infty`$
+2. $`f_t \circ f_{t-1} \circ \ldots \circ f_{0}`$ is a constant function with proba 0 given $`t \rightarrow \infty`$
 
 in orther words, BC is [well-defined](https://en.wikipedia.org/wiki/Well-defined) while FC is not. 
 
@@ -137,9 +137,9 @@ seems to be inaccurate as the more precise condition is: if the **only** nil in 
 # questions
 
 -  passive vs active? examples?
-   - passive setting: the markov chain is already given, `NextState` just gives the next state based on the given chain
-   - active setting: the markov chain is not known, `RandomSuccessor` sets the next state and returns it. 
+   - passive setting: the markov chain is already given, $`NextState`$ just gives the next state based on the given chain
+   - active setting: the markov chain is not known, $`RandomSuccessor`$ sets the next state and returns it. 
 
-- `voter-CFTP` `monotone-CFTP` vs `coalescing-CFTP`, what are they?
+- $`voter-CFTP`$ $`monotone-CFTP`$ vs $`coalescing-CFTP`$, what are they?
   - voter-CFTP: the graph figure (fig 2) described in sec 1.1 and analyzed in sec 4
   - coalescing-CFTP: in sec 4
