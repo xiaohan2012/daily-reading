@@ -76,8 +76,8 @@ namely, **inpurity** measure
 
 ## other measures
 
-1. entropy: `- \sum_i p_i \log p_i`
-2. gini index: `1 - \sum_i p_i^2`
+1. entropy: $`- \sum_i p_i \log p_i`$
+2. gini index: $`1 - \sum_i p_i^2`$
 
 tends to perform better than misclassification rate ([example](https://github.com/rasbt/python-machine-learning-book/blob/master/faq/decision-tree-binary.md))
 
