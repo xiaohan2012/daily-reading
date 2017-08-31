@@ -169,6 +169,8 @@ in other words, $`w(T)`$ satisfy the recursive transition probability (also stat
 
 thus, proof is done.
 
+note: we are lucky that transition kernel `P` satisfies the stationary distribution. 
+
 ## implications of the theorem
 
 - the probability of sampling a tree using random walk is proportional to its weight (product of edge weights)
