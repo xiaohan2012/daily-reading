@@ -19,15 +19,28 @@ find some transition $`T`$ that does not satisfy detailed balance, for example
 
 $`\pi(i) T(i, j) > \pi(j) T(j, i)`$
 
-*but* we add a compensation term $`A(i, j)`$ to make it equal
+intuitively, $`Pr[x \rightarrow y] > Pr[y \rightarrow x]`$. 
 
-$`\pi(i) T(i, j) A(i, j) = \pi(j) T(j, i)`$
+this is against the detailed balance condition. 
 
-in other words, 
+we need to increse $`Pr[y \rightarrow x]`$ to match $`Pr[x \rightarrow y]`$
+
+## compensation
+
+we add a "compensation" term $`A(i, j)`$ to make reversibility hold
+
+$`\pi(i) T(i, j) A(i, j) = \pi(j) T(j, i) A(i, j)`$
+
+without loss of generality, assume $`\pi(i) T(i, j) > \pi(j) T(j, i)`$ holds, then
 
 
-$`A(i, j) = \frac{\pi(j) T(j, i)}{\pi(i) T(i, j)}`$
+$`A(i, j) = \frac{\pi(j) T(j, i)}{\pi(i) T(i, j)}`$ and $`A(j, i)=1`$ 
 
-which is the acceptance probability. 
+makes the above hold.  $`A(i, j)`$ is the acceptance probability. 
 
-but why do we toss a coin $`u \in [0, 1]`$?
+in other words, the transition now has two steps:
+
+- $`T(i, j)`$: normal one
+- $`A(i, j)`$, compensation if necessary
+
+if $`A(i, j)`$, this process is simply tossing a coin
