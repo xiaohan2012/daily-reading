@@ -31,3 +31,5 @@ a quick way to print vertices or edges
          cout, "\n"
            });
 ```
+
+more one [istream_iterator and ostream_iterator](http://en.cppreference.com/w/cpp/iterator/istream_iterator/istream_iterator)
