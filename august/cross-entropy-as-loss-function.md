@@ -55,11 +55,11 @@ $`C(y_1, \ldots, y_n, a_1, \ldots, a_n) = \sum\limits_{i=1}^n y_i \ln a_i + (1-y
 
 by def, cross entropy is defined as:
 
-`H(p, q) = -\sum_{x \in X} p(x) \log q(x)`
+$`H(p, q) = -\sum_{x \in X} p(x) \log q(x)`$
 
-assume `p` is the ground truth distribution and `q` is prediction. 
+assume $`p`$ is the ground truth distribution and $`q`$ is prediction. 
 
-then `x \in X`, there is only one `x` that has `p(x)>0` (actually 1), because it's a multi-class problem. 
+then $`x \in X`$, there is only one $`x`$ that has $`p(x)>0`$ (actually 1), because it's a multi-class problem. 
 
 
 
