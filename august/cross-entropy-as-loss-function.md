@@ -10,7 +10,7 @@ to see why cross entropy is a good loss function, we consider:
 
 # quadratic loss function
 
-- derivative on $`w`$: $`(\detal(z)-y)\delta^{'}(z))=\delta(z) \delta^{'}(z)`$ by substiting with the ground truth
+- derivative on $`w`$: $`(\delta(z)-y)\delta^{'}(z))=\delta(z) \delta^{'}(z)`$ by substiting with the ground truth
 - derivative on $`b`$: $`\delta(z) \delta^{'}(z)`$
 
 recall the figure of sigmoid function:
