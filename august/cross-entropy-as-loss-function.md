@@ -61,6 +61,16 @@ assume $`p`$ is the ground truth distribution and $`q`$ is prediction.
 
 then $`x \in X`$, there is only one $`x`$ that has $`p(x)>0`$ (actually 1), because it's a multi-class problem. 
 
+- `q` is softmax if `|X|>2`
+- if `|X|=2`, then `q` can be either sigmoid or softmax
+
+## cross entropy for sigmoid
+
+`\sum_{i=1, \ldots, L} y \log p + (1-y) \log (1-p)`
+
+in other words, a cross entropy for each label (binary one)
+
+[tensorflow implementation](https://stackoverflow.com/questions/35400065/multilabel-text-classification-using-tensorflow/39472895#39472895)
 
 
 # source
