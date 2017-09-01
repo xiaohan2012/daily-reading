@@ -11,7 +11,8 @@ instead, we do the following:
 
 
 
-# related papers
+# resources
 
+- http://astrostatistics.psu.edu/su14/lectures/cisewski_is.pdf
 - http://onlinelibrary.wiley.com/doi/10.1111/1467-9469.00360/pdf
 - http://math.tut.fi/posgroup/heine_fusion05a.pdf
