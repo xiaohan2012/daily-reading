@@ -8,11 +8,11 @@ main adaptations:
    - sould be improved here
 
 2. bottle-neck layer: one hidden layer between pooling and output
-   - to reduce memory because `L` (label dim) is large
+   - to reduce memory because $`L`$ (label dim) is large
    - one more layer of non-linearity
 
-3. dynamic-pooling: instead of max-pooling, use max-`k` pool
+3. dynamic-pooling: instead of max-pooling, use max-$`k`$ pool
    - intuition: just one max loses information
-   - diving the sentence into `k` chunks, take the max from each chunk
+   - diving the sentence into $`k`$ chunks, take the max from each chunk
 
 
