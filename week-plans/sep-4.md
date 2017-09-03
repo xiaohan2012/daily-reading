@@ -1,0 +1,10 @@
+- [ ] documentation of sampling steiner tree using random spanning tree sampling and sampling-importance resampling
+- [ ] experiment with sampling steiner trees and on small graph
+    - needs to design some measure of uncertainty
+- [ ] reflection on “mindset” one chapter a day
+- [ ] cvx project
+    - [ ] cnn-text experiment
+    - [ ] cnn-text using different objective function (not binary logistic cross entropy, based on modified softmax or using propensity)
+    - network embedding + can-text with better supervised objective function
+- [ ] boost graph remaining
+- [ ] edmonds into graph_tool
