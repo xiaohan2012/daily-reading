@@ -5,6 +5,6 @@
 - [ ] cvx project
     - [ ] cnn-text experiment
     - [ ] cnn-text using different objective function (not binary logistic cross entropy, based on modified softmax or using propensity)
-    - network embedding + can-text with better supervised objective function
+    - [ ] network embedding + cnn-text with better supervised objective function
 - [ ] boost graph remaining
 - [ ] edmonds into graph_tool
