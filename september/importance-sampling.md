@@ -1,6 +1,6 @@
 # monte carlo integration
 
-problem: compute $`I=\text{E}_f w(x) = \int_a^b f(x)w(x) dx`$, where:
+problem: compute $`I=\text{E}_f [w(x)] = \int_a^b f(x)w(x) dx`$, where:
 
 - $`f(x)`$ is some density function with domain $`[a, b]`$
 
@@ -17,7 +17,7 @@ intuition:
 
 ## example: Gaussian CDF
 
-problem: calcualte $`\text{E}_N \text{1}(X \le a)`$, where:
+problem: calcualte $`\text{E}_N [\text{1}(X \le a)]`$, where:
 
 - $`\text{1}(X<a)`$ is indicator function of wheter $`X \le a`$ holds
 - $`N \rightarrow N(0, 1)`$ is Guassian distribution centered at 1 with std $`1`$
@@ -38,7 +38,7 @@ for mc integration $`\int f(x) w(x) dx`$, if $`f(x)`$ is difficult to sample fro
 
 use another distribution $`g(x)`$ which is easy to sample from and re-write the integral
 
-$`\text{E}_f w(x) = \int f(x) w(x) dx = \int f(x) \frac{w(x)}{g(x)} g(x) dx = \text{E}_g \frac{f(x) w(x)}{g(x)} \approx \frac{1}{N} \sum_i \frac{f(x_i) w(x_i)}{g(x_i)}`$
+$`\text{E}_f [w(x)] = \int f(x) w(x) dx = \int f(x) \frac{w(x)}{g(x)} g(x) dx = \text{E}_g [\frac{f(x) w(x)}{g(x)}] \approx \frac{1}{N} \sum_i \frac{f(x_i) w(x_i)}{g(x_i)}`$
 
 where $`\{x_i\}`$ is drawn from $`g(x)`$ (called **proposal distribution**), instead of $`f(x)`$
 
