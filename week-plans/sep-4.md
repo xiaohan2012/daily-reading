@@ -8,3 +8,6 @@
     - [ ] network embedding + cnn-text with better supervised objective function
 - [ ] boost graph remaining
 - [ ] edmonds into graph_tool
+- [ ] Nokia scholarship application
+- [ ] research project topic
+  - extreme multi-label classification using network embedding approach
