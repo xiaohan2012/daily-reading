@@ -1,3 +1,11 @@
+# overview
+
+- graph with property (for example edge weight)
+  - custom/standard property field
+- run `bfs` and `dijkstra` on such graphs
+  - use `record_distance` and `record_predecessor`
+- lambda expression in c++ (since c++11)
+
 # bfs
 
 ## distance
