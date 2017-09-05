@@ -9,5 +9,4 @@
 - [ ] boost graph remaining
 - [ ] edmonds into graph_tool
 - [ ] Nokia scholarship application
-- [ ] research project topic
-  - extreme multi-label classification using network embedding approach
+- [X] research project topic: extreme multi-label classification using network embedding approach
