@@ -1,7 +1,7 @@
 - [ ] documentation of sampling steiner tree using random spanning tree sampling and sampling-importance resampling
 - [ ] experiment with sampling steiner trees and on small graph
-    - [ ] sample steiner trees using TRUNCATE
-    - [ ] re-sampling steiner tree using sampling-importance re-sampling
+    - [X] sample steiner trees using TRUNCATE
+    - [X] re-sampling steiner tree using sampling-importance re-sampling
     - [ ] define query uncertainty measure on nodes
     - [ ] plot the heatmap
 - [ ] reflection on “mindset” one chapter a day
