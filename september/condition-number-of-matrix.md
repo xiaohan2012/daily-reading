@@ -1,9 +1,12 @@
 
 # condition number
 
-there are more than one condition numbers, for inverse, eigenvalue computation, etc
+in the general sense, condition number measures how *sensitive* the answer is to *perturbations* in the input data and to roundoff errors made during the solution process.
 
-it generally measures how *sensitive* the answer is to *perturbations* in the input data and to roundoff errors made during the solution process.
+for this note: condition number (for matrix inverse) upper-bounds the relative change of linear system $`Ax=b`$ due to change in $`b`$
+
+note that there are more than one condition numbers, for inverse, eigenvalue computation, etc. we consider inverse here. 
+
 
 # condition number of matrix inverse
 
@@ -39,7 +42,7 @@ let's consider linear equation and a small perturbation.
 
 given $`Ax=b`$, by definition, we known
 
-$`\frac{||Ax||}{||x||} \le M \rightarrow \frac{||b||}{||x||} \le M \righarrow ||b|| \le M ||x||`$ (1)
+$`\frac{||Ax||}{||x||} \le M \rightarrow \frac{||b||}{||x||} \le M \rightarrow ||b|| \le M ||x||`$ (1)
 
 
 suppose we add a small change $`\epsilon`$ to $`b`$ and the resulting new solution is $`x+y`$ (in other words, $`y`$ is the change original solution $`x`$)
