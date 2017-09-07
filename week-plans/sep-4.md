@@ -1,15 +1,18 @@
-- [ ] documentation of sampling steiner tree using random spanning tree sampling and sampling-importance resampling
-- [X] experiment with sampling steiner trees and on small graph
+- documentation of sampling steiner tree using random spanning tree sampling and sampling-importance resampling
+  - [ ] incremental determinant update correct? (circle case)
+  - [X] rest
+- experiment with sampling steiner trees and on small graph
     - [X] sample steiner trees using TRUNCATE
     - [X] re-sampling steiner tree using sampling-importance re-sampling
     - [X] define query uncertainty measure on nodes
     - [X] plot the heatmap
 - [ ] reflection on “mindset” one chapter a day
-- [ ] cvx project
-    - [ ] cnn-text experiment
-    - [ ] cnn-text using different objective function (not binary logistic cross entropy, based on modified softmax or using propensity)
-    - [ ] network embedding + cnn-text with better supervised objective function
-- [ ] boost graph remaining
+- cvx project
+    - [X] cnn-text experiment using kim-cnn
+    - [ ] kim-cnn (v1, v2, v3)
+    - [ ] kim-cnn: objective function based on propensity
+    - [ ] network embedding + kim-text with better supervised objective function
+- [X] boost graph remaining
 - [ ] edmonds into graph_tool
 - [ ] Nokia scholarship application
 - [X] research project topic: extreme multi-label classification using network embedding approach
