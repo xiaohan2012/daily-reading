@@ -10,8 +10,8 @@ the question is: **then what's exactly $`v(t)`$ and $`w(t)`$?**
 
 to represent in matrix form, denote:
 
-- $`u(t) = [v(t) w(t)]`$
-- $`\frac{du}{dt} = [\frac{dv}{dt} \frac{dw}{dt}]`$
+- $`u(t) = [v(t) \quad w(t)]`$
+- $`\frac{du}{dt} = [\frac{dv}{dt} \quad \frac{dw}{dt}]`$
 
 and 
 
@@ -21,7 +21,7 @@ then
 
 $`\frac{du}{dt} = A u(t)`$
 
-with $`u(0) = [8 5]`$
+with $`u(0) = [8 \quad 5]`$
 
 ## single variable case 
 
@@ -41,7 +41,7 @@ substituting it in gives:
 
 $`\lambda e^{\lambda t} \begin{pmatrix} y \\ z \end{pmatrix} = e^{\lambda t} A \begin{pmatrix} y \\ z \end{pmatrix}`$
 
-denote $`x=[y z]`$ and canceling out the common terms give us:
+denote $`x=[y \quad z]`$ and canceling out the common terms give us:
 
 $`Ax=\lambda x`$
 
