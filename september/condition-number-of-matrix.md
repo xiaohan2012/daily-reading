@@ -22,7 +22,7 @@ $`m=\min \frac{||Ax||}{||x||} = \min \frac{||y||}{||A^{-1}y||}=1/\max\frac{||A^{
 
 ## examples
 
-- for singular matrix:, $`\kappa = \infnty`$
+- for singular matrix:, $`\kappa = \infty`$
 - for identity matrix, $`\kappa = 1`$
 
 ## exact form
