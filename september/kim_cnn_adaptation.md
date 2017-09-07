@@ -42,7 +42,10 @@ to evaluate it, can do either:
 
 - `input_x` and `input_y_binary` can be `SparseTensor` as well, currently it's dense. 
 
-# experiment result for `kim_cnn`
+
+# experiment results
+
+## experiment result for `kim_cnn`
 
 softmax entropy as loss
 
@@ -57,9 +60,6 @@ weird thing:
 
 possible explation: learning rate too high ([source](https://stackoverflow.com/questions/39868939/possible-explanations-for-loss-increasing))
 
-# experiment result for `kim_cnn`
-
-# experiment result for `fastXML` and `PFastreXML`
 
 ## fastxml
 
@@ -74,3 +74,9 @@ possible explation: learning rate too high ([source](https://stackoverflow.com/q
 2. precision at 3: 0.1977069351230425
 3. precision at 5: 0.1545302013422819
 4. precision at 10: 0.10696308724832215
+
+##  kimcnn + logistic entropy
+
+1. p@1: 0.57
+2. p@3: 0.38 
+3. p@5: 0.29
