@@ -1,5 +1,5 @@
 - documentation of sampling steiner tree using random spanning tree sampling and sampling-importance resampling
-  - [ ] incremental determinant update correct? (circle case)
+  - [X] incremental determinant update correct? (circle case) -- incorrect
   - [X] rest
 - experiment with sampling steiner trees and on small graph
     - [X] sample steiner trees using TRUNCATE
