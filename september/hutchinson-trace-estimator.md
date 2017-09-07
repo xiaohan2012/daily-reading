@@ -63,4 +63,4 @@ cyclic property
 $`\text{tr}(ABCD)=\text{tr}(BCDA)=\text{tr}(CDAB)=\text{tr}(DABC)`$
 
 
-$`\det(\exp(A))=\exp(\tr(A))`$ (for gaussian models?)
+$`\det(\exp(A))=\exp(\text{tr}(A))`$ (for gaussian models?)
