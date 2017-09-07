@@ -1,4 +1,9 @@
-# first problem -- solve linear differential equation
+# introduction
+
+the problem is to  solve $`A \lambda = \lambda x`$ where $`x`$ and $`\lambda`$ are both unknown. 
+
+
+# moitvation: solve linear differential equation
 
 suppose there exists two functions on $`t`$: $`v(t)`$ and $`w(t)`$ and their relationships w.r.t their derivatives, and their value at $`t=0`$, $`v(0)=8, w(0)=5`$
 
@@ -65,9 +70,9 @@ this means:
 
 the singular matrix satisfies the following
 
-$`\text{det}(A - \lambda I)=0`$
+$`\det(A - \lambda I)=0`$
 
-which gives a polynomial whose roots are the eigen values $`\lambda`$.
+which gives a polynomial (called **characteristic polynomial**) whose roots are the eigen values $`\lambda`$. (so $`\lambda`$ are also called **roots of characteristic polynomials**)
 
 for each root, we solve one linear equation, in which the solution $`x`$ is called eigenvector. 
 
@@ -75,7 +80,7 @@ together, the form the null space of $`A-\lambda I`$, such space is also called 
 
 in summary, steps are:
 
-1. find the polynomial by $`\text{det}(A - \lambda I)=0`$
+1. find the polynomial by $`\det(A - \lambda I)=0`$
 2. find the roots $`\lambda`$
 3. for each root, solve $`(A - \lambda I)x=0`$
 
@@ -137,11 +142,11 @@ pivot, diagonal entries and eigenvalues are usualy completely different, except 
 
 by definition of eigenvalues (root of characteristic polynomial):
 
-$`det(A-\lambda I) = \prod_i (\lambda - \lambda_i)`$
+$`\det(A-\lambda I) = \prod_i (\lambda - \lambda_i)`$
 
 by setting $`\lambda=0`$, we get:
 
-$`det(A) = \prod_i \lambda_i`$
+$`\det(A) = \prod_i \lambda_i`$
 
 
 
