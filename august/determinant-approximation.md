@@ -1,4 +1,5 @@
-[pape](http://www4.ncsu.edu/~ipsen/ps/tr03-30.pdf)
+[paper](http://www4.ncsu.edu/~ipsen/ps/tr03-30.pdf)
+[slides](http://www4.ncsu.edu/~ipsen/ps/slides_iwasep.pdf)
 
 two ideas:
 
