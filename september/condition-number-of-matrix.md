@@ -55,7 +55,7 @@ $`||\epsilon|| \ge m ||y||`$ (2)
 
 if we measure the **relative change** of $`b`$ and $`x`$, then we use (1) and (2) and have:
 
-$`\frac{||\epsilon||}{||b||} \le \kappa(A)\frac{y}{x}`$
+$`\frac{||\epsilon||}{||b||} \le \kappa(A)\frac{||y||}{||x||}`$
 
 in other words, the relative change of $`x`$ is upper-bounded by the relative change of $`b`$ and condition number $`\kappa(m)`$. 
 
