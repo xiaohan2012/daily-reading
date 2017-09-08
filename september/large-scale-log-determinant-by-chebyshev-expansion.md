@@ -11,7 +11,7 @@ estimate log-determinant of large positive definite matrix using:
 
 - trace of matrix $`A`$: $`\sum_i A_{ii}`$
 
-- power series: $`\sum_{n=0}^{\infnty} a_n (x - c)^n`$ (it's infinite)
+- power series: $`\sum_{n=0}^{\infty} a_n (x - c)^n`$ (it's infinite)
   - trace of it?
 
 - chebyshev approximation: approximating a function by (finite) power series
@@ -40,7 +40,7 @@ $`\log \det B = \log \det (I-A) = \log \prod_i (1-\lambda_i) = \sum_i \log (1-\l
 
 then we use chebyshev approximation for $`f(x)=\log(1-x)`$ in this case:
 
-$`\sum\limits_{i=1}^d \log (1-\lambda_i) \approx \sum\limits_{i=1}^d p_n(\lambda_{i=1}) = \sum\limits_i^d \sum\limits_{c=1}^n c_j T_j(\lambda_i)`$
+$`\sum\limits_{i=1}^d \log (1-\lambda_i) \approx \sum\limits_{i=1}^d p_n(\lambda_{i=1}) = \sum\limits_i^d \sum\limits_{j=1}^n c_j T_j(\lambda_i)`$
 
 - $`p_n(\lambda_i)`$ is the degree-n chebyshev approximation for $`\log(1-\lambda_i)`$
 - $`c_j, T_j`$ are defined by chebyshev approximation
@@ -53,21 +53,17 @@ the paper claims (if it's correct, my confusion below):
 
 $`\sum\limits_i^d T_j(\lambda_i) = \text{tr}(T_j(A))`$
 
+- some intuition: sum of eigen values = trace (eigen value property)
+  - however, there is a transformation $`T_j`$
 - $`\text{tr}`$ is matrix trace
+
+**question** is there such a property for matrix function $`f`$ such that
+
+$`\sum_i f(\lambda_i)=\text{tr} f(X)`$
 
 therefore, 
 
-$`\log \det B = \sum\limits_{c=1}^n c_j \text{tr}(T_j(A))`$
-
-**question**
-
-is there such a property for chebyshev approximation that:
-
-given $`A`$ and eigen values $`\lambda_i`$, after transformation $`T`$ (defined by chebyshev approx), 
-
-for matrix $`T(A)`$, the eigen values are $`T(\lambda_i)`$.
-
-what's the definition for $`T`$ applied on matrix $`A`$?
+$`\log \det B = \sum\limits_{j=1}^n c_j \text{tr}(T_j(A))`$
 
 # resources
 
