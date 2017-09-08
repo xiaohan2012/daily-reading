@@ -21,11 +21,11 @@ estimate log-determinant of large positive definite matrix using:
 
 approximate $`f: [-1, 1] \rightarrow \mathbb{R}`$ (note that input domain is bounded between $`[-1, 1]`$
 
-[][figs/chebyshev-1.png]
+![](figs/chebyshev-1.png)
 
-[][figs/chebyshev-2.png]
+![](figs/chebyshev-2.png)
 
-[][figs/chebyshev-3.png]
+![](figs/chebyshev-3.png)
 
 comment:
 
