@@ -38,45 +38,17 @@ to evaluate it, can do either:
 - `feed_dict={sparse_tensor: (indices, values, shape)}`
 - `feed_dict={sparse_tensor: SparseTensorValue(indices, values, shape)}`
 
+
 # possible improvement
 
 - `input_x` and `input_y_binary` can be `SparseTensor` as well, currently it's dense. 
 
+# misc
 
-# experiment results
-
-## experiment result for `kim_cnn`
-
-softmax entropy as loss
-
-1. p@1: ~30%
-2. p@3: ~18%
-3. p@5: ~14%
-
-weird thing:
-
-1. performnace **decreases**
-2. training loss **increases**
-
-possible explation: learning rate too high ([source](https://stackoverflow.com/questions/39868939/possible-explanations-for-loss-increasing))
-
-
-## fastxml
-
-1. precision at 1: 0.28439597315436244
-2. precision at 3: 0.194910514541387
-3. precision at 5: 0.15000000000000002
-4. precision at 10: 0.10486577181208054
-
-## PFastreXML
-
-1. precision at 1: 0.2785234899328859
-2. precision at 3: 0.1977069351230425
-3. precision at 5: 0.1545302013422819
-4. precision at 10: 0.10696308724832215
-
-##  kimcnn + logistic entropy
-
-1. p@1: 0.57
-2. p@3: 0.38 
-3. p@5: 0.29
+- `numpy.squeeze` and `tf.squeeze`: remove the dimentions of size 1
+-  sort a Tensor: [SO post](https://stackoverflow.com/questions/40784941/sorting-an-array-in-tensorflow)
+   - [tf.gather(params, indices, axies)](https://www.tensorflow.org/api_docs/python/tf/gather): gather entries from `params` on `axis` according to `slices`
+- `tf.reverse(t, axis=[...])` reverse a tensor on certain axes. 
+  - `axis=[..]`: remember the `[]`
+- `tf.nn.top_k`: [differentiable](https://github.com/tensorflow/tensorflow/issues/5726)
+- flatten a tensor: `tf.reshape(tensor, [tf.reduce_prod(tensor.shape)])`
