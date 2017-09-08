@@ -14,5 +14,5 @@
     - [ ] network embedding + kim-text with better supervised objective function
 - [X] boost graph remaining
 - [ ] edmonds into graph_tool
-- [ ] Nokia scholarship application
+- [X] Nokia scholarship application (decided to give up as I don't have any publication for now)
 - [X] research project topic: extreme multi-label classification using network embedding approach
