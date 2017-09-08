@@ -2,8 +2,8 @@
 
 estimate log-determinant of large positive definite matrix using:
 
-1. chebyshev polynomial (on both scalar and matrix)
-2. estimation of matrix trace by monte-carlo
+1. using chebyshev polynomial to approxmate log-det by a set of matrix traces
+2. estimation of matrix trace by power hutchinson method and iteration
 
 # concept
 
@@ -17,7 +17,7 @@ estimate log-determinant of large positive definite matrix using:
 - chebyshev approximation: approximating a function by (finite) power series
   - seems to be a huge topic
 
-# chebyshev polynomial
+## chebyshev polynomial
 
 approximate $`f: [-1, 1] \rightarrow \mathbb{R}`$ (note that input domain is bounded between $`[-1, 1]`$
 
@@ -34,7 +34,7 @@ comment:
 - $`c_i`$  depends on $`f(x_k)`$ and $`T_i(x_k)`$, where $`x_k`$ is defined independent from input $`x`$
 
 
-# log-det calculation by cholesky decomposition 
+## log-det calculation by cholesky decomposition 
 
 $`B=LL^T`$ where $`L`$ is lower-triangular then
 
