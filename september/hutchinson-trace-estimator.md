@@ -1,9 +1,13 @@
 # Hutchinson's trace estimator
 
 goal: estimate $`\text{tr}(A)`$, trace of matrix when $`A`$'s form is not explicit. 
-some backgrounds below
 
-# $`\text{tr}(A)=\text{E}[z^T A z]`$
+motivation: if $`A`$ has some "complex" form, for example $`A=B^k`$, then evaluating $`\text{tr}(B^k)`$ by first computing $`B^k`$ then evaluating the trace is $`O(kn^3)`$. 
+
+hutchinson's method is a cheaper way to do 
+
+# main result $`\text{tr}(A)=\text{E}[z^T A z]`$
+
 
 we now prove it
 
