@@ -6,7 +6,7 @@
     - [X] re-sampling steiner tree using sampling-importance re-sampling
     - [X] define query uncertainty measure on nodes
     - [X] plot the heatmap
-- [ ] reflection on “mindset” one chapter a day
+- [X] reflection on “mindset” one chapter a day
 - cvx project
     - [X] cnn-text experiment using kim-cnn
     - [ ] kim-cnn (v1, v2, v3)
