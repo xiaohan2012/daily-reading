@@ -72,7 +72,7 @@ issues:
 then objective is: 
 
 
-$`\min\limits_{p, q} \sum\limits_{(u, i) \in \kappa} (r_{ui} \mu - b_u - b_i - q_i^T p_u)^2 + \lambda(||q_i||^2 + ||p_u||^2 + b_u^2 + b_i^2)`$
+$`\min\limits_{p, q} \sum\limits_{(u, i) \in \kappa} (r_{ui} - \mu - b_u - b_i - q_i^T p_u)^2 + \lambda(||q_i||^2 + ||p_u||^2 + b_u^2 + b_i^2)`$
 
 # other
 
