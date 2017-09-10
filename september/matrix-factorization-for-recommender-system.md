@@ -84,3 +84,5 @@ $`\min\limits_{p, q} \sum\limits_{(u, i) \in \kappa} (r_{ui} - \mu - b_u - b_i -
 # source
 
 - Yehuda Koren, and Chris Volinsky, Matrix Factorization Techniques For Recommender Systems
+- [tensorflow.contrib.factorization](https://github.com/tensorflow/tensorflow/blob/r1.3/tensorflow/contrib/factorization/python/ops/factorization_ops.py#L633)
+  - seems to be not easy to implement ALS
