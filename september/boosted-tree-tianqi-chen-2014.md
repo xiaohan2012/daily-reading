@@ -99,9 +99,11 @@ motivation: simpler form of the loss, easier to optimize?
 
 note:
 
-- $`f(x + \delta x)`$ corresponds to $`l(y_i, \hat{y}^{(t-1)}_i + f_t(x_i))`$
+- $`f(x + \Delta x)`$ corresponds to $`l(y_i, \hat{y}^{(t-1)}_i + f_t(x_i))`$
   - $`x \rightarrow \hat{y}^{(t-1)}_i `$
-  - $`\delta x \rightarrow f_t(x_i)`$
+  - $`\Delta x \rightarrow f_t(x_i)`$
+
+## new objective
 
 ![](figs/boosting-tree-new-objective.png)
 
