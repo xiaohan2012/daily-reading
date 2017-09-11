@@ -2,11 +2,19 @@
 
 through a weak *learner*, we can learn a series of weak *predictors* and make them into a strong *predictor*.
 
+basic idea: learn a sequence of predictors $`\{h_t\}_{t=1}^T`$ under different data distribution $`D_t`$. meanwhile, each prediction is associated with a weight $`\alpha_t`$
+
+- the higher $`D_t(i)`$, the more important $`i`$th data point is (predictor is more likely to make mistake on it)
+
+
 specifically, given some learning algorithm:
 
-1. use ensemble of predictors, $`h_1, \ldots, h_t`$, each $`h_i`$ with a confidence score $`\alpha_i`$
-1. training data's distribution $`D_t(i)`$ (weight on training data points) is **adjusted** based on the current predictor's ($`h_t`$) performance
-1. final predictor is $`\sum_{i=1}^T \alpha_i h_i`$
+1. initially, data points are equally important $`D_1(i)=\frac{1}{m}`$ (assuming there are $`m`$ data points)
+1. at step $`i`$,  learn a predictor, $`h_t`$, under data distribution $`D_t(i)`$
+1. $`D_t(i)`$ (weight on training data points) is **adjusted** based on the current predictor's ($`h_t`$) performance and $`D_{t-1}`$ (in a multiplicatively way, very related to *Multiplicative Weight Update* framework)
+1. predictor weight $`\alpha_t`$ computed by how good it predicts under $`D_t`$
+
+final predictor is $`\sum_{i=1}^T \alpha_i h_i`$
 
 algorithm:
 
