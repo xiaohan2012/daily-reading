@@ -26,11 +26,11 @@ logistic loss (two forms depending on space of $`y`$)
 
 ## examples
 
-- ridge regression: $`\sum\limits_{i=1}{n} ||y_i - w^Tx_i||^2 + \lambda ||w||^2`$
+- ridge regression: $`\sum\limits_{i=1}^{n} ||y_i - w^Tx_i||^2 + \lambda ||w||^2`$
   - linear model, square loss, $`l2`$ regularization
-- lasso regression: $`\sum\limits_{i=1}{n} ||y_i - w^Tx_i||^2 + \lambda |w|`$
+- lasso regression: $`\sum\limits_{i=1}^{n} ||y_i - w^Tx_i||^2 + \lambda |w|`$
   - linear model, square loss, $`l1`$ regularization
-- logistic regression: $`\sum\limits_{i=1}{n} L_{logreg}(y_i, w^Tx_i) + \lambda ||w||^2`$
+- logistic regression: $`\sum\limits_{i=1}^{n} L_{logreg}(y_i, w^Tx_i) + \lambda ||w||^2`$
   - linear model, logistic loss, $`l2`$ regularization
 
 
@@ -51,22 +51,22 @@ $`\hat{y} = \sum\limits_{k=1}{K} f_k(x)`$
 - $`f_k`$ is the regression tree
 - another perspective: $`f_k`$ is a function that takes in attributes and outputs score
 
-Parameters: $`\Theta=\{f_1, \ldots, f_K\}, f_i \in \mathcal{F}`$, $`\mathca{F}`$ all regression trees (function space)
+Parameters: $`\Theta=\{f_1, \ldots, f_K\}, f_i \in \mathcal{F}`$, $`\mathcal{F}`$ all regression trees (function space)
 
 ## bias and variance perspective
 
 model: $`\hat{y} = \sum\limits_{k=1}{K} f_k(x)`$
 
-objective: $`\sum\limits_{i=1}{n} l(y_i, \hat{y_i}) + \sum\limits_{k=1}^K \Omega(f_k)`$
+objective: $`\sum\limits_{i=1}^{n} l(y_i, \hat{y_i}) + \sum\limits_{k=1}^K \Omega(f_k)`$
 
-common techniques used for decision tree and correspondence to objective:
+common heuristics used for decision tree and correspondence to objective:
 
 - split by information gain -- training loss $`\sum_i l(y_i, \hat{y_i})`$
 - pruning: regularization defined by number of tree nodes
 - max depth: constraint of size of $`\mathcal{F}`$
 - smoothing on leaf values: $`l2`$ regularization on leaf values
 
-in other words, loss+regularization applies to tree/function learning as well. 
+in other words, *loss+regularization formula* applies to tree/function learning as well. 
 
 # additive training (boosting)
 
@@ -78,7 +78,7 @@ idea: learn a list of predictors sequetially, each each predictor is learned suc
 notations:
 
 - $`f_t(x_i)`$: $`t`$th predicion on $`i`$th example
-- $`\hat{y}^{t}_i=\sum\limits_{i=1}{t-1} f_{t-1}(x_1)`$: predictions accumulated from previous $`t`$ rounds
+- $`\hat{y}^{t}_i=\sum\limits_{i=1}^{t-1} f_{t-1}(x_1)`$: predictions accumulated from previous $`t`$ rounds
 - in other words, $`\hat{y}^{t}_i = \hat{y}^{t-1}_i + f_t(x_i)`$
 
 ## goal
@@ -106,6 +106,12 @@ note:
 ![](figs/boosting-tree-new-objective.png)
 
 **BP 23**
+
+# questions
+
+- why use boosting? and the form is different from adaboost?
+- why use taylor expansion?
+
 
 ## example: 
 
