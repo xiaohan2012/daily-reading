@@ -1,0 +1,22 @@
+- deep walk + xml learning
+  - [ ] deep walk training
+  - [ ] combine with xml
+  - [ ] evaluation 
+- active learning
+  - [X] find source code for infection status inference and source finding (based on observed infections without timestamps)
+    - comment: failed to find any
+  - [ ] min steiner tree-based inference algorithm
+    - `infinf`: get the 
+    - `source`: ranked by distance to all other terminals (plus exponential function)
+  - [ ] implement active learning framework: query a node, update the result
+  - [ ] different query-selection baselines: by node degree, pagerank, random, etc
+  - [ ] evaluate the method with baselines
+    - `infinf`: precision, recall
+    - `source`: precision@k
+- [ ] efficient determinant computation using JMLR paper: input - sparse matrix, output - estimated determinent
+- why determinant-based score mimics energy function
+  - [ ] try on other graphs, do the scatter plot
+  - [ ] what does it tell w.r.t the formula
+- [ ] gradient boosted tree
+- [ ] metric learning tutorial
+- [ ] edmond's algorithm in `graph_tool`
