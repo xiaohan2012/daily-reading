@@ -1,6 +1,7 @@
 - deep walk + xml learning
-  - [ ] deep walk training
-  - [ ] combine with xml
+  - [X] deep walk runnable
+  - [ ] deep walk checkpoint, training summary and embedding visualization
+  - [ ] deepwalk combine with xml
   - [ ] evaluation 
 - active learning
   - [X] find source code for infection status inference and source finding (based on observed infections without timestamps)
