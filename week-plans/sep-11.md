@@ -5,16 +5,16 @@
   - [ ] evaluation 
 - active learning
   - [X] find source code for infection status inference and source finding (based on observed infections without timestamps)
-    - comment: failed to find any
+        - comment: failed to find any
   - [ ] min steiner tree-based inference algorithm
-    - `infinf`: get the minimum spanning tree
-    - `source`: ranked by distance to all other terminals (plus exponential function)
+        - `infinf`: get the minimum spanning tree
+        - `source`: ranked by distance to all other terminals (plus exponential function)
   - [ ] implement active learning framework: query a node, update the result
-    - uninfected node is removed from the graph
+        - uninfected node is removed from the graph
   - [ ] different query-selection baselines: by node degree, pagerank, random, etc
   - [ ] evaluate the method with baselines
-    - `infinf`: precision, recall
-    - `source`: precision@k
+        - `infinf`: precision, recall
+        - `source`: precision@k
 - [ ] efficient determinant computation using JMLR paper: input - sparse matrix, output - estimated determinent
 - why determinant-based score mimics energy function
   - [ ] try on other graphs, do the scatter plot
