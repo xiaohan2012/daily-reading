@@ -37,9 +37,13 @@ other notation:
 
 The premise is that if $`\mathbf{X}_{\mathbf{M}}^{'}`$ matches $`\mathbf{X}^{'}`$, then $`\mathbf{X}_{\mathbf{M}}`$ will match $`\mathbf{X}`$. 
 
+![](figs/k-tree-workflow.png)
+
 # (sampled) k-tree
 
 **k-tree**, a model to approximate real cascades. 
+
+![](figs/k-tree-workflow.png)
 
 parametrized by $`(b, h, k)`$: a balanced tree of height $`h`$ and branching factor $`b`$, each node is augmented with $`k-1`$ edges from its $`k-1`$ closest ancestors. 
 - for influence cascade, $`k=1`$ (because tree)
