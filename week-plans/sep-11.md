@@ -9,11 +9,15 @@
   - [X] min steiner tree-based inference algorithm for inferring missing nodes
   - [X] implement active learning framework: query a node, update the result
   - [X] different query-selection baselines: by node degree, pagerank, random, etc
-  - [X] evaluate the method with baselines for ninferring missing nodes
+  - [X] evaluate the method with baselines for inferring missing nodes
+- experiment
+  - [X] pagerank with personalized vector on infected nodes
+  - [ ] optimize extract steiner tree
+  - [ ] experiment on small graphs
 - [ ] efficient determinant computation using JMLR paper: input - sparse matrix, output - estimated determinent
 - why determinant-based score mimics energy function
   - [ ] try on other graphs, do the scatter plot
   - [ ] what does it tell w.r.t the formula
-- [ ] gradient boosted tree
+- [X] gradient boosted tree
 - [ ] metric learning tutorial
 - [ ] edmond's algorithm in `graph_tool`
