@@ -13,7 +13,8 @@
 - experiment
   - [X] pagerank with personalized vector on infected nodes
   - [ ] optimize extract steiner tree
-  - [ ] experiment on small graphs
+  - [X] code for experiment on small graphs
+        - fixed many bugs
 - [ ] efficient determinant computation using JMLR paper: input - sparse matrix, output - estimated determinent
 - why determinant-based score mimics energy function
   - [ ] try on other graphs, do the scatter plot
