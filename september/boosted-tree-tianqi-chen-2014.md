@@ -2,7 +2,24 @@
 
 https://homes.cs.washington.edu/~tqchen/pdf/BoostedTree.pdf
 
-we focus on regression trees: $`\mathbb{R}^T \rightarrow \mathbb{R}`$
+key message it tries to convey:
+
+benefit of separating model and objective, for example:
+
+- we using additive boosting technique as the objective
+- we use regression tree as model
+- each of them are *abstracted away* from each other
+
+- from the model, we understand **what we learn**
+- from the objective, we study **how we learn**
+
+also this separation brings engineering benefit (modularized code)
+
+- like in tensorflow, there are a set of independent optimizers and objective functions (how we learn) that are applicable to almost every models (what we learn)
+
+note that we focus on regression trees: $`\mathbf{R}^T \rightarrow \mathbf{R}`$
+
+
 
 # key elements of supervised machine learning
 
@@ -130,9 +147,9 @@ benefits:
 
 define a tree $`f_t`$ by the structure $`q`$ and leaf weight $`w`$
 
-- tree structure $`q: \mathbb{R}^d \rightarrow \{1, 2, \ldots, T\}`$
-  - maps input $`x \in \mathbb{R}^d`$ to one of the $`T`$ leafs
-- leaf weight $`w \in \mathbb{R}^T \rightarrow \mathbb{R}`$
+- tree structure $`q: \mathbf{R}^d \rightarrow \{1, 2, \ldots, T\}`$
+  - maps input $`x \in \mathbf{R}^d`$ to one of the $`T`$ leafs
+- leaf weight $`w \in \mathbf{R}^T \rightarrow \mathbf{R}`$
   - map tree leaf index to a real-valued score
 
 then $`f_t(x) = w_{q(x)}`$
@@ -168,7 +185,7 @@ the above re-grouping suggests:
 
 ![](figs/boosting-tree-optimal-leaf-weight.png)
 
-(recall that $`g_i`$ and $`h_i`$ are just 1st and 2nd order partial derivative of $`l(y_i, \hat{y}_i)`$)
+(recall that $`g_i`$ and $`h_i`$ are just 1st and 2nd order partial derivative of $`l(y_i, \hat{f}_i^{(t-1)})`$, error from *previous rounds*)
 
 in other words, given any tree structure, we can calculate its optimal objective using the above formula. 
 
@@ -204,7 +221,25 @@ time complexity:
 
 # questions
 
-- how to do classification?
+- how to do (binary) classification? think of separation of model and objective: 
+  - model is the regression tree
+  - objective is the logistic error function
+
+- how does separation of model and objective help better organizting ML toolkit?
+
+# self-check
+
+## another way to do the time series problem
+
+the problem and top-down approach:
+
+![](figs/boosting-tree-time-series-problem.png)
+
+1. using tree boosting:
+   - learn an ensemble of trees of depth 1 (so each tree is very simple)
+2. bottom-up
+   - greedily merge neighbors
+
 
 ## example: 
 
