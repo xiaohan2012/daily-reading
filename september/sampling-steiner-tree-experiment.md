@@ -42,9 +42,52 @@ running time:
 
 - det score is usually very large, $`10^{30}`$
   - may suffer from overflow
-- exp score is much smaller, so divided by det score is very  small ($`10^{-45}`$)
+- \exp score is much smaller, so divided by det score is very  small ($`10^{-45}`$)
   - may suffer from underflow
 
 # plot
 
-- scatter plot marker size: `s` argument
+- scatter plot marker size: $`s`$ argument
+
+# Sep 14
+
+main finding:
+
+1. correlation between $`\det`$ and $`\exp`$ is close to 1
+2. sample expectation
+
+## pearson correlation between $`\det`$ and $`\exp`$
+
+dolphin:
+
+- pearson correlation: 0.88264 (after log:  0.96298)
+
+karate:
+
+- pearson correlation: 0.97765 (after log: 0.98121)
+
+**what does it tell?**
+
+we can use $`\det`$ to approximate $`\exp`$. but we need to prove some property of det. 
+
+for example, when steiner tree is small, its det score tends to be large. 
+
+##  tree size histogram
+
+because:
+
+1. $`\exp`$ can be approximated by $`\det`$
+2. $`\exp`$ favors small trees
+
+then I expected $`\det`$ sampler also favors small trees. 
+
+however, the tree size histogram does not agree. 
+
+note that even after resampling, tree size does not improve. 
+
+![](figs/sampling-tree-size-histogram.png)
+
+also, determinant based sampler does not give much preference to high determinant score trees. 
+
+![](figs/sampling-determinant-histogram.png)
+
