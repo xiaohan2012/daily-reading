@@ -41,3 +41,8 @@ change the following functions:
 for graph with hidden hides, its `vertex_filter` will raise error if hidden hides are accessed. 
 
 however, `vertex_filter.a` still have the same length as `g.num_vertices()`
+
+# `graph_tool` installation
+
+`./configure CXXFLAGS="-std=gnu++14"`
+
