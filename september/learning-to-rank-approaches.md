@@ -20,14 +20,14 @@ drawback:
 
 # point-wise approach
 
-given query document pait `(q, d)`, return a similarity score. 
+given query document pait $`(q, d)`$, return a similarity score. 
 
 ## example
 
-using `q` and `d` we can get features such as:
+using $`q`$ and $`d`$ we can get features such as:
 
-- `\alpha`: cosine similarity under vector space model
-- `w`: the minimum word span that `q` is covered in `d` (the small the more relevant)
+- $`\alpha`$: cosine similarity under vector space model
+- $`w`$: the minimum word span that $`q`$ is covered in $`d`$ (the small the more relevant)
 
 given training data (with relevant/irrelevant labels), we can learn a linear regression model that fits such data. 
 
@@ -49,7 +49,7 @@ so variation can be:
 
 # pair-wise approach
 
-given the features of two documents `d_i` and `d_j`, predict whether `d_i` is ranked higher than `d_j` or the opposite. 
+given the features of two documents $`d_i`$ and $`d_j`$, predict whether $`d_i`$ is ranked higher than $`d_j`$ or the opposite. 
 
 note the features are derived from the query and the document. for example, the featues can be:
 
@@ -60,10 +60,10 @@ note the features are derived from the query and the document. for example, the 
 
 transforms rakning problem into classification problem
 
-- input: features on `d_i`, `d_j`: `\phi_i` and `\phi_j`
-- output: `d_i>d_j` if `\mathbf{w}(\phi_i - \phi_j)>0`
+- input: features on $`d_i`$, $`d_j`$: $`\phi_i`$ and $`\phi_j`$
+- output: $`d_i>d_j`$ if $`\mathbf{w}(\phi_i - \phi_j)>0`$
 
-parameter to learn `\mathbf{w}`
+parameter to learn $`\mathbf{w}`$
 
 ## pros and cons
 
@@ -74,7 +74,7 @@ parameter to learn `\mathbf{w}`
 
 intuition: some pairs are more important.
 
-- if we switch the order of document `i` and `j`, the objective (nDCG) will change accordingly. but this differs w.r.t wich pair `(i, j)`
+- if we switch the order of document $`i`$ and $`j`$, the objective (nDCG) will change accordingly. but this differs w.r.t wich pair $`(i, j)`$
 
 example: LambdaMART
 
