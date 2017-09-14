@@ -20,5 +20,5 @@
   - [ ] try on other graphs, do the scatter plot
   - [ ] what does it tell w.r.t the formula
 - [X] gradient boosted tree
-- [ ] metric learning tutorial
+- [X] learning-to-rank tutorial
 - [ ] edmond's algorithm in `graph_tool`
