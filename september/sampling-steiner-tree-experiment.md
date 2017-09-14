@@ -1,7 +1,7 @@
 # grid graph
 
 - [square lattice](https://en.wikipedia.org/wiki/Square_lattice)
-- $`graph_tool.generation.lattice`$
+- `graph_tool.generation.lattice`
 
 # `remove_vertex`
 
