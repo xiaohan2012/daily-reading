@@ -3,7 +3,7 @@
 - [square lattice](https://en.wikipedia.org/wiki/Square_lattice)
 - $`graph_tool.generation.lattice`$
 
-# $`remove_vertex`$
+# `remove_vertex`
 
 it's not as cheap as I thought. 
 

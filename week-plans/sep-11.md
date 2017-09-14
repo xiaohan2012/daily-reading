@@ -12,13 +12,13 @@
   - [X] evaluate the method with baselines for inferring missing nodes
 - experiment
   - [X] pagerank with personalized vector on infected nodes
-  - [ ] optimize extract steiner tree
+  - [X] optimize extract steiner tree
   - [X] code for experiment on small graphs
         - fixed many bugs
 - [ ] efficient determinant computation using JMLR paper: input - sparse matrix, output - estimated determinent
-- why determinant-based score mimics energy function
-  - [ ] try on other graphs, do the scatter plot
-  - [ ] what does it tell w.r.t the formula
+- [X] determinant-based score vs energy scores
+      - correlation between the scores high
+      - issue of the samples: does not prefer small trees
 - [X] gradient boosted tree
 - [X] learning-to-rank tutorial
 - [ ] edmond's algorithm in `graph_tool`
