@@ -26,3 +26,18 @@ hide it by setting vertex_fitler, benefit:
 
 it's slow. use `dict` if possible
 
+# custome object for `set`
+
+change the following functions:
+
+- `__eq__`
+- `__ne__`
+- `__hash__`
+
+[source](https://stackoverflow.com/questions/5754440/performing-set-operations-on-custom-classes-in-python)
+
+# `vertex_filter`
+
+for graph with hidden hides, its `vertex_filter` will raise error if hidden hides are accessed. 
+
+however, `vertex_filter.a` still have the same length as `g.num_vertices()`
