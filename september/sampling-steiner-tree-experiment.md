@@ -91,3 +91,19 @@ also, determinant based sampler does not give much preference to high determinan
 
 ![](figs/sampling-determinant-histogram.png)
 
+## hellinger distance
+
+[def](https://en.wikipedia.org/wiki/Hellinger_distance\#Discrete_distributions)
+
+- karate: `0.2094`
+- dolphin: `0.3946`
+
+det vs energy probas: karate
+
+![](figs/figs/hellinger-karate.png)
+
+
+det vs energy probas: karate
+
+![](figs/figs/hellinger-dolphin.png)
+
