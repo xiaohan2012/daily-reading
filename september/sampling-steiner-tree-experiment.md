@@ -53,24 +53,8 @@ running time:
 
 main finding:
 
-1. correlation between $`\det`$ and $`\exp`$ is close to 1
+1. distance between distribution on $`\det`$ and $`\exp`$
 2. sample expectation
-
-## pearson correlation between $`\det`$ and $`\exp`$
-
-dolphin:
-
-- pearson correlation: 0.88264 (after log:  0.96298)
-
-karate:
-
-- pearson correlation: 0.97765 (after log: 0.98121)
-
-**what does it tell?**
-
-we can use $`\det`$ to approximate $`\exp`$. but we need to prove some property of det. 
-
-for example, when steiner tree is small, its det score tends to be large. 
 
 ##  tree size histogram
 
@@ -100,10 +84,10 @@ also, determinant based sampler does not give much preference to high determinan
 
 det vs energy probas: karate
 
-![](figs/figs/hellinger-karate.png)
+![](figs/hellinger-karate.png)
 
 
 det vs energy probas: karate
 
-![](figs/figs/hellinger-dolphin.png)
+![](figs/hellinger-dolphin.png)
 
