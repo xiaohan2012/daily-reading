@@ -6,3 +6,7 @@ documentation: https://www.tensorflow.org/versions/r0.12/how_tos/embedding_viz/
 # learned
 
 - when launching tensorboard, make sure `--logdir` points to the checkpoint directory
+
+- to show by category color, create a column with integers representing the labels in the `tsv` file
+
+- `du -hs * | sort -h`: sort by size
