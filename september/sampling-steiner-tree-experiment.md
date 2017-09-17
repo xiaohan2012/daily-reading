@@ -91,3 +91,7 @@ det vs energy probas: karate
 
 ![](figs/hellinger-dolphin.png)
 
+observation:
+
+- trees with large `exp` proba tend to have even higher det proba. 
+- it might explain why re-sampling give more smaller trees. 
