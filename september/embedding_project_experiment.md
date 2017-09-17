@@ -36,3 +36,7 @@ possible explation: learning rate too high ([source](https://stackoverflow.com/q
 2. p@3: 0.38 
 3. p@5: 0.29
 
+
+# KISS (keep it simple and stupid)
+
+- considering all labels (regardless of label refrequency)
