@@ -1,6 +1,6 @@
 - deep walk + xml learning
   - [X] deep walk runnable
-  - [ ] deep walk checkpoint, training summary and embedding visualization
+  - [X] deep walk checkpoint, training summary and embedding visualization
   - [ ] deepwalk combine with xml
   - [ ] evaluation 
 - active learning
@@ -15,6 +15,7 @@
   - [X] optimize extract steiner tree
   - [X] code for experiment on small graphs
         - fixed many bugs
+  - [X] hellinger distance between `det` and `exp`
 - [ ] efficient determinant computation using JMLR paper: input - sparse matrix, output - estimated determinent
 - [X] determinant-based score vs energy scores
       - correlation between the scores high
