@@ -106,15 +106,21 @@ so there are good and bad examples:
 
 ![](figs/inf-proba-vs-uncertainty-good-example.png)
 
-- infected nodes: `[22 15 48 53 37 27  2 34 24 39 72]`
+- obs: `[22 15 48 53 37 27  2 34 24 39 72]`
 
 ![](figs/inf-proba-vs-uncertainty-good-example-1.png)
 
-- infected nodes: `[71 86 47 39 27 76 43 55 34 68 57]`
+- obs: `[71 86 47 39 27 76 43 55 34 68 57]`
 
-## bad example:
+## bad examples
 
-![](figs/inf-proba-vs-uncertainty.png)
+![](figs/inf-proba-vs-uncertainty-bad-example.png)
+
+- obs: `[33 13 20 42 57 51 47 26 15 64 84]`
+
+![](figs/inf-proba-vs-uncertainty-bad-example-1.png)
+
+- obs: `[31  1 21 30 35  2 52 28  3 18  0]`
 
 as we can see, nodes in the "central" region tend to have higher uncertainty than nodes in the margin.  this contradicts our expectation. 
 
