@@ -40,3 +40,11 @@ possible explation: learning rate too high ([source](https://stackoverflow.com/q
 # KISS (keep it simple and stupid)
 
 - considering all labels (regardless of label refrequency)
+
+# sep 18
+
+misunderstanding: in order for the combined approach to work, data in validation set should also be "trained" to get the embedding. 
+
+however, the labels to the validation set should be hidden. 
+
+so next step: modify kimcnn to disable certain input data during training. 
