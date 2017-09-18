@@ -108,9 +108,13 @@ so there are good and bad examples:
 
 - obs: `[22 15 48 53 37 27  2 34 24 39 72]`
 
+## ok example
+
 ![](figs/inf-proba-vs-uncertainty-good-example-1.png)
 
 - obs: `[71 86 47 39 27 76 43 55 34 68 57]`
+
+uncertainty on the lower right part is over-estimated
 
 ## bad examples
 
