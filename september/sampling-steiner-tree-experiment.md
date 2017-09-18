@@ -125,3 +125,15 @@ uncertainty on the lower right part is over-estimated
 ![](figs/inf-proba-vs-uncertainty-bad-example-1.png)
 
 - obs: `[31  1 21 30 35  2 52 28  3 18  0]`
+
+## dolphin network
+
+0.1 nods are sampled
+
+![](figs/inf-proba-vs-uncertainty-dolphin-1.png)
+
+![](figs/inf-proba-vs-uncertainty-dolphin-2.png)
+
+![](figs/inf-proba-vs-uncertainty-dolphin-3.png)
+
+![](figs/inf-proba-vs-uncertainty-dolphin-4.png)
