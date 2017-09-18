@@ -125,9 +125,3 @@ uncertainty on the lower right part is over-estimated
 ![](figs/inf-proba-vs-uncertainty-bad-example-1.png)
 
 - obs: `[31  1 21 30 35  2 52 28  3 18  0]`
-
-as we can see, nodes in the "central" region tend to have higher uncertainty than nodes in the margin.  this contradicts our expectation. 
-
-recall our parsimony assumption: cascade can be described by a steiner tree with minimum number of edges
-
-is it true?
