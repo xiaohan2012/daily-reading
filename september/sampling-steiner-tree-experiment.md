@@ -128,7 +128,7 @@ uncertainty on the lower right part is over-estimated
 
 ## dolphin network
 
-0.1 nods are sampled
+0.1 nodes are sampled
 
 ![](figs/inf-proba-vs-uncertainty-dolphin-1.png)
 
@@ -137,3 +137,14 @@ uncertainty on the lower right part is over-estimated
 ![](figs/inf-proba-vs-uncertainty-dolphin-3.png)
 
 ![](figs/inf-proba-vs-uncertainty-dolphin-4.png)
+
+
+## karate network
+
+![](figs/inf-proba-vs-uncertainty-karate-1.png)
+
+![](figs/inf-proba-vs-uncertainty-karate-2.png)
+
+![](figs/inf-proba-vs-uncertainty-karate-3.png)
+
+![](figs/inf-proba-vs-uncertainty-karate-4.png)
