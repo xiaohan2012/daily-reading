@@ -148,3 +148,13 @@ uncertainty on the lower right part is over-estimated
 ![](figs/inf-proba-vs-uncertainty-karate-3.png)
 
 ![](figs/inf-proba-vs-uncertainty-karate-4.png)
+
+
+## new doubt
+
+1. are *small* steiner trees good appriximation to the real cascade?
+
+- does SI model encourage small trees?
+   -  if not, is tree diameter a better measure for quality?
+- why not use other random tree generator based on the underlying cascade model?
+

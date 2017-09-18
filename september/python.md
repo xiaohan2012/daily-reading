@@ -46,3 +46,9 @@ however, `vertex_filter.a` still have the same length as `g.num_vertices()`
 
 `./configure CXXFLAGS="-std=gnu++14"`
 
+
+# `graph_tool` plot in `matplotlib`
+
+remembe to add before plotting:
+
+- `plt.swith_backend('cairo')
