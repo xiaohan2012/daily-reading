@@ -95,3 +95,29 @@ observation:
 
 - trees with large `exp` proba tend to have even higher det proba. 
 - it might explain why re-sampling give more smaller trees. 
+
+# sep 18
+
+Aris suggests we look at the uncertainty score before doing any evaluation such as precision and recall. 
+
+so there are good and bad examples:
+
+## good examples
+
+![](figs/inf-proba-vs-uncertainty-good-example.png)
+
+- infected nodes: `[22 15 48 53 37 27  2 34 24 39 72]`
+
+![](figs/inf-proba-vs-uncertainty-good-example-1.png)
+
+- infected nodes: `[71 86 47 39 27 76 43 55 34 68 57]`
+
+## bad example:
+
+![](figs/inf-proba-vs-uncertainty.png)
+
+as we can see, nodes in the "central" region tend to have higher uncertainty than nodes in the margin.  this contradicts our expectation. 
+
+recall our parsimony assumption: cascade can be described by a steiner tree with minimum number of edges
+
+is it true?
