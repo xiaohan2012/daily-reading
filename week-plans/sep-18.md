@@ -2,11 +2,19 @@
 - edmond's algorithm in C++
   - [ ] understand the method
   - [ ] adapt the code using sparse matrix
-- visualize infection probability and uncertainty for page rank and our method
+- visualize infection probability and uncertainty for our method
+  - [X] infection probability on each node (color depth indicates such proba)
+  - [X] uncertainty on each node
+- what is a good reconstructed cascade?
 - combine deepwalk and kim-cnn	  
   - [ ] model
   - [ ] training
-  - [ ] evaluation (score, visualization
+  - [ ] evaluation (score, visualization)
 - sampling random spanning tree papers
-
-
+  - [ ] faster generation
+  - [ ] determinant based approaches
+- [ ] nokia application
+- [ ] graph summarization
+  - [X] plain graph
+  - [ ] labeled
+  - [ ] dynamic
