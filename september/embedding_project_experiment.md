@@ -51,6 +51,8 @@ so next step: modify kimcnn to disable certain input data during training.
 
 # sep 19
 
+get some inspiration from *Revisiting Semi-Supervised Learning with Graph Embeddings*
+
 following sep 18, previous thinking on joint training is letting the unsupervised training signal flow to the cnn module. 
 
 however, this complicates things. 
