@@ -90,9 +90,9 @@ $`\text{Pr}_v(e)`$
 
 the probabiliy of leaving via edge $`e`$ if entering $`D_i`$ via $`v`$. 
 
-denote the new chain as $`\~{X}`$
+denote the new chain as $`\tilde{X}`$
 
-**lemma 7**: if we know $`P_v(e)`$, then it takes $`O(\phi mn)`$ to pre-process $`\~{X}`$ and $`O(l)`$ to process a chain $`\~{X}`$ of length $`l`$
+**lemma 7**: if we know $`P_v(e)`$, then it takes $`O(\phi mn)`$ to pre-process $`\tilde{X}`$ and $`O(l)`$ to process a chain $`\tilde{X}`$ of length $`l`$
 
 proof idea: $`e`$ can be sampled in polynomial time. and it takes $`O(|V(D_i)||C(D_i)|)`$ to build the same table. $`|C(D_i)| \le \phi m`$ and $`|V(D_i)| \le n`$
 
