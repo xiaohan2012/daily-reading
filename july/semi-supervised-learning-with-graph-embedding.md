@@ -1,4 +1,4 @@
-# Revisiting Semi-Supervised Learning with Graph Embeddings
+n# Revisiting Semi-Supervised Learning with Graph Embeddings
 
 essentially, graph embedding + graph-based semi-supervised learning
 
@@ -9,14 +9,14 @@ essentially, graph embedding + graph-based semi-supervised learning
 
 ## graph-based semi-supervised learning
 
-general form `\sum_{i \in L} l(y_i, f(x_i)) + \sum_{ij \in E} a_ij |f(x_i) - f(x_j)|^2`
+general form $`\sum_{i \in L} l(y_i, f(x_i)) + \sum_{ij \in E} a_ij |f(x_i) - f(x_j)|^2`$
 
-- `L`: labeled node
-- `y`: true label
-- `f`: predicted label function
-- `l`: loss function
-  - different papers have different definition of `l`
-- `a_ij`: weight between `i` and `j`
+- $`L`$: labeled node
+- $`y`$: true label
+- $`f`$: predicted label function
+- $`l`$: loss function
+  - different papers have different definition of $`l`$
+- $`a_ij`$: weight between $`i`$ and $`j`$
 
 # model
 
@@ -28,6 +28,19 @@ objective function consists of two parts:
   - embedding (also as parameter): only for transductive setting
 
 refer to **Figure 2**
+
+## skip-gram: model
+
+sample triplets $`(i, c, \gamma)`$:
+
+- $`i`$: node
+- $`c`$: context node to predict
+- $`\gamma`$: if they are of the same label or not
+
+$`L_u=-\text{E} \log \sigma(\gamma w_c e_i)`$
+
+- each node has embedding $`e_i`$
+- for each context node $`c`$, it has parameter $`w_c`$, (the idea is same as the parameter in noisy contrastive estimation)
 
 ## skip-gram: context sampling
 
@@ -50,7 +63,8 @@ two softmax layers:
 
 a multi-layer neural network
 
-## indutive learning
+
+## inductive learning
 
 embedding is derived from a hidden layer with the input feature as input (Figure 2(b))
 
