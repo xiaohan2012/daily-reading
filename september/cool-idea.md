@@ -8,6 +8,8 @@ do we need it? is the calling relation DAG sufficient?
 
 visualization of the functions so we know the bigger picture. 
 
+related to [software visualization](https://softvis.wordpress.com/tools/)
+
 # repository alignment
 
 given two repositories and the functions in each of them, can we align the functions so that two similar functions from each repo are aligned. 
@@ -15,4 +17,11 @@ given two repositories and the functions in each of them, can we align the funct
 ## usefulness
 
 compare two repositories. what they have and we they don't have. 
+
+# graph summarization using embedding
+
+open question: can we utility graph embedding techniques for graph summarization tasks?
+
+- what's the general use of graph embedding?
+- what are the tasks for graph summarization?
 
