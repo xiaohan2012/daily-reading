@@ -158,3 +158,16 @@ uncertainty on the lower right part is over-estimated
    -  if not, is tree diameter a better measure for quality?
 - why not use other random tree generator based on the underlying cascade model?
 
+# sep 19: computation bottle neck
+
+```
+   111        10           32      3.2      0.0          det_scores = [det_score_of_steiner_tree(st, g)
+   112        10     16416741 1641674.1     79.5                        for st in steiner_tree_samples]
+```
+
+acutally the bottle neck is computing laplacian
+
+```
+    16      1000      3380914   3380.9     89.6      l = laplacian(g, weight=weights)
+```
+

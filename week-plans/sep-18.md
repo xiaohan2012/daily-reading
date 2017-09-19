@@ -1,10 +1,17 @@
-- extract steiner tree in C++
 - edmond's algorithm in C++
   - [ ] understand the method
-  - [ ] adapt the code using sparse matrix
+  - [ ] wrap it in Python
 - visualize infection probability and uncertainty for our method
   - [X] infection probability on each node (color depth indicates such proba)
   - [X] uncertainty on each node
+- sampling steiner tree
+  - [X] optimize extract steiner tree 
+        - ended up not using C++
+  - [X] re-use sampled spanning trees
+  - [ ] experiment using more trees
+    - is there a case where PR is worse than our method?
+  - [ ] inference algorithm based on sampled trees
+  - [ ] interaction with Gephi
 - what is a good reconstructed cascade?
 - combine deepwalk and kim-cnn	  
   - [ ] model

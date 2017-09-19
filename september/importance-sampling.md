@@ -75,3 +75,4 @@ it depends on the actual shape of both.
 
 - [http://astrostatistics.psu.edu/su14/lectures/cisewski_is.pdf](http://astrostatistics.psu.edu/su14/lectures/cisewski_is.pdf)
 - [why importance sampling proposal has heavier tails](https://stats.stackexchange.com/questions/76798/in-importance-sampling-why-should-the-importance-density-have-heavier-tails)
+- http://onlinelibrary.wiley.com/doi/10.1111/1467-9469.00360/pdf
