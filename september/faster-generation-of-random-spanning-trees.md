@@ -80,4 +80,59 @@ similar to Aleliunas' result but proof is different. because $`X`$ is short-cut.
 
 # algorithm
 
-after $`\tau_i`$, 
+after $`\tau_i`$, the steps inside $`D_i`$ is useless. 
+
+for example, after $`\tau_i=j`$, $`k`$ steps are spent inside $`D_i`$, $`X_j, \ldots, X_{j+k}`$ and the chain leaves via edge some $`(u, u^{'}) \in C(D_i)`$. 
+
+which means, after $`\tau_i`$, once we have entered $`D_i`$ through $`v`$, we can shortcut the $`X_j, \ldots, X_{j+k}`$ and immediately leave by some edge $`e \in C(D_i)`$, the question is how to compute:
+
+$`\text{Pr}_v(e)`$
+
+the probabiliy of leaving via edge $`e`$ if entering $`D_i`$ via $`v`$. 
+
+denote the new chain as $`\~{X}`$
+
+**lemma 7**: if we know $`P_v(e)`$, then it takes $`O(\phi mn)`$ to pre-process $`\~{X}`$ and $`O(l)`$ to process a chain $`\~{X}`$ of length $`l`$
+
+proof idea: $`e`$ can be sampled in polynomial time. and it takes $`O(|V(D_i)||C(D_i)|)`$ to build the same table. $`|C(D_i)| \le \phi m`$ and $`|V(D_i)| \le n`$
+
+**lemma 8**: given $`(\phi, \gamma)`$ decomposition and $`P_v(e)`$, we can find a random arborescence in $`O(m(\gamma + \phi n))`$ time. 
+
+time decomposes into two parts:
+
+- $`m\gamma`$: sum of cover time inside each $`D_i`$ (lemma 6)
+- $`\phi mn`$: by fact 5
+
+## computing $`P_v(e)`$
+
+**lemma 9** we can compute an $`(1+\epsilon)`$-approximation of $`P_v(e)`$ in $`O(\phi m^2 \log 1/\epsilon)`$ time
+
+basic idea: connection between random walk and eletrical network. 
+
+construct graph $`D^{'}`$ such that:
+
+- add $`u^{'}`$ to $`D`$
+- a dummy node $`u^{*}`$ is added to $`D`$ (to replace $`(_, w^{'}) \in C(D)`$)
+- connect $`(w, _) \in C(D)`$ to the dummy node $`u^{*}`$
+
+then $`P_v(u, u^{'})`$ is the proba of random walk starting on $`v`$ that hits $`u^{'}`$ before $`u^{*}`$
+
+**some magic behind**: $`P_v(e)`$ is equal to the voltage on $`v`$ if we set $`vol(u^{'})=1`$ and $`vol(u^{*})=0`$
+
+solving this approximately uses $`O(|E(D^{'})|\log 1/\epsilon)`$ time. 
+
+we have $`C`$ edges and $`k`$ $`D_i`$s. total time $`O(\sum_i |C||E(D_i^{'})|\log 1/\epsilon)=O(\phi m^2 \log 1/\epsilon)`$
+
+note that $`|E(D^{'})|=|E(D)| + |C(D)| \le 2|E(D)|`$ (using **property 3** of the decomposition)
+
+**lemma 10** given $`(\phi, \gamma)`$ decomposition and $`(1+\epsilon)`$-approximation of $`P_r(e)`$, we can generate a $`\delta`$-random arborescence in time $`O(m(\gamma + \phi n))`$ in expectation, where $`\epsilon \le \delta / mn`$
+
+the distortion is at most $`(1+\epsilon)^{mn} \le 1+\epsilon mn \le 1 + \delta`$
+
+## finding decomposition quickly
+
+ball-growing technique in Leighton and Rao [15]: there exists a $`(\phi, O(1/\phi))`$ decomposition using time $`O(m)`$
+
+if we set $`\phi=1/n^{1/2}`$, then running time is $`O(m^2/\sqrt{n} \log 1/\delta)`$
+
+# $`O(m/\sqrt{n} \log 1/\delta)`$ time
