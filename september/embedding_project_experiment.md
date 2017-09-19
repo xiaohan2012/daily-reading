@@ -48,3 +48,23 @@ misunderstanding: in order for the combined approach to work, data in validation
 however, the labels to the validation set should be hidden. 
 
 so next step: modify kimcnn to disable certain input data during training. 
+
+# sep 19
+
+following sep 18, previous thinking on joint training is letting the unsupervised training signal flow to the cnn module. 
+
+however, this complicates things. 
+
+a simpler approach is:
+
+- design another vector from the node embedding for classfication
+- and let the output layer decide which part to give more emphasize
+
+also, learned one training method for this kind of joint learning:
+
+- alternate the trainining on each loss function separately while fixing parameters from the reminaing parts
+
+for example, 
+
+1. update parameters of the cnn part while fixing node embedding
+2. update node embedding (cnn parameter does not affect)
