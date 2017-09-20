@@ -1,10 +1,12 @@
-connection between electrical networks and random walk on graphs
+# overview: Faster generation of random spanning trees
 
-$`\delta`$-random spanning tree: random spanning tree from distribution within multiplicative $`(1+\delta)`$ of uniform. 
+a faster random spanning arborescence generation method:
 
-- multiplicative $`(1+\delta)`$ of uniform: $`(1-\delta) / N \ge \text{Pr}(T) \le (1+\delta) / N`$
-
-
+1. short cutting random walks from broder's algorithm
+   - short cut is enabled by decomposing grpah into small components, each with fast cover time
+2. bottleneck is computing the "shortcutting" probability $`P_v(e)`$
+3. bottleneck addressed by computing a slightly different random walk and using the concept strong decoposition
+   - shortcomings (missing edges) resolved by sampling trees from the super graph (much smaller)
 
 
 # intutition
@@ -19,6 +21,13 @@ this comparison indicates a lot of waste of edges.
 in practice, some regions are covered very quickly, and a lot of time are spent on them. how we avoid this?
 
 one option is to **shortcut** the random walk, so that the easily covered regions are skipped once they are covered
+
+## concepts
+
+$`\delta`$-random spanning tree: random spanning tree from distribution within multiplicative $`(1+\delta)`$ of uniform. 
+
+- multiplicative $`(1+\delta)`$ of uniform: $`(1-\delta) / N \ge \text{Pr}(T) \le (1+\delta) / N`$
+
 
 # basic idea
 
@@ -35,7 +44,7 @@ $`(D_1, \ldots, D_k, S, C)`$
 
 - $`D_1, \ldots, D_K`$: subgraphs
 - $`S`$: remaining nodes, $`V \setminus \cup_i V(D_i)`$
-- $`C`$: crossing edges w.r.t $`D_i`$
+- $`C`$: remaining and crossing edges w.r.t $`D_i`$
 - $`C(D_i)`$: edges in $`C`$ incident to $`D_i`$
 - $`U(D_i)`$: nodes in $`D_i`$ that are incident to some edge in $`C`$
 
@@ -109,19 +118,25 @@ time decomposes into two parts:
 
 basic idea: connection between random walk and eletrical network. 
 
-construct graph $`D^{'}`$ such that:
+consider the edge we leave through, $`e=(u, u^{'})`$, construct graph $`D^{'}`$ such that:
 
 - add $`u^{'}`$ to $`D`$
-- a dummy node $`u^{*}`$ is added to $`D`$ (to replace $`(_, w^{'}) \in C(D)`$)
-- connect $`(w, _) \in C(D)`$ to the dummy node $`u^{*}`$
+- a dummy node $`u^{*}`$ is added to $`D`$ (to replace $`(*, w^{'}) \in C(D)`$)
+- connect adjacent edges $`(w, *) \in C(D)`$ to the dummy node $`u^{*}`$
+  - like "rewiring" the adjacent edges to point to the same dummy node that we should not touch before touching $`u^{'}`$
 
 then $`P_v(u, u^{'})`$ is the proba of random walk starting on $`v`$ that hits $`u^{'}`$ before $`u^{*}`$
 
-**some magic behind**: $`P_v(e)`$ is equal to the voltage on $`v`$ if we set $`vol(u^{'})=1`$ and $`vol(u^{*})=0`$
+**some magic behind**: $`P_v(e)`$ is equal to the voltage on $`v`$ if we set $`vol(u^{'})=1`$ and $`vol(u^{*})=0`$. this solves $`P_v(e)`$ for one $`e`$ and all $`v \in D_i`$. 
+
+weird that **node** voltage equals **edge** probability. 
 
 solving this approximately uses $`O(|E(D^{'})|\log 1/\epsilon)`$ time. 
 
-we have $`C`$ edges and $`k`$ $`D_i`$s. total time $`O(\sum_i |C||E(D_i^{'})|\log 1/\epsilon)=O(\phi m^2 \log 1/\epsilon)`$
+we have $`C`$ edges and $`k`$ $`D_i`$s:
+
+- each $`D_i`$ takes $`O(|C||E(D^{'})|\log 1/\epsilon)`$ for $`|C|`$ edges
+- so total time is $`O(\sum_i |C||E(D_i^{'})|\log 1/\epsilon)=O(\phi m^2 \log 1/\epsilon)`$
 
 note that $`|E(D^{'})|=|E(D)| + |C(D)| \le 2|E(D)|`$ (using **property 3** of the decomposition)
 
@@ -133,6 +148,81 @@ the distortion is at most $`(1+\epsilon)^{mn} \le 1+\epsilon mn \le 1 + \delta`$
 
 ball-growing technique in Leighton and Rao [15]: there exists a $`(\phi, O(1/\phi))`$ decomposition using time $`O(m)`$
 
+
+
+## total running time: $`O(m^2/\sqrt{n} \log 1/\delta)`$
+
+3 parts:
+
+1. decompostion: $`O(m)`$
+2. computing $`P_v(e)`$: $`O(\phi m^2 \log 1/\delta)`$ (**bottle neck**)
+3. finding arborescence: $`O(m(\gamma + \phi n))`$
+
 if we set $`\phi=1/n^{1/2}`$, then running time is $`O(m^2/\sqrt{n} \log 1/\delta)`$
 
-# $`O(m/\sqrt{n} \log 1/\delta)`$ time
+# improving to $`O(m\sqrt{n} \log 1/\delta)`$ time
+
+now we speed up the bottle neck part, computing $`P_v(e)`$
+
+intuition, let's decompose such running time:
+
+- $`\phi m`$: $`|C|`$ term
+- $`m \log 1/\epsilon`$: computing the electric voltage for each $`D_i`$, takes $`\sum_i |E(D_i)| \log 1/\epsilon`$ time
+
+if we can replace the $`|E(D_i)|`$ term by $`|V(D_i)|`$, then $`m \log 1/\epsilon`$ becomes $`n \log 1/\epsilon`$, thus giving the above improved time. 
+
+recall that can $`P_v(e)`$ is the proba of starting at $`v`$ and leaving via *edge* $`e`$. in the new running time, it indicates we leave at some *vertex* $`u`$.
+
+therefore $`P_v(e) \rightarrow Q_v(u)`$. 
+
+now we calculate the probability that random walks starts from $`v \in D_i`$, leaves $`D_i`$ and first reaches $`u \not\in D_i`$. 
+
+denote the new chain as $`\hat{X}`$, which is similar to $`\tilde{X}`$ but instead of taking the first and last vertex in $`D_i`$, $`\hat{X}`$ only takes the first. 
+
+the **problem** for $`\hat{X}`$ is: compared to $`P_v(e)`$ we don't know which edge we leave through, which can be the edge that are in the final arborescence. so $`Q_v(u)`$ might miss some edges
+
+to **solve** this we need to:
+
+- make sure missing edges are few
+- find a way to recompute the missing edges without distorting the desired distribution
+
+## strong $`(\phi, \gamma)`$-decomposition
+
+![](figs/faster-generation-strong-decomposition.png)
+
+1. it's a $`(\phi, \gamma)`$-decomposition, but with more constraints
+2. $`S`$ is vertex multi-cut: removing $`S`$ will leave $`D_i`$s as disconnected components
+3. nodes in $`S`$ adjacent to $`D_i`$ is bounded
+   - note that some $`s \in S`$ might not be adjacent to any $`D_i`$
+   - in parellel with $`|C| \le \phi|E(G)|`$ in the def of (weak) decomposition
+   - used in $`Q_v(u)`$ time complexity analysis (lemma 14)
+
+**lemma 13**: such decomposition can be computed in $`O(m)`$ time
+
+algorithm in table 1. details omitted
+
+## computing $`Q_v(u)`$
+
+**lemma 14**: given a strong $`(\phi, \gamma)`$-decomposition, we can compute $`(1+\epsilon)`$-approximation of $`Q_v(u)`$ in $`O(\phi m n \log 1/\epsilon)`$ time. 
+
+similar to computing $`P_v(e)`$ using electrical flow. 
+
+now we compute for adjacent nodes $`C(S)`$, not adjacent edges $`C`$. and using property 3, we know $`|C(S)| \le \phi |V(G)| = \phi n`$. 
+
+
+
+## coping with shortcomings of $`\hat{X}`$
+
+shortcomming: missing edge due to $`\hat{X}`$
+
+approach: 
+
+1. construct a new graph $`H^{'}`$ where nodes are the disconncted components left by the halfly constructed arborescence (the size is bounded by $`\phi |V|`$, much smaller)
+2. use some other random spanning tree algorithm on $`H^{'}`$ (time $`O((\phi n)^{2.376})`$
+
+
+
+# what's next
+
+1. electrical network and random walk
+2. ball growing techniques
