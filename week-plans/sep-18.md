@@ -1,5 +1,5 @@
 - edmond's algorithm in C++
-  - [ ] understand the method
+  - [ ] read my own graph and do the computation
   - [ ] wrap it in Python
 - visualize infection probability and uncertainty for our method
   - [X] infection probability on each node (color depth indicates such proba)
@@ -18,7 +18,7 @@
   - [ ] training
   - [ ] evaluation (score, visualization)
 - sampling random spanning tree papers
-  - [ ] faster generation
+  - [X] faster generation
   - [ ] determinant based approaches
 - [ ] nokia application
 - [ ] graph summarization
