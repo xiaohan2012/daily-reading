@@ -1,6 +1,7 @@
 - edmond's algorithm in C++
   - [ ] read my own graph and do the computation
   - [ ] wrap it in Python
+- [ ] optimize `build_closure`
 - visualize infection probability and uncertainty for our method
   - [X] infection probability on each node (color depth indicates such proba)
   - [X] uncertainty on each node
@@ -23,5 +24,5 @@
 - [ ] nokia application
 - [ ] graph summarization
   - [X] plain graph
-  - [ ] labeled
-  - [ ] dynamic
+  - [X] labeled
+  - [X] dynamic
