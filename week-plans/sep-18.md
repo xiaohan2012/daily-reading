@@ -1,6 +1,7 @@
 - edmond's algorithm in C++
-  - [ ] read my own graph and do the computation
-  - [ ] wrap it in Python
+  - [X] read my own graph and do the computation
+  - [X] wrap it in Python
+  - [ ] accepts `min`, `max`, `roots` argument
 - [ ] optimize `build_closure`
 - visualize infection probability and uncertainty for our method
   - [X] infection probability on each node (color depth indicates such proba)
@@ -22,7 +23,7 @@
   - [X] faster generation
   - [ ] determinant based approaches
 - [ ] nokia application
-- [ ] graph summarization
+- graph summarization
   - [X] plain graph
   - [X] labeled
   - [X] dynamic
