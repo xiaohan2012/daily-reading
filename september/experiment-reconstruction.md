@@ -25,19 +25,37 @@
 
 ## `build_closure`
 
-most time on 
-
 ```
-   71      3205        26537      8.3      0.0          cpbfs_search(g, source=root, visitor=vis, terminals=list(late_terminals),
-    72      3205       201234     62.8      0.0                       forbidden_nodes=list(set(terminals) - set(late_terminals)),
-    73      3205   1243017283 387836.9     96.1                       count_threshold=k)
+   74       119         1114      9.4      0.0          cpbfs_search(g, source=root, visitor=vis, terminals=list(late_terminals),
+   75       119         7240     60.8      0.0                       forbidden_nodes=list(set(terminals) - set(late_terminals)),
+   76       119     53260540 447567.6     97.8                       count_threshold=k)
 ```
 
-this is one bottle neck I believe
+```
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    59                                               @profile
+    60                                               def black_target(self, e):
+    61   2914677      7232975      2.5     70.1          t = int(e.target())
+    62   2914676      2879264      1.0     27.9          if self.pred[t] == -1:
+    63     51554        94979      1.8      0.9              s = int(e.source())
+    64     51554        41574      0.8      0.4              self.pred[t] = s
+    65     51554        64489      1.3      0.6              self.dist[t] = self.dist[s] + 1
 
+Total time: 6.08986 s
+File: /home/cloud-user/code/source_finding/utils.py
+Function: tree_edge at line 67
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    67                                               @profile
+    68                                               def tree_edge(self, e):
+    69    959605      1855004      1.9     30.5          s, t = e.source(), e.target()
+    70    959605      2064484      2.2     33.9          s, t = int(s), int(t)
+    71    959605       928588      1.0     15.2          self.pred[t] = s
+    72    959605      1241789      1.3     20.4          self.dist[t] = self.dist[s] + 1
 ```
-    65                                               def tree_edge(self, e):
-    66  25247842     92221318      3.7     53.1          s, t = int(e.source()), int(e.target())
-    67  25247842     28369457      1.1     16.3          self.pred[t] = s
-    68  25247842     53176873      2.1     30.6          self.dist[t] = self.dist[s] + 1
-```
+
+it turns out I am wrong: `tree_edge` and `black_target` part only takes 20% of the time of `cpbfs_search`
+
+so `cpbfs_search` itself is slow. 
