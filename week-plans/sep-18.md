@@ -2,7 +2,9 @@
   - [X] read my own graph and do the computation
   - [X] wrap it in Python
   - [ ] accepts `min`, `max`, `roots` argument
-- [ ] optimize `build_closure`
+- [X] optimize `build_closure`
+  - only optimizes the `visitor` part
+  - `cpbfs_search` not so trivial to optimize
 - visualize infection probability and uncertainty for our method
   - [X] infection probability on each node (color depth indicates such proba)
   - [X] uncertainty on each node
@@ -10,6 +12,7 @@
   - [X] optimize extract steiner tree 
         - ended up not using C++
   - [X] re-use sampled spanning trees
+  - [ ] faster laplacian
   - [ ] experiment using more trees
     - is there a case where PR is worse than our method?
   - [ ] inference algorithm based on sampled trees
