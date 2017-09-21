@@ -12,9 +12,11 @@ note that:
 2. it works with weighted graph
 
 
-*question**
+**question**
 
 I still don't understand why we sample tree by simple sample from edges
+
+
 
 # source
 
