@@ -25,3 +25,10 @@ open question: can we utility graph embedding techniques for graph summarization
 - what's the general use of graph embedding?
 - what are the tasks for graph summarization?
 
+# faster deep learning for xml learning
+
+prediction for the SIGIR 2017 paper is slow because it needs to evaluate all the labels. 
+
+can we make it faster?
+
+# 
