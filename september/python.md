@@ -90,3 +90,45 @@ don't use `g.vertex`
 ```
 setting edge filter is slow, takes `36.8\%` of the time. 
 
+
+# `line_profiler` + `Ipyhton`
+
+`c.InteractiveShellApp.extensions = ['line_profiler']`
+
+or 
+
+`>>> %load_ext line_profiler`
+
+usage:
+
+`%lprun -f my_method for i in range(1000): my_method()`
+
+# real bottle neck: contracting graph
+
+related to the slow part: `g.edge`
+
+before optimizing:
+
+```
+   206     31252      4782729    153.0     38.7          new_g.add_edge(u, v)
+   207
+   208      1000        59560     59.6      0.5      new_weights = new_g.new_edge_property('float')
+   209     32252        55232      1.7      0.4      for (u, v), w in e2w.items():
+   210     31252      5200172    166.4     42.1          new_weights[new_g.edge(u, v)] = w
+```
+
+after optimzing:
+
+```
+   205      1000         1360      1.4      0.0      edges = []
+   206     32261        34668      1.1      0.5      for u, v in e2w:
+   207     31261      5101433    163.2     76.2          e = new_g.add_edge(u, v)
+   208     31261        51667      1.7      0.8          edges.append(e)
+   209
+   210      1000        58566     58.6      0.9      new_weights = new_g.new_edge_property('float')
+   211     32261        41056      1.3      0.6      for e, w in zip(edges, e2w.values()):
+   212     31261       364971     11.7      5.5          new_weights[e] = w
+   213
+```
+
+assigning weight takes only 11.7, instead of 166.4 now. 

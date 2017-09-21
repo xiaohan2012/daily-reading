@@ -12,7 +12,8 @@
   - [X] optimize extract steiner tree 
         - ended up not using C++
   - [X] re-use sampled spanning trees
-  - [ ] faster laplacian
+  - [X] faster laplacian
+        - not the crux, graph contraction is slow
   - [ ] experiment using more trees
     - is there a case where PR is worse than our method?
   - [ ] inference algorithm based on sampled trees
