@@ -70,3 +70,12 @@ for example,
 
 1. update parameters of the cnn part while fixing node embedding
 2. update node embedding (cnn parameter does not affect)
+
+# Sep 23
+
+hack for missing placeholder value:
+
+- just add some non-sense value for the missed placeholder
+
+however, during graph training, it concats network embedding and text embedding. this makes no sense.
+
