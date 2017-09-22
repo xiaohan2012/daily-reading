@@ -14,9 +14,12 @@
   - [X] re-use sampled spanning trees
   - [X] faster laplacian
         - not the crux, graph contraction is slow
-  - [ ] experiment using more trees
+  - [X] experiment using more trees
     - is there a case where PR is worse than our method?
-  - [ ] inference algorithm based on sampled trees
+  - [X] inference algorithm based on sampled trees
+  - [X] process plotting
+  - [ ] why random's performance deteriorates
+  - [ ] find cases when ours is better than pagerank
   - [ ] interaction with Gephi
 - what is a good reconstructed cascade?
 - combine deepwalk and kim-cnn	  
@@ -25,8 +28,8 @@
   - [ ] evaluation (score, visualization)
 - sampling random spanning tree papers
   - [X] faster generation
-  - [ ] determinant based approaches
-- [ ] nokia application
+  - [X] determinant based approaches
+- [X] nokia application
 - graph summarization
   - [X] plain graph
   - [X] labeled

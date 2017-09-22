@@ -132,3 +132,21 @@ after optimzing:
 ```
 
 assigning weight takes only 11.7, instead of 166.4 now. 
+
+
+# make `matplotlib.colormap` using `seaborn`
+
+just wonderful!
+
+https://stackoverflow.com/questions/37902459/how-do-i-use-seaborns-color-palette-as-a-colormap-in-matplotlib
+
+- `ListedColormap`
+- `sns.color_palette(colors).as_hex()`
+
+# `graph_tool.cairo_draw`
+
+seems to have normalized the colormap
+
+# resize figure
+
+`fig.set_size_inches(width, height, forward=True)`

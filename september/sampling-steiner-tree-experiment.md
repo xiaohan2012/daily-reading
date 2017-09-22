@@ -171,3 +171,26 @@ acutally the bottle neck is computing laplacian
     16      1000      3380914   3380.9     89.6      l = laplacian(g, weight=weights)
 ```
 
+
+# sep 22
+
+## sampling based inference
+
+gives better result.
+
+notebook: http://193.166.24.212:9999/notebooks/compare_inference_method.ipynb
+
+## our method vs pagerank
+
+gives better result
+
+## why performance drops
+
+first reason: sometimes after the query, the prediction does not change, 
+
+however the queried node (which is a correct prediction) is removed from the prediction, thus making it performance drop. 
+
+second reason: 
+
+- spanning trees should not be re-used . for queried nodes are **not** infected, some old spanning trees are not spanning trees for the new graph. 
+
