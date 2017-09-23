@@ -71,11 +71,17 @@ for example,
 1. update parameters of the cnn part while fixing node embedding
 2. update node embedding (cnn parameter does not affect)
 
-# Sep 23
+# Sep 22
 
 hack for missing placeholder value:
 
 - just add some non-sense value for the missed placeholder
 
 however, during graph training, it concats network embedding and text embedding. this makes no sense.
+
+# Sep 23
+
+we need one dummy training example, with non-sense words and non training labels, because even during graph training, label training needs input, weird. 
+
+BTW, can I give a simple example that reproduces the same error. 
 

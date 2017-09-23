@@ -21,10 +21,9 @@
   - [ ] why random's performance deteriorates
   - [ ] find cases when ours is better than pagerank
   - [ ] interaction with Gephi
-- what is a good reconstructed cascade?
-- combine deepwalk and kim-cnn	  
-  - [ ] model
-  - [ ] training
+- combine deepwalk and kim-cnn
+  - [X] model
+  - [X] training
   - [ ] evaluation (score, visualization)
 - sampling random spanning tree papers
   - [X] faster generation
