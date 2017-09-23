@@ -24,7 +24,8 @@
 - combine deepwalk and kim-cnn
   - [X] model
   - [X] training
-  - [ ] evaluation (score, visualization)
+  - [X] evaluation, score 
+  - [ ] embedding visualization
 - sampling random spanning tree papers
   - [X] faster generation
   - [X] determinant based approaches
