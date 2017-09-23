@@ -150,3 +150,7 @@ seems to have normalized the colormap
 # resize figure
 
 `fig.set_size_inches(width, height, forward=True)`
+
+# `jupyter-nbconvert`
+
+instead of `jupyter nbconvert`
