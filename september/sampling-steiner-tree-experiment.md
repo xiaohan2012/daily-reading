@@ -194,3 +194,70 @@ second reason:
 
 - spanning trees should not be re-used . for queried nodes are **not** infected, some old spanning trees are not spanning trees for the new graph. 
 
+
+
+# sep 23
+
+possible improvements on visualization:
+
+1. remove uninfected nodes
+1. mark also queried nodes (if infected)
+1. plot all observed (and infected) nodes during query process
+1. color depth for infection probability
+
+why performance go worse?
+
+- bad spanning tree samples? --- increase sample size
+  - based only on determinant, there might be some bad trees, shall we just take the **k smallest** trees?
+- incorrect threshold for infection probability -- take the top-k nodes?
+
+current evaluation method does not take into account queried nodes. 
+
+thus, if a algorithm just query infected nodes (assume there exists such one), then its performance should increase linearly, this is a good baseline. 
+
+if evaluation only considers observations + queried nodes, we should expect the performance to increase. 
+
+## bad steiner trees: example
+
+I sampled 500 steiner trees on 3 observed nodes. the min steiner tree has size 4. 
+
+below is the tree sizes statistics:
+
+```
+count    500.000000
+mean      13.414000
+std        8.280322
+min        4.000000
+25%        6.000000
+50%       11.500000
+75%       19.000000
+max       41.000000
+dtype: float64
+```
+- top 25% trees have size <= 6. 
+
+and 10 most common tree sizes and their frequency:
+
+```
+[(4, 66), (6, 36), (5, 32), (7, 31), (9, 29), (8, 23), (13, 20), (16, 20), (10, 19), (17, 19)]
+```
+
+## improved tree sampling algorithm
+
+let's keep it simple and stupid just take the top 20% trees ranked by the tree size (the smaller the tree, the higher rank)
+
+## sampling steiner trees by personalized random walk. 
+
+this reminds me of sampling the steiner tree by a random walk of personalized vector. 
+
+would it both be faster and give smaller trees in general?
+
+## inference algorithm comparison
+
+(1) sampling using all tree samples vs (2) sampling using top-k tree samples
+
+- same precision
+- recall: (1) > (2)
+
+why? threshold=0.5 is bad?
+
