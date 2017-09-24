@@ -261,3 +261,20 @@ would it both be faster and give smaller trees in general?
 
 why? threshold=0.5 is bad?
 
+
+# Sep 24
+
+observation:
+
+- `all-samples` tend to give higher infection probability, because the tree sizes are big (so mor nodes are covered)
+- `small-samples` tend to give lower infection probability
+
+[more experiment result](http://193.166.24.212:9999/notebooks/infection_probability_small_sample_vs_ordinary.ipynb)
+
+this suggests, taking setting a fixed threshold is not fair. 
+
+one way to fix the evaluation is to use ranking-based measurement such as:
+
+- precision at `k`
+- recall at `k`
+
