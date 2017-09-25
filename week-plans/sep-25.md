@@ -27,8 +27,10 @@
 
 - active learning experiment
   - [X] ranking based evaluation
-  - [X] full comparison (graph, observation)
-  - [ ] query comparison (interpretable)
+  - [X] inference method comparison using new evaluation
+  - [X] better query process visualization
+  - [X] query comparison
+  - [ ] interprete query comparison result
 
 - network embedding
   - more datasets

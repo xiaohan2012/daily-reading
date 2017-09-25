@@ -281,6 +281,9 @@ one way to fix the evaluation is to use ranking-based measurement such as:
 
 # Sep 25
 
+
+## smaller tree samples vs full samples
+
 using smaller samples have no obvious advantage over full samples. 
 
 - [karate](http://193.166.24.212:9999/files/figs/inference_method_comparison_karate.pdf)
@@ -299,3 +302,22 @@ the uncertainty based method queries too conservatively.
 query node is very close to observed infected node. 
 
 can we jump a bit longer?
+
+## main modification
+
+- use ranking based evaluation
+- our query method resample steiner trees at each iteration (to be safe, however some optimization can be done here)
+- better visualization that illustrate how different query strategy works
+
+## query comparison
+
+- http://193.166.24.212:9999/files/figs/query_comparison_lattice.pdf
+- http://193.166.24.212:9999/files/figs/query_comparison_karate.pdf
+- http://193.166.24.212:9999/files/figs/query_comparison_dolphin.pdf
+
+observation:
+
+- for `k=5, 10`, our method is good
+- for `k=15, ..., 30` , random is equal even better
+
+why?
