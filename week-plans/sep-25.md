@@ -1,11 +1,17 @@
-- read about active learning in general
 - read about graph inference problems (what I read in KDD 2017)
 - find other graph inference problems in kdd papers
 
+- electrical network and random walk
+
+- think about random steiner tree and personalized random walk
+
 - extreme multi-label learning: faster prediction. can I borrow the idea from sparse local embedding paper
+
+- can we use the techniques in gradient boosted tree in fastxml? 
 
 - wrap edmonds' algorithm
   - usable by rejected paper
+
 - experiment for rejected paper
   - refer to previous experiment's measurements 
     - prove that closure and delay-bfs is better
