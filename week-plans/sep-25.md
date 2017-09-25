@@ -29,3 +29,8 @@
   - [X] ranking based evaluation
   - [X] full comparison (graph, observation)
   - [ ] query comparison (interpretable)
+
+- network embedding
+  - more datasets
+  - cross validation
+  - visualization of embeddings
