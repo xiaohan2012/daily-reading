@@ -292,5 +292,10 @@ what's next?
 - still take full samples
 - but use ranking based evaluation for query selection comparison
 
+## observation
 
+the uncertainty based method queries too conservatively. 
 
+query node is very close to observed infected node. 
+
+can we jump a bit longer?
