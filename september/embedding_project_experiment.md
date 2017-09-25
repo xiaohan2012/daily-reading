@@ -87,5 +87,16 @@ BTW, can I give a simple example that reproduces the same error.
 
 # Sep 25
 
-- `kim_cnn` achieves around 65% accuracy at iteration 2000
-- `combined` achieves around 50% accuracy at iteration 2000
+at iteration 2200:
+- `kim_cnn` achieves:
+  - p1: 54% 
+  - p3: 37%
+  - p5: 28%
+
+- `combined` 2000:
+  - p1: 53%
+  - p2: 36%
+  - p5: 27%
+
+one difference: training accuracy is much higher for `kim_cnn` than `combined`
+
