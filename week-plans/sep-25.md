@@ -2,10 +2,11 @@
 - find other graph inference problems in kdd papers
 
 - electrical network and random walk
+  - chapter 1
 
 - think about random steiner tree and personalized random walk
 
-- extreme multi-label learning: faster prediction. can I borrow the idea from sparse local embedding paper
+- extreme multi-label learning: faster prediction. can I borrow the idea from sparse local embedding paper (clustering?)
 
 - can we use the techniques in gradient boosted tree in fastxml? 
 
