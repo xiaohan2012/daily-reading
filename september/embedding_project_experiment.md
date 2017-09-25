@@ -85,3 +85,7 @@ we need one dummy training example, with non-sense words and non training labels
 
 BTW, can I give a simple example that reproduces the same error. 
 
+# Sep 25
+
+- `kim_cnn` achieves around 65% accuracy at iteration 2000
+- `combined` achieves around 50% accuracy at iteration 2000
