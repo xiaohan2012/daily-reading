@@ -154,3 +154,17 @@ seems to have normalized the colormap
 # `jupyter-nbconvert`
 
 instead of `jupyter nbconvert`
+
+# tri-diagonal matrix
+
+`np.diag(a, -1) + np.diag(b, 0) + np.diag(c, 1)`
+
+# lu decomposition
+
+```python
+import scipy
+import scipy.linalg
+
+scipy.linalg.lu(A)
+```
+

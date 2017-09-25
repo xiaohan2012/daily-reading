@@ -1,5 +1,7 @@
 # three problems
 
+random walk in one-dimensional finite network
+
 ## drunkard's walk
 
 image a 1-dimension street with $`N+1`$ stops (from 0 to $`N`$) and a drunkard that roams on the street. 
@@ -25,13 +27,7 @@ now the question is:
 
 what's the probability $`P(x)`$ that I win if  start with $`x`$ coins.
 
-Obviously, $`P(0)=0`$ and $`P(N)=1`$. 
-
-## common pattersn
-
-1. $`P(0)=0`$
-2. $`P(N)=1`$
-3. $`P(x)=1/2 P(x-1) + 1/2 P(x+1)`$, if $`0 \le x \le N`$
+Obviously, $`P(0)=0`$ and $`P(N)=1`$.  
 
 ## electric network problem
 
@@ -52,7 +48,53 @@ so $`v(x) = 1/2v(x+1) + 1/2v(x-1)`$
 
 they are the same problem. 
 
+## common patterns
 
+1. $`P(0)=0`$
+2. $`P(N)=1`$
+3. $`P(x)=1/2 P(x-1) + 1/2 P(x+1)`$, if $`0 \le x \le N`$
+
+also applies to $`v`$ of the electric network
+
+remarks:
+
+1. the above is actually a linear system (and it has unique solution)
+
+2. as a generalization, the walk can be biased with probability $`p`$, and it's 
+$`P(x)=1/p P(x-1) + (1-p) P(x+1)`$, if $`0 \le x \le N`$
+
+3. there is some relationship between $`p`$ and resitance, $`p=\frac{\frac{1}{R_{x-1}}}{\frac{1}{R_{x-1}} + \frac{1}{R_x}}`$
+
+## more general form: harmonic function
+
+- a set of points: $`S=\{0, 1, \ldots, N\}`$
+- interior points: $`D=\{1, \ldots, N-1\}`$
+- boundary points: $`B=\{0, N\}`$
+
+a function $`f: S \rightarrow \mathbb{R}`$ is harmonic if:
+
+$`f(x)=\frac{f(x-1)+f(x+1)}{2}`$ for $`x \in D`$ (looks familiar?)
+
+*Dirichlet problem*: given values on boundary points, find a harmonic function on interior points. 
+
+Uniqueness principle: for the same boundary values, harmonic function is unique (proved by maximum. 
+
+Maximum principle: the maximum and minimum of $`f`$ corresponds to $`B`$
+
+in other words, $`f(x)`$ $`D`$ are between $`f(x)`$ on $`B`$. 
+
+**uniqueness proof**: suppose $`h(x)=f(x)-g(x)`$, prove that $`h(x)=0`$ for $`0<x<N`$ using maximum principle (omitted).
+
+the walker will eventually reach either point in $`B`$: proved by maximum principle. 
+
+**exercise** let $`m(x)`$ be the *expected* number of steps to reach either 0 or $`N`$ from $`x`$. then:
+
+1. $`m(0)=0`$ and $`m(N)=0`$ (because it arealy reaches)
+2. $`m(x)=\frac{m(x+1)+m(x-1)}{2} + 1`$ (plus 1 because we need to take one more step to reach $`x`$ from its neighbors )
+
+what is the condition for unique solution? note that the maximum principle does not necessarily hold. 
+
+but I think the corresponding linear system is non-singular. 
 
 
 
