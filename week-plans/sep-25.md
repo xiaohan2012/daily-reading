@@ -26,6 +26,6 @@
   - my own graph library
 
 - active learning experiment
-  - [ ] ranking based evaluation
-  - [ ] full comparison (graph, observation)
+  - [X] ranking based evaluation
+  - [X] full comparison (graph, observation)
   - [ ] query comparison (interpretable)

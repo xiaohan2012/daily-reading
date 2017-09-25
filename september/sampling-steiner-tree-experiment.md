@@ -278,3 +278,19 @@ one way to fix the evaluation is to use ranking-based measurement such as:
 - precision at `k`
 - recall at `k`
 
+
+# Sep 25
+
+using smaller samples have no obvious advantage over full samples. 
+
+- [karate](http://193.166.24.212:9999/files/figs/inference_method_comparison_karate.pdf)
+- [dolphin](http://193.166.24.212:9999/files/figs/inference_method_comparison_dolphin.pdf)
+- [lattice](http://193.166.24.212:9999/files/figs/inference_method_comparison_lattice.pdf)
+
+what's next?
+
+- still take full samples
+- but use ranking based evaluation for query selection comparison
+
+
+
