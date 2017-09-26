@@ -168,3 +168,38 @@ import scipy.linalg
 scipy.linalg.lu(A)
 ```
 
+# catch multiple exceptions
+
+```python
+except (IDontLikeYouException, YouAreBeingMeanException) as e:
+```
+
+
+# tf debugging
+
+- https://www.tensorflow.org/programmers_guide/debugger
+  - including memory consumption
+  - however, there is bug: https://github.com/tensorflow/tensorflow/issues/12059
+- profiling: https://github.com/tensorflow/tensorflow/issues/1824
+
+
+# tf get tensor from checkpoint
+
+```pyton
+import tensorflow as tf
+
+checkpoint_file = 'runs/deepwalk/checkpoints/model-25000'
+
+sess = tf.InteractiveSession()
+
+saver = tf.train.import_meta_graph("{}.meta".format(checkpoint_file))
+saver.restore(sess, checkpoint_file)
+
+embedding_table = sess.graph.get_operation_by_name('embedding/table')
+
+val = embedding_table.outputs[0].eval()
+
+print(val)
+```
+
+https://gist.github.com/xiaohan2012/5456951471c6e7fd19fc796809ab303a

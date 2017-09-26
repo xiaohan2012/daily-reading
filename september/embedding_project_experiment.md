@@ -100,3 +100,18 @@ at iteration 2200:
 
 one difference: training accuracy is much higher for `kim_cnn` than `combined`
 
+
+# Sep 26
+
+- use pretrained node embedding
+- memory keeps increasing for combined model
+  - possible reason: memory leak
+  - is it because of deepwalk?
+
+memory profiling tools:
+
+- https://github.com/tensorflow/tensorflow/issues/492
+- https://github.com/yaroslavvb/memory_probe_ops
+- https://github.com/yaroslavvb/memory_util
+
+

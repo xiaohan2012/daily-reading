@@ -33,6 +33,8 @@
   - [ ] interprete query comparison result
 
 - network embedding
+  - [X] use pre-trained node embedding
+  - [ ] use nce parameters as well
   - more datasets
   - cross validation
   - visualization of embeddings
