@@ -1,8 +1,10 @@
 # Meta-Graph Based Recommendation Fusion over Heterogeneous Information Networks
 
-- works on heterogenous information network with rich side information
+matrix factorization is the core in RS. in practice, recommendation data is usually in heterogenous networkk with rich information. 
 
-novelty: learn all the side informaiton jointly instead of separately
+this work copes with information network with rich side information
+
+novelty: it learns all the side informaiton jointly instead of separately
 
 # approach
 
