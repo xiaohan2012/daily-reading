@@ -1,4 +1,4 @@
-# three problems
+# three problems: random walk in 1D
 
 random walk in one-dimensional finite network
 
@@ -96,6 +96,111 @@ what is the condition for unique solution? note that the maximum principle does 
 
 but I think the corresponding linear system is non-singular. 
 
+# random walk in 2D
+
+what is:
+
+1. the probability $`p(x)`$ that the random walker will reach point $`E`$ (escape) before reahcing $`P`$ (meet the police) if he starts at interior point $`x`$
+2. or the voltage at interior points $`x`$ is $`P`$ has voltage 1 and $`E`$ are grouneded. 
+
+![](figs/random-walk-in-2d.png)
+
+suppose it has 1/4 probability to one of its 4 neighbouring points. 
+
+harmonic function: 
+
+$`f(a, b) = \frac{f(a-1, b) + f(a, b-1) + f(a+1, b) + f(a, b+1)}{4}`$
+
+using kirchoff's law, $`v(a, b)`$ also satisfies the above. 
+
+maximum principle: harmonic function will always reach its maximum/minimum at its boundaries. 
+
+uniqueness is preserved. 
+
+exercise: 
+
+1. if $`f`$ and $`g`$ are harmonic, then $`h=a \cdot f + b \cdot g`$ is harmonic for constant $`a`$ and $`b`$
+   - superposition principle
+2. suppose we have $`B_1, \ldots, B_n`$ boundary points and we know the harmonic function $`e_j(a, b)`$ if $`B_j=1`$ while $`B_i=0, \forall i \neq j`$. then suppose the boundary values are $`v_1, \ldots, v_n`$, then harmonic function is $`f(a, b) = \sum_j v_j e_j(a, b)`$
+   - proved using the above property
+
+**question**: how to get the solution?
+
+## method 1: monte carlo method
+
+idea: 
+
+- for each $`x`$, simulate $`n`$ experiments
+- count the fraction of successes $`\hat{p}`$ as an estimation of the value $`\hat{m}`$
+  - denote $`S_n`$ as number of susscess, then $`\hat{p}=S_n / n`$
+  - $`q = 1-p`$
+
+disadvantages: if $`p`$ is very small, then according to central limit theorem, to acquire good accuracy $`n`$ needs to be large. 
+
+$`P(-k < \frac{S_n-np}{\sqrt{npq}}<k) \approx A(k)`$
+
+- $`A(k)`$ area under the normal curve between $`-k`$ and $`k`$
+
+estimation method, assume some value of $`k`$ (e.g, $`k=2`$), divide $`S_n`$ and $`np`$ by $`n`$. 
+
+## method 2: dirichlet problem and method of relaxations
+
+dirichlet problem: given a metal square, cut off a small square inside it.
+
+assume the outer boundaries have tempoerature 1 and inner boundaries have temperature 0, what are the temperature of the interior points, $`u(x, y)`$
+
+u(x, y) is harmonic function but in the continuous region.
+
+usually we solve this be discretise it. 
+
+relaxtion method: 
+
+1. for each interior point, adjust its value to be equal to its surroundings
+   - this adjustment makes some part equal while also producing other unequal parts
+2. repeat the above process until convergence. 
+
+faster than monte carlo method
+
+
+## method 3: solve by linear equation
+
+each interior point correspond to a variable and a linear equation.
+
+together we solve a linear system
+
+it's exact but needs matrix inverse
+
+## method 4: markov chain
+
+absorbing state: once entered, cannot leave it, like home and bar in the drunkard example
+
+absorbing markov chain: have at least on absorbing state
+
+a random walker on the absorbing markov chain will eventually end up in the absorbing state(s). 
+
+canonical form:
+
+$`\mathbf{P} = \begin{pmatrix} \mathbf{I} & \mathbf{0} \\ \mathbf{R} & \mathbf{Q} \end{pmatrix}`$
+
+- $`\mathbf{I}`$ transition within absorbing states
+- $`\mathbf{Q}`$ transition within non-absorbing states
+- $`\mathbf{R}`$ transition from non-absorbing states to absorbing ones
+
+fundamental matrix: $`N=(\mathbf{I} - \mathbf{Q})^{-1}`$
+
+- $`\mathbf{N}_{ij}`$: expected number of times we will be in $`j`$ before reaching absorbing states if starting from $`i`$ 
+  - for $`N_{11}`$, it starts at iteself, so already 1, it has $`\frac{1}{2} \times \frac{1}{2}`$ probability to go $`1 \rightarrow 2 \rightarrow 2`$ and $`\frac{1}{2}^{4}`$ to go $`1, 2, 3, 2, 1`$, and so on
+  - the limiting value is $`3/2`$
+  - but why in general (theoretically)? why inverse has such interpretation?
+  
+- $`t=\mathbf{N} \mathbf{I}`$: expected number of steps for each starting state before absorbtion. (duration of the random walk, if it touches the absorbing state, it terminates)
+
+- $`\mathbf{B}=\mathbf{N}\mathbf{R}`$: probability of ending at each absorbing state given some starting state. 
+  - why this is probability?
+
+example for 1-D random walk (5 states):
+
+![](figs/random-walk-matrix-examples.png)
 
 
 # electric network
