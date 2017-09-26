@@ -321,3 +321,23 @@ observation:
 - for `k=15, ..., 30` , random is equal even better
 
 why?
+
+# Sep 26
+
+some reason why random is better:
+
+consider the follow case:
+
+1. observed infections are very close to each other (because infection region is small)
+
+what will our method produce?
+
+1. the regions between the observations are of highest uncertainty
+2. as observations are close, the region is small
+3. once they are exhausted, it will search the boundary of observed region. 
+
+but, why not take a larger leap? more explorative, like random approach?
+
+
+
+
