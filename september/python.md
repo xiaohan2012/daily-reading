@@ -203,3 +203,24 @@ print(val)
 ```
 
 https://gist.github.com/xiaohan2012/5456951471c6e7fd19fc796809ab303a
+
+# `python setup.py`
+
+note to the following:
+
+- `packages=['name-of-the-package']`
+
+```python
+core_module = Extension(
+    'pyedmond/_core',  # the path to save the compiled module
+    include_dirs=['/usr/include/python3.5/'],
+    libraries=['boost_python-py35', 'boost_graph'],
+    library_dirs=['/usr/lib/x86_64-linux-gnu/'],
+    extra_compile_args=['-std=c++11', '-O2', '-Wall'],
+    extra_link_args=['-Wl,--export-dynamic'],
+    sources=['pyedmond/_core.cpp']
+)
+```
+
+
+adding test: https://docs.pytest.org/en/latest/goodpractices.html#integrating-with-setuptools-python-setup-py-test-pytest-runner
