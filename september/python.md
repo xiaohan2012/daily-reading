@@ -232,6 +232,6 @@ os.environ["CXX"] = "g++-4.7"
 
 to specifiy enrionment variables such as compiler
 
-authentication issue when doing `python setup.py register`:  https://github.com/pypa/setuptools/issues/941
+authentication issue when doing `python setup.py sdist upload`:  https://github.com/pypa/setuptools/issues/941
 
 - create a `.pypirc` file
