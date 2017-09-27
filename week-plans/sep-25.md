@@ -11,7 +11,7 @@
 - can we use the techniques in gradient boosted tree in fastxml? 
 
 - wrap edmonds' algorithm
-  - usable by rejected paper
+  - [X] usable by rejected paper
 
 - experiment for rejected paper
   - refer to previous experiment's measurements 
@@ -30,11 +30,14 @@
   - [X] inference method comparison using new evaluation
   - [X] better query process visualization
   - [X] query comparison
-  - [ ] interprete query comparison result
+  - [X] interprete query comparison result
 
 - network embedding
   - [X] use pre-trained node embedding
-  - [ ] use nce parameters as well
-  - more datasets
-  - cross validation
-  - visualization of embeddings
+  - [X] use nce parameters as well
+  - [X] preprocess more datasets
+  - experiment on the datasets for three methods
+    - [ ] split train, dev and test data (80%, 10%, 10%)
+    - [ ] save running information to separate directory
+    - [ ] evaluation for each dataset
+  - [ ] presentation
