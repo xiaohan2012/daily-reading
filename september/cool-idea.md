@@ -31,4 +31,7 @@ prediction for the SIGIR 2017 paper is slow because it needs to evaluate all the
 
 can we make it faster?
 
-# 
+# active learning for continuous time independent cascade model
+
+why CTIC model, mainly because $`p(x)`$ is defined, thus mutual information can be properly defined. 
+
