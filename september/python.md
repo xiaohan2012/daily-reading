@@ -224,3 +224,14 @@ core_module = Extension(
 
 
 adding test: https://docs.pytest.org/en/latest/goodpractices.html#integrating-with-setuptools-python-setup-py-test-pytest-runner
+
+```python
+os.environ["CC"] = "g++-4.7"
+os.environ["CXX"] = "g++-4.7"
+```
+
+to specifiy enrionment variables such as compiler
+
+authentication issue when doing `python setup.py register`:  https://github.com/pypa/setuptools/issues/941
+
+- create a `.pypirc` file
