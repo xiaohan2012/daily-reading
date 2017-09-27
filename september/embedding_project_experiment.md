@@ -115,3 +115,9 @@ memory profiling tools:
 - https://github.com/yaroslavvb/memory_util
 
 
+# Sep 27
+
+no need to k-fold cross validation (used for small dataset)
+
+usually, split it into train/dev/test dataset. 
+
