@@ -147,4 +147,8 @@ fuck, it still leaks!!
 make it UNK
 
 
+## possible improvement
+
+- understand how is the training done. when training the labels, are the node embeddings updated?
+- add regularization to node embedding learning
 
