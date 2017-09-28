@@ -121,3 +121,30 @@ no need to k-fold cross validation (used for small dataset)
 
 usually, split it into train/dev/test dataset. 
 
+# Sep 28
+
+possible improvement:
+
+1. binary matrix is sparse, as opposed to dense
+1. check the memory bottle neck?
+1. why memory leaks?
+
+memory observation:
+
+1. `kimcnn` only takes three percent of memory while training, while takes thirty percent while validating
+
+## memory leak possible reason
+
+save embedding for visualization seems to leak memories
+
+don't know why
+
+fuck, it still leaks!!
+
+
+## dealing with unknown labels
+
+make it UNK
+
+
+

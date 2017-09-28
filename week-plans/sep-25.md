@@ -37,7 +37,10 @@
   - [X] use nce parameters as well
   - [X] preprocess more datasets
   - experiment on the datasets for three methods
-    - [ ] split train, dev and test data (80%, 10%, 10%)
-    - [ ] save running information to separate directory
+    - [X] split train, dev and test data (80%, 10%, 10%)
+    - [X] save running information to separate directory
     - [ ] evaluation for each dataset
   - [ ] presentation
+    - architecture figure
+    - model formulas
+    - training algorithm
