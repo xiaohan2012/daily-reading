@@ -31,4 +31,13 @@ $`H(X_{V-O} \mid O)=-\sum\limits_{X_{V-O}} p(X_{V-O}, O) \log p(X_{V-O} \mid O)`
   
 
 
+# Sep 29
+
+## more on personalized random walk for steiner tree sampling
+
+one idea of the random walk from broder's paper is: 
+
+everytime you visit node, it corresponds to a dicted tree with that node as the root. 
+
+however, for personalized random walk, this is not true because when the walker jumps, it might destroy the tree structure (if we remove the out edge of the landing node)
 
