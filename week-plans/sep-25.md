@@ -1,10 +1,12 @@
 - read about graph inference problems (what I read in KDD 2017)
-- find other graph inference problems in kdd papers
+
+- [X] find other graph inference problems in kdd papers
 
 - electrical network and random walk
   - chapter 1
 
-- think about random steiner tree and personalized random walk
+- [X] think about random steiner tree and personalized random walk
+  - is not very easy
 
 - extreme multi-label learning: faster prediction. can I borrow the idea from sparse local embedding paper (clustering?)
 
@@ -39,8 +41,5 @@
   - experiment on the datasets for three methods
     - [X] split train, dev and test data (80%, 10%, 10%)
     - [X] save running information to separate directory
-    - [ ] evaluation for each dataset
-  - [ ] presentation
-    - architecture figure
-    - model formulas
-    - training algorithm
+    - [X] evaluation for each dataset
+  - [X] presentation slides

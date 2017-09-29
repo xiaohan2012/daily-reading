@@ -202,6 +202,15 @@ example for 1-D random walk (5 states):
 
 ![](figs/random-walk-matrix-examples.png)
 
+## harmonic function in this case
+
+it should satisfy: 
+
+$`f(i) = \sum_j P_{ji} f(j)`$
+
+or in matrix form (denote $`f`$ as a column matrix):
+
+$`f=Pf`$
 
 # electric network
 
