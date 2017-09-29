@@ -1,11 +1,16 @@
 # summary
 
 - uniform random spanning tree (undirected) generation for undirected unweighted graph
+
 - proof of markov matrix tree theorem using backward chain
+
 - backward chain produces random spanning with stationary distribution $`\delta(T) = \prod_{e \in T} w(e)`$
   - $`w(e)`$ is normalized to be stochastic accoding to node degree
-- uniform random spanning tree generation using another type of tree by forward chain
-  - proof using equivalence to backward chain and chain reversibility
+
+- tree generated from forward chain has the same stationary distribution: $`\delta(T)`$	
+  - proved using chain reversibility
+
+- uniform generation using some math
 
 # introduction
 
@@ -169,7 +174,7 @@ in other words, $`w(T)`$ satisfy the recursive transition probability (also stat
 
 thus, proof is done.
 
-note: we are lucky that transition kernel `P` satisfies the stationary distribution. 
+note: we are lucky that transition kernel $`P`$ satisfies the stationary distribution. 
 
 ## implications of the theorem
 
