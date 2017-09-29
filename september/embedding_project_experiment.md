@@ -152,3 +152,10 @@ make it UNK
 - understand how is the training done. when training the labels, are the node embeddings updated?
 - add regularization to node embedding learning
 
+# sep 29
+
+## memory leak place found!
+
+- memory leak reason: `global_step += 1` creates new node
+- how to debuged it: use `sess.graph.finalize()` which makes graph readable only
+- `optimizer.minimize(model.label_loss, global_step=global_step)` will increment the global step
