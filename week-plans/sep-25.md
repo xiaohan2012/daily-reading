@@ -19,13 +19,14 @@
   - refer to previous experiment's measurements 
     - prove that closure and delay-bfs is better
   - how come synthetic networks and real datasets give different result for the methods
-  - plug in the new edmonds' algorithm
+  - [X] plug in the new edmonds' algorithm
   - experiment on more syntheitc graphs and real graphs
     - 4k nodes: http://snap.stanford.edu/data/egonets-Facebook.html
     - 1k: http://snap.stanford.edu/data/email-Eu-core.html
     - 5k: http://snap.stanford.edu/data/ca-GrQc.html
-  - separate the code
+  - [X] separate the code
   - my own graph library
+
 
 - active learning experiment
   - [X] ranking based evaluation
