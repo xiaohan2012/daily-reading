@@ -59,3 +59,16 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 it turns out I am wrong: `tree_edge` and `black_target` part only takes 20% of the time of `cpbfs_search`
 
 so `cpbfs_search` itself is slow. 
+
+# code structure
+
+- `steiner_tree_order` contains code for `tfbfs` (name is confusing)
+- `steiner_tree_mst` constains code for transitive closure approach
+
+together put them in `core.py`
+
+
+`GraphView(Graph(diredcted=False), directed=True)` does not add bi-directional edges. 
+
+
+recap: when building the closure, we do constrained bfs that avoids late terminals
