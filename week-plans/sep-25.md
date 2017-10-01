@@ -16,16 +16,16 @@
   - [X] usable by rejected paper
 
 - experiment for rejected paper
-  - refer to previous experiment's measurements 
-    - prove that closure and delay-bfs is better
-  - how come synthetic networks and real datasets give different result for the methods
+  - [X] refer to previous experiment's measurements and test the evaluation method
+  - [ ] prove that closure and delay-bfs is better
+  - [ ] explain how come synthetic networks and real datasets give different result for the methods
   - [X] plug in the new edmonds' algorithm
-  - experiment on more syntheitc graphs and real graphs
+  - [ ] experiment on more syntheitc graphs and real graphs
     - 4k nodes: http://snap.stanford.edu/data/egonets-Facebook.html
     - 1k: http://snap.stanford.edu/data/email-Eu-core.html
     - 5k: http://snap.stanford.edu/data/ca-GrQc.html
   - [X] separate the code
-  - my own graph library
+  - [ ] my own `gt_utils` library
 
 
 - active learning experiment
