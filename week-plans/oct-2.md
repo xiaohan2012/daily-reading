@@ -1,0 +1,12 @@
+- reconstructing cascade
+  - [ ] plot the evaluation figure (then let's see)
+  - [ ] at least produce some consistent result, if not, understand why
+  - [ ] minimum steiner tree in C++
+- case study  
+  - [ ] find the dataset
+  - [ ] run the experiment
+  - [ ] interpret the result
+- [ ] check different graph query problems
+  - what are their simimlarities and differences w.r.t problem formulation
+- [ ] what are the datasets/applications for community searching
+- [ ] what are the datasets/applications for graph query
