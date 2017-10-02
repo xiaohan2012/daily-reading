@@ -27,3 +27,8 @@ as I move quite often, the query needs to be in real-time.
 [more concrete problem formulation](https://neo4j.com/graphgist/9d627127-003b-411a-b3ce-f8d3970c2afa?ref=solutions)
 
 
+# question
+
+- what is the technique difference between a graph search engine and text search engine?
+- what is a graph query like?
+- how is graph search different from subgraph matching?
