@@ -18,3 +18,13 @@ for example, two authors might be involved in multiple communities
 
 a straightforward approach:  find the densest matching subgraph and split the subgraph into sub-subgraphs by labels. 
 
+
+
+# papers
+
+
+-  http://www.vldb.org/pvldb/vol10/p709-fang.pdf
+- http://www.vldb.org/pvldb/vol10/p949-huang.pdf
+- http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.477.4053&rep=rep1&type=pdf
+- FIRST, Fast Interactive Subgraph Matching
+- Graph Query Reformulation with Diversity
