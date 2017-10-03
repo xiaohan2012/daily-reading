@@ -2,6 +2,7 @@
   - [ ] plot the evaluation figure (then let's see)
   - [ ] at least produce some consistent result, if not, understand why
   - [ ] minimum steiner tree in C++
+  - [ ] run on slashdot and dblp datasets
 - case study  
   - [ ] find the dataset
   - [ ] run the experiment
