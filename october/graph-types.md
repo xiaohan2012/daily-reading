@@ -1,0 +1,7 @@
+- weighted
+- directed
+- attribtued
+- multi-layer
+- heterogenous 
+- temporal
+- signed
