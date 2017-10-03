@@ -74,3 +74,14 @@ queries: nodes of different types,
 definition of k-core in multi layer network
 
 
+## recommendation in bipartite graph
+
+user-item graph, amazon, twitter
+
+different queries:
+
+1. query: user, answer: what tweets should be recommended to him
+2. query: tweet, answer: what users should look at this tweet
+3. query: tweet and user, what does it mean? 
+
+maybe take a look at the twitter paper in vldb

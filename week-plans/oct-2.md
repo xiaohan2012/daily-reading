@@ -3,11 +3,10 @@
   - [ ] at least produce some consistent result, if not, understand why
   - [ ] minimum steiner tree in C++
   - [ ] run on slashdot and dblp datasets
-- case study  
+- case study (reconstruction)
   - [ ] find the dataset
   - [ ] run the experiment
   - [ ] interpret the result
-- [ ] check different graph query problems
-  - what are their simimlarities and differences w.r.t problem formulation
-- [ ] what are the datasets/applications for community searching
-- [ ] what are the datasets/applications for graph query
+- [X] what are the applications for community searching
+- [ ] community query tutorial 
+- [ ] what the recommendation in twitter? different recommendation task? different query type?
