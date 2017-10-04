@@ -72,3 +72,43 @@ together put them in `core.py`
 
 
 recap: when building the closure, we do constrained bfs that avoids late terminals
+
+# different method comparison
+
+## node precision/recall
+
+- precision:
+  - for ct, one dataset gives higher precision than other two 
+  - for si, close to 1
+- recall: expected for both ct and si
+
+## edge precision and recall
+
+- ct gives expected result (closure is better than bfs in precision but not on recall)
+- while si does not
+
+## order correlation
+
+baseline is quite competitive, not sure if this is the correct way to evaluate. 
+
+## order accuracy
+
+- si favors delay-bfs
+- ct favors closure
+
+
+## what to show
+
+across all datasets
+
+- node precision and recall
+  - for si
+
+- edge precision and recall
+  - for ct
+
+- order accuracy
+  - for ct
+
+some measure across all measurements
+

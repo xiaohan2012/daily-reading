@@ -1,14 +1,20 @@
 - reconstructing cascade
-  - [ ] plot the evaluation figure (then let's see)
+  - [X] plot the evaluation figure (then let's see)
   - [ ] at least produce some consistent result, if not, understand why
   - [ ] minimum steiner tree in C++
   - [ ] run on slashdot and dblp datasets
+  - [X] MCC evaluation
+  - [ ] ic and sp model
+  - [ ] q to 1.0
 - case study (reconstruction)
   - [ ] find the dataset
   - [ ] run the experiment
   - [ ] interpret the result
+- paper submission
+  - [ ] abstract, October 6, 2017 11:59PM (US Pacific Time):
+  - [ ] October 13, 2017 11:59PM (US Pacific Time)
 - [X] what are the applications for community searching
-- [ ] community query tutorial 
+- [X] community query tutorial 
 - [ ] what are the recommendation in twitter? different recommendation task? different query type?
 - [X] k-core/k-truss structure in heterogenous or multilayer network
   - why is it a cool topic? meta-path based k-core give different semantics for defining closenss
