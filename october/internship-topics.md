@@ -85,3 +85,10 @@ different queries:
 3. query: tweet and user, what does it mean? 
 
 maybe take a look at the twitter paper in vldb
+
+## ***k-core in heterogenous information networks
+
+further topic, search 
+
+## community search in public and private social network
+

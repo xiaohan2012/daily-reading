@@ -9,3 +9,7 @@ two steps:
 1. acquicision of the papers
 2. filtering
 
+# node embedding for public-private networks
+
+# k-core for heterogenous information networks
+
