@@ -18,4 +18,5 @@
     - how to design the meta-paths and k values for certain goals? like what are the close collaborators with Francesco that they tend to publish into the same conference? 
     - how to find the k-core given a list of meta-paths? 
 
-- [ ] public/pricate network: what are they? why are they interesting and what are the challenges?
+- [X] public/pricate network: what are they? why are they interesting and what are the challenges?
+- [X] collect the community search papers into mendeley
