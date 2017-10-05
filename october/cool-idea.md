@@ -13,3 +13,6 @@ two steps:
 
 # k-core for heterogenous information networks
 
+# k truss for signed networks
+
+what's the definition?
