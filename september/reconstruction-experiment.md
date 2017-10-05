@@ -112,3 +112,10 @@ across all datasets
 
 some measure across all measurements
 
+
+# real cascades
+
+- flixter dataset by polina
+
+- https://github.com/polinapolina/reconstructing-an-epidemic-over-time/blob/master/Data/flixter_1000_K9.txt
+
