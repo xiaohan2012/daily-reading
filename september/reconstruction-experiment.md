@@ -110,7 +110,6 @@ across all datasets
 - order accuracy
   - for ct
 
-some measure across all measurements
 
 
 # real cascades: flixter
@@ -142,11 +141,62 @@ only 50% edges are mutual friends.
 - graph is directed
 - cascade does not form a connected component
 
-simplification:
+simplification (might be invalid):
 
 - extract only the largest cascade subgraph: 16531 nodes, 87452 edges
 - extract only the largest cc in the cascade subgraph: the cascade contains 3741 nodes
+- assume the graph is *undirected*
+
+# sp and ic
+
+pause: no-order, 0.065 done
+
 
 # pandas
 
 - `get_group(key)` from `GroupBy` object
+
+# all models on one dataset
+
+- node precision
+  - grqc: desirable
+  - email-eu: ic strange
+
+- node recall: 
+  - email-eu good
+  - grqc: strange
+  - ic flactuates
+
+- order accuracy: email-eu gives relatively consistent result, but grqc does not
+- edge precision:
+  - email-eu nor grqc is consistent
+  - ic flactuates
+- edge recall
+  - both grqc and email-eu favors tbfs (expected)
+  - ic flactuates  
+
+good news:
+
+1. si and ct are favorable
+
+bad news:
+
+1. edge precision is low on certain graphs
+2. ic and sp model favors tbfs on edge precision
+
+
+
+# one model on all datasets
+
+## ct
+
+- order accuracy: good
+- edge precision: closure good
+- edge recall: tbfs good , expected
+
+
+## si
+
+similar as ct
+
+good news: some model is good on all four datasets

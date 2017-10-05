@@ -4,14 +4,14 @@
   - [ ] minimum steiner tree in C++
   - [ ] run on slashdot and dblp datasets
   - [X] MCC evaluation
-  - [ ] ic and sp model
+  - [X] ic and sp model
   - [ ] q to 1.0
-- case study (reconstruction)
-  - [ ] find the dataset
+- real cascade (reconstruction)
+  - [X] find the dataset
   - [ ] run the experiment
   - [ ] interpret the result
 - paper submission
-  - [ ] abstract, October 6, 2017 11:59PM (US Pacific Time):
+  - [X] abstract, October 6, 2017 11:59PM (US Pacific Time):
   - [ ] October 13, 2017 11:59PM (US Pacific Time)
 - [X] what are the applications for community searching
 - [X] community query tutorial 
