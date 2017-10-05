@@ -113,9 +113,40 @@ across all datasets
 some measure across all measurements
 
 
-# real cascades
+# real cascades: flixter
 
 - flixter dataset by polina
-
 - https://github.com/polinapolina/reconstructing-an-epidemic-over-time/blob/master/Data/flixter_1000_K9.txt
+- too small
 
+# real cascade: twitter
+
+http://lsir.epfl.ch/research/datasets/socialnetwork/
+
+```
+@InProceedings{galuba-wosn10,
+     author = {Galuba, Wojciech and Aberer, Karl and Chakraborty, Dipanjan and Despotovic, Zoran and Kellerer, Wolfgang},
+     booktitle = {3rd {W}orkshop on {O}nline {S}ocial {N}etworks ({WOSN}'10)},
+     title = {{O}uttweeting the {T}witterers - {P}redicting {I}nformation {C}ascades in {M}icroblogs},
+     year = 2010
+} 
+```
+
+
+# real cascade: digg
+
+https://www.isi.edu/~lerman/downloads/digg2009.html from [this paper](https://arxiv.org/pdf/1202.3162.pdf)
+
+only 50% edges are mutual friends. 
+
+- graph is directed
+- cascade does not form a connected component
+
+simplification:
+
+- extract only the largest cascade subgraph: 16531 nodes, 87452 edges
+- extract only the largest cc in the cascade subgraph: the cascade contains 3741 nodes
+
+# pandas
+
+- `get_group(key)` from `GroupBy` object
