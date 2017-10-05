@@ -1,12 +1,7 @@
-- what are the properties of k-core? observation 1 to 3
-- 
-  
 
-[k-core decomposition in C++](http://www.geeksforgeeks.org/find-k-cores-graph/)
-  - based on modified version of DFS
-  - why time is $`O(V+E)`$
+# intro
 
-
+transform the problem of maintaining k-core decomposition to maining the k values of each node. 
 
 # bg
 
@@ -76,4 +71,12 @@ we can divide the neighbours into two sets:
 - $`\{v \in N(u) \mid K(v) \le K(u) \}`$: their $`K`$ values might change. 
 
 and we just traverse from each $`v`$ and collect the subcores. 
+
+
+# resources
+
+- [k-core decomposition in C++](http://www.geeksforgeeks.org/find-k-cores-graph/)
+  - based on modified version of DFS
+  - why time is $`O(V+E)`$?
+
 
