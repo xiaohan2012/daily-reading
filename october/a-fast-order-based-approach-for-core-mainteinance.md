@@ -88,8 +88,11 @@ and if $`deg^{+}(u) > core(u)`$ after some edge insertion, $`core(u)`$ needs to 
 2. before $`u`$
 3. is a candidate node in $`V_C`$
 
+note that if `u` will be moved to `K+1`, then some of its neighbors (after it) `deg^{+}` needs to be updated because now `u` is after them! 
 
-## scanning process
+that's why we need to collect other candidates as well. 
+
+## scanning process: building `V_C`
 
 denote $`V_C`$ as the set of candidate nodes.
 
@@ -123,6 +126,19 @@ we need to ensure *Lemma 5.1* is satisfied.
 for each visited $`w \not\in V_C`$, we leave them there (the paper say it "append to $`O_k^{'}`$")
 
 for each visited $`w \in V_C`$, we *prepend* them to $`O_{k+1}^{'}`$ ($`K+1`$ core)
+
+
+
+# compared to the traversal algorithm
+
+traversal does not use the order information from core decomposition, which this algorithm does. 
+
+# questions
+
+- what if for edge `(u, v)`, `u, v \in O_k`? --- does not matter, we only consider order. `v` might be changed to `K+1`
+
+
+# batch setting
 
 
 
