@@ -92,3 +92,6 @@ further topic, search
 
 ## community search in public and private social network
 
+following topic of incremnental core mainteinance
+
+- if we want to find the k-core community of query node `u`, some computation does not need to be performed if we know the node's core number is upper bounded by `k-1`
