@@ -115,5 +115,55 @@ traversal does not use the order information from core decomposition, which this
 
 # batch setting
 
+suppose `u` is the query node and `core(u)=K`
 
+we divide the edges `(u, v)` into 3 categories:
+
+1. `E_{<} = \{(u, v) \mid core(v) < K \}`
+2. `E_{=} = \{(u, v) \mid core(v) = K \}`
+3. `E_{>} = \{(u, v) \mid core(v) > K \}`
+
+inserted edges in the `i`the core: `E_{<}^{(i)}`
+endpoints in the `i`the core: `O_{<}^{(i)}`
+
+## `E_{<}`
+
+observation 1: `\delta core(vu) = 0`
+
+observation 2: `\delta core(v) \le 1`
+
+consider each `O_i` group separately where `i<K`
+
+**updating `V_C`** 
+
+we consider each `O_i` separately, 
+
+first, increment each `deg^{+}(v)`, for `(u, v) \in E_{<}^{(i)}` and 
+
+if `deg^{+}(v) > K`, then include `v` into `V_C`
+
+and we update `V_C` by scanning `O_i` from the earliest node in `O_{<}^{(i)}`. 
+
+**maintaining order**
+
+again we consider for each `O_i`, similar to the paper:
+
+1. prepend `V_C` to `O_{i+1}^{'}` while repecting their orignal order in `O_i`
+2. append the rest of the scanned nodes in `O_i^{'}`
+
+
+## `E_{=}`
+
+observation 3: `\delta core(u) \le 1`
+
+*proof*: consider edge insertion separately,
+once `core(u)` becomes `K+1`, it won't change because of now `core(v)<core(u)`for all `v \in V_{=}`. then from theorem 3.2.
+
+observation 4: `\delta core(v) \le 1` for all `v \in V_{=}`
+
+the argument the same as the case for `E_{<}`.
+
+combining the above two cases, we know for all `v^{'} \in \{u\} \cup O_{=} \cup O_{<}`, `\delta core(v^{'}) \le 1`
+
+## `E_{>}`
 

@@ -1,16 +1,20 @@
 - SDM submission
-  - [ ] different cascades
+  - [ ] different cascades for digg
   - [ ] synthetic cascade plot and select the plots
-  - [ ] motivating exaple, case study
+  - [ ] motivating example, case study
+  - submission instruction: http://www.siam.org/meetings/sdm18/submissions.php (9 pages)
+    - new template file: `ltexpprt.tex
+
 
 - core mainteinance
-  - [ ] core(v) < (u) case
+  - [X] core(v) < (u) case
+  - [X] core(v) = (u) case
   - [ ] core(u) > core(v) case
 
 
-daily summary:
+# daily summary
 
-monday:
+## monday
 
 - k-core maintainance based on decomposition order
 - batch setting makes some sense
@@ -21,3 +25,11 @@ monday:
 
 
 
+## tuesday
+
+- core mainteinance
+  - `L \le K` case clear, needs to document
+  - for `L>K`, not so clear
+- found some error with the ICDE 2017 paper
+  - needs to document
+- SDM submission: plots using log, clear about what are the selling points in experiment
