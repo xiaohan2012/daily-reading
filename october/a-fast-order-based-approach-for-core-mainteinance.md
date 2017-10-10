@@ -7,59 +7,31 @@
 
 - $`V^{*}`$: nodes whose core number need to be updated
 
-# main idea of the traversal algorithm
+# previous theorems
 
+suppose one edge $`(u, v)`$ is inserted.
 
-- max-core degree, $`mcd(u)`$: number of neighbors of $`u`$ in $`core(u)-core`$ ($`core(w) \ge core(u)`$)
-  - for a node $`u`$ to be n $`k`$-core, $`mcd(u) \ge k`$ should hold.
-  - so if $`mcd(u) < core(u)+1`$ ($`core(u)+1`$ is the new possible core number), $`u`$ can be pruned
-  - in other words, we need to maintain $`mcd(u)`$ for each $`u`$
-- pure-core degree, $`pcd(u)`$, further pruning of the neighbors by max-core degree
-  - intuition: for some nodes in neighbors  w.r.t $`mcd(u)`$, specifically $`\{w \mid core(w)=core(u) \}`$, they have no way to increment their core number, thus cannot affect $`u`$
-  - exclude neighbors, $`\{w \mid core(w)=core(u), mcd(w) \le core(w)\}`$ (using the above result)
-  - so, if $`pcd(u)<core(u)+1`$, they can be pruned. 
-  
-note that nodes in max-core degree is a superset of nodes in pure-core degree. 
+**theorem 1**: core number of each vertex can increase by at most 1. 
 
+**theorem 2**: if $`core(u) < core(v)`$, $`core(v)`$ won't change
 
-## traversal insertion algorithm
+*proof*: if $`core(v)=K`$ increases to $`K+1`$, then edge $`(u, v)`$ must be included in the $`K+1`$, therefore $`u`$ is in the $`K+1`$ core, which is impossible becasue its core number can increase at most by 1 (using theorem 3.1). 
 
-- edge $`(u, v)`$ is inserted
-- suppose $`K=core(u)<core(v)`$
+**theorem 3**
 
-now we collect $`V^{'}`$, nodes that might need to change
-
-1. we start from $`u`$, perform DFS 
-1. we consider only nodes $`w`$ that:
-   - $`core(w)=core(u)`$: by theorem 3.2
-   - $`mcd(w) > K`$: if $`mcd(w) \le K`$, then it has no way to move to (K+1)-core. not edges is added incident to w. the only way it can move up is by promotion of its neighbors. 
-1. additionally, we maintain $`cd(w)`$, maximial possible number of neighors of $`w`$ in $`(K+1)`$-core. 
-   - initially $`cd(w)=pcd(w)`$
-   - if $`cd(w) \le K`$, it's sure that $`w \not\in V^{*}`$
-   - then we decrement the $`cd`$ values of its neighbors
-   - this process goes on (called evition propagation)
-   - (do we increment it i some cases?)
-   - example 4.2 explains the process quite 
-1. also, we update $`mcd`$ and $`pcd`$
-
-to upperbound $`|V^{'}|`$, we introduce the idea of pure-core, $`pc`$ 
-
-- set of nodes that have core number $`K`$
-- connected
-- and $`core(w)>K`$
-
-it's shown that (by experiment):
-
-- size of $`pc`$ has high variance and can sometimes be very large
-- so the problem of vldb paper is the search space can be large (for some nodes). 
+- if $`core(u) < core(v)`$, then $`V^{*} \subseteq sc(u)`$ 
+  - proof partly using theorem 2
+- if $`core(u) = core(v)`$, then $`V^{*} \subseteq sc(u) \cup sc(v)`$
 
 
 # ordered-based algorithm
 
 ## main idea
 
-we can narrow down $`V^{*}`$ only to nodes after $`u`$ and in the same core $`O_k`$. 
+we can narrow down $`V^{*}`$ only to nodes **after** $`u`$ and in the same core $`O_k`$, $`sc(u)`$. 
 (using the paragraph **Edge Insertion**)
+
+- in other words, $`V^{*} \subset\eq sc(u) \cap \{v \mid u \le v \}`$
 
 then we scan from $`u`$ to the end of $`O_k`$ and build $`V^{*}`$. 
 
@@ -81,18 +53,17 @@ property of $`deg^{+}(u)`$: $`deg^{+}(u) \le core(u)`$
 
 and if $`deg^{+}(u) > core(u)`$ after some edge insertion, $`core(u)`$ needs to increment. 
 
-
 **candidate degree** $`deg^{*}(u)`$: number of neighbors of $`u`$ that are:
 
 1. in the same core, $`O_k`$
 2. before $`u`$
 3. is a candidate node in $`V_C`$
 
-note that if `u` will be moved to `K+1`, then some of its neighbors (after it) `deg^{+}` needs to be updated because now `u` is after them! 
+intuition: if $`u`$ will be moved to $`K+1`$, then some of its neighbors (after it) $`deg^{+}`$ needs to be updated because now $`u`$ is after them! 
 
 that's why we need to collect other candidates as well. 
 
-## scanning process: building `V_C`
+## scanning process: building $`V_C`$
 
 denote $`V_C`$ as the set of candidate nodes.
 
@@ -115,6 +86,12 @@ if $`w`$ is not in $`V_C`$, then for $`\{w^{'} \mid w^{'} \in nbr(w) \}`$, $`deg
 
 See Fig 8 for example. 
 
+## what makes a difference? the order
+
+because of the ordering, we can exclude nodes before $`u`$ from $`V^{*}`$. 
+
+this is shown in example 5.2. 
+
 ## $`V_C = V^{*}`$
 
 not sure why. 
@@ -127,15 +104,13 @@ for each visited $`w \not\in V_C`$, we leave them there (the paper say it "appen
 
 for each visited $`w \in V_C`$, we *prepend* them to $`O_{k+1}^{'}`$ ($`K+1`$ core)
 
-
-
 # compared to the traversal algorithm
 
 traversal does not use the order information from core decomposition, which this algorithm does. 
 
 # questions
 
-- what if for edge `(u, v)`, `u, v \in O_k`? --- does not matter, we only consider order. `v` might be changed to `K+1`
+- what if for edge $`(u, v)`$, $`u, v \in O_k`$? --- does not matter, we only consider order. $`v`$ might be changed to $`K+1`$
 
 
 # batch setting

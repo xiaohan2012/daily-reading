@@ -80,3 +80,49 @@ and we just traverse from each $`v`$ and collect the subcores.
   - why time is $`O(V+E)`$?
 
 
+# main idea of the traversal algorithm
+
+
+- max-core degree, $`mcd(u)`$: number of neighbors of $`u`$ in $`core(u)-core`$ ($`core(w) \ge core(u)`$)
+  - for a node $`u`$ to be n $`k`$-core, $`mcd(u) \ge k`$ should hold.
+  - so if $`mcd(u) < core(u)+1`$ ($`core(u)+1`$ is the new possible core number), $`u`$ can be pruned
+  - in other words, we need to maintain $`mcd(u)`$ for each $`u`$
+- pure-core degree, $`pcd(u)`$, further pruning of the neighbors by max-core degree
+  - intuition: for some nodes in neighbors  w.r.t $`mcd(u)`$, specifically $`\{w \mid core(w)=core(u) \}`$, they have no way to increment their core number, thus cannot affect $`u`$
+  - exclude neighbors, $`\{w \mid core(w)=core(u), mcd(w) \le core(w)\}`$ (using the above result)
+  - so, if $`pcd(u)<core(u)+1`$, they can be pruned. 
+  
+note that nodes in max-core degree is a superset of nodes in pure-core degree. 
+
+
+## summary from "order-based" paper: traversal insertion algorithm
+
+- edge $`(u, v)`$ is inserted
+- suppose $`K=core(u)<core(v)`$
+
+now we collect $`V^{'}`$, nodes that might need to change
+
+1. we start from $`u`$, perform DFS 
+1. we consider only nodes $`w`$ that:
+   - $`core(w)=core(u)`$: by theorem 3.2
+   - $`mcd(w) > K`$: if $`mcd(w) \le K`$, then it has no way to move to (K+1)-core. not edges is added incident to w. the only way it can move up is by promotion of its neighbors. 
+1. additionally, we maintain $`cd(w)`$, maximial possible number of neighors of $`w`$ in $`(K+1)`$-core. 
+   - initially $`cd(w)=pcd(w)`$
+   - if $`cd(w) \le K`$, it's sure that $`w \not\in V^{*}`$
+   - then we decrement the $`cd`$ values of its neighbors
+   - this process goes on (called evition propagation)
+   - (do we increment it i some cases?)
+   - example 4.2 explains the process quite 
+1. also, we update $`mcd`$ and $`pcd`$
+
+to upperbound $`|V^{'}|`$, we introduce the idea of pure-core, $`pc`$ 
+
+- set of nodes that have core number $`K`$
+- connected
+- and $`core(w)>K`$
+
+it's shown that (by experiment):
+
+- size of $`pc`$ has high variance and can sometimes be very large
+- so the problem of vldb paper is the search space can be large (for some nodes). 
+
