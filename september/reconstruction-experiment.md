@@ -200,3 +200,16 @@ bad news:
 similar as ct
 
 good news: some model is good on all four datasets
+
+# matplotlib
+
+# limiting the number of ticks
+
+https://stackoverflow.com/questions/13052844/matplotlib-how-to-decrease-density-of-tick-labels-in-subplots/13053381
+
+# positioning text using figure transform
+
+https://stackoverflow.com/questions/42435446/how-to-put-text-outside-python-plots
+
+
+
