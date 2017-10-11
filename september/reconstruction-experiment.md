@@ -212,4 +212,6 @@ https://stackoverflow.com/questions/13052844/matplotlib-how-to-decrease-density-
 https://stackoverflow.com/questions/42435446/how-to-put-text-outside-python-plots
 
 
+# line cycler
 
+https://stackoverflow.com/questions/7799156/can-i-cycle-through-line-styles-in-matplotlib

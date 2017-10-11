@@ -28,7 +28,7 @@
 ## tuesday
 
 - core mainteinance
-  - `L \le K` case clear, needs to document
+  - `L \le K` case clear, needs to document: only all nodes can move by at most 1
   - for `L>K`, not so clear
 - found some error with the ICDE 2017 paper
   - needs to document
@@ -42,3 +42,9 @@
 - mistake 2 is not mistake: say `b` is removed first, then `u` does not have to appear after `a`
   - actually, the result of chain effect will re-order the k-order
 
+- formal proof for `E_{<}` case that increase of core number is upper bounded by 1 while `core(u)` is unchanged. 
+
+what's next:
+
+- time complexity of the sequential algorithm
+- how much can batch processing bring
