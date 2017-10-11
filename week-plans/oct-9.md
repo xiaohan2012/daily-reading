@@ -33,3 +33,12 @@
 - found some error with the ICDE 2017 paper
   - needs to document
 - SDM submission: plots using log, clear about what are the selling points in experiment
+
+## wednesday
+
+
+- mistake 1 is not mistake: because of the chain effect, `u` can be removed from `V_C` as well. 
+  - `deg^{+}(u) > K` is just a necessary but insufficient condition for core update. 
+- mistake 2 is not mistake: say `b` is removed first, then `u` does not have to appear after `a`
+  - actually, the result of chain effect will re-order the k-order
+
