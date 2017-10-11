@@ -203,15 +203,20 @@ good news: some model is good on all four datasets
 
 # matplotlib
 
-# limiting the number of ticks
+## limiting the number of ticks
 
 https://stackoverflow.com/questions/13052844/matplotlib-how-to-decrease-density-of-tick-labels-in-subplots/13053381
 
-# positioning text using figure transform
+## positioning text using figure transform
 
 https://stackoverflow.com/questions/42435446/how-to-put-text-outside-python-plots
 
 
-# line cycler
+## line cycler
 
 https://stackoverflow.com/questions/7799156/can-i-cycle-through-line-styles-in-matplotlib
+
+
+## move y-label
+
+https://stackoverflow.com/questions/12750355/python-matplotlib-figure-title-overlaps-axes-label-when-using-twiny

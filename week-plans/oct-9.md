@@ -48,3 +48,4 @@ what's next:
 
 - time complexity of the sequential algorithm
 - how much can batch processing bring
+
