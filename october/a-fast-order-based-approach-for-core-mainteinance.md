@@ -31,7 +31,7 @@ suppose one edge $`(u, v)`$ is inserted.
 we can narrow down $`V^{*}`$ only to nodes **after** $`u`$ and in the same core $`O_k`$, $`sc(u)`$. 
 (using the paragraph **Edge Insertion**)
 
-- in other words, $`V^{*} \subset\eq sc(u) \cap \{v \mid u \le v \}`$
+- in other words, $`V^{*} \subseteq sc(u) \cap \{v \mid u \le v \}`$
 
 then we scan from $`u`$ to the end of $`O_k`$ and build $`V^{*}`$. 
 

@@ -49,3 +49,8 @@ what's next:
 - time complexity of the sequential algorithm
 - how much can batch processing bring
 
+## Thursday
+
+- time complexity of Algorithm 2
+- order statistic tree
+- an example that batch update is faster (by a linear factor)
