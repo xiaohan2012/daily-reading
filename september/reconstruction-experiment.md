@@ -220,3 +220,8 @@ https://stackoverflow.com/questions/7799156/can-i-cycle-through-line-styles-in-m
 ## move y-label
 
 https://stackoverflow.com/questions/12750355/python-matplotlib-figure-title-overlaps-axes-label-when-using-twiny
+
+## legend 
+
+- position: https://stackoverflow.com/questions/4700614/how-to-put-the-legend-out-of-the-plot
+- spacing: https://stackoverflow.com/questions/41827406/matplotlib-how-to-adjust-space-between-legend-markers-and-labels and https://matplotlib.org/api/legend_api.html#matplotlib.legend.Legend
