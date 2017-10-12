@@ -1,7 +1,7 @@
 - SDM submission
-  - [ ] different cascades for digg
-  - [ ] synthetic cascade plot and select the plots
-  - [ ] motivating example, case study
+  - [X] different cascades for digg
+  - [X] synthetic cascade plot and select the plots
+  - [X] motivating example, case study
   - submission instruction: http://www.siam.org/meetings/sdm18/submissions.php (9 pages)
     - new template file: `ltexpprt.tex
 
