@@ -101,8 +101,28 @@ not sure why.
 we need to ensure *Lemma 5.1* is satisfied. 
 
 for each visited $`w \not\in V_C`$, we leave them there (the paper say it "append to $`O_k^{'}`$")
+  - ok, here I used to misunderstand. the order in $`O_{k}^{'}`$ might change (because of the appending operation)
 
 for each visited $`w \in V_C`$, we *prepend* them to $`O_{k+1}^{'}`$ ($`K+1`$ core)
+
+# implementation
+
+for each $`O_k`$, we maintein a order statistic tree, $`A_k`$, that supports:
+
+- query node rank in $`O(\log|O_k|)`$ time to evaluate if $`u \le v`$
+- insertion/deletion in $`O(\log|O_k|)`$ time
+
+also we use $`B`$ to keep track of nodes that are either $`deg^{*}(u) + deg^{+}(u) > K`$ or $`deg^{*}(u) + deg^{+}(u) \le K , deg^{*}(u) \neq 0`$. 
+  - nodes that enter first or third loop in Algorithm 2
+  - $`V^{+}`$ in other words
+
+$`B`$ is a min-heap, which stores $`(rank(u), u)`$ pairs nodes in $`V^{+}`$
+
+# running time
+
+$`O(\sum_{v \in V^{+}} deg(v) \log \max\{|O_k|, |O_{k+1}|\})`$
+
+the $`\log`$ part mainly comes from order evaluation
 
 # compared to the traversal algorithm
 
@@ -115,55 +135,56 @@ traversal does not use the order information from core decomposition, which this
 
 # batch setting
 
-suppose `u` is the query node and `core(u)=K`
+suppose $`u`$ is the query node and $`core(u)=K`$
 
-we divide the edges `(u, v)` into 3 categories:
+we divide the edges $`(u, v)`$ into 3 categories:
 
-1. `E_{<} = \{(u, v) \mid core(v) < K \}`
-2. `E_{=} = \{(u, v) \mid core(v) = K \}`
-3. `E_{>} = \{(u, v) \mid core(v) > K \}`
+1. $`E_{<} = \{(u, v) \mid core(v) < K \}`$
+2. $`E_{=} = \{(u, v) \mid core(v) = K \}`$
+3. $`E_{>} = \{(u, v) \mid core(v) > K \}`$
 
-inserted edges in the `i`the core: `E_{<}^{(i)}`
-endpoints in the `i`the core: `O_{<}^{(i)}`
+inserted edges in the $`i`$the core: $`E_{<}^{(i)}`$
+endpoints in the $`i`$the core: $`O_{<}^{(i)}`$
 
-## `E_{<}`
+## $`E_{<}`$
 
-observation 1: `\delta core(vu) = 0`
+observation 1: $`\delta core(vu) = 0`$
 
-observation 2: `\delta core(v) \le 1`
+observation 2: $`\delta core(v) \le 1`$
 
-consider each `O_i` group separately where `i<K`
+consider each $`O_i`$ group separately where $`i<K`$
 
-**updating `V_C`** 
+**updating $`V_C`$** 
 
-we consider each `O_i` separately, 
+we consider each $`O_i`$ separately, 
 
-first, increment each `deg^{+}(v)`, for `(u, v) \in E_{<}^{(i)}` and 
+first, increment each $`deg^{+}(v)`$, for $`(u, v) \in E_{<}^{(i)}`$ and 
 
-if `deg^{+}(v) > K`, then include `v` into `V_C`
+if $`deg^{+}(v) > K`$, then include $`v`$ into $`V_C`$
 
-and we update `V_C` by scanning `O_i` from the earliest node in `O_{<}^{(i)}`. 
+and we update $`V_C`$ by scanning $`O_i`$ from the earliest node in $`O_{<}^{(i)}`$. 
 
 **maintaining order**
 
-again we consider for each `O_i`, similar to the paper:
+again we consider for each $`O_i`$, similar to the paper:
 
-1. prepend `V_C` to `O_{i+1}^{'}` while repecting their orignal order in `O_i`
-2. append the rest of the scanned nodes in `O_i^{'}`
+1. prepend $`V_C`$ to $`O_{i+1}^{'}`$ while repecting their orignal order in $`O_i`$
+2. append the rest of the scanned nodes in $`O_i^{'}`$
 
 
-## `E_{=}`
+## $`E_{=}`$
 
-observation 3: `\delta core(u) \le 1`
+observation 3: $`\delta core(u) \le 1`$
 
 *proof*: consider edge insertion separately,
-once `core(u)` becomes `K+1`, it won't change because of now `core(v)<core(u)`for all `v \in V_{=}`. then from theorem 3.2.
+once $`core(u)`$ becomes $`K+1`$, it won't change because of now $`core(v)<core(u)`$for all $`v \in V_{=}`$. then from theorem 3.2.
 
-observation 4: `\delta core(v) \le 1` for all `v \in V_{=}`
+observation 4: $`\delta core(v) \le 1`$ for all $`v \in V_{=}`$
 
-the argument the same as the case for `E_{<}`.
+the argument the same as the case for $`E_{<}`$.
 
-combining the above two cases, we know for all `v^{'} \in \{u\} \cup O_{=} \cup O_{<}`, `\delta core(v^{'}) \le 1`
+combining the above two cases, we know for all $`v^{'} \in \{u\} \cup O_{=} \cup O_{<}`$, $`\delta core(v^{'}) \le 1`$
 
-## `E_{>}`
+## $`E_{>}`$
+
 
