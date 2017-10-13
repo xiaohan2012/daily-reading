@@ -4,6 +4,9 @@
   - [X] motivating example, case study
   - submission instruction: http://www.siam.org/meetings/sdm18/submissions.php (9 pages)
     - new template file: `ltexpprt.tex
+  - pause: `outputs/paper_experiment/facebook/si/no-order/qs/0.256`
+    - `python paper_experiment.py -g facebook  -m no-order  -l si -p 0.5  -q 0.256  -o outputs/paper_experiment/facebook/si/no-order/qs/0.256.time.pkl -k 100 --parallel`
+
 
 
 - core mainteinance
@@ -54,3 +57,7 @@ what's next:
 - time complexity of Algorithm 2
 - order statistic tree
 - an example that batch update is faster (by a linear factor)
+
+many jobs are about deep learning, text mining. let's not give up my previous love:
+
+- http://web.stanford.edu/class/cs224n/syllabus.html
