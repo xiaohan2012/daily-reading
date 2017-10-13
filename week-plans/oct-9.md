@@ -61,3 +61,9 @@ what's next:
 many jobs are about deep learning, text mining. let's not give up my previous love:
 
 - http://web.stanford.edu/class/cs224n/syllabus.html
+
+## Friday
+
+- bound on how much the core number can change for `u<v` case
+- example on `u<v`
+- finished the SDM submission (exhausted!)
