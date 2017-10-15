@@ -1,0 +1,5 @@
+- active learning
+  - [ ] understands the document
+- core
+  - [ ] what's the algorithm for equal/higher core edges
+  - [ ] experiment the algorithm

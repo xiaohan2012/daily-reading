@@ -67,3 +67,7 @@ many jobs are about deep learning, text mining. let's not give up my previous lo
 - bound on how much the core number can change for `u<v` case
 - example on `u<v`
 - finished the SDM submission (exhausted!)
+
+## Sunday
+
+for the batch motivation, time analysis mistake
