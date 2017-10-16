@@ -52,7 +52,8 @@ $`H(X_{V-A}\mid X_A) = - \int p(x_{V-A} , x_A) \log p(x_{V-A} \mid x_A) d x_{V-A
 note that it's not the same as entropy, more detail on [wikiepdia page](https://en.wikipedia.org/wiki/Conditional_entropy)
 
 objective: $`\text{argmax}_{A \subset V, |A|=k} H(X_{V-A}\mid X_A) = \text{argmax}_{A \subset V, |A|=k} H(X_A)`$
-  - because $`H(X|Y) = H(X) - H(Y)`$ 
+  - because $`H(X|Y) = H(X, Y) - H(Y)`$ 
+  - here $`H(X, Y)`$ is a constant
 
 select $`k`$ sensors that minimizes the entropy (uncertainty) on the sensors themself. 
 
