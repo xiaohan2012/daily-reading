@@ -1,4 +1,9 @@
+# Community Search over Big Graphs: Models, Algorithms, and Opportunities
+
+http://www.comp.hkbu.edu.hk/~xinhuang/paper/ICDE-Tutorial17.pdf
+
 # basic setting
+
 
 given node(s) query, find subgraph(s) that satisfy certian proeprty
 
