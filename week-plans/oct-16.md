@@ -23,6 +23,15 @@
 # Tuesday
 
 - read paper densest subgraph in streaming and mapreduce
+  - the 2-approximation
+  - `\log n` pass (streaming setting)
+  - mapreduce review
 - possible extensions of k core decomposition project:
   - streaming setting
   - distributed setting
+- shall we do distributed k-core mainteainance because not much work is done there.
+  - can collaborate with Gianmarko
+- observation (continue batch insertion)
+  - the (n-1)-clique and n-clique example, reversing the edges insertion order reduce the time to `O(n^2 \log n)`
+  - Francesco's assumption, for node with at most one adjacent inserted edge, `\Delta core(u) \le 1` does not hold
+
