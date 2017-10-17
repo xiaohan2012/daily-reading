@@ -15,7 +15,7 @@ Catalyurek. **Streaming algorithms for k-core decomposition**. PVLDB, 6(6):433�
 
 5. Zhang, Y., Yu, J. X., Zhang, Y., & Qin, L. (2016). **A Fast Order-Based Approach for Core Maintenance**. Retrieved from https://arxiv.org/pdf/1606.00200.pdf
 
-7. D. Wen, L. Qin, Y. Zhang, X. Lin, and J. X. Yu. I/o efficient core graph decomposition at web scale. In Proc. of ICDE’16, 2016. 
+7. D. Wen, L. Qin, Y. Zhang, X. Lin, and J. X. Yu. **I/O efficient core graph decomposition at web scale**. In Proc. of ICDE’16, 2016. 
    - semi-external algorithm
 
 
