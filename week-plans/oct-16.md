@@ -37,3 +37,6 @@
 - discussion with Lorenzo
   - better have a problem statement before discussion
   - share the documentations
+- k-truss on author-paper graph
+  - common "co-author": there is at least a path of type `A-P-A-P-A`
+  - what is a good k-truss community for citation network?
