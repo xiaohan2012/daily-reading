@@ -19,3 +19,10 @@
   - a lot of approximation algorithms
   - for different definition of graph density and different settings, static, dynamic
 - about life and work: no need to get trapped at local minimum, look far, think big
+
+# Tuesday
+
+- read paper densest subgraph in streaming and mapreduce
+- possible extensions of k core decomposition project:
+  - streaming setting
+  - distributed setting
