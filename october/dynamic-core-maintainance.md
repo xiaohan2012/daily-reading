@@ -13,15 +13,21 @@ Catalyurek. **Streaming algorithms for k-core decomposition**. PVLDB, 6(6):433�
 
 4. J. Cheng, Y. Ke, S. Chu, and M. T. Ozsu. **Efficient core decomposition in massive networks**. In Proc. of the 27th Int. Conf. on Data Engineering, ICDE ’11, pages 51–62, Washington, DC, USA, 2011. IEEE Computer Society.
 
-5. Zhang, Y., Yu, J. X., Zhang, Y., & Qin, L. (2016). A Fast Order-Based Approach for Core Maintenance. Retrieved from https://arxiv.org/pdf/1606.00200.pdf
+5. Zhang, Y., Yu, J. X., Zhang, Y., & Qin, L. (2016). **A Fast Order-Based Approach for Core Maintenance**. Retrieved from https://arxiv.org/pdf/1606.00200.pdf
 
-6. Wang, N., Yu, D., Jin, H., Hua, Q.-S., Shi, X., & Xie, X. (n.d.). Core Maintenance in Dynamic Graphs: A Parallel Approach based on Matching. Retrieved from https://arxiv.org/pdf/1703.03900.pdf
+7. D. Wen, L. Qin, Y. Zhang, X. Lin, and J. X. Yu. I/o efficient core graph decomposition at web scale. In Proc. of ICDE’16, 2016. 
+   - semi-external algorithm
 
-# distributed
+
+# parallel/distributed
 
 1. H. Aksu, M. Canim, Y.-C. Chang, I. Korpeoglu, and O. Ulusoy. 
 **Distributed k -core view materialization and maintenance for large dynamic graphs**. IEEE Trans. Knowl. Data Eng., 26(10):2439–2452, 2014. (for fixed k value)
 
-2. P. Jakma, M. Orczyk, C. S. Perkins, and M. Fayed. **Distributed k-core decomposition of dynamic graphs**. In Proc. of the 2012 ACM CoNEXT Student Workshop, New York, NY, USA, 2012. ACM. (only two pages)
+2. P. Jakma, M. Orczyk, C. S. Perkins, and M. Fayed. **Distributed k-core decomposition of dynamic graphs**. In Proc. of the 2012 ACM CoNEXT Student Workshop, New York, NY, USA, 2012. ACM. (can be ignored)
 
-3. Sabeur Aridhi, Martin Brugnara, Alberto Montresor, Yannis Velegrakis, **Distributed k–core Decomposition and Maintenance in Large Dynamic Graphs**, DEBS, 2016
+3. [ ] Sabeur Aridhi, Martin Brugnara, Alberto Montresor, Yannis Velegrakis, **Distributed k–core Decomposition and Maintenance in Large Dynamic Graphs**, DEBS, 2016
+
+4. [ ] Wang, N., Yu, D., Jin, H., Hua, Q.-S., Shi, X., & Xie, X. (n.d.). **Core Maintenance in Dynamic Graphs: A Parallel Approach based on Matching**. Retrieved from https://arxiv.org/pdf/1703.03900.pdf
+   - comapred with traversal, speedup ration ~100
+
