@@ -34,4 +34,6 @@
 - observation (continue batch insertion)
   - the (n-1)-clique and n-clique example, reversing the edges insertion order reduce the time to `O(n^2 \log n)`
   - Francesco's assumption, for node with at most one adjacent inserted edge, `\Delta core(u) \le 1` does not hold
-
+- discussion with Lorenzo
+  - better have a problem statement before discussion
+  - share the documentations
