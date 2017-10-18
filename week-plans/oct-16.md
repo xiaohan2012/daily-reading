@@ -66,3 +66,7 @@
   - core number are should be distributed by power law, this affects how to partition the data. how should it be done?
     - for nodes with small core, they should be further partitioned by community (this should be auto-detected by core composition order)
     - *question*: how to partition the nodes so that nodes' neighbors which have similar core number are in the same partition? state the motivation and formulate the problem. 
+
+- discussing with Cigdem:
+  - guided simulation for sampling steiner trees
+  - using time
