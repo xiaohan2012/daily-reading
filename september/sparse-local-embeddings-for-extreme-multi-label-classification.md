@@ -1,6 +1,10 @@
 # Sparse Local Embeddings for Extreme Multi-label Classification, NIPS, 2015
 
-given training data $`\{x_i, y_i\}`$
+# highlight
+
+- does not assume low-rank assumption -- leads to the use of neighborhood embedding learning
+- clustering data points for scalability
+
 
 # related work
 
@@ -73,16 +77,24 @@ using some off-the-shelf convex optimization techniques such as ADMM
 
 to check
 
+
 # prediction
 
 KNN-based: 
 
-for each new $`x`$, project it by $`V x`$ and find its *nearest neighbors* from $`z_1, \ldots, z_n`$ (and find $`y`$ and take the average?)
+for each new $`x`$, after projection $`z=V x`$, find its *nearest neighbors* from $`z_1, \ldots, z_n`$ (and find $`y`$ and take the average?)
 
 this is slow because it requires a linear scan over all training data points. 
 
-speeding-up: cluster $`(x_i, y_i)`$ into clusters and treat each cluster as one training data point. thus, it reduces training data size. 
+## scaling up
 
-also, it uses an ensemble of clustering to fight the following issue:
+partition the data points to clusters using feature matrix $`X`$. 
 
-- clustering is usually unsable for high dim data
+train each cluster separately (a set of parameters for each cluster). 
+
+in addition, it uses an ensemble of clustering because clustering is usually unstable for high dim data
+
+during prediction, it finds the closest cluster to $`x`$. 
+
+for an ensemble of clustering, it find an ensemble of closest clusters and use majority voting to determine the labels. 
+
