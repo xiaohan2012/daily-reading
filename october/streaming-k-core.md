@@ -39,6 +39,8 @@ main result:
 2. theorem 2: if $`K(u)<K(v)`$, $`K(v)`$ won't change. 
 3. theorem 3: connectivity
 4. theorem 4: assume $`K(u) \le K(v)`$, nodes whose k values *may* be affected are the $`K(u)`$ *shell* reachable from $`u`$. 
+   - or nodes whose core number is $`K(u)`$
+   - and they are reachable via a path from u such that each node in the path has core number equal to $`K(u)`$
    - essentially $`H^u - H_{N(u)+1}`$
 
 # algorithm
