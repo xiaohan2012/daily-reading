@@ -16,3 +16,19 @@ two steps:
 # k truss for signed networks
 
 what's the definition?
+
+# understanding webpage
+
+goal: classifiy webpage parts
+
+which part is:
+
+- the navigation bar
+- real content
+- an item
+- ad
+- etc
+
+# generating webpage
+
+given two different webapges, can we generate another webpage that combine both?
