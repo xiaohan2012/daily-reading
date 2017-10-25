@@ -32,3 +32,6 @@ which part is:
 # generating webpage
 
 given two different webapges, can we generate another webpage that combine both?
+
+- https://thegrid.io/: not obvious on how to use, plus needs to buy (but supports return)
+- https://firedrop.ai/: cool chatbot with human interaction
