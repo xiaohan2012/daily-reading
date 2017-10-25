@@ -43,17 +43,23 @@ main result:
    - and they are reachable via a path from u such that each node in the path has core number equal to $`K(u)`$
    - essentially $`H^u - H_{N(u)+1}`$
 
-# algorithm
+# algorithm: locating candidate
 
 ## subcore
 
-find the shell (called subcore) by traversal and update the K value accordingly. 
+subcore is essentially the nodes whose core number might change. 
+
+Algorithm 2: find the subcore (k-shell) by traversal and update the K value accordingly. 
+
+- essentially a variant of DFS that only visits edges whose endpoints have given a specific core number
+- meanwhile, it returns current degree ($`cd`$), which is used to track its degree in its max-core. 
+
 
 ## pure core
 
 goal: locate a smaller set of candidates
 
-maximum core degree ($`MCD`$) of $`u`$: num of neighbors that have greater or equal $`K`$ values than $`K(u)`$
+$`MCD`$: maximum core degree of $`u`$: num of neighbors that have greater or equal $`K`$ values than $`K(u)`$
 
 - $`MCD(u) \ge K(u)`$: $`MCD`$ is an upperbound on $`K(u)`$
 - only when $`MCD(u)>K(u)`$, an adjacent edge addition could result in update
@@ -61,7 +67,42 @@ maximum core degree ($`MCD`$) of $`u`$: num of neighbors that have greater or eq
 
 def:
 
-- purecore: subcore plus the extra condition, $`MCD(u)>K(u)`$
+- pure core: subcore plus the extra condition, $`MCD(u)>K(u)`$
+
+main theorem: only nodes in pure core may change their core number
+
+## algorithm: updating core number
+
+as both subcore and purecore gives *possible* nodes that change their core number, we need to determine them exactly. 
+
+Algorithm 3 gives the edge insertion case. 
+
+basic idea:
+
+- order the nodes by their $`cd`$ value from low to high
+- process each node $`u`$ sequentially, if $`cd(u) \le k`$, it cannot be in the new (k+1)-core, and we need to update its neighbors $`cd`$ value (chain effect)
+- once $`cd(u)>k`$, it holds that the remaining nodes have $`cd()>k`$ (because of the ordering), thus they will all be in the new $`(k+1)`$-core (break the loop)
+
+## TRAVERSAL algorithm
+
+based on the concept of pure core degree ($`PCD(u)`$): number of neighbors $`w`$that are either:
+  - $`K(u) = K(w)`$ and $`K(u) < MCD(w)`$
+  - $`K(u) < K(w)`$
+
+intuition for PCD: potential number of neighbors that are in the next max-core
+
+we can use PCD as the new criteria for candidate node filtering. 
+
+the algorithm computes the $`cd`$ on the fly. not sure how it works exactly. 
+
+
+# edge deletion
+
+very similar to chain effect. 
+
+1. decrement the $`MCD`$ value, if the new value is smaller the $`K`$, its core number will change
+2. as a result, its neighbors $`MCD`$ value might change also. do 1 and 2 recursively. 
+
 
 # implication for public private network
 

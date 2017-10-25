@@ -16,7 +16,13 @@
 
 todo
 
-- parallel paper: summarize in gitlab (for sharing)
+## "parallel" paper
+
+two main ideas:
+
+- parallel processing of edges in a matching
+- for edges in the same core, do it in batch
+
 - community search papers
 - guided/biased cascade generation
 - C++ programming
