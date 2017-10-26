@@ -43,6 +43,12 @@ related:
 - assuming the source is known
 - joint inference on source and other infected nodes. 
 
+## near optimal sensor placement
+
+- gaussian process works on the finite space, how prediction works not so clear
+- gaussian process gives closed form of conditional entropy
+- mutual information formulation simplified to the different between two conditional entropy terms
+- scaling up using lazy evaluation and local kernel
 
 
 - C++ programming
