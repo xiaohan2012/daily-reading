@@ -7,7 +7,7 @@
 
 # learned
 
-- introduce auxilary variables to complete the integared variables to `V`
+- introduce auxilary variables to complete the integared variables to $`V`$
 - the above enables importance sampling to be done (we sample casacade from a simpler distribution)
 - understood equation 8
 
