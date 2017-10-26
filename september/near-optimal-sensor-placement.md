@@ -31,7 +31,7 @@ useufulness:
 
 given $`M`$ and $`K`$, some measurement $`x_A`$ on $`A \subseteq V`$ ($`A`$ is the sensor set), we can predict the value of other variables in $`V`$ (associated with their probability)
 
-for example, we can predict the temperature of other places
+for example, we can predict the temperature of other locations
 
 ## stationary kernels
 
@@ -96,12 +96,19 @@ illustration:
 
 # algorithm
 
-maximizing mutual information is NP-hard, but mutual information gain is sub-modular. 
+maximizing mutual information is NP-hard, but mutual information gain is submodular. 
 
-more to follow: 
+the standard greedy algorithm can be applied. 
 
-- how to evaluate mutual information? 
-- how to speed up?
+at each step, we choose the sensor `y` that maximizes:
+
+`MI(A \cup y) - MI(A) = H(y \mid A) - H(y \mid \hat{A})`
+
+both `H(y \mid A)` and `H(y \mid \hat{A})` can be evaluated in closed form
+
+- Equation 5
+- a special property for Gaussian
+
 
 
 # resources
@@ -109,4 +116,7 @@ more to follow:
 - gaussian process: https://www.robots.ox.ac.uk/~mebden/reports/GPtutorial.pdf
 
 
+# questions
 
+- Gaussian process: how the prediction is done?
+- how to speed up to `O(kn)`
