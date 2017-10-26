@@ -14,8 +14,6 @@
 
 # Wednesday
 
-todo
-
 ## "parallel" paper
 
 two main ideas:
@@ -23,8 +21,30 @@ two main ideas:
 - parallel processing of edges in a matching
 - for edges in the same core, do it in batch
 
-- community search papers
-- guided/biased cascade generation
+# Thursday
+
+
+## community search papers
+
+- k-truss decomposition
+- simple index
+- motivation for TCP index
+
+## guided/biased cascade generation
+
+for continuous time model, one way is:
+
+- first generate cascade samples
+- then use sampling-important-resampling to resample the cascasdes. 
+- however, requires assuming the source node and `t_s`
+
+related:
+
+- assuming the source is known
+- joint inference on source and other infected nodes. 
+
+
+
 - C++ programming
 - https://medium.com/towards-data-science/pytorch-vs-tensorflow-spotting-the-difference-25c75777377b
 
