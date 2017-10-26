@@ -109,7 +109,32 @@ both $`H(y \mid A)`$ and $`H(y \mid \hat{A})`$ can be evaluated in closed form
 - Equation 5
 - a special property for Gaussian
 
+# scaling up
 
+time complexity: $`O(kn^4)`$, $`O(n^3)`$ matrix multiplication for each point at each iteration, there $`O(n)`$ nodes and $`O(k)`$ iterations.
+
+## lazy evaluaiton
+
+observation: node's score, $`\delta_y^t`$ decreases monotonically as $`t`$ increases, where $`t`$ is the iteration number
+
+therefore, if for some $`\delta_y^t < \delta_{y^{*}}^{t+1}`$, there is not need to compute $`\delta_y^{t+1}`$ because it won't be selected at $`t+1`$.
+
+the main idea:
+
+- we update the node's score $`\delta_y`$ whenever it's selected and it's not updated
+- if the selected node is updated, then we (seriously) select it for the current iteration
+
+exact time complexity is not easy derive. the paper seems to claim that at each iteration, $`O(1)`$ nodes are re-evaluated.
+
+## local kernel
+
+much of the computation is done on multiplying the covariance matrix. 
+
+however, correlation decreases exponentially with the distance between the points. 
+  - for example, two far away nodes can be considered independent
+
+therefore, when evaluating $`H(y \mid B)`$, we can *truncate* $`B`$ such that only $`K(x, y) > \epsilon`$ are kept. 
+  - so called, local kernel 
 
 # resources
 
@@ -120,3 +145,9 @@ both $`H(y \mid A)`$ and $`H(y \mid \hat{A})`$ can be evaluated in closed form
 
 - Gaussian process: how the prediction is done?
 - how to speed up to $`O(kn)`$
+
+# learned
+
+- lazy evaluation as a general tool for greedy algorithm (monotonicity required)
+- local kernel exploits the exponential decrease property of gaussian distribution
+- mutual information as selection strategy
