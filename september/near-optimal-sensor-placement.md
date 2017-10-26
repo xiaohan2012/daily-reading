@@ -100,11 +100,11 @@ maximizing mutual information is NP-hard, but mutual information gain is submodu
 
 the standard greedy algorithm can be applied. 
 
-at each step, we choose the sensor `y` that maximizes:
+at each step, we choose the sensor $`y`$ that maximizes:
 
-`MI(A \cup y) - MI(A) = H(y \mid A) - H(y \mid \hat{A})`
+$`MI(A \cup y) - MI(A) = H(y \mid A) - H(y \mid \hat{A})`$
 
-both `H(y \mid A)` and `H(y \mid \hat{A})` can be evaluated in closed form
+both $`H(y \mid A)`$ and $`H(y \mid \hat{A})`$ can be evaluated in closed form
 
 - Equation 5
 - a special property for Gaussian
@@ -119,4 +119,4 @@ both `H(y \mid A)` and `H(y \mid \hat{A})` can be evaluated in closed form
 # questions
 
 - Gaussian process: how the prediction is done?
-- how to speed up to `O(kn)`
+- how to speed up to $`O(kn)`$
