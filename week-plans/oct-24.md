@@ -50,7 +50,23 @@ related:
 - mutual information formulation simplified to the different between two conditional entropy terms
 - scaling up using lazy evaluation and local kernel
 
+## mutual information for continous time diffusion model
 
-- C++ programming
-- https://medium.com/towards-data-science/pytorch-vs-tensorflow-spotting-the-difference-25c75777377b
+`\text{argmax}_y H(y) - H(y \mid V^{'} - y)`, where `V^{'}=V-O`
+
+how to evaluate the conditional entropy
+
+## pytorch vs tensorflow
+
+https://medium.com/towards-data-science/pytorch-vs-tensorflow-spotting-the-difference-25c75777377b
+
+- pytorch: more pythonic, developer friendly, dynamic graph, pdb debugging supported, no native support for tensorboard but there are alternatives
+- tf: static graph, easier deployment, supports distributed training
+
+## source code for order-based core maintenance
+
+- `GLIST::ComputeCore`:
+  - computes `core` 
+  - builds the `O_k` (`node_`, `head_` and `tail_`)
+  - computes `mcd`
 
