@@ -1,7 +1,7 @@
 # Querying K-Truss Community in Large and Dynamic Graphs
 
-- k-truss definition: each pair of nodes has east least `k-2` common neighborss
-  - so minimum of `k` is 2. 
+- k-truss definition: each pair of nodes has east least $`k-2`$ common neighborss
+  - so minimum of $`k`$ is 2. 
 
 - original definition of k truss [7]
 - truss decomposition [21]
@@ -28,7 +28,7 @@ condition 2 is used to ensure connectivenss and cohesiion
 # properties of k-truss
 
 1. bounded diameter
-2. (k-1)-edge-connected: removing any `(k-1)` edge still keeps it connected
+2. (k-1)-edge-connected: removing any $`(k-1)`$ edge still keeps it connected
 3. polynomial time for k-truss decomposition: [7, 21]
 
 1 and 2 are reltaed to criteria of a good community.
@@ -40,18 +40,18 @@ variants of k-truss community:
 
 # problem
 
-given a query node `v_q` and integer `k`, find all k-truss community that contains `v_q`
+given a query node $`v_q`$ and integer $`k`$, find all k-truss community that contains $`v_q`$
 
 # querying
 
 def:
 
-- subgraph trussness `\tau(H)`: minimum of edge support in subgraph
-- edge trussness `\tau(e)`: maximum support from all subgraphs, corresponding subgraph is `H^e`
+- subgraph trussness $`\tau(H)`$: minimum of edge support in subgraph
+- edge trussness $`\tau(e)`$: maximum support from all subgraphs, corresponding subgraph is $`H^e`$
 
-in other words, if edge `e` has trussness `k`, there must exist a connected subgraph `G^{'}` that gives `sup(e, G^{'}) \ge k`. 
+in other words, if edge $`e`$ has trussness $`k`$, there must exist a connected subgraph $`G^{'}`$ that gives $`sup(e, G^{'}) \ge k`$. 
 
-note that the subgraph is composed of triangles (except for `k=2`)
+note that the subgraph is composed of triangles (except for $`k=2`$)
 
 ## truss decomposition
 
@@ -61,7 +61,7 @@ goal: compute trussness of all edges.
 
 algorithm: idea similar to core decomposition - "peeling"
   - order the edges by support
-  - for the current edge, update its adjacent edges' support, set its `\tau` value and remove it from `G`
+  - for the current edge, update its adjacent edges' support, set its $`\tau`$ value and remove it from $`G`$
     - requires ordering of the edges by updated support
   - repeat the process
 
@@ -74,8 +74,8 @@ the graph is stored in adjacency list format.
 - neighbors for each node are sorted by their truss value in descending order (because the values are integers, sorting can be done in linear time). 
 - edge trussness values are stored in hashtable
 
-- time complexity: `O(\sum\limits_{(u, v)} \min\{d(u), d(v)\})`
-- space complexity: `O(m)`
+- time complexity: $`O(\sum\limits_{(u, v)} \min\{d(u), d(v)\})`$
+- space complexity: $`O(m)`$
 
 ## query processing
 
@@ -84,19 +84,19 @@ performs a variant of BFS.
 basic idea:
 
 - traverse edges by triangle adjacency (edge is like node, adjacency is defined by triangle adjacency)
-- we visit an edge only if its trussness `\ge k`
+- we visit an edge only if its trussness $`\ge k`$
 
-we do this `BFS` for each adjacent edges of `q`. 
+we do this $`BFS`$ for each adjacent edges of $`q`$. 
 
-- time complexity: `O(|Ans| d_{max})` (line 7, 8)
-  - `Ans = C_1 \cup \ldots \cup C_l`
+- time complexity: $`O(|Ans| d_{max})`$ (line 7, 8)
+  - $`Ans = C_1 \cup \ldots \cup C_l`$
 
 # TCP-index (Triangle Connectivity Preserved Index)
 
 
 problem with simple index
 
-- repeated access of qualified edges: each edge is visited `2(k-2)` times. the total time lower bounded by `\Omega(k|Ans|)`
+- repeated access of qualified edges: each edge is visited $`2(k-2)`$ times. the total time lower bounded by $`\Omega(k|Ans|)`$
 - unnecessary access of disqualified edges (line 9)
 
 # comment
