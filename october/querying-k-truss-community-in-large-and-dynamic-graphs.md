@@ -47,7 +47,7 @@ given a query node $`v_q`$ and integer $`k`$, find all k-truss community that co
 def:
 
 - subgraph trussness $`\tau(H)`$: minimum of edge support in subgraph
-- edge trussness $`\tau(e)`$: maximum trussness of all subgraphs that contain `e`, corresponding subgraph is $`H^e`$
+- edge trussness $`\tau(e)`$: maximum trussness of all subgraphs that contain $`e`$, corresponding subgraph is $`H^e`$
 
 in other words, if edge $`e`$ has trussness $`k`$, there must exist a connected subgraph $`G^{'}`$ that gives $`sup(e, G^{'}) \ge k`$. 
 
@@ -56,7 +56,7 @@ note that the subgraph is composed of triangles (except for $`k=2`$)
 ## truss decomposition
 
 - used as the initialization step
-- goal: compute trussness of all edges, `\{\tau(e) \mid e \in E \}`
+- goal: compute trussness of all edges, $`\{\tau(e) \mid e \in E \}`$
 
 algorithm: idea similar to core decomposition - "peeling"
   - order the edges by support
@@ -99,17 +99,17 @@ problem with simple index
 2. unnecessary access of disqualified edges (line 9)
 
 
-for each node `x`, an index is constructed on the ego network `G_x`. where `V_x=N(x)` and `E(x) = \{(y,z) \in E \mid y, z \in N(x)\}`
+for each node $`x`$, an index is constructed on the ego network $`G_x`$. where $`V_x=N(x)`$ and $`E(x) = \{(y,z) \in E \mid y, z \in N(x)\}`$
 
 
-for problem 1, a triangle `(x, y, z)` can only in a k-truss community, if `k \ge \min\{\tau(x, y), \tau(y, z), \tau(x, z)\}`. 
+for problem 1, a triangle $`(x, y, z)`$ can only in a k-truss community, if $`k \ge \min\{\tau(x, y), \tau(y, z), \tau(x, z)\}`$. 
 
-for `(y, z) \in E(x)`, it has a weight `\min\{\tau(x, y), \tau(y, z), \tau(x, z)\}`. 
+for $`(y, z) \in E(x)`$, it has a weight $`\min\{\tau(x, y), \tau(y, z), \tau(x, z)\}`$. 
 
 for problem 2, observation (Figure 4):
 
-1. if edge `(y, z)` is added, edges `(x, y)` and `(x, z)` are implicitly added. 
-2. don't quite understand why `(x_2, x_3)` is not added. 
+1. if edge $`(y, z)`$ is added, edges $`(x, y)`$ and $`(x, z)`$ are implicitly added. 
+2. don't quite understand why $`(x_2, x_3)`$ is not added. 
 
 the idea is, we just store a tree. 
 
@@ -136,7 +136,7 @@ k-truss is very related to k-core. in k-truss:
 
 # questions
 
-- when constructin `G_x`,  it consider only `N(x)`, is it possible that some non-neighors is also in some k-truss community containing `x`?
+- when constructin $`G_x`$,  it consider only $`N(x)`$, is it possible that some non-neighors is also in some k-truss community containing $`x`$?
 - 
 
 
