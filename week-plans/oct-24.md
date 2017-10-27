@@ -70,3 +70,37 @@ https://medium.com/towards-data-science/pytorch-vs-tensorflow-spotting-the-diffe
   - builds the `O_k` (`node_`, `head_` and `tail_`)
   - computes `mcd`
 
+# Friday
+
+## revisiting community search
+
+new questions:
+
+- comparison between different community definition, k-truss, k-core, quasi-clique, etc
+  - k-truss vs k-core for example
+- what is good and bad about k-truss? (no explicit diameter constraint)
+  - related paper is *Closest Truss Community Search* by Huang, VLDB 2016
+
+- not so many work on community search, even fewer on complex graphs (attribtued, etc)
+
+## community search in heterogenous graphs
+
+can be seen as fined-grained version of social circle detection. it gives extra information on each circle
+
+two entities are reachable from each other via at least `k` paths constrained by certain meta-path. 
+
+examples:
+
+academic network, given an author `a` as query, find the subgraph constaining its co-authors, papers, topics and venues
+
+a straightforward baseline: 
+
+1. label the authors by paper topics
+2. perform attributed community search
+3. filter the co-authored papers by topic
+
+the goal is not clear. 
+
+**to read**: what is a good community in heterogenous information networks?
+
+## 

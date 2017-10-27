@@ -113,6 +113,9 @@ for problem 2, observation (Figure 4):
 
 the idea is, we just store a tree. 
 
+**more illustration** in the ICDE tutorial (page 30, 31)
+
+
 ## search
 
 # dynamic graph
@@ -141,3 +144,7 @@ k-truss is very related to k-core. in k-truss:
 
 
 
+# related papers
+
+- Closest Truss Community Search, HUang, VLDB 16
+- 
