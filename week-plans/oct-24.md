@@ -103,4 +103,20 @@ the goal is not clear.
 
 **to read**: what is a good community in heterogenous information networks?
 
-## 
+
+## mutual information for cascading process
+
+`H(y) = \int p(t_y \mid O) \log p(t_y \mid O) d t_y`
+
+the goal is to generate cascades `C` that respects `O`
+
+## sampling cascades
+
+idea of `delay-bfs`: connect the terminals level by level (level refers to time)
+
+`delay-bfs` can be modified to sample a order-respecting cascade. 
+
+however, if transmission delay information is available, how is the sampling done?
+
+# week review
+
