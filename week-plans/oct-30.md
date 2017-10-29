@@ -10,6 +10,7 @@
 - extreme multilabel classification (1 h)
   - what's the prediction time of  SIGIR paper? 
   - how does it reduce it?
+- two more papers on compression/decompression (new)
 - metric learning tutorial: https://arxiv.org/pdf/1306.6709.pdf (1 afternoon)
 
 # monday
@@ -17,10 +18,20 @@
 - **frog**: think about how to sample cascade (1.5 h)
   - how to estimate `H(t_y \mid O)=\int p(t_y \mid O) d t_y`? using cascades?
   - what distribution should the cascades be drawn from?
-  - conditional entropy part
+  - same question for conditional entropy part
 - graph robustness measure: (1.5 h)
   - https://arxiv.org/pdf/1311.5064.pdf
 - read https://arxiv.org/pdf/1302.6109.pdf (1.5 h)
   - how social resilience is quantified
 - meeting with Cigdem (2 h)
 
+# Sunday
+
+- read fastxml paper
+
+next step:
+
+- understand the compression-decompression techniques
+  - commonality and difference
+- understand the tree based methods
+  - LPSR and MLRF
