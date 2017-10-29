@@ -110,6 +110,8 @@ the goal is not clear.
 
 the goal is to generate cascades `C` that respects `O`
 
+note that `p(t_y \mid O) = \int p(X \mid O) p(t_y \mid X) d X`
+
 ## sampling cascades
 
 idea of `delay-bfs`: connect the terminals level by level (level refers to time)
