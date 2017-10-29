@@ -4,6 +4,8 @@ given query $`q`$, and returned ranked list of documents, $`d_, \ldots, d_p`$
 
 # Cumulative gain
 
+- $`rel_{i}`$: relevance score of the item with rank $`i`$
+
 $`\mathrm{CG_{p}} = \sum_{i=1}^{p} rel_{i}`$
 
 - ranking order does not matter
@@ -33,5 +35,7 @@ $`\mathrm{nDCG_{p}} = \frac{DCG_{p}}{IDCG_{p}} `$
 where:
 
 $`\mathrm{IDCG_{p}} = \sum_{i=1}^{|REL|} \frac{ 2^{rel_{i}} - 1 }{ \log_{2}(i+1)} `$
+
+- $`REL`$: list of relevant documents
 
 
