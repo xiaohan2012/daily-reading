@@ -50,6 +50,6 @@ uniform sparsest cut: $`\min \frac{|E(S, V-S)|}{|S| \times |V-S|}`$
 interpretation:
 
 - if this value is quite small, then the graph is easily separable
-
+- also used as a measure for graph robustness (the harder, the harder to separate)
 
 
