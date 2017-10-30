@@ -42,7 +42,7 @@ it can be shown that $`\lambda_n <= 2`$.
 # middle case: between 0 and $`\lambda_n`$
 
 the smallest non-zero eigen value is the lower bound on the uniform sparsest cut
-  - $`\lambda_2 <= USC(G) <= \sqrt(8 \lambda_2) <= \sqrt(8 USC(G))`$
+  - $`\lambda_2 <= USC(G) <= \sqrt{8 \lambda_2} <= \sqrt{8 USC(G)}`$
 
 
 uniform sparsest cut: $`\min E(S, V-S) / (|S|x|V-S|)`$
