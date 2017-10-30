@@ -6,13 +6,13 @@
 
 another way to denote the kth smallest eigen value of matrix $`M`$:
 
-$`\lambda_k =  min_x (x^T M x / x^T x)`$
+$`\lambda_k =  \min_x (x^T M x / x^T x)`$
 
 s.t. $`x`$ is orthnogonal to the previous $`k-1`$ eigen vectors. 
 
 # eigen values: perspective 2
 
-$`\lambda_k =  min_{k-dim space S} max_{x in S} (x^T M x / x^T x)`$
+$`\lambda_k =  \min_{\text{k-dim space } S} \max_{x \in S} (x^T M x / x^T x)`$
 
 this decouples the dependency among eigen vectors
 
@@ -45,7 +45,7 @@ the smallest non-zero eigen value is the lower bound on the uniform sparsest cut
   - $`\lambda_2 <= USC(G) <= \sqrt(8 \lambda_2) <= \sqrt(8 USC(G))`$
 
 
-uniform sparsest cut: $`min E(S, V-S) / (|S|x|V-S|)`$
+uniform sparsest cut: $`\min E(S, V-S) / (|S|x|V-S|)`$
 
 interpretation:
 
