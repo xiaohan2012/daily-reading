@@ -151,3 +151,4 @@ therefore, when evaluating $`H(y \mid B)`$, we can *truncate* $`B`$ such that on
 - lazy evaluation as a general tool for greedy algorithm (monotonicity required)
 - local kernel exploits the exponential decrease property of gaussian distribution
 - mutual information as selection strategy
+- conditional entropy on Gaussian models has closed form
