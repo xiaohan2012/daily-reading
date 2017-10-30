@@ -32,7 +32,7 @@ thus, the problem becomes a maximization problem.
 
 in other words, it's the maximum-cut problem (without normalization).
 
-it can be shown that $`\lambda_n <= 2`$.
+it can be shown that $`\lambda_n \le 2`$.
 
 - if a graph is bipartite, equality holds.
 - however, the other direction does not hold.
@@ -42,10 +42,10 @@ it can be shown that $`\lambda_n <= 2`$.
 # middle case: between 0 and $`\lambda_n`$
 
 the smallest non-zero eigen value is the lower bound on the uniform sparsest cut
-  - $`\lambda_2 <= USC(G) <= \sqrt{8 \lambda_2} <= \sqrt{8 USC(G)}`$
+  - $`\lambda_2 \le USC(G) \le \sqrt{8 \lambda_2} \le \sqrt{8 USC(G)}`$
 
 
-uniform sparsest cut: $`\min E(S, V-S) / (|S|x|V-S|)`$
+uniform sparsest cut: $`\min \frac{|E(S, V-S)|}{|S| \times |V-S|}`$
 
 interpretation:
 
