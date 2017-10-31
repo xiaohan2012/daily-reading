@@ -68,11 +68,11 @@ next steps:
 - [X] frog: think about our formulation (2 h)
 - [X] Toward optimal active learning through monte carlo estimation of error reduction: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.137.6296 (1 h)
   - what's the objective to optimize here?
-- [ ] Fabio's active learning paper (1 h)
+- [X] Fabio's active learning paper (1 h)
   - what's the objective to optimize here?
-- [ ] active learning for uncovering biological network: http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005466 (1 h)
+- [X] active learning for uncovering biological network: http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005466 (1 h)
 
-# frog
+## frog
 
 formulated the problem, the objective has recursive form. 
 
@@ -89,3 +89,11 @@ next:
 - related problem: add edges to maximize some function on k-core (ego, or global)
   - what's the driving factor for network unraveling (friendster paper)
 
+## active learning
+
+- uncover biological networks: interesting and different problem. 
+- to avoid general query selection model, reminds of sensor placement papers
+
+next:
+
+- sensor placement papers (the one Kiran sends me)
