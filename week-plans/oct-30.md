@@ -63,12 +63,29 @@ next steps:
 
 # Tuesday
 
-- [ ] frog: anchored k problem paper (2 h)
+- [X] anchored k problem paper (1 h)
   - what's the problem formulation
-- [ ] think about our formulation (1 h)
+- [X] frog: think about our formulation (2 h)
 - [ ] Toward optimal active learning through monte carlo estimation of error reduction: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.137.6296 (1 h)
   - what's the objective to optimize here?
 - [ ] Fabio's active learning paper (1 h)
   - what's the objective to optimize here?
 - [ ] active learning for uncovering biological network: http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005466 (1 h)
+
+# frog
+
+formulated the problem, the objective has recursive form. 
+
+what's unknown:
+
+- is it NP-hard?
+- submodularity on recursive function
+  - https://arxiv.org/pdf/1701.08939.pdf: section 4.1
+
+next:
+
+- can we reduce the original problem as a special case to our problem?
+- if not, can we us the NP-hardness proof in kleinberg's paper to our case?
+- related problem: add edges to maximize some function on k-core (ego, or global)
+  - what's the driving factor for network unraveling (friendster paper)
 
