@@ -66,7 +66,7 @@ next steps:
 - [X] anchored k problem paper (1 h)
   - what's the problem formulation
 - [X] frog: think about our formulation (2 h)
-- [ ] Toward optimal active learning through monte carlo estimation of error reduction: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.137.6296 (1 h)
+- [X] Toward optimal active learning through monte carlo estimation of error reduction: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.137.6296 (1 h)
   - what's the objective to optimize here?
 - [ ] Fabio's active learning paper (1 h)
   - what's the objective to optimize here?
