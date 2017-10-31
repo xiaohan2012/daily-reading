@@ -1,7 +1,7 @@
 # week plan
 
 - [X] friendster paper (1 h)
-- influence maximization: influence definition, problem definition and approximation method (2~3 h)
+- [X] influence maximization: influence definition, problem definition and approximation method (2~3 h)
 - [X] resilience measures (2 h)
 - find and read related work: modify graph structure to increase graph robustness (1 h)
   - example: https://www.researchgate.net/publication/301313634_Optimizing_network_robustness_by_edge_rewiring_a_general_framework
@@ -97,3 +97,40 @@ next:
 next:
 
 - sensor placement papers (the one Kiran sends me)
+
+## summary today
+
+- formulated problem for anchored problem, to do
+  - NP-hardness
+  - submodularity
+- ways other than entropy, mutual information to solve problem
+  - expected error
+  - size of connected component
+
+# wednesday: hobby hackathon
+
+- [ ] understand the paper (1h)
+- [ ] relate it to the Matlab code (1.5 h)
+- [ ] rewrite it in Python (whole afternoon)
+  - and experiment with at least one dataset
+
+
+# thursday
+
+- [ ] frog: how to estimate `p(t_y \mid O)` (1.5 h)
+  - integation over all possible cascades part, make it formal
+  - uniform sampling part, is it correct?
+  - if the above is correct, what's the actual sampling problem?
+- if time permitted, think about what's the prediction error in our case and how to plug in the method in Roy 2001. 
+- [ ] NP hardness proof of anchored k-core problem (1.5 h)
+  - possibly apply the technique to prove our problem
+- [ ] related work: modify graph structure to increase graph robustness (1.5 h)
+  - cited and citing in https://www.researchgate.net/publication/301313634_Optimizing_network_robustness_by_edge_rewiring_a_general_framework
+  - what are resilience definition, problems, methods?
+- [ ] discussion with Cigdem (1.5h)
+
+# friday
+
+- [ ] sensor placement papers sent by Kiran
+  - review it
+  - probabilistic infection model
