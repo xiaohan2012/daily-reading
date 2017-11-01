@@ -44,7 +44,7 @@ minimize $`||P_{\Omega}(Y^T Y) - P_{\Omega}(Z^T Z)||^2_F + \lambda ||Z||_1`$
 
 where:
 
-- $`\Omega`$ the set of kNN neighbors, $`(i, j) \in \Omega`$ iff $`i \in N_j`$
+- $`\Omega`$ the set of kNN neighbors, $`(i, j) \in \Omega`$ iff $`i \in N_j`$: similarity is defined by $`Y^T Y`$ or $`Z^T Z`$
 - $`(P_{\Omega}(M))_{ij}=M_{ij}`$ if $`(i, j) \in \Omega`$, otherwise $`0`$
 
 # predict local embedding
