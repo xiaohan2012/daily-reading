@@ -82,7 +82,7 @@ to check
 
 KNN-based: 
 
-for each new $`x`$, after projection $`z=V x`$, find its *nearest neighbors* from $`z_1, \ldots, z_n`$ (and find $`y`$ and take the average?)
+for each new $`x`$, after projection $`z=V x`$, find its `k`-*nearest neighbors* from $`z_1, \ldots, z_n`$ (and find $`y`$ and take the average?)
 
 this is slow because it requires a linear scan over all training data points. 
 
@@ -98,3 +98,9 @@ during prediction, it finds the closest cluster to $`x`$.
 
 for an ensemble of clustering, it find an ensemble of closest clusters and use majority voting to determine the labels. 
 
+# questions
+
+- to find k nearest neighbors, why not use similarity search?
+  - such as https://github.com/facebookresearch/faiss
+- other values to do the low-rank matrix completion?
+  - SVP: https://arxiv.org/abs/0909.5457
