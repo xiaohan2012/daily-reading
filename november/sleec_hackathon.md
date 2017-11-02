@@ -31,7 +31,18 @@ instead, it uses ALS
   - `params.NNtest = 25`
   - `params.normalize = 1`
 
+# notes on lapack usage in `implict`
+
+lapack routines:
+
+- `axpy`: `y=\alpha x + y`, where `x, y` are vector and `\alpha` is scalar
+- `posv`: solves a linear system
+
+these routines are used by alternating least square
+
 # next
 
 - enforce sparsity:
   - elasticnet and sparsity on embedding
+- least square with l1 regularization
+  - http://cvxopt.org/examples/mlbook/l1regls.html
