@@ -32,7 +32,7 @@ next step:
 # monday
 
 - [X] **frog**: think about how to sample cascade (1.5 h)
-  - how to estimate `H(t_y \mid O)=\int p(t_y \mid O) d t_y`? using cascades?
+  - how to estimate $`H(t_y \mid O)=\int p(t_y \mid O) d t_y`$? using cascades?
   - what distribution should the cascades be drawn from?
   - same question for conditional entropy part
 - [X] graph robustness measure: (1.5 h)
@@ -43,9 +43,9 @@ next step:
 
 ## frog and discussion
 
-problem is how to estimate `p(t_y \mid O)` using simulated cascades
+problem is how to estimate $`p(t_y \mid O)`$ using simulated cascades
 
-- be formal about the form with hidden variable `C`
+- be formal about the form with hidden variable $`C`$
 
 discussion:
 
@@ -109,15 +109,15 @@ next:
 
 # wednesday: hobby hackathon
 
-- [ ] understand the paper (1h)
-- [ ] relate it to the Matlab code (1.5 h)
-- [ ] rewrite it in Python (whole afternoon)
+- [X] understand the paper (1h)
+- [X] relate it to the Matlab code (1.5 h)
+- [X] rewrite it in Python (whole afternoon)
   - and experiment with at least one dataset
 
 
 # thursday
 
-- [ ] frog: how to estimate `p(t_y \mid O)` (1.5 h)
+- [X] frog: how to estimate $`p(t_y \mid O)`$ (1.5 h)
   - integation over all possible cascades part, make it formal
   - uniform sampling part, is it correct?
   - if the above is correct, what's the actual sampling problem?
@@ -128,6 +128,33 @@ next:
   - cited and citing in https://www.researchgate.net/publication/301313634_Optimizing_network_robustness_by_edge_rewiring_a_general_framework
   - what are resilience definition, problems, methods?
 - [ ] discussion with Cigdem (1.5h)
+
+## frog
+
+formally derived $`p(t_y \mid O)`$ which is $`- \frac{1}{P(O)} \sum\limits_{t_y} f(t_y, O) \log f(t_y, O) + \frac{\log P(O)}{P(O)}`$, 
+where $`f(t_y, O)=\sum\limits_{C \text{ respects } O \text{ and } t_y} P(X)`$
+
+- how to estimate both `f(t_y, O)`and `P(O)`?
+- is it \#P-complete?
+
+## anchored k-core hardness
+
+- reduction from set-cover
+- checked the restricted case where `|S_i| < k` (`v` won't be saved unless anchored)
+- the more general case has not been checked
+
+tried to prove the NP-hardness by reduction from set cover. 
+
+however, when constructing the graph, how can ensure only the "set" nodes are anchored not the "element" nodes.
+
+- maybe try to "pseudo-anchor" (e.g, contain it in a n-clique) the "set" nodes so that anchoring any "element" does not give more benefit than anchoring "set" nodes. 
+  
+a related problem: https://cs.stackexchange.com/questions/83330/np-hardness-of-maximum-set-cover-with-element-level-submodular-function
+
+related papers:
+
+- http://luthuli.cs.uiuc.edu/~daf/courses/Optimization/Paperssubmodular/nemhauser.pdf
+- multi-cover problem: https://www.cc.gatech.edu/people/home/mihail/D.read2010/Rajagopalan_Vazirani.pdf
 
 # friday
 
