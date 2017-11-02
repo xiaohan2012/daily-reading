@@ -180,6 +180,12 @@ network games related to coreness
 - http://www.coalitiontheory.net/archive-ctn/papers/13_harkins.pdf
 - https://wsl.stanford.edu/ITMANET/ITMANET_Publications/manshadi_allerton09.pdf
 
+## discussion
+
+- framework of Mccallum's  paper
+- common pool of tree samples
+- use current time
+- experiment
 
 ## summary
 
