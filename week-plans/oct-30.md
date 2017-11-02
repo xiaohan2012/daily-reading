@@ -156,8 +156,41 @@ related papers:
 - http://luthuli.cs.uiuc.edu/~daf/courses/Optimization/Paperssubmodular/nemhauser.pdf
 - multi-cover problem: https://www.cc.gatech.edu/people/home/mihail/D.read2010/Rajagopalan_Vazirani.pdf
 
+## increase network robustness
+
+- preserving community structure: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4326464/
+  - adding edges increase robustness but changes the community structure, a cost is introduced 
+- rewire/re-configure to increase connectivity robustness: https://link.springer.com/article/10.1007/s10618-015-0447-5
+- add links to increase connectivity: http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7324302
+- graph augmentation problem (connectivity): http://epubs.siam.org/doi/abs/10.1137/0205044 (lot of citations)
+- design of survival networks: http://www.sciencedirect.com/science/article/pii/S0927050705801276
+
+
+anchoring related
+
+- anchor nodes (trusted) to maximize connectivity: http://nebula.wsimg.com/cb7e56e24c51cdee9efeb51c71b2fe85?AccessKeyId=DC23973FEA94075ABCF3&disposition=0&alloworigin=1
+  - it's NP-hard
+
+hardness result of anchored k-core problem:
+
+- it's even harder: https://www.aaai.org/ocs/index.php/AAAI/AAAI13/paper/viewFile/6313/6872
+
+network games related to coreness
+
+- http://www.coalitiontheory.net/archive-ctn/papers/13_harkins.pdf
+- https://wsl.stanford.edu/ITMANET/ITMANET_Publications/manshadi_allerton09.pdf
+
+
+## summary
+
+- not very easy to prove NP-hardness, can we find some other non-stochastic resilience measure?
+  - based on the paper of friendster, what property a resilience network have?
+- did not find any work for our problem
+  - related terms: survial network, network augmentation, network vulnerability
+
+
 # friday
 
-- [ ] sensor placement papers sent by Kiran
-  - review it
-  - probabilistic infection model
+- [ ] friendster paper
+  - what's a good resilience measure
+- [ ] network game equilibrium
