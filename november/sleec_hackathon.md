@@ -46,3 +46,13 @@ these routines are used by alternating least square
   - elasticnet and sparsity on embedding
 - least square with l1 regularization
   - http://cvxopt.org/examples/mlbook/l1regls.html
+
+
+# email with Kush, the author
+
+- l1 is not handled during ALS
+- l1 is enforced on both `V` and `VX` using ADMM and
+- the embedding Z used for searching is replaced by `VX`
+
+not the same as in the paper. 
+
