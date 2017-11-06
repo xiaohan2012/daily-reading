@@ -44,3 +44,7 @@ for example:
 - by minimizing the upper bound in corollary 4.5
   - how to compute `$\gamma_k$`?
 - or relax the `$\gamma_k$` by any non-decreasing and non-negative number sequence. 
+
+# more papers
+
+- https://web.stanford.edu/~jacksonm/GamesNetworks.pdf
