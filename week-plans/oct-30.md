@@ -182,7 +182,7 @@ network games related to coreness
 
 ## discussion
 
-- framework of Mccallum's  paper
+- framework of Mccallum's paper
 - common pool of tree samples
 - use current time
 - experiment
@@ -197,6 +197,6 @@ network games related to coreness
 
 # friday
 
-- [ ] friendster paper
-  - what's a good resilience measure
+- [X] friendster paper
+  - what's a good resilience measure? distribution of core number
 - [ ] network game equilibrium
