@@ -31,3 +31,24 @@ learned
 - relation between largest nash equilibria and core number (lower bound)
 - proposed a problem formulation on maximization some function on k-core
 
+## np-hardness
+
+in influence maximization:
+
+- IC model: reduction from set cover, edges are created directed so to avoid selection of element nodes. 
+- IT model: 
+
+## discussion with Aris
+
+active learning:
+
+1. query selection
+2. evaluation using some recontruction method
+
+random process:
+
+1. some node leaves and the contagion spreads
+2. immunize `k` nodes to minimize spread
+
+
+
