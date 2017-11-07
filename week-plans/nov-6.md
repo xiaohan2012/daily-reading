@@ -52,3 +52,22 @@ random process:
 
 
 
+# Wednesday
+
+- frog: 
+  - https://theory.stanford.edu/~jvondrak/data/submod-tutorial-1.pdf and https://courses.engr.illinois.edu/cs598csc/sp2010/Lectures/Lecture20.pdf (1.5 h)
+  - influence maximization submodularity (0.5 h)
+  - is the function a submodular function (0.5 h)
+- one possible formulation: given some infected node and some infection probability defined on node degree, immunize `b` nodes so that the expected cascade size is minimized. 
+  - is the above function submodular (0.5 h)
+  - np-hard? (0.5 h)
+  - or the infection can start from multiple nodes
+  - relation to network immunization strategy: find related papers (1 h)
+- active learning experiment
+  - calculate the expected prediction error (without using current time, 1h)
+  - plot the query selection process and compare it with entropy based method on grid (1 h)
+- night (1 h)
+  - more training epochs
+  - take the mean on l2 regularization 
+  - use sparse tensor
+    
