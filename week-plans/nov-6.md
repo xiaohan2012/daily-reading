@@ -71,3 +71,62 @@ random process:
   - take the mean on l2 regularization 
   - use sparse tensor
     
+
+## frog
+
+- submodular function minimization: polynomial time
+- maximizing monotone and submodular function: `(1-1/e)`
+
+## immunization (fixed infection probability)
+
+assume infection probability is fixed. 
+
+problem:
+
+given source node `s`, a sampled graph (by infection probability), we want to remove `b` nodes so that the connected component where `s` is in has minimize size. 
+
+### sub/super-modularity
+
+the size function given removed nodes is super-modular (non-decreasing). 
+
+**prove it!**
+
+for multiple sources, the function seesm to be super-modular as well
+
+### NP-hardness
+
+reduction from [component order connectivity](https://cs.stackexchange.com/questions/12789/find-which-vertices-to-delete-from-graph-to-get-smallest-largest-component)
+
+given a graph `G` such that `s` is connected to many leave nodes. this makes sure the `\text{argmax} C \in cc |C| = C_s`
+
+as single-source version is a special case of multi-source version, the multi-source version is also NP-hard.
+
+## network immunization papers
+
+spectral-based:
+
+- Node Immunization on Large Graphs: Theory and Algorithms
+  - SIS model
+- [Scalable Approximation Algorithm for Network Immunization](https://arxiv.org/pdf/1711.00784.pdf)
+  - greedy
+
+can we define some epidemic threshold for our stochastic process, 
+like [Epidemic Thresholds in Real Networks](http://cs.stanford.edu/~jure/pubs/virus-tissec.pdf)
+- in contrast to using simulation to approximate the value
+
+TODO: can we apply the technique in this paper to our paper. 
+
+### stay/leave as network games
+
+TODO: can we define such game? and the equilibria is the probability to stay?
+
+## active learning project
+
+done:
+
+- score for prediction error based
+
+not done:
+  - `query_strategy_test` using  `simulator`	
+  - `QueryGenerator.__init__`  not accepting `obs`
+
