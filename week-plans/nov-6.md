@@ -114,7 +114,7 @@ can we define some epidemic threshold for our stochastic process,
 like [Epidemic Thresholds in Real Networks](http://cs.stanford.edu/~jure/pubs/virus-tissec.pdf)
 - in contrast to using simulation to approximate the value
 
-TODO: can we apply the technique in this paper to our paper. 
+TODO: can we apply the technique in this paper to our work. 
 
 ### stay/leave as network games
 
@@ -129,4 +129,20 @@ done:
 not done:
   - `query_strategy_test` using  `simulator`	
   - `QueryGenerator.__init__`  not accepting `obs`
+
+## sleec
+
+realized I didn't do validation step, so the result is not very reliable. 
+
+also, `lambda1` should be might smaller than `lambda2` and train with larger iteration number. 
+
+# Thursday
+
+- frog: https://stanford.edu/~jugander/NetworksNIPS2015/papers/NIPS_Networks_2015_paper_28.pdf (2.5 h)
+- similarity/difference between IC model and our model (0.5h)
+- proof of \#P-hardness: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.302.362&rep=rep1&type=pdf (1.5h)
+- active learning
+  - test of simulator on all query methods (1h)
+  - experiment using simulator, compare query process using different strategies (1h)
+
 
