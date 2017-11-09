@@ -181,3 +181,4 @@ two directions:
 - add edges to optimize some function on k-core
   - what's the intuition for the objective function?
   - how about add weight to each node? to reflect individual importance. 
+  - or add edges to optimize the sum of increase of each node's core number
