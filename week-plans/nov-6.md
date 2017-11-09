@@ -182,3 +182,24 @@ two directions:
   - what's the intuition for the objective function?
   - how about add weight to each node? to reflect individual importance. 
   - or add edges to optimize the sum of increase of each node's core number
+
+## active learning
+
+observation: the new query strategy selects nodes at the boundary of the graph
+
+possible reason: these (uninfected) nodes matches the prediction (self-reinforcing):
+
+- `p(y=0 | q)=1` and `E_{D+ (q, 0)}` is maximized because (it matches the current prediction)
+- `p(y=1 | q)=0` and `E_{D+ (q, 1)}`: so this term can be ignored
+
+in other words `p(y=0 | q)` is not estimated properly in this case.
+
+1. the observed data is quite focused in one small area (cannot be avoided)
+2. the sampled tree is quite small
+
+what can we do?
+
+- sample larger/better tree
+
+# Friday
+
