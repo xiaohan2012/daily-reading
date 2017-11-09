@@ -146,3 +146,38 @@ also, `lambda1` should be might smaller than `lambda2` and train with larger ite
   - experiment using simulator, compare query process using different strategies (1h)
 
 
+## frog
+
+- a generalization of network design problem based on manipulating edge probabilities
+- edge deletion/addition to minimize/maximize spread (super-modular function)
+- maniulate edge probabilities on continuous time diffusion model to minimize transportation time
+
+## mapping our model to infection process
+
+mapping our model to infection process. 
+
+- adding dummy node and connect it to all other nodes with infection probability
+- edge is associated with some probability to infect the target from source
+  - need to play with the probability, for example, if u's two neighbors, x, y get infected at the same time stamp, then we can set `p_{x, u} = \frac{1}{\deg{u} + 1}` and `f_{y, u}=0` to simulate the effect of infection via edge. 
+
+observation:
+
+- edge `(u, v)`'s infection probability will be evaluated whenever `v` is infected. 
+  - and it depends on `v` current degree. 
+- immunizing nodes means setting their outcoming edges' probability to zero.
+- consider a star graph, the center nodes have many neighbors. using our model. in expectation half of its neighbors will leave however, because `N` is large, center node will stay with high probability. 
+
+main chanllenges:
+
+- edge probability is evaluated dynaimcally in contrast to IC model with pre-defined edge probability
+  - can we fix it somehow? for example, lower-core nodes have a weaker influence on higher-core nodes while higher-core nodes have a stronger influence on lower-core nodes. 
+
+two directions:
+
+- map it to IC model and devise node immunization strategy
+  - edge probability needs to be defined to reflect unraveling influence
+  - initial infection probability needs to be defined
+  - why giving up this approach? dynamic edge probability? not sure if it captures the unraveling process?
+- add edges to optimize some function on k-core
+  - what's the intuition for the objective function?
+  - how about add weight to each node? to reflect individual importance. 
