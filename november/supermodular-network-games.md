@@ -48,3 +48,4 @@ for example:
 # more papers
 
 - https://web.stanford.edu/~jacksonm/GamesNetworks.pdf
+- [supermodular games](http://econweb.ucsd.edu/~jsobel/205f10/notes12.pdf)

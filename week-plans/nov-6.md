@@ -178,6 +178,7 @@ two directions:
   - edge probability needs to be defined to reflect unraveling influence
   - initial infection probability needs to be defined
   - why giving up this approach? dynamic edge probability? not sure if it captures the unraveling process?
+  - are there any similar work? related to Friday frog
 - add edges to optimize some function on k-core
   - what's the intuition for the objective function?
   - how about add weight to each node? to reflect individual importance. 
@@ -203,3 +204,17 @@ what can we do?
 
 # Friday
 
+- frog: supermodular function, example https://dl.acm.org/citation.cfm?id=2623704 (2 h)
+  - related work
+  - relation to our problem
+  - how to prove supermoduarity?
+  - how is supermodularity used? for min/max problems? 
+  - just read that max submodular is like min supermodular (give some appx-guarantee) and min submodular is like max supermodular (exist polynomial algorithm) is it true?
+  - is it worth to do the same for IC model
+- try to *disprove* the function is submodular/supermodular (1.5 h)
+- think about why active learning experiment gives that result (1.5 h)
+  - what would be a good query (without time)? what are other running examples?
+  - what are the scores of other nodes? what would the score of the node near the obs be like? and in reality, what is it like?
+- discussion with Cigdem (2h)
+  - ask her if there exists influence maximization papers on dynamic changing influence probabilities
+  - show the result and my thinking
