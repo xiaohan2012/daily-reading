@@ -22,7 +22,7 @@ given a non-negative $`w_k`$ weight for each core $`k`$, add $`b`$ edges to maxi
 
 $`\sum\limits_{k=1}^{K} w_k size(shell_k)`$
 
-`w_k` can be related to the lower bound in the network games. 
+$`w_k`$ can be related to the lower bound in the network games. 
 
 learned
 
@@ -48,7 +48,7 @@ active learning:
 random process:
 
 1. some node leaves and the contagion spreads
-2. immunize `k` nodes to minimize spread
+2. immunize $`k`$ nodes to minimize spread
 
 
 
@@ -58,7 +58,7 @@ random process:
   - https://theory.stanford.edu/~jvondrak/data/submod-tutorial-1.pdf and https://courses.engr.illinois.edu/cs598csc/sp2010/Lectures/Lecture20.pdf (1.5 h)
   - influence maximization submodularity (0.5 h)
   - is the function a submodular function (0.5 h)
-- one possible formulation: given some infected node and some infection probability defined on node degree, immunize `b` nodes so that the expected cascade size is minimized. 
+- one possible formulation: given some infected node and some infection probability defined on node degree, immunize $`b`$ nodes so that the expected cascade size is minimized. 
   - is the above function submodular (0.5 h)
   - np-hard? (0.5 h)
   - or the infection can start from multiple nodes
@@ -75,7 +75,7 @@ random process:
 ## frog
 
 - submodular function minimization: polynomial time
-- maximizing monotone and submodular function: `(1-1/e)`
+- maximizing monotone and submodular function: $`(1-1/e)`$
 
 ## immunization (fixed infection probability)
 
@@ -83,7 +83,7 @@ assume infection probability is fixed.
 
 problem:
 
-given source node `s`, a sampled graph (by infection probability), we want to remove `b` nodes so that the connected component where `s` is in has minimize size. 
+given source node $`s`$, a sampled graph (by infection probability), we want to remove $`b`$ nodes so that the connected component where $`s`$ is in has minimize size. 
 
 ### sub/super-modularity
 
@@ -97,7 +97,7 @@ for multiple sources, the function seesm to be super-modular as well
 
 reduction from [component order connectivity](https://cs.stackexchange.com/questions/12789/find-which-vertices-to-delete-from-graph-to-get-smallest-largest-component)
 
-given a graph `G` such that `s` is connected to many leave nodes. this makes sure the `\text{argmax} C \in cc |C| = C_s`
+given a graph $`G`$ such that $`s`$ is connected to many leave nodes. this makes sure the $`\text{argmax} C \in cc |C| = C_s`$
 
 as single-source version is a special case of multi-source version, the multi-source version is also NP-hard.
 
@@ -127,14 +127,14 @@ done:
 - score for prediction error based
 
 not done:
-  - `query_strategy_test` using  `simulator`	
-  - `QueryGenerator.__init__`  not accepting `obs`
+  - $`query_strategy_test`$ using  $`simulator`$	
+  - $`QueryGenerator.__init__`$  not accepting $`obs`$
 
 ## sleec
 
 realized I didn't do validation step, so the result is not very reliable. 
 
-also, `lambda1` should be might smaller than `lambda2` and train with larger iteration number. 
+also, $`lambda1`$ should be might smaller than $`lambda2`$ and train with larger iteration number. 
 
 # Thursday
 
@@ -158,14 +158,14 @@ mapping our model to infection process.
 
 - adding dummy node and connect it to all other nodes with infection probability
 - edge is associated with some probability to infect the target from source
-  - need to play with the probability, for example, if u's two neighbors, x, y get infected at the same time stamp, then we can set `p_{x, u} = \frac{1}{\deg{u} + 1}` and `f_{y, u}=0` to simulate the effect of infection via edge. 
+  - need to play with the probability, for example, if u's two neighbors, x, y get infected at the same time stamp, then we can set $`p_{x, u} = \frac{1}{\deg{u} + 1}`$ and $`f_{y, u}=0`$ to simulate the effect of infection via edge. 
 
 observation:
 
-- edge `(u, v)`'s infection probability will be evaluated whenever `v` is infected. 
-  - and it depends on `v` current degree. 
+- edge $`(u, v)`$'s infection probability will be evaluated whenever $`v`$ is infected. 
+  - and it depends on $`v`$ current degree. 
 - immunizing nodes means setting their outcoming edges' probability to zero.
-- consider a star graph, the center nodes have many neighbors. using our model. in expectation half of its neighbors will leave however, because `N` is large, center node will stay with high probability. 
+- consider a star graph, the center nodes have many neighbors. using our model. in expectation half of its neighbors will leave however, because $`N`$ is large, center node will stay with high probability. 
 
 main chanllenges:
 
