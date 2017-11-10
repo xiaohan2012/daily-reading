@@ -226,4 +226,7 @@ refer to [this note](november/scalable-diffusion-aware-optimization-of-network-t
 
 gives some idea on proving monotonicity and supermodularity when the state spaces do not have a 1-to-1 mapping.
 
-## 
+## monotonicity and submodulatiy proof
+
+[refer to](november/unraveling-problem-submodularity.md)
+- attemps to prove monotonicity
