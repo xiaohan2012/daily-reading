@@ -245,3 +245,14 @@ next:
   - use max only (to reflect that infected nodes are more informative)
 - what's a good probabilistic model to infer node states?
 
+
+# Saturday
+
+- morning:
+  - shopping
+  - video chat with family
+- afternoon: 
+  - intern application: companies
+  - basketball
+- evening:
+  - auto-encoder in keras
