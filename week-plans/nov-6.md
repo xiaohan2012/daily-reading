@@ -229,4 +229,18 @@ gives some idea on proving monotonicity and supermodularity when the state space
 ## monotonicity and submodulatiy proof
 
 [refer to](november/unraveling-problem-submodularity.md)
-- attemps to prove monotonicity
+
+- attempts to prove monotonicity
+
+## discussion
+
+- fixed sign error
+- probabilistic way to infer the node states and a different infection model based one iC
+
+
+next:
+
+- understand the query process: why it selects those nodes
+- precision and recall
+  - use max only (to reflect that infected nodes are more informative)
+
