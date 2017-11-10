@@ -243,4 +243,5 @@ next:
 - understand the query process: why it selects those nodes
 - precision and recall
   - use max only (to reflect that infected nodes are more informative)
+- what's a good probabilistic model to infer node states?
 
