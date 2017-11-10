@@ -38,3 +38,18 @@
 - goal: minimize sum of the (expected) travel distance between pairs of nodes using limited budget
 - a fast primal-dual algorithm
 - https://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/view/12311
+
+# Maximizing the Spread of Cascades Using Network Design
+
+- IC model: maximize spread by adding nodes (non-submodular)
+- http://www.cs.cornell.edu/gomes/papers/UAI2010-cascades.pdf
+
+# Influence blocking maximization in social networks under the competitive linear threshold model
+
+Influence blocking maximization problem
+
+https://arxiv.org/abs/1110.4723
+
+have they proved any sub/super-modularity?
+
+# 

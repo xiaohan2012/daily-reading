@@ -2,7 +2,7 @@
 
 - [X] frog: network games, two papers and can it be used to define our problem (2.5h)
 - [ ] NP-hardness: proof in influence maximization paper and our case (1h)
-- [ ] discussion (2h)
+- [X] discussion (2h)
 
 
 ## frog
@@ -218,3 +218,12 @@ what can we do?
 - discussion with Cigdem (2h)
   - ask her if there exists influence maximization papers on dynamic changing influence probabilities
   - show the result and my thinking
+
+
+## frog
+
+refer to [this note](november/scalable-diffusion-aware-optimization-of-network-topology.md)
+
+gives some idea on proving monotonicity and supermodularity when the state spaces do not have a 1-to-1 mapping.
+
+## 
