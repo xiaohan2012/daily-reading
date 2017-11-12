@@ -127,8 +127,8 @@ done:
 - score for prediction error based
 
 not done:
-  - $`query_strategy_test`$ using  $`simulator`$	
-  - $`QueryGenerator.__init__`$  not accepting $`obs`$
+  - `query_strategy_test` using  `simulator`
+  - `QueryGenerator.__init__`  not accepting `obs`
 
 ## sleec
 
@@ -256,3 +256,34 @@ next:
   - basketball
 - evening:
   - auto-encoder in keras
+
+
+# week summary
+
+## internship project
+
+**sub/super modularity**
+
+- super/sub modularity of minimization/maximization are very related: greey works for both case
+- super/sub modularity for maximization/minimization requires different techniques: solvable in polynomial time but exists approximation algorithm
+  - refer to this paper: Fast semi differential- based submodular function optimization
+
+**mapping cascade process**
+
+tried to map the cascade process to some epidemic process. 
+however, the main infection probability is **dynamically evaluated**. 
+which makes it hard to derive cascade probability directly
+
+**related work**
+
+- our problem can be seen as an network immunization problem but with a different cascade model
+- there are quite a few network immunization papers varying on different aspects, such as
+  - cascade model: IC, LT, etc
+  - measure of resilience: eigen-value, expected cascade size
+  - strategy: node/edge manipulation
+  - style: heuristic or with approximation gaurantee
+
+
+## active learning
+
+- implemented the result, cannot understand quite much
