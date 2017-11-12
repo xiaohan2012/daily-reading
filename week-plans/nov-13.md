@@ -20,14 +20,17 @@
 ** multi-label **
 
 - [ ] search for approaches using label embedding (1h)
-- [ ] difference to related work
-- [ ] write down my idea formally
-- [ ] present it Fan
+- main point of 
+  - [ ] SLEEC (0.5h)
+  - [ ] Robust Extreme Multi-label Learning (1h)
+  - [ ] AnnexML: Approximate Nearest Neighbor Search for Extreme Multi-label Classification, KDD 2017.  (2h)
+  - [ ] Deep Learning for Extreme Multi-label Text Classification (1h)
+  - [ ] Deep Extreme Multi-label Learning (1h)
 
 ** mini hackathon
 
 - [ ] understand the paper
-- [ ] implement it in Keras
+- [ ] implement it in Keras 
 - [ ] experiemt: network reconstruction, classification
 
 
