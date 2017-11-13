@@ -37,7 +37,9 @@ denote:
 
 there are the following cases:
 
-1) **$`v`$ is infected**:
+1) **$`v`$ is infected** and $`t(v) - t(u) > 1`$:
+
+in other words, infection via $`(u, v)`$ fails
 
 denote:
 
@@ -63,41 +65,8 @@ there are two cases to consider:
 2. if $`nt_{G}(v) \subset nt_{G^{'}}(v)`$, then $`P(t(v) \mid X^{'}, G) =  (1 - \frac{1}{\deg_{t(u)}(v)}) \frac{1}{\deg_{t(v)}(v)} \prod\limits_{t \in nt_{G}(v), t < t(u)} (1 - \frac{1}{\deg_{t}(v) + 1})`$
    - it's possible that $`P(t(v) \mid X^{'}, G) > P(t(v) \mid X^{'}, G)`$ because of the additional term $`(1 - \frac{1}{\deg_{t(u)}(v)})`$ in $`P(t(v) \mid X^{'}, G)`$
 
+because of the second case, $`P(X \mid G)`$ is non-monotone w.r.t the edges. 
 
-
-1.2)
-
-2) **$`v`$ is not infected**:
-
-
-
-**think about the above**
-
-
-two subcases:
-
-- (1) if there exists some of $`v`$'s neighbors $`\{u^{'}\}`$ are infected at the same time as $`u`$
-
-$`P(X)=P(X - \text{ attempt  on } v \text{ at time } t(u)) \frac{\deg{v}_u-1}{\deg{v}_u}`$
-
-and 
-
-$`P(X^{'})=P(X^{'} - \text{ attempt  on } v \text{ at time } t(u)) \frac{\deg{v}_u}{\deg{v}_u}+1`$
-
-- (2) no such node $`u^{'}`$ exists, then $`P(X^{'}) = P(X) \frac{\deg{v}_u-1}{\deg{v}_u}`$
-  - $`\deg{v}_u`$ is the degree of node $`v`$ when $`u`$ is removed
-
-
-in both cases, $`P(X^{'}) \ge P(e)P(X)`$
-
-so $`\delta(S)`$ is monotonically decreasing
 
 ## submodularity
-
-
-consider two sets $`S`$ and $`S+f`$, now we add edge $`e`$
-
-simplest case: if for both $`e=(u, v)`$ and $`f=(x, y)`$, 
-
-$`v(y)`$ is not attempted by nodes besides $`u(x)`$. this corresponds to the (2) case. 
 
