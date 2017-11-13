@@ -1,10 +1,12 @@
 # introduction
 
-the unraveling process described by Francesco
+let's consider the unraveling process described previously, in which nodes attempt to leave once some of its neighbors left. 
 
-# property
+also, we consider the  edge addition version. 
 
-we consider edge addition version, the goal is to minimize the spread case (assuming some dummy node, $`r`$)
+the goal is to minimize the spread size by adding edges. 
+
+# some notations
 
 - $`S`$: set of edges added
 - $`e=(u, v)`$: edge to add
@@ -12,7 +14,7 @@ we consider edge addition version, the goal is to minimize the spread case (assu
 the spread $`\delta(S)=\sum\limits_{X \in X_S} P(X) R(r, X)`$
 
 - $`X_S`$: set of all possible cascades
-- $`X`$: one cascade, (a set of time-stamped nodes, or a *DAG*)
+- $`X`$: one cascade, (a set of time-stamped nodes)
 - $`P(X)`$: probability of such cascade
 - $`R(r, X)`$: number of nodes reachable from $`r`$ in $`X`$
 
@@ -24,11 +26,13 @@ $`P(X \mid G) = \prod_{i=1,\ldots,n}\begin{cases}\frac{1}{\deg_{t_i}(u_i)} \prod
 
 $`nt_G(u_i)`$: all unique times that $`u_i`$'s neighbors are infected
 
-## monotonicity
+# monotonicity check
+
+we next check whether `\delta(S)` is a monotonic function w.r.t. `S`. 
 
 first, it's easy to see the bijection between $`X_S`$ and $`X_{S+e}`$
 
-for each $`X^{'} \in X_{S+e}`$ and the corresponding $`X \in X_S`$ 
+for each $`X \in X_{S+e}`$ and the corresponding $`X \in X_S`$ 
 
 denote:
 
