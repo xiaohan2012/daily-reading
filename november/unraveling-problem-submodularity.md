@@ -41,19 +41,20 @@ there are the following cases:
 
 denote:
 
-- `X^{'} = X-\{(v, t(v))\}`
-$`P(X \mid G) = P(X^{'} \mid G) P(v, t(v) \mid X^{'}, G)`$
+- $`X^{'} = X-\{(t(v))\}`$
 
-and 
+then
 
-$`P(X \mid G + e) = P(X^{'} \mid G+e) P(v, t(v) \mid X^{'}, G+e)`$
+$`P(X \mid G) = P(X^{'} \mid G) P(t(v) \mid X^{'}, G)`$
+
+$`P(X \mid G + e) = P(X^{'} \mid G+e) P(t(v) \mid X^{'}, G+e)`$
 
 it's obvious that $`P(X^{'} \mid G) = P(X^{'} \mid G+e)`$
 
 next, we need to compare the remaining terms:
 
-- $`P(v, t(v) \mid X^{'}, G) = \frac{1}{\deg_{t(v)}(v)} \prod\limits_{t \in nt(v), t < t(v)} (1 - \frac{1}{\deg_{t}(u_i)})`$
-- $`P(v, t(v) \mid X^{'}, G+e) = \frac{1}{\deg_{t(v)}(v)} \prod\limits_{t \in nt(v), t < t(v)} (1 - \frac{1}{\deg_{t}(u_i) + 1})`$
+- $`P(t(v) \mid X^{'}, G) = \frac{1}{\deg_{t(v)}(v)} \prod\limits_{t \in nt(v), t < t(v)} (1 - \frac{1}{\deg_{t}(u_i)})`$
+- $`P(t(v) \mid X^{'}, G+e) = \frac{1}{\deg_{t(v)}(v)} \prod\limits_{t \in nt(v), t < t(v)} (1 - \frac{1}{\deg_{t}(u_i) + 1})`$
 
 
 
