@@ -20,7 +20,7 @@ the spread $`\delta(S)=\sum\limits_{X \in X_S} P(X) R(r, X)`$
 
 denote $`X`$ as $`\{(u_i, t_i)\}_{i=1,\ldots,n}`$, then
 
-$`P(X=\{(u_i, t_i)\}_{i=1,\ldots,n}) = \prod_{i=1,\ldots,n}\begin{cases}\frac{1}{\deg_{t_i}(u_i)} \prod\limits_{t_j \in nt(u_i), t_j < t_i} (1 - \frac{1}{\deg_{t_j}(u_i)}) & \text{ if } t_i \neq \infty\\ \prod\limits_{t_j \in nt(u_i)} (1 - \frac{1}{\deg_{t_j}(u_i)}) & \text{ otherwise} \end{cases}`$
+$`P(X \mid G) = \prod_{i=1,\ldots,n}\begin{cases}\frac{1}{\deg_{t_i}(u_i)} \prod\limits_{t_j \in nt(u_i), t_j < t_i} (1 - \frac{1}{\deg_{t_j}(u_i)}) & \text{ if } t_i \neq \infty\\ \prod\limits_{t_j \in nt(u_i), t_j \neq \infty} (1 - \frac{1}{\deg_{t_j}(u_i)}) & \text{ otherwise} \end{cases}`$
 
 $`nt(u_i)`$: all unique times that $`u_i`$'s neighbors are infected
 
@@ -39,11 +39,26 @@ there are the following cases:
 
 1) **$`v`$ is infected**:
 
-1.1) $`t(v) - t(u)>1`$
+denote:
+
+$`P(X \mid G) = P(X-\{(v, t(v))\} \mid G) P(v, t(v) \mid X \mid X-\{(v, t(v))\}, G)`$
+
+and 
+
+$`P(X \mid G + e) = P(X-\{(v, t(v))\} \mid G+e) P(v, t(v) \mid X-\{(v, t(v))\}, G+e)`$
+
+it's obvious that $`P(X-\{(v, t(v))\} \mid G) = P(X-\{(v, t(v))\} \mid G+e)`$
+
+next, we need to compare the remaining terms:
+
+- $`P(v, t(v) \mid X \mid X-\{(v, t(v))\}, G) = \frac{1}{\deg_{t(v)}(v)} \prod\limits_{t \in nt(v), t < t(v)} (1 - \frac{1}{\deg_{t}(u_i)})`$
+- $`P(v, t(v) \mid X-\{(v, t(v))\}, G+e) = \frac{1}{\deg_{t(v)}(v)} \prod\limits_{t \in nt(v), t < t(v)} (1 - \frac{1}{\deg_{t}(u_i) + 1})`$
+
+
 
 in other words, infection via $`(u, v)`$ fails.
 
-$`P(X^{'}) = P(X)(1-p(u \rightarrow v))`$ (is this true?)
+then, $`P(X^{'}) = P(X)(1-p(u \rightarrow v))`$
 
 1.2)
 
