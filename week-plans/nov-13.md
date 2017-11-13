@@ -55,6 +55,13 @@ next step:
 - other infection functions: k-core, edge-wise, etc
 - vertex removal case
 
+## semidifferential
+
+got the main idea, still confusing
+
+## active learnig
+
+todo: evaluation
 
 # Tuesday
 
