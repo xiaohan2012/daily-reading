@@ -41,7 +41,7 @@ there are the following cases:
 
 denote:
 
-- $`X^{'} = X-\{(t(v))\}`$
+- $`X^{'} = X-\{t(v)\}`$
 - $`G^{'}=G+\{e\}`$
 
 then
@@ -60,7 +60,8 @@ next, we need to compare the remaining terms:
 there are two cases to consider:
 
 1. if $`nt_{G}(v) = nt_{G^{'}}(v)`$, then $`P(t(v) \mid X^{'}, G) < P(t(v) \mid X^{'}, G^{'})`$
-2. if $`nt_{G}(v) \subset nt_{G^{'}}(v)`$, then $`P(t(v) \mid X^{'}, G) = \frac{1}{\deg_{t(v)}(v)} (1 - \frac{1}{\deg_{t(u)}(v)}) \prod\limits_{t \in nt_{G}(v), t < t(u)} (1 - \frac{1}{\deg_{t}(v) + 1})`$
+2. if $`nt_{G}(v) \subset nt_{G^{'}}(v)`$, then $`P(t(v) \mid X^{'}, G) =  (1 - \frac{1}{\deg_{t(u)}(v)}) \frac{1}{\deg_{t(v)}(v)} \prod\limits_{t \in nt_{G}(v), t < t(u)} (1 - \frac{1}{\deg_{t}(v) + 1})`$
+   - it's possible that $`P(t(v) \mid X^{'}, G) > P(t(v) \mid X^{'}, G)`$ because of the additional term $`(1 - \frac{1}{\deg_{t(u)}(v)})`$ in $`P(t(v) \mid X^{'}, G)`$
 
 
 
