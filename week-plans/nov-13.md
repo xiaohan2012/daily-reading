@@ -45,6 +45,17 @@
 - present result to Cigdem (1h)
   - also ask her about cascade model dynamically evaluated edge probabilities 
 
+## frog
+
+- cannot prove monotonicity for the spread function
+- https://gitlab.com/xiaohan2012/daily-reading/blob/master/november/unraveling-problem-submodularity.md
+
+next step:
+
+- other infection functions: k-core, edge-wise, etc
+- vertex removal case
+
+
 # Tuesday
 
 - frog: k-core based
