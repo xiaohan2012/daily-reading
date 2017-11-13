@@ -61,9 +61,13 @@ next, we need to compare the remaining terms:
 
 there are two cases to consider:
 
-1. if $`nt_{G}(v) = nt_{G^{'}}(v)`$, then $`P(t(v) \mid X^{'}, G) < P(t(v) \mid X^{'}, G^{'})`$
-2. if $`nt_{G}(v) \subset nt_{G^{'}}(v)`$, then $`P(t(v) \mid X^{'}, G) =  (1 - \frac{1}{\deg_{t(u)}(v)}) \frac{1}{\deg_{t(v)}(v)} \prod\limits_{t \in nt_{G}(v), t < t(u)} (1 - \frac{1}{\deg_{t}(v) + 1})`$
-   - it's possible that $`P(t(v) \mid X^{'}, G) > P(t(v) \mid X^{'}, G)`$ because of the additional term $`(1 - \frac{1}{\deg_{t(u)}(v)})`$ in $`P(t(v) \mid X^{'}, G)`$
+first, if $`nt_{G}(v) = nt_{G^{'}}(v)`$, then $`P(t(v) \mid X^{'}, G) < P(t(v) \mid X^{'}, G^{'})`$
+
+second, if $`nt_{G}(v) \subset nt_{G^{'}}(v)`$, then 
+
+\\[P(t(v) \mid X^{'}, G) =  (1 - \frac{1}{\deg_{t(u)}(v)}) \frac{1}{\deg_{t(v)}(v)} \prod\limits_{t \in nt_{G}(v), t < t(u)} (1 - \frac{1}{\deg_{t}(v) + 1})\\]
+
+for the latter case, it's possible that $`P(t(v) \mid X^{'}, G) > P(t(v) \mid X^{'}, G)`$ because of the additional term $`(1 - \frac{1}{\deg_{t(u)}(v)})`$ in $`P(t(v) \mid X^{'}, G)`$
 
 So $`P(X \mid G)`$ neither monotone increasing or decreasing w.r.t the edges being added. 
 
