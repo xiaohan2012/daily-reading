@@ -24,7 +24,9 @@ the spread $`\delta(S)=\sum\limits_{X \in X_S} P(X) R(r, X)`$
 
 denote $`X`$ as $`\{(u_i, t_i)\}_{i=1,\ldots,n}`$, then
 
-$`P(X \mid G) = \prod_{i=1,\ldots,n}\begin{cases}\frac{1}{\deg_{t_i}(u_i)} \prod\limits_{t_j \in nt_G(u_i), t_j < t_i} (1 - \frac{1}{\deg_{t_j}(u_i)}) & \text{ if } t_i \neq \infty\\ \prod\limits_{t_j \in nt_G(u_i), t_j \neq \infty} (1 - \frac{1}{\deg_{t_j}(u_i)}) & \text{ otherwise} \end{cases}`$
+```math
+P(X \mid G) = \prod_{i=1,\ldots,n}\begin{cases}\frac{1}{\deg_{t_i}(u_i)} \prod\limits_{t_j \in nt_G(u_i), t_j < t_i} (1 - \frac{1}{\deg_{t_j}(u_i)}) & \text{ if } t_i \neq \infty\\ \prod\limits_{t_j \in nt_G(u_i), t_j \neq \infty} (1 - \frac{1}{\deg_{t_j}(u_i)}) & \text{ otherwise} \end{cases}
+```
 
 $`nt_G(u_i)`$: all unique times that $`u_i`$'s neighbors are infected
 
@@ -70,7 +72,9 @@ and there are two cases to consider:
 
 **second**, if $`nt_{G}(v) \subset nt_{G^{'}}(v)`$, then 
 
-$`P(t(v) \mid X^{'}, G) =  \frac{1}{\deg_{t(v)}(v)} (1 - \frac{1}{\deg_{t(u)}(v)})  \prod\limits_{t \in nt_{G}(v), t < t(u)} (1 - \frac{1}{\deg_{t}(v) + 1})`$
+```math
+P(t(v) \mid X^{'}, G) =  \frac{1}{\deg_{t(v)}(v)} (1 - \frac{1}{\deg_{t(u)}(v)})  \prod\limits_{t \in nt_{G}(v), t < t(u)} (1 - \frac{1}{\deg_{t}(v) + 1})
+```
 
 note that $`nt_{G^{'}}(v) = nt_G(v) \cup \{t(u)\}`$
 
