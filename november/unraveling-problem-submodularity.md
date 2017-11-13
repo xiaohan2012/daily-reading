@@ -12,23 +12,43 @@ we consider edge addition version, the goal is to minimize the spread case (assu
 the spread $`\delta(S)=\sum\limits_{X \in X_S} P(X) R(r, X)`$
 
 - $`X_S`$: set of all possible cascades
-- $`X`$: one cascade
+- $`X`$: one cascade, (a set of time-stamped nodes, or a *DAG*)
 - $`P(X)`$: probability of such cascade
 - $`R(r, X)`$: number of nodes reachable from $`r`$ in $`X`$
+
+## probability of a cascade
+
+$`P(\{(u_i, t_i)\}_{i=1,\ldots,n}) = \prod_{i=1,\ldots,n}\begin{cases}\frac{1}{\deg_{t_i}(u_i)} & \text{ if } t_1 \neq \infty\\ \prod_{\text{all times that neighbors are infected}} (1 - \frac{1}{\deg_{t_j}(u_i)}) & \text{ otherwise} \end{cases}`$
 
 ## monotonicity
 
 first, it's easy to see the bijection between $`X_S`$ and $`X_{S+e}`$
 
-for each $`X^{'} \in X_{S+e}`$ and the corresponding $`X \in X_S`$
+for each $`X^{'} \in X_{S+e}`$ and the corresponding $`X \in X_S`$ 
 
-- if $`v`$ is infected
-  - 
-- if $`v`$ is not infected
+denote:
+
+- $`e=(u, v)`$
+- the degree of node $`v`$ at time $`t`$ as $`\deg_t(v)`$
+
+there are the following cases:
+
+1) **$`v`$ is infected**:
+
+1.1) $`t(v) - t(u)>1`$
+
+in other words, infection via $`(u, v)`$ fails.
+
+$`P(X^{'}) = P(X)(1-p(u \rightarrow v))`$ (is this true?)
+
+1.2)
+
+2) **$`v`$ is not infected**:
+
+
 
 **think about the above**
 
-cannot take time into account because otherwise bijection is lost. 
 
 two subcases:
 
