@@ -16,7 +16,7 @@ the spread $`\delta(S)=\sum\limits_{X \in X_S} P(X) R(r, X)`$
 - $`X_S`$: set of all possible cascades
 - $`X`$: one cascade, (a set of time-stamped nodes)
 - $`P(X)`$: probability of such cascade
-- $`R(r, X)`$: number of nodes reachable from $`r`$ in $`X`$
+- $`R(r, X)`$: number of nodes reachable from $`r`$ in $`X`$, where $`r`$ is a dummy node connected to all other nodes to initialize the cascade
 
 ## probability of a cascade
 
@@ -28,7 +28,7 @@ $`nt_G(u_i)`$: all unique times that $`u_i`$'s neighbors are infected
 
 # monotonicity check
 
-we next check whether `\delta(S)` is a monotonic function w.r.t. `S`. 
+we next check whether $`\delta(S)`$ is a monotonic function w.r.t. $`S`$. 
 
 first, it's easy to see the bijection between $`X_S`$ and $`X_{S+e}`$
 
@@ -36,34 +36,33 @@ for each $`X \in X_{S+e}`$ and the corresponding $`X \in X_S`$
 
 denote:
 
-- $`e=(u, v)`$
 - the degree of node $`v`$ at time $`t`$ as $`\deg_t(v)`$
 
-there are the following cases:
+consider the following case:
 
-1) **$`v`$ is infected** and $`t(v) - t(u) > 1`$:
+$`v`$ is infected and $`t(v) - t(u) > 1`$:
 
-in other words, infection via $`(u, v)`$ fails
+in other words, infection via $`(u, v)`$ fails (because if it succeeds, then $`t(v) - t(u) = 1`$ holds)
 
 denote:
 
-- $`X^{'} = X-\{t(v)\}`$
-- $`G^{'}=G+\{e\}`$
+- $`X^{'} = X-\{t(v)\}`$: all nodes with timatemps without $`(v, t(v))`$
+- $`G^{'}=G+\{e\}`$: the new graph with $`e`$ aded
 
-then
+then according to the cascade definition
 
 $`P(X \mid G) = P(X^{'} \mid G) P(t(v) \mid X^{'}, G)`$
 
 $`P(X \mid G^{'}) = P(X^{'} \mid G^{'}) P(t(v) \mid X^{'}, G^{'})`$
 
-it's obvious that $`P(X^{'} \mid G) = P(X^{'} \mid G^{'})`$
+it's obvious that $`P(X^{'} \mid G) = P(X^{'} \mid G^{'})`$ using the definition of cascade
 
 next, we need to compare the remaining terms:
 
 - $`P(t(v) \mid X^{'}, G) = \frac{1}{\deg_{t(v)}(v)} \prod\limits_{t \in nt_G(v), t < t(v)} (1 - \frac{1}{\deg_{t}(u_i)})`$
 - $`P(t(v) \mid X^{'}, G^{'}) = \frac{1}{\deg_{t(v)}(v)} \prod\limits_{t \in nt_{G^{'}}(v), t < t(v)} (1 - \frac{1}{\deg_{t}(u_i) + 1})`$
 
-there are two cases to consider:
+and there are two cases to consider:
 
 **first**, if $`nt_{G}(v) = nt_{G^{'}}(v)`$, then $`P(t(v) \mid X^{'}, G) < P(t(v) \mid X^{'}, G^{'})`$
 
@@ -73,7 +72,7 @@ $`P(t(v) \mid X^{'}, G) =  \frac{1}{\deg_{t(v)}(v)} (1 - \frac{1}{\deg_{t(u)}(v)
 
 note that $`nt_{G^{'}}(v) = nt_G(v) \cup \{t(u)\}`$
 
-for the latter case, it's possible that $`P(t(v) \mid X^{'}, G) > P(t(v) \mid X^{'}, G^{'})`$ because of the additional term $`(1 - \frac{1}{\deg_{t(u)}(v)})`$ in $`P(t(v) \mid X^{'}, G)`$
+for the second case, it's possible that $`P(t(v) \mid X^{'}, G) > P(t(v) \mid X^{'}, G^{'})`$ because of the additional term $`(1 - \frac{1}{\deg_{t(u)}(v)})`$ in $`P(t(v) \mid X^{'}, G)`$
 
 So $`P(X \mid G)`$ is neither monotone increasing or decreasing w.r.t the edges being added. 
 
