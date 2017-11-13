@@ -2,7 +2,9 @@
 
 ** immunization **
 
-- [ ] sub/super modularity of our model: prove or disprove
+- monotonicity and modularity of our model: prove or disprove
+  - [X] non-monotonic
+  - sub/super modularity
 - [ ] k-core based formulation: add edges to increase total increase of core number:
   - [ ] what's the motivation (.5h)? 
   - [ ] prove its sub/super modularity (1h)
@@ -19,7 +21,7 @@
 
 ** multi-label **
 
-- [ ] search for approaches using label embedding (1h)
+- [X] search for approaches using label embedding (1h)
 - main point of 
   - [ ] SLEEC (0.5h)
   - [ ] Robust Extreme Multi-label Learning (1h)
@@ -65,5 +67,13 @@ todo: evaluation
 
 # Tuesday
 
-- frog: k-core based
+- frog: sub/super modularity (1.5h)
+- variants of cascade model: based on k-core and edge-wise infection (1.5h)
+  - motivation
+  - monotonicity
+  - submodularity
+- experiment evaluation using sampled-based inference(1h)
+- review what to say in the meeting (0.5h)
+- explain it to Lorenzo (maybe, 1h)
+- meeting (2.5h)
 
