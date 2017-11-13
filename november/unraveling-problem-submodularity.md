@@ -18,7 +18,9 @@ the spread $`\delta(S)=\sum\limits_{X \in X_S} P(X) R(r, X)`$
 
 ## probability of a cascade
 
-$`P(\{(u_i, t_i)\}_{i=1,\ldots,n}) = \prod_{i=1,\ldots,n}\begin{cases}\frac{1}{\deg_{t_i}(u_i)} & \text{ if } t_1 \neq \infty\\ \prod_{\text{all times that neighbors are infected}} (1 - \frac{1}{\deg_{t_j}(u_i)}) & \text{ otherwise} \end{cases}`$
+$`P(\{(u_i, t_i)\}_{i=1,\ldots,n}) = \prod_{i=1,\ldots,n}\begin{cases}\frac{1}{\deg_{t_i}(u_i)} & \text{ if } t_i \neq \infty\\ \prod_{t_j \in nt(u_i)} (1 - \frac{1}{\deg_{t_j}(u_i)}) & \text{ otherwise} \end{cases}`$
+
+$`nt(u_i)`$: all unique times that $`u_i`$'s neighbors are infected
 
 ## monotonicity
 
