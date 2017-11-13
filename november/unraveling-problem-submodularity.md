@@ -20,9 +20,9 @@ the spread $`\delta(S)=\sum\limits_{X \in X_S} P(X) R(r, X)`$
 
 denote $`X`$ as $`\{(u_i, t_i)\}_{i=1,\ldots,n}`$, then
 
-$`P(X \mid G) = \prod_{i=1,\ldots,n}\begin{cases}\frac{1}{\deg_{t_i}(u_i)} \prod\limits_{t_j \in nt(u_i), t_j < t_i} (1 - \frac{1}{\deg_{t_j}(u_i)}) & \text{ if } t_i \neq \infty\\ \prod\limits_{t_j \in nt(u_i), t_j \neq \infty} (1 - \frac{1}{\deg_{t_j}(u_i)}) & \text{ otherwise} \end{cases}`$
+$`P(X \mid G) = \prod_{i=1,\ldots,n}\begin{cases}\frac{1}{\deg_{t_i}(u_i)} \prod\limits_{t_j \in nt_G(u_i), t_j < t_i} (1 - \frac{1}{\deg_{t_j}(u_i)}) & \text{ if } t_i \neq \infty\\ \prod\limits_{t_j \in nt_G(u_i), t_j \neq \infty} (1 - \frac{1}{\deg_{t_j}(u_i)}) & \text{ otherwise} \end{cases}`$
 
-$`nt(u_i)`$: all unique times that $`u_i`$'s neighbors are infected
+$`nt_G(u_i)`$: all unique times that $`u_i`$'s neighbors are infected
 
 ## monotonicity
 
@@ -42,19 +42,20 @@ there are the following cases:
 denote:
 
 - $`X^{'} = X-\{(t(v))\}`$
+- `G^{'}=G+\{e\}`
 
 then
 
 $`P(X \mid G) = P(X^{'} \mid G) P(t(v) \mid X^{'}, G)`$
 
-$`P(X \mid G + e) = P(X^{'} \mid G+e) P(t(v) \mid X^{'}, G+e)`$
+$`P(X \mid G^{'}) = P(X^{'} \mid G^{'}) P(t(v) \mid X^{'}, G^{'})`$
 
-it's obvious that $`P(X^{'} \mid G) = P(X^{'} \mid G+e)`$
+it's obvious that $`P(X^{'} \mid G) = P(X^{'} \mid G^{'})`$
 
 next, we need to compare the remaining terms:
 
-- $`P(t(v) \mid X^{'}, G) = \frac{1}{\deg_{t(v)}(v)} \prod\limits_{t \in nt(v), t < t(v)} (1 - \frac{1}{\deg_{t}(u_i)})`$
-- $`P(t(v) \mid X^{'}, G+e) = \frac{1}{\deg_{t(v)}(v)} \prod\limits_{t \in nt(v), t < t(v)} (1 - \frac{1}{\deg_{t}(u_i) + 1})`$
+- $`P(t(v) \mid X^{'}, G) = \frac{1}{\deg_{t(v)}(v)} \prod\limits_{t \in nt_G(v), t < t(v)} (1 - \frac{1}{\deg_{t}(u_i)})`$
+- $`P(t(v) \mid X^{'}, G^{'}) = \frac{1}{\deg_{t(v)}(v)} \prod\limits_{t \in nt_{G^{'}}(v), t < t(v)} (1 - \frac{1}{\deg_{t}(u_i) + 1})`$
 
 
 
