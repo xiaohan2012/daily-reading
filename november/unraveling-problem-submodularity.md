@@ -2,6 +2,8 @@
 
 let's consider the unraveling process described previously, in which nodes attempt to leave once some of its neighbors left. 
 
+- the details about the process is [here (first section)](http://193.166.24.212/anchored.pdf)
+
 also, we consider the  edge addition version. 
 
 the goal is to minimize the spread size by adding edges. 
