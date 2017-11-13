@@ -65,7 +65,7 @@ first, if $`nt_{G}(v) = nt_{G^{'}}(v)`$, then $`P(t(v) \mid X^{'}, G) < P(t(v) \
 
 second, if $`nt_{G}(v) \subset nt_{G^{'}}(v)`$, then 
 
-\\[P(t(v) \mid X^{'}, G) =  (1 - \frac{1}{\deg_{t(u)}(v)}) \frac{1}{\deg_{t(v)}(v)} \prod\limits_{t \in nt_{G}(v), t < t(u)} (1 - \frac{1}{\deg_{t}(v) + 1})\\]
+\\[ P(t(v) \mid X^{'}, G) =  (1 - \frac{1}{\deg_{t(u)}(v)}) \frac{1}{\deg_{t(v)}(v)} \prod\limits_{t \in nt_{G}(v), t < t(u)} (1 - \frac{1}{\deg_{t}(v) + 1}) \\]
 
 for the latter case, it's possible that $`P(t(v) \mid X^{'}, G) > P(t(v) \mid X^{'}, G)`$ because of the additional term $`(1 - \frac{1}{\deg_{t(u)}(v)})`$ in $`P(t(v) \mid X^{'}, G)`$
 
