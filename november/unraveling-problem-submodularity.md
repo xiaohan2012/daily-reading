@@ -22,7 +22,12 @@ the spread $`\delta(S)=\sum\limits_{X \in X_S} P(X) R(r, X)`$
 
 ## probability of a cascade
 
-denote $`X`$ as $`\{(u_i, t_i)\}_{i=1,\ldots,n}`$, then
+denote:
+
+- the degree of node $`v`$ at time $`t`$ as $`\deg_t(v)`$
+- $`X = \{(u_i, t_i)\}_{i=1,\ldots,n}`$
+
+then, 
 
 ```math
 P(X \mid G) = \prod_{i=1,\ldots,n}\begin{cases}\frac{1}{\deg_{t_i}(u_i)} \prod\limits_{t_j \in nt_G(u_i), t_j < t_i} (1 - \frac{1}{\deg_{t_j}(u_i)}) & \text{ if } t_i \neq \infty\\ \prod\limits_{t_j \in nt_G(u_i), t_j \neq \infty} (1 - \frac{1}{\deg_{t_j}(u_i)}) & \text{ otherwise} \end{cases}
@@ -37,10 +42,6 @@ we next check whether $`\delta(S)`$ is a monotonic function w.r.t. $`S`$.
 first, it's easy to see the bijection between $`X_S`$ and $`X_{S+e}`$
 
 for each $`X \in X_{S+e}`$ and the corresponding $`X \in X_S`$ 
-
-denote:
-
-- the degree of node $`v`$ at time $`t`$ as $`\deg_t(v)`$
 
 consider the following case:
 
