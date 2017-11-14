@@ -9,7 +9,8 @@
   - [X] what's the motivation (.5h)? 
   - [X] prove its sub/super modularity (1h)
   - [X] present the formulation to Lorenzo and Francesco (1h)
-- [ ] ask Cigdem if there is any model related to dynamicaly evaluated edge probabilities (0.5h)
+- [ ] adding single edge case
+- [ ] adding `k` edges case
 
 ** active learning **
 
@@ -31,7 +32,7 @@
 
 ** mini hackathon
 
-- [ ] understand the paper
+- [X] understand the paper
 - [ ] implement it in Keras 
 - [ ] experiemt: network reconstruction, classification
 
@@ -98,8 +99,34 @@ todo: evaluation
 
 - switch to maximizing k-core problem
 
-
 todo:
 
 - write problem formulation, disprove of submodularity and supermodularity
 - think about one edge case, how to do it efficiently?
+
+# Wednesday
+
+- frog: understand how prediction error selects the query and why it's so bad (3 h): 
+  - is average precision a good measure? understand average precision such as its motivation? 
+  - why pagerank and entropy are so good at average precision?
+  - if average precision is not a good measure, find more reasonable measures. 
+  - pick examples that prediction error-based method perform worse on lattice
+- *efficiently* select the single edge to add with the maximum number of affected nodes (1.5 h)
+  - there are `O(n^2)` edges to add, can we reduce the time complexity to `O(n)`?
+- formalize the formulation (both problems), single edge algorithm, disproof sub/super modularity (1 h)
+- discussion with Cigdem (1h)
+
+
+## single edge case 
+
+observation:
+
+- only nodes with the same core number can be affected and they must form a connected component, this gives an upperbound
+
+
+then suppose we calculated the effect of an edge, we can filter out connneced components whose upperbound is lower than the effect value. 
+
+ideally, the edge caculate affect as many node as possible. 
+
+
+ 
