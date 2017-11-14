@@ -5,17 +5,17 @@
 - monotonicity and modularity of our model: prove or disprove
   - [X] non-monotonic
   - sub/super modularity
-- [ ] k-core based formulation: add edges to increase total increase of core number:
-  - [ ] what's the motivation (.5h)? 
-  - [ ] prove its sub/super modularity (1h)
-  - [ ] present the formulation to Lorenzo and Francesco (1h)
+- [X] k-core based formulation: add edges to increase total increase of core number:
+  - [X] what's the motivation (.5h)? 
+  - [X] prove its sub/super modularity (1h)
+  - [X] present the formulation to Lorenzo and Francesco (1h)
 - [ ] ask Cigdem if there is any model related to dynamicaly evaluated edge probabilities (0.5h)
 
 ** active learning **
 
 - [ ] understand the query process
   - try more examples
-- [ ] precision/recall using sampling based inference
+- [X] precision/recall using sampling based inference
 - [ ] precision/recall using inference method in SDM submission
 
 
@@ -87,3 +87,19 @@ todo: evaluation
 
 - monotonic
 - but neither submodular nor supermodular
+
+## active learning
+
+- pagerank > entropy > prediction error > random
+- used [average_precision_score](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.average_precision_score.html#sklearn.metrics.average_precision_score)
+- http://193.166.24.212:9999/notebooks/average_precision_score.ipynb
+
+## discussion
+
+- switch to maximizing k-core problem
+
+
+todo:
+
+- write problem formulation, disprove of submodularity and supermodularity
+- think about one edge case, how to do it efficiently?
