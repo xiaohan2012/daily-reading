@@ -106,7 +106,7 @@ denote:
 
 and we need to consider:
 
-$`\delta_f(S, e, f) = P(X \mid G_e) - P(X \mid G) - (P(X \mid G_{ef}) - P(X \mid G_f))`$
+$`\Delta_f(S, e, f) = P(X \mid G_e) - P(X \mid G) - (P(X \mid G_{ef}) - P(X \mid G_f))`$
 
 using the result from monotonicity part, we have the following:
 
@@ -124,10 +124,19 @@ note that for brevity, we denote $`P(t_u \mid X^{'}, G)`$ by $`P(t_u \mid G)`$.
 then using the above lemmas
 
 ```math
+\Delta_f(S, e, f) = P(X^{'} \mid G) (P(t_u \mid G_e) P(t_v \mid G_e) - P(t_u \mid G) P(t_v \mid G) - (P(t_u \mid G_{ef}) P(t_v \mid G_{ef}) - P(t_u \mid G_f) P(t_v \mid G_f)))
+```
+removing the common factor $`P(X^{'} \mid G)`$, we have:
+
+```math
+\Delta_f(S, e, f) \approx P(t_u \mid G_e) P(t_v \mid G) - P(t_u \mid G) P(t_v \mid G) - P(t_u \mid G_e) P(t_v \mid G_f) + P(t_u \mid G) P(t_v \mid G_f)) 
+```
+by grouping the first two and last two terms, we have:
+
+
+```math
 \begin{aligned}
-\delta_f(S, e, f) & = P(X^{'} \mid G) (P(t_u \mid G_e) P(t_v \mid G_e) - P(t_u \mid G) P(t_v \mid G) - (P(t_u \mid G_{ef}) P(t_v \mid G_{ef}) - P(t_u \mid G_f) P(t_v \mid G_f))) \\
-& \approx P(t_u \mid G_e) P(t_v \mid G) - P(t_u \mid G) P(t_v \mid G) - P(t_u \mid G_e) P(t_v \mid G_f) + P(t_u \mid G) P(t_v \mid G_f)) \\
-& = (P(t_u \mid G_e) - P(t_u \mid G)) P(t_v \mid G) - (P(t_u \mid G_e) - P(t_u \mid G)) P(t_v \mid G_f) \\
-& = (P(t_u \mid G_e) - P(t_u \mid G)) (P(t_v \mid G) - P(t_v \mid G_f))
+  \Delta_f(S, e, f) & \approx \left[P(t_u \mid G_e) - P(t_u \mid G)\right] P(t_v \mid G) - \left[P(t_u \mid G_e) - P(t_u \mid G)\right] P(t_v \mid G_f)\\
+  & = \left[P(t_u \mid G_e) - P(t_u \mid G)\right] \left[P(t_v \mid G) - P(t_v \mid G_f)\right]
 \end{aligned}
 ```
