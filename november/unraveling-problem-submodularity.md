@@ -29,7 +29,7 @@ denote:
 
 then, 
 
-```$math
+```math
 P(X \mid G) = \prod_{i=1,\ldots,n}\begin{cases}\frac{1}{\deg_{t_i}(u_i)} \prod\limits_{t_j \in nt_G(u_i), t_j < t_i} (1 - \frac{1}{\deg_{t_j}(u_i)}) & \text{ if } t_i \neq \infty\\ \prod\limits_{t_j \in nt_G(u_i), t_j \neq \infty} (1 - \frac{1}{\deg_{t_j}(u_i)}) & \text{ otherwise} \end{cases}
 ```
 
@@ -73,7 +73,7 @@ and there are two cases to consider:
 
 **second**, if $`nt_{G}(v) \subset nt_{G^{'}}(v)`$, then 
 
-```$math
+```math
 P(t(v) \mid X^{'}, G) =  \frac{1}{\deg_{t(v)}(v)} (1 - \frac{1}{\deg_{t(u)}(v)})  \prod\limits_{t \in nt_{G}(v), t < t(u)} (1 - \frac{1}{\deg_{t}(v) + 1})
 ```
 
@@ -128,13 +128,13 @@ then using the above lemmas
 ```
 removing the common factor $`P(X^{'} \mid G)`$, we have:
 
-```$math
+```math
 \Delta_f(S, e, f) \propto P(t_u \mid G_e) P(t_v \mid G) - P(t_u \mid G) P(t_v \mid G) - P(t_u \mid G_e) P(t_v \mid G_f) + P(t_u \mid G) P(t_v \mid G_f)) 
 ```
 by grouping the first two and last two terms, we have:
 
 
-```$math
+```math
 \begin{aligned}
   \Delta_f(S, e, f) & \propto \left[P(t_u \mid G_e) - P(t_u \mid G)\right] P(t_v \mid G) - \left[P(t_u \mid G_e) - P(t_u \mid G)\right] P(t_v \mid G_f)\\
   & = \left[P(t_u \mid G_e) - P(t_u \mid G)\right] \left[P(t_v \mid G) - P(t_v \mid G_f)\right]
