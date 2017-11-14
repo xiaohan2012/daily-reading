@@ -124,10 +124,10 @@ note that for brevity, we denote $`P(t_u \mid X^{'}, G)`$ by $`P(t_u \mid G)`$.
 then using the above lemmas
 
 ```math
-\begin{align*}
+\begin{aligned}
 \delta_f(S, e, f) & = P(X^{'} \mid G) (P(t_u \mid G_e) P(t_v \mid G_e) - P(t_u \mid G) P(t_v \mid G) - (P(t_u \mid G_{ef}) P(t_v \mid G_{ef}) - P(t_u \mid G_f) P(t_v \mid G_f))) \\
 & \approx P(t_u \mid G_e) P(t_v \mid G) - P(t_u \mid G) P(t_v \mid G) - P(t_u \mid G_e) P(t_v \mid G_f) + P(t_u \mid G) P(t_v \mid G_f)) \\
 & = (P(t_u \mid G_e) - P(t_u \mid G)) P(t_v \mid G) - (P(t_u \mid G_e) - P(t_u \mid G)) P(t_v \mid G_f) \\
 & = (P(t_u \mid G_e) - P(t_u \mid G)) (P(t_v \mid G) - P(t_v \mid G_f))
-\end{align*}
+\end{aligned}
 ```
