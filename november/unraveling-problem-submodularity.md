@@ -129,14 +129,14 @@ then using the above lemmas
 removing the common factor $`P(X^{'} \mid G)`$, we have:
 
 ```math
-\Delta_f(S, e, f) \approx P(t_u \mid G_e) P(t_v \mid G) - P(t_u \mid G) P(t_v \mid G) - P(t_u \mid G_e) P(t_v \mid G_f) + P(t_u \mid G) P(t_v \mid G_f)) 
+\Delta_f(S, e, f) \propto P(t_u \mid G_e) P(t_v \mid G) - P(t_u \mid G) P(t_v \mid G) - P(t_u \mid G_e) P(t_v \mid G_f) + P(t_u \mid G) P(t_v \mid G_f)) 
 ```
 by grouping the first two and last two terms, we have:
 
 
 ```math
 \begin{aligned}
-  \Delta_f(S, e, f) & \approx \left[P(t_u \mid G_e) - P(t_u \mid G)\right] P(t_v \mid G) - \left[P(t_u \mid G_e) - P(t_u \mid G)\right] P(t_v \mid G_f)\\
+  \Delta_f(S, e, f) & \propto \left[P(t_u \mid G_e) - P(t_u \mid G)\right] P(t_v \mid G) - \left[P(t_u \mid G_e) - P(t_u \mid G)\right] P(t_v \mid G_f)\\
   & = \left[P(t_u \mid G_e) - P(t_u \mid G)\right] \left[P(t_v \mid G) - P(t_v \mid G_f)\right]
 \end{aligned}
 ```
