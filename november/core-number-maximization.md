@@ -6,8 +6,9 @@ add $`B`$ edges to maximize the following  objective
 
 # properties of objective
 
-1. non-decreasing monotonic: obvious
-2. non submodular
+## monotinicity
+
+non-decreasing monotonic: obvious
 
 ## non-submodular
 
