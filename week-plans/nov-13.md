@@ -74,6 +74,16 @@ todo: evaluation
   - submodularity
 - experiment evaluation using sampled-based inference(1h)
 - review what to say in the meeting (0.5h)
-- explain it to Lorenzo (maybe, 1h)
 - meeting (2.5h)
 
+## frog
+
+- reducted the form to a simpler one
+- if non-monotonicity holds, then neither super-modularity nor sub-modularity holds
+
+## maximizing k-core numbers by add edges
+
+[document](november/core-number-maximization.md)
+
+- monotonic
+- but neither submodular nor supermodular
