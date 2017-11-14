@@ -29,9 +29,9 @@ denote:
 
 then, 
 
-```math
+`$``$math
 P(X \mid G) = \prod_{i=1,\ldots,n}\begin{cases}\frac{1}{\deg_{t_i}(u_i)} \prod\limits_{t_j \in nt_G(u_i), t_j < t_i} (1 - \frac{1}{\deg_{t_j}(u_i)}) & \text{ if } t_i \neq \infty\\ \prod\limits_{t_j \in nt_G(u_i), t_j \neq \infty} (1 - \frac{1}{\deg_{t_j}(u_i)}) & \text{ otherwise} \end{cases}
-```
+`$``$
 
 $`nt_G(u_i)`$: all unique times that $`u_i`$'s neighbors are infected
 
@@ -73,9 +73,9 @@ and there are two cases to consider:
 
 **second**, if $`nt_{G}(v) \subset nt_{G^{'}}(v)`$, then 
 
-```math
+`$``$math
 P(t(v) \mid X^{'}, G) =  \frac{1}{\deg_{t(v)}(v)} (1 - \frac{1}{\deg_{t(u)}(v)})  \prod\limits_{t \in nt_{G}(v), t < t(u)} (1 - \frac{1}{\deg_{t}(v) + 1})
-```
+`$``$
 
 note that $`nt_{G^{'}}(v) = nt_G(v) \cup \{t(u)\}`$
 
@@ -85,3 +85,49 @@ So $`P(X \mid G)`$ is neither monotone increasing or decreasing w.r.t the edges 
 
 ## submodularity
 
+Cosider two sets of edges to add based on $`S`$
+
+$`A=S \text{ and } B=S+\{f\}`$
+
+and for an arbitrary edge $`e=(a, u)`$ and $`f=(b, v)`$. 
+
+we want to check the relationship between 
+
+$`f(A+\{e\}) - f(A)`$ and $`f(B+\{e\}) - f(B)`$
+
+next we consider a speicific cascade $`X \in X_{A}`$. 
+
+it can be seen that $`X \in X_{A+e}, X_B, X_{B+e}`$ as well and for each pair of $`\{X_A, X_{A+e}, X_B, X_{B+e}\}`$, there is bijective relation.
+
+denote:
+
+- $`X^{'}=\{(w, t) \in X \mid w \neq u, w \neq v\}`$
+- graphs corresponds to adding $`S`$, $`S+e`$, $`S+\{e, f\}`$, $`S+f`$ as $`G, G_e, G_{ef}, G_f`$ respectively.
+
+and we need to consider:
+
+$`\delta_f(S, e, f) = P(X \mid G_e) - P(X \mid G) - (P(X \mid G_{ef}) - P(X \mid G_f))`$
+
+using the result from monotonicity part, we have the following:
+
+$`P(X \mid G) = P(X^{'} \mid G) P(t_u \mid G) P(t_v \mid G)`$
+
+and simiarly for other terms. 
+
+note that for brevity, we denote $`P(t_u \mid X^{'}, G)`$ by $`P(t_u \mid G)`$. 
+
+
+**lemma**: $`P(X^{'} \mid G) = P(X^{'} \mid G_e) = P(X^{'} \mid G_{ef}) = P(X^{'} \mid G_f)`$
+
+**lemma**: $`P(x_u \mid G_{ef}) = P(x_u \mid G_{e})`$, where $`e=(a, u), f = (b, v)`$ and $`u \neq v`$
+
+then using the above lemmas
+
+```math
+\begin{align*}
+\delta_f(S, e, f) & = P(X^{'} \mid G) (P(t_u \mid G_e) P(t_v \mid G_e) - P(t_u \mid G) P(t_v \mid G) - (P(t_u \mid G_{ef}) P(t_v \mid G_{ef}) - P(t_u \mid G_f) P(t_v \mid G_f))) \\
+& \approx P(t_u \mid G_e) P(t_v \mid G) - P(t_u \mid G) P(t_v \mid G) - P(t_u \mid G_e) P(t_v \mid G_f) + P(t_u \mid G) P(t_v \mid G_f)) \\
+& = (P(t_u \mid G_e) - P(t_u \mid G)) P(t_v \mid G) - (P(t_u \mid G_e) - P(t_u \mid G)) P(t_v \mid G_f) \\
+& = (P(t_u \mid G_e) - P(t_u \mid G)) (P(t_v \mid G) - P(t_v \mid G_f))
+\end{align*}
+```
