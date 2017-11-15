@@ -35,15 +35,15 @@ this result is from Theorem 4 of VLDB paper
 - such bound by $`ub(u)=|nc(u)|`$
 
 
-in other words, suppose we have computed the exact value $`\Delte_f(e)`$ for a small set of edges and we take the maximum $`\Delte_f^{'}`$, then any edges $`(u, \cdot)`$ with $`ub(u) \le \Delte_f^{'}`$ can be pruned.
+in other words, suppose we have computed the exact value $`\Delta_f(e)`$ for a small set of edges and we take the maximum $`\Delta_f^{'}`$, then any edges $`(u, \cdot)`$ with $`ub(u) \le \Delta_f^{'}`$ can be pruned.
 
-note that, we are actually pruning nodes instead of edges because $`\Delte_f((u, v))`$ only depends on $`u`$.
+note that, we are actually pruning nodes instead of edges because $`\Delta_f((u, v))`$ only depends on $`u`$.
 
 # edge selection strategy
 
 (using the order-based paper, ICDE 2017)
 
-the question is how to select edges to make $`\Delte_f`$ as much as possible. 
+the question is how to select edges to make $`\Delta_f`$ as much as possible. 
 
 **rule 1**, edges $`e=(u, v)`$ with $`\deg^{+}(u) < core(u)`$ can't increase its core number, in other words, $`\Delta_f(e)=0`$. 
 
