@@ -47,8 +47,6 @@ we denote:
 - reachable node set by $`nc(u)`$
 - the upper bound by $`ub(e)=|nc(u)|`$
 
-note for $`e=(u, v), core(u)=core(v)`$, $`ub(e)=|nc(u) \cup nc(v)|`$
-
 in other words, suppose we have computed the exact value $`\Delta_f(e)`$ for a small set of edges and we take the maximum $`\Delta_f^{'}`$, then any edges $`(u, \cdot)`$ with $`ub(e) \le \Delta_f^{'}`$ can be pruned.
 
 note that, we are actually pruning nodes instead of edges because $`\Delta_f((u, v))`$ only depends on $`u`$.
@@ -61,7 +59,7 @@ two subcases to consider:
 
 **second**: if $`nc(u) \neq nc(v)`$, we prove $`ub(e)=2`$. 
 
-first of all, we show if $`\Delta_f(e)>0`$, then $`\Delta_f(e)=2`$ and both $`u`$ anv $`v`$ increases their core index. 
+first of all, we show if $`\Delta_f(e)>0`$, then $`\Delta_f(e)>2`$ and both $`u`$ anv $`v`$ increases their core index. 
 
 we prove by contradiction (assuming $`u`$ is ordered before $`v`$):
 
