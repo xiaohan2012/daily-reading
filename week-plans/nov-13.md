@@ -116,6 +116,18 @@ todo:
 - formalize the formulation (both problems), single edge algorithm, disproof sub/super modularity (1 h)
 - discussion with Cigdem (1h)
 
+## frog
+
+- found a bug in infer infection probabilities, need to remove uninfected nodes as well.
+- plotted an example on cascade 81, prediction error-based looks better than other methods
+
+after fixing the bug:
+
+the result varies on datasets. 
+in general, random and prediction error are the best. pagerank is the worst. 
+
+- on lattice, prediction error is the best
+- on karate, random is the best
 
 ## single edge case 
 
@@ -129,4 +141,13 @@ then suppose we calculated the effect of an edge, we can filter out connneced co
 ideally, the edge caculate affect as many node as possible. 
 
 
- 
+## discussion
+
+next:
+
+- try on larger graphs
+- generative model with time information
+- sampling time-respecting trees
+- entropy of tree
+
+some papers recommended by Cigdem
