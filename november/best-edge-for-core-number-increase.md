@@ -32,10 +32,11 @@ $`x`$ is reachable from from $`u`$ via some path that consisting of nodes $`y`$ 
 this result is from Theorem 4 of VLDB paper
 
 - we denote reachable node set by $`nc(u)`$
-- such bound by $`ub(u)=|nc(u)|`$
+- such bound by $`ub(e)=|nc(u)|`$
 
+note for `e=(u, v), core(u)=core(v)`, `ub(e)=|nc(u) \cup nc(v)|`
 
-in other words, suppose we have computed the exact value $`\Delta_f(e)`$ for a small set of edges and we take the maximum $`\Delta_f^{'}`$, then any edges $`(u, \cdot)`$ with $`ub(u) \le \Delta_f^{'}`$ can be pruned.
+in other words, suppose we have computed the exact value $`\Delta_f(e)`$ for a small set of edges and we take the maximum $`\Delta_f^{'}`$, then any edges $`(u, \cdot)`$ with $`ub(e) \le \Delta_f^{'}`$ can be pruned.
 
 note that, we are actually pruning nodes instead of edges because $`\Delta_f((u, v))`$ only depends on $`u`$.
 
