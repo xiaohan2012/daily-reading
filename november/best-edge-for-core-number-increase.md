@@ -18,12 +18,23 @@ select $`B`$ edges $`E^{'} \subseteq \hat{E}`$ that maximizes:
 
 $`f(G+E^{'}) - f(G)`$
 
-# pruning strategy
+# edge pruning strategy
+
+for each candididate edge $`e=(u, v)`$, we first assume $`core(u) < core(v)`$ w.l.o.g, 
+
+## strategy 1: pruning by $`\deg^{+}(u)`$
+
+(using the order-based paper, ICDE 2017)
+
+edges $`e=(u, \cdot)`$ with $`\deg^{+}(u) < core(u)`$ can't increase its core number, in other words, $`\Delta_f(e)=0`$. 
+
+these edges can be pruned in time $`O(n)`$
+
+
+## strategy 2: pruning by upperbound
 
 main idea: we derive an upperbound for edge $`(u, \cdot)`$ absed on node $`u`$. 
 using this upperbound and computed $`\Delta_f(\cdot)`$ values, we can prune edges efficiently. 
-
-for each candididate edge $`e=(u, v)`$, we assume $`core(u) < core(v)`$ w.l.o.g, 
 
 then $`\Delta_f(e)`$ is *upper-bounded* by the numbers of the nodes $`x`$ such that: 
 
@@ -31,27 +42,49 @@ $`x`$ is reachable from from $`u`$ via some path that consisting of nodes $`y`$ 
 
 this result is from Theorem 4 of VLDB paper
 
-- we denote reachable node set by $`nc(u)`$
-- such bound by $`ub(e)=|nc(u)|`$
+we denote:
 
-note for `e=(u, v), core(u)=core(v)`, `ub(e)=|nc(u) \cup nc(v)|`
+- reachable node set by $`nc(u)`$
+- the upper bound by $`ub(e)=|nc(u)|`$
+
+note for $`e=(u, v), core(u)=core(v)`$, $`ub(e)=|nc(u) \cup nc(v)|`$
 
 in other words, suppose we have computed the exact value $`\Delta_f(e)`$ for a small set of edges and we take the maximum $`\Delta_f^{'}`$, then any edges $`(u, \cdot)`$ with $`ub(e) \le \Delta_f^{'}`$ can be pruned.
 
 note that, we are actually pruning nodes instead of edges because $`\Delta_f((u, v))`$ only depends on $`u`$.
 
+## special case : $`e=(u, v)`$ s.t. $`core(u) = core(v)`$
+
+two subcases to consider:
+
+**first**: if $`nc(u) = nc(v)`$, then $`ub(e)=|nc(u)|=|nc(v)|`$. this is obvious
+
+**second**: if $`nc(u) \neq nc(v)`$, we prove $`ub(e)=2`$. 
+
+first of all, we show if $`\Delta_f(e)>0`$, then $`\Delta_f(e)=2`$ and both $`u`$ anv $`v`$ increases their core index. 
+
+we prove by contradiction (assuming $`u`$ is ordered before $`v`$):
+
+- 1) assuming $`u`$ changes core while $`v`$ remains, then we would require $`\deg^{+}(u)`$ to increase. however, because $`v`$ remains, this is impossible. 
+- 2) assuming $`v`$ changes while $`u`$ remains, then this is impossible because $`\deg^{+}(v)`$ does not change in this case. 
+
+second, we show $`ub(e)=2`$. in other words $`u`$ and $`v`$ are the only two nodes with core index increased. 
+
+equivalently, we show $`u > w`$, for $`\forall w \in nc(u) - \{u\}`$. 
+
+because $`u`$ changes, it can be seen that:
+
+$`\deg^{+}(u)=core(u)=\deg^{>}(u)`$ before insertion, where $`\deg^{>}(u)`$ is the number of neighbors on $`u`$ with higher cores.
+
+in other words, other $`w \in nc(u) - \{u\}`$ have $`\deg^{>}(v) < core(u)`$. therefore, they are removed earlier than $`u`$ during the core decomposition step. 
+
+the same thing can be proved for $`v`$. 
+
 # edge selection strategy
 
-(using the order-based paper, ICDE 2017)
+the question is how to select edges to make $`\Delta_f`$ as much as possible so the above pruning steps can be drastic. 
 
-the question is how to select edges to make $`\Delta_f`$ as much as possible. 
-
-**rule 1**, edges $`e=(u, v)`$ with $`\deg^{+}(u) < core(u)`$ can't increase its core number, in other words, $`\Delta_f(e)=0`$. 
-
-these edges can be pruned in time $`O(n)`$
-
-
-**rule 2**, for edge $`e=(u, v)`$ with $`\deg^{+}(u) = core(u)`$ and node $`v \in nc(u)`$, we would like $`\deg^{+}(v)=core(v)`$ as well, because in this case, $`v`$ might increase its core number as well. 
+**heuristic 1** for edge $`e=(u, v)`$ with $`\deg^{+}(u) = core(u)`$ and node $`v \in nc(u)`$, we would like $`\deg^{+}(v)=core(v)`$ as well, because in this case, $`v`$ might increase its core number as well. 
 
 in other words, we denote the set of nodes $`nc^{+}(u)`$ as $`v \in nc(u)`$, $`\deg^{+}(v) = core(v)`$ and nodes in $`nc^{+}(u)`$ reachable from each other via path of nodes in $`nc^{+}(u)`$ itself. 
 
@@ -69,14 +102,17 @@ it's obvious that such groups are disjoint.
 
 then we can prune groups instead of nodes because nodes in the same group have the same $`ub`$ value. 
 
-this grouping information can be easily calcualted by first k-core decomposition and second, BFS, which takes $`O(E)`$. 
+this grouping information can be easily calculated by:
+
+1) k-core decomposition 
+2) BFS, which takes $`O(E)`$
 
 ## iterative pruning
 
-1. initially prune nodes accoding to rule 1
-2. select an edge $`e(u, v)`$ according to rule 2
+1. initially prune edges using pruning strategy 1
+2. select an edge $`e(u, v)`$ 
 3. update best $`\Delta_f`$ value
-4. prune nodes if $`\Delta_f`$ changes
+4. prune nodes if $`\Delta_f`$ using pruning strategy 2
 5. go back to step 2
 
 ## time complexity
