@@ -4,7 +4,7 @@
 
 given $`G=(V, E)`$, select one edge among $`\hat{E}=V \times V - E`$ that maximizes 
 
-$`\Delta_f(e) = f(G+\{e\}) - f(G)`$
+$`\Delta f(e) = f(G+\{e\}) - f(G)`$
 
 where $`f(G)=\sum\limits_{v \in V} core(v)`$. 
 
@@ -26,7 +26,7 @@ for each candididate edge $`e=(u, v)`$, we first assume $`core(u) < core(v)`$ w.
 
 (using the order-based paper, ICDE 2017)
 
-edges $`e=(u, \cdot)`$ with $`\deg^{+}(u) < core(u)`$ can't increase its core number, in other words, $`\Delta_f(e)=0`$. 
+edges $`e=(u, \cdot)`$ with $`\deg^{+}(u) < core(u)`$ can't increase its core number, in other words, $`\Delta f(e)=0`$. 
 
 these edges can be pruned in time $`O(n)`$
 
@@ -34,9 +34,9 @@ these edges can be pruned in time $`O(n)`$
 ## strategy 2: pruning by upperbound
 
 main idea: we derive an upperbound for edge $`(u, \cdot)`$ absed on node $`u`$. 
-using this upperbound and computed $`\Delta_f(\cdot)`$ values, we can prune edges efficiently. 
+using this upperbound and computed $`\Delta f(\cdot)`$ values, we can prune edges efficiently. 
 
-then $`\Delta_f(e)`$ is *upper-bounded* by the numbers of the nodes $`x`$ such that: 
+then $`\Delta f(e)`$ is *upper-bounded* by the numbers of the nodes $`x`$ such that: 
 
 $`x`$ is reachable from from $`u`$ via some path that consisting of nodes $`y`$ with $`core(y) = core(u)`$.
 
@@ -47,9 +47,9 @@ we denote:
 - reachable node set by $`nc(u)`$
 - the upper bound by $`ub(e)=|nc(u)|`$
 
-in other words, suppose we have computed the exact value $`\Delta_f(e)`$ for a small set of edges and we take the maximum $`\Delta_f^{'}`$, then any edges $`(u, \cdot)`$ with $`ub(e) \le \Delta_f^{'}`$ can be pruned.
+in other words, suppose we have computed the exact value $`\Delta f(e)`$ for a small set of edges and we take the maximum $`\Delta f^{'}`$, then any edges $`(u, \cdot)`$ with $`ub(e) \le \Delta f^{'}`$ can be pruned.
 
-note that, we are actually pruning nodes instead of edges because $`\Delta_f((u, v))`$ only depends on $`u`$.
+note that, we are actually pruning nodes instead of edges because $`\Delta f((u, v))`$ only depends on $`u`$.
 
 ## special case : $`e=(u, v)`$ s.t. $`core(u) = core(v)`$
 
@@ -59,7 +59,7 @@ two subcases to consider:
 
 **second**: if $`nc(u) \neq nc(v)`$, we prove $`ub(e)=2`$. 
 
-first of all, we show if $`\Delta_f(e)>0`$, then $`\Delta_f(e)>2`$ and both $`u`$ anv $`v`$ increases their core index. 
+first of all, we show if $`\Delta f(e)>0`$, then $`\Delta f(e)>2`$ and both $`u`$ anv $`v`$ increases their core index. 
 
 we prove by contradiction (assuming $`u`$ is ordered before $`v`$):
 
@@ -80,7 +80,7 @@ the same thing can be proved for $`v`$.
 
 # edge selection strategy
 
-the question is how to select edges to make $`\Delta_f`$ as much as possible so the above pruning steps can be drastic. 
+the question is how to select edges to make $`\Delta f`$ as much as possible so the above pruning steps can be drastic. 
 
 **heuristic 1** for edge $`e=(u, v)`$ with $`\deg^{+}(u) = core(u)`$ and node $`v \in nc(u)`$, we would like $`\deg^{+}(v)=core(v)`$ as well, because in this case, $`v`$ might increase its core number as well. 
 
@@ -109,8 +109,8 @@ this grouping information can be easily calculated by:
 
 1. initially prune edges using pruning strategy 1
 2. select an edge $`e(u, v)`$ 
-3. update best $`\Delta_f`$ value
-4. prune nodes if $`\Delta_f`$ using pruning strategy 2
+3. update best $`\Delta f`$ value
+4. prune nodes if $`\Delta f`$ using pruning strategy 2
 5. go back to step 2
 
 ## time complexity
