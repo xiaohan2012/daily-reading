@@ -9,12 +9,12 @@
   - [X] what's the motivation (.5h)? 
   - [X] prove its sub/super modularity (1h)
   - [X] present the formulation to Lorenzo and Francesco (1h)
-- [ ] adding single edge case
+- [X] adding single edge case
 - [ ] adding `k` edges case
 
 ** active learning **
 
-- [ ] understand the query process
+- [X] understand the query process
   - try more examples
 - [X] precision/recall using sampling based inference
 - [ ] precision/recall using inference method in SDM submission
@@ -151,3 +151,13 @@ next:
 - entropy of tree
 
 some papers recommended by Cigdem
+
+# Thursday
+
+- [ ] implement it in Keras 
+- experiemt: 
+  - [ ] visualization
+  - [ ] network reconstruction
+  - [ ] classification
+- meeting with Aris (15:00)
+- meeting with Francesco (16:00)
