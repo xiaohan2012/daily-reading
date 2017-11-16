@@ -166,6 +166,7 @@ some papers recommended by Cigdem
 
 - can we sample steiner tree directly?
   - the transitive closure approach
+  - can we bound the sampling error?
 
 
 ## meeting with Francesco
