@@ -2,7 +2,7 @@
 
 ## specifiy model
 
-```
+```python
 Model(inputs=[main_input, auxiliary_input], outputs=[main_output, auxiliary_output])
 ```
 
@@ -10,7 +10,7 @@ where `main_input, auxiliary_input, main_output, auxiliary_output` are just laye
 
 ## different loss function and weights
 
-```
+```python
 model.compile(optimizer='rmsprop', loss='binary_crossentropy',
               loss_weights=[1., 0.2])
 ```
@@ -19,7 +19,7 @@ using `binary_crossentropy` on all outputs
 
 or differentiate them
 
-```
+```python
 model.compile(optimizer='rmsprop',
               loss={'main_output': 'binary_crossentropy', 'aux_output': 'binary_crossentropy'},
               loss_weights={'main_output': 1., 'aux_output': 0.2})
@@ -30,7 +30,7 @@ model.compile(optimizer='rmsprop',
 
 just call that layers with different inputs
 
-```
+```python
 import keras
 from keras.layers import Input, LSTM, Dense
 from keras.models import Model
