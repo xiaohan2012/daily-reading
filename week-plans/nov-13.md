@@ -178,6 +178,7 @@ some papers recommended by Cigdem
 - Write a detailed pseudo-code at LaTex
 - Start coding/trying
 - think about adding multiple edges, detecting the quasi-clique version
+- paper by Anis, Aris, etc
 
 # Friday/Saturday
 
