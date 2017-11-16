@@ -161,3 +161,18 @@ some papers recommended by Cigdem
   - [ ] classification
 - meeting with Aris (15:00)
 - meeting with Francesco (16:00)
+
+## meeting with Aris
+
+- can we sample steiner tree directly?
+  - the transitive closure approach
+
+
+## meeting with Francesco
+
+- Write also the other objective function where the higher cores are more important
+- Prove hardness
+- Check paper [1] to get more ideas for pruning or computing good candidate nodes
+- Design a smart data structure to keep all the information we need
+- Write a detailed pseudo-code at LaTex
+- Start coding/trying
