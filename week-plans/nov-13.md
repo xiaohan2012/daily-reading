@@ -177,3 +177,22 @@ some papers recommended by Cigdem
 - Design a smart data structure to keep all the information we need
 - Write a detailed pseudo-code at LaTex
 - Start coding/trying
+- think about adding multiple edges, detecting the quasi-clique version
+
+# Friday/Saturday
+
+- frog: sampling steiner tree using transitive closure (1.5h)
+  - what's the main challenge that affects uniform sampling?
+  - how to circumvent it even within reasonable amount of error
+  - find papers if possible
+- probabilistic paper (1.5h)
+  - inferring diffusion network
+  - back to source paper
+  - can we apply these models in our case
+- efficient incremental edge selection (1.5h)
+- write a detailed pseudo-code at LaTex and other objective function with weights (1h) 
+  - fix the time complexity
+- software structure of this project (1h)
+  - main modules, core update, pruning, selection? 
+  - the data structures we need? 
+- compile/run the order-based code (0.5h)
