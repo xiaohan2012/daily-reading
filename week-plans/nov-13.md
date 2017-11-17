@@ -180,20 +180,28 @@ some papers recommended by Cigdem
 - think about adding multiple edges, detecting the quasi-clique version
 - paper by Anis, Aris, etc
 
-# Friday/Saturday
+
+# Friday
+
+- minihackathon: joint training done
+
+
+# Saturday
 
 - frog: sampling steiner tree using transitive closure (1.5h)
   - what's the main challenge that affects uniform sampling?
   - how to circumvent it even within reasonable amount of error
   - find papers if possible
-- probabilistic paper (1.5h)
+- understanding the email discussion (0.5h)
+- probabilistic paper (1h)
   - inferring diffusion network
   - back to source paper
   - can we apply these models in our case
 - efficient incremental edge selection (1.5h)
-- write a detailed pseudo-code at LaTex and other objective function with weights (1h) 
+  - can we re-use result from previous iteration (greedy approach)
+- write a detailed pseudo-code at LaTex and other objective functions with weights (1h) 
   - fix the time complexity
-- software structure of this project (1h)
-  - main modules, core update, pruning, selection? 
-  - the data structures we need? 
-- compile/run the order-based code (0.5h)
+- to implement the greedy approach, how should be code be written? (0.5 h)
+  - write the skeleton
+- leave work at around 16:00
+
