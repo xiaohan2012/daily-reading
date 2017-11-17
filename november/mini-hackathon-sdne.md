@@ -32,8 +32,6 @@ refer to [this](https://github.com/palash1992/GEM/blob/master/gem/embedding/sdne
 - [GEM, python](https://github.com/palash1992/GEM), a collection of algorithms
 
 
-
-
 # learned
 
 - before defining your own custom loss function, test it!
@@ -47,4 +45,21 @@ input to the loss function is
   - in my case, it's the reconstrudcted neighborbood, not the input node ids
 
 
+## loss function argument's shape
 
+must match.
+
+in my case, the edge wise loss does not need `true_y`. 
+
+so theoretically, `None` can be passed. 
+
+however, because of this requirement, `np.array` with the same shape as `embedding_diff` need to be passed.
+
+## regularizer
+
+- add it the the layer definition
+- https://keras.io/regularizers/
+
+## setting zero entries to 1 and multiply non-zero entries by constant, `a`
+
+just `v * (a-1) +1`
