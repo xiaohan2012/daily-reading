@@ -64,3 +64,11 @@ however, because of this requirement, `np.array` with the same shape as `embeddi
 ## setting zero entries to 1 and multiply non-zero entries by constant, `a`
 
 just `v * (a-1) +1`
+
+## `Lambda` layer
+
+to add arbitrary transformation
+
+## sparse input
+
+not very easy in keras
