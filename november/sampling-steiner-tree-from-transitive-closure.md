@@ -24,9 +24,9 @@ sampling an steiner tree can be done in the following steps:
    - assuming we know some algorithm to sample spanning tree on undirected and weighted graph
 3. reconstruct the steiner tree $`T`$ from the $`T^{'}`$ on $`G`$ to minimize the probability difference between $`T`$ and $`T^{'}`$
 
-the question is: how to make sure the probability of sampling `T^{'}` frmo `G^{'}` is not far from that of sampling `T` in `G`.
+the question is: how to make sure the probability of sampling $`T^{'}`$ frmo $`G^{'}`$ is not far from that of sampling $`T`$ in $`G`$.
 
-one way is recontruct `T` such that weights `T^{'}` are over-counted as minimum as possible.
+one way is recontruct $`T`$ such that weights $`T^{'}`$ are over-counted as minimum as possible.
 
 
 # reconstruction problem
