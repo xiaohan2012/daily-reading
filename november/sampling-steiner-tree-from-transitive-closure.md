@@ -30,31 +30,32 @@ sampling an steiner tree can be done in the following steps:
    - assuming we know some algorithm to sample spanning tree on undirected and weighted graph
 3. reconstruct the steiner tree $`T`$ from the $`T^{'}`$ on $`G`$ to minimize the probability difference between $`T`$ and $`T^{'}`$
 
+"Reconstruction" means creating a mapping from edges in $`T^{'}`$ to edge subset in $`G`$. 
+Specifically, we map $`f \in T^{'}`$ to $`E(f) \subseteq E`$ s.t $`\prod\limits_{e \in E(f)} w(e) = w^{'}(f)`$
+
 ideally, we would like $`P(T)`$ and $`P(T^{'})`$ stay as close as possible.
 
-one way is to recontruct $`T`$ from $`T^{'}`$ in specific way such that $`P(T) \approx `$P(T^{'})`$.
-
+one way is to recontruct $`T`$ from $`T^{'}`$ in a specific way such that $`P(T) \approx P(T^{'})`$.
 
 # reconstruction problem
 
-given a sampled spanning tree $`T^{'}`$ and its reconstructed steiner tree $`T`$, denote the probability of sampling $`T^{'}`$ and $`T`$ from their corresponding graphs:
+given a sampled spanning tree $`T^{'}`$ and its reconstructed steiner tree $`T`$, their probability has the following form:
 
 
-$`P(T^{'}) \propto \prod\limits_{\mathbb{e} \in T^{'}} \prod\limits_{e \in E(\mathbb{e})} w(e)`$
+$`P(T^{'}) \propto \prod\limits_{f \in T^{'}} \prod\limits_{e \in E(f)} w(e)`$
 
 $`P(T) \propto \prod\limits_{e \in T} w(e)`$
 
-ideally, if we can upper-bound the the "difference" $`d(T^{'}, T)`$ for every $`T^{'}`$ using some reconstruction algorithm, then we can bound the distance between 1)  the  probability distributions produced by tha above algorithm 2) the desired  probability distributions. 
+ideally, if we can upper-bound the the "distance" $`d(T^{'}, T)`$ for every $`T^{'}`$ using some reconstruction algorithm, then we can bound the distance between $`P(T^{'})`$ and $`P(T)`$
 
 define the "distance" between $`T^{'}`$ and $`T`$ as
 
 $`d(T^{'}, T)=\frac{P(T^{'})}{P(T)}`$.
 
-the problem is:
+then the problem is:
 
-given $`T^{'}`$ in $`G^{'}`$, reconstruct $`T`$ from $`T^{'}`$ in $`G`$ such that $`d(T^{'}, T)`$ is minized. 
+given $`T^{'}`$ in $`G^{'}`$, reconstruct $`T`$ from $`T^{'}`$ in $`G`$ such that $`d(T^{'}, T)`$ is minimized. 
 
-by "reconstruction", it means creating a mapping from edges in $`T^{'}`$ to edge subset in $`G`$. 
-Specifically, we map $`f \in T^{'}`$ to $`E(f) \subseteq E`$ s.t $`\prod\limits_{e \in E(f)} w(e) = w^{'}(f)`$ 
+
 
 
