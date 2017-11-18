@@ -6,7 +6,16 @@ sampling a steiner tree $`T`$ with probability proportional to $`\prod\limits_{e
 
 we can easily adapt our current problem (from $`\exp\left(\sum\limits_{e \in T} -c(e)\right)`$) plugging in $`w(e) = \exp\left(-c(e)\right)`$
 
-# algorithm overview
+# notation
+
+- $`G=(V, E)`$, edge weight $`w: E \rightarrow R`$
+- for each edge $`f`$ in transitive closure, given some reconstruction algorithm, denote its corresponding edges in $`G`$ as $`E(f)`$
+- transitive closure $`G^{'}=(X, E^{'})`$, new edge weight $`w^{'}: E^{'} \rightarrow R`$
+  - $`w^{'}(f) = \prod\limits_{e \in E(f)} w(e)`$
+  - in other words, transitive closure is constructed by product of edge weights (not summation in the usual case)
+
+
+# sampling procedure in general
 
 sampling an steiner tree can be done in the following steps:
 
@@ -15,14 +24,9 @@ sampling an steiner tree can be done in the following steps:
    - assuming we know some algorithm to sample spanning tree on undirected and weighted graph
 3. reconstruct the steiner tree $`T`$ from the $`T^{'}`$ on $`G`$ to minimize the probability difference between $`T`$ and $`T^{'}`$
 
-# notation
+the question is: how to make sure the probability of sampling `T^{'}` frmo `G^{'}` is not far from that of sampling `T` in `G`.
 
-- $`G=(V, E)`$, edge weight $`w: E \rightarrow R`$
-- terminals $`X`$
-- for each edge $`\mathbb{e}`$ in transitive closure, denote its corresponding edges in $`G`$ as $`E(\mathbb{e})`$
-- transitive closure $`G^{'}=(X, E^{'})`$, new edge weight $`w^{'}: E^{'} \rightarrow R`$
-  - $`w^{'}(\mathbb{e}) = \prod\limits_{e \in E(\mathbb{e})} w(e)`$
-  - in other words, transitive closure is constructed by product of edge weights (not summation in the usual case)
+one way is recontruct `T` such that weights `T^{'}` are over-counted as minimum as possible.
 
 
 # reconstruction problem
