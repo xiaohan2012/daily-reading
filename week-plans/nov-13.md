@@ -234,4 +234,7 @@ differentiated 3 types of edges.
   - determine the number of intra-core edges to add to increase the core number of the whole `nc` (multi-edge case)
   - if this number is largar than 1, it cannot be the one best edge
 
-## incremental update
+
+next:
+
+- integrate it into the document
