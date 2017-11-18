@@ -4,7 +4,7 @@
 
 sampling a steiner tree $`T`$ with probability proportional to $`\prod\limits_{e \in T} w(e)`$
 
-we can easily adapt our current problem (from $`\exp^{\sum\limits_{e \in T} c(e)}`$) plugging in $`w(e) = \exp^{-c(e)}`$
+we can easily adapt our current problem (from $`\exp\left(\sum\limits_{e \in T} c(e)\right)`$) plugging in $`w(e) = \exp\left(-c(e)\right)`$
 
 # algorithm overview
 
