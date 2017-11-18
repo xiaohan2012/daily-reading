@@ -205,3 +205,33 @@ some papers recommended by Cigdem
   - write the skeleton
 - leave work at around 16:00
 
+## frog
+
+problem formulation: http://193.166.24.212/transitive_closure_problem.pdf
+
+## email
+
+different formulations for query strategy and clarification
+
+## closed-form of node infection probability?
+
+assuming the underlying cascade forms a tree
+
+1) because the underlying cascade tree is not known, we always need tree samples to estimate the infection status
+
+I cannot see how we can get rid of the samples. 
+
+2) one work-around is estimate the infection status probability on the most likely tree. 
+
+## "core" maximization
+
+differentiated 3 types of edges.
+
+[quasi clique detection](november/quasi-clique-detection.md)
+
+- corresponds to intra-core, intra-`nc` case
+- usefulness: 
+  - determine the number of intra-core edges to add to increase the core number of the whole `nc` (multi-edge case)
+  - if this number is largar than 1, it cannot be the one best edge
+
+## incremental update
