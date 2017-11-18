@@ -30,6 +30,7 @@ refer to [this](https://github.com/palash1992/GEM/blob/master/gem/embedding/sdne
 - [LINE, C++](https://github.com/tangjianpku/LINE)
 - [LINE, keras](https://github.com/VahidooX/LINE)
 - [GEM, python](https://github.com/palash1992/GEM), a collection of algorithms
+- [OpenNE, tensorflow](https://github.com/thunlp/OpenNE), a collection of algorithms by Tsinghua University
 
 
 # learned
