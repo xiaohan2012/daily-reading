@@ -46,7 +46,7 @@ $`P(T^{'}) \propto \prod\limits_{f \in T^{'}} \prod\limits_{e \in E(f)} w(e)`$
 
 $`P(T) \propto \prod\limits_{e \in T} w(e)`$
 
-ideally, if we can upper-bound the the "distance" $`d(T^{'}, T)`$ for every $`T^{'}`$ using some reconstruction algorithm, then we can bound the distance between $`P(T^{'})`$ and $`P(T)`$
+ideally, if we can upper-bound the "probability distance" $`d(T^{'}, T)`$ for every $`T^{'}`$ using some reconstruction algorithm, then we can bound the distance between the two probability distributions. 
 
 define the "distance" between $`T^{'}`$ and $`T`$ as
 
