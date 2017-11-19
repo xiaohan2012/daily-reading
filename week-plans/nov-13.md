@@ -33,7 +33,7 @@
 ** mini hackathon
 
 - [X] understand the paper
-- [ ] implement it in Keras 
+- [X] implement it in Keras 
 - [ ] experiemt: network reconstruction, classification
 
 
@@ -238,3 +238,33 @@ differentiated 3 types of edges.
 next:
 
 - integrate it into the document
+
+
+# summary
+
+## core maximization
+
+- problem formulation
+- monotonic, non-submodular and non-supermodular
+  - inter/intra- core, inter/intra-`nc` cases
+- single edge case
+  - inter-core edges case: node-level pruning based on `deg+` and `nc` size
+  - intra-core edges
+    - bound on intra-`nc` case, `|nc|`
+    - bound on  inter-`nc` case, 2
+- pattern of quasi-clique: [thinking](november/quasi-clique-detection.md)
+  - one missing edge
+  - number of edges to add
+
+## active learning
+
+- prediction error gives better queries than entropy and pagerank
+  - random is also good
+- closed-form is not very easy
+- how to bound the reconstruction error?
+
+
+
+
+
+
