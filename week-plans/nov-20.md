@@ -1,6 +1,6 @@
 # plan
 
-**active learning**
+## active learning
 
 coding:
 
@@ -15,7 +15,7 @@ reading:
 - find papers on reconstructing from spanning tree on closure (minimize the error) (1h)
 - [Sampling Random Spanning Trees Faster than Matrix Multiplication](https://arxiv.org/pdf/1611.07451.pdf) (1.5h)
 
-**core maximization**
+## core maximization
 
 reading:
 
@@ -33,6 +33,15 @@ thinking:
 - design a smart data structure to keep all the information we need (incremental)
 
 coding: 
+
+
+## mini-hackathon: SDNE
+
+- [ ] cross validation on the visualization of 20newsgroups
+- [ ] tensorboard visualization of label embedding
+- [ ] link prediction on test data
+- [ ] write blog article
+
 
 # monday
 
