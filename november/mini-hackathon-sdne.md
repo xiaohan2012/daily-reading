@@ -72,3 +72,14 @@ to add arbitrary transformation
 ## sparse input
 
 not very easy in keras
+
+## comment on sklearn `GridSearchCV`
+
+- the model needs to have `fit`, `score` and `set_params` interface
+
+# todo
+
+- [ ] cross validation on the visualization of 20newsgroups
+- [ ] tensorboard visualization of label embedding
+- [ ] link prediction on test data
+- [ ] write blog article
