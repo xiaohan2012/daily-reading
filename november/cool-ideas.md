@@ -18,3 +18,10 @@ training is done by optimizing $`e_d`$ and $`e_l`$ alternately.
 $`e_l`$ can be initlized by some network embedding method. 
 
 - the graph: two labels are connected if they occur in the same document
+
+# application: summarizing twitter hashtags
+
+given a set of tweets containing hashtags, how to summarize them?
+
+or a collection of documents, how to summarize them?
+
