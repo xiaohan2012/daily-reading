@@ -4,13 +4,13 @@
 
 coding:
 
-- try on larger dataset (1 h)
+- [X] try on larger dataset (1 h)
 - steiner tree sampling algorithm in C++ (3 h)
 - integrate (2h)
 
 reading:
 
-- network entropy paper (1 h)
+- network entropy tutorial (1 h)
 - pac learning paper (1 h)
 - find papers on reconstructing from spanning tree on closure (minimize the error) (1h)
 - [Sampling Random Spanning Trees Faster than Matrix Multiplication](https://arxiv.org/pdf/1611.07451.pdf) (1.5h)
@@ -24,11 +24,11 @@ reading:
 
 thinking:
 
-- [ ] intra-core intra-`nc`: how to detect such subgraph, even it's not the inner most core? (1h)
+- [X] intra-core intra-`nc`: how to detect such subgraph, even it's not the inner most core? (1h)
   - related to dense subgraph detection
   - however, the subgraph might not be in the inner most core
-- [ ] single inter-core edge, we can use the quasi-clique pattern to determine the best node? (1h)
-- adding multiple edges, detecting the quasi-clique version
+- [X] single inter-core edge, we can use the quasi-clique pattern to determine the best node? (1h)
+- [X] adding multiple edges, detecting the quasi-clique version
 - prove hardness (1h)
 - design a smart data structure to keep all the information we need (incremental)
 
@@ -37,6 +37,7 @@ coding:
 
 ## mini-hackathon: SDNE
 
+- [X] pretraining on autoencoder, [ref](https://keras.io/getting-started/faq/)
 - [ ] cross validation on the visualization of 20newsgroups
 - [ ] tensorboard visualization of label embedding
 - [ ] link prediction on test data
@@ -54,9 +55,45 @@ coding:
 - steiner tree sampling algorithm in C++ (2 h)
 - disccusion (2h)
 
+## frog
+
+lemma about the "fingerprint" of an `nc` of size `L` be have core `k`. 
+
+proof needs to be done
+
+question:
+
+- can we this fingerprint to decide if an addition edge will cause core number change?
+- or even grouping the edges for batch processing so that there are as many batches as possible such that the batch introduces core number updates
+
+## top-k densest subgraphs
+
+- snowball: connected component with highest core number
+- update involves moving nodes across different snow balls or moving/in out
+
+## sampling steiner tree without visiting all nodes
+
+[some observation](sampling-steiner-tree-without-visiting-all-nodes.md)
+
+##  try larger datasets
+
+so slow
+
+
 # tuesday
 
-- 
+- frog (2h): 
+  - upperbounds for different types of edges
+  - formalize greedy algorithm
+  - data structure
+- meeting: (1.5h)
+- pac learning paper (0.5 h)
+- active learning large graphs (1.5 h): 
+  - profiling on large graphs
+  - re-use steiner trees (only delete those infeasible ones)
+  - calculate speed-up
+- C++ code of steiner tree sampling (2.5 h)
+
 
 evening:
 
