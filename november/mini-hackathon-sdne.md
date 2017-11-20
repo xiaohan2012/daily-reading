@@ -77,9 +77,18 @@ not very easy in keras
 
 - the model needs to have `fit`, `score` and `set_params` interface
 
+## pre-training
+
+pre-training should be done on autoencoder
+
 # todo
 
 - [ ] cross validation on the visualization of 20newsgroups
 - [ ] tensorboard visualization of label embedding
 - [ ] link prediction on test data
 - [ ] write blog article
+
+# questions
+
+- what are `loss`, `decoding-layer-0_loss_1`, `decoding-layer-0_loss_2` and `lambda_1_loss`?
+- where is `l2_param` reflected?
