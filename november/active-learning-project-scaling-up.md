@@ -40,3 +40,11 @@ similarly, if a node is in every infection tree (almost sure to be infected), th
 interesting question: 
 
 prove these nodes have higher predicted error mathematically
+
+# speedup
+
+for grqc:
+
+- pruning from ~4000 candidates to 2000 candidates: 1.5 mins for  each query
+- using 100 samples to estimate, to 5 secs for each query
+
