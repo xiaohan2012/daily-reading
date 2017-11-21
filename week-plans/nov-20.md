@@ -114,6 +114,11 @@ next questions:
 
 [two ways to address the scalability issue](november/active-learning-project-scaling-up.md)
 
+## random spanning tree C++
+
+- http://www.boost.org/doc/libs/1_65_1/boost/graph/random_spanning_tree.hpp
+- https://www.cs.cmu.edu/~15859n/RelatedWork/RandomTrees-Wilson.pdf
+
 evening:
 
 - tensorboard visualization of label embedding
