@@ -5,8 +5,9 @@
 coding:
 
 - [X] try on larger dataset (1 h)
-- steiner tree sampling algorithm in C++ (3 h)
-- integrate (2h)
+- ~~steiner tree sampling algorithm in C++ (3 h)~~: 
+  - integrate (2h)
+  - give up becasue it's not the bottle neck  
 
 reading:
 
@@ -94,6 +95,24 @@ so slow
   - calculate speed-up
 - C++ code of steiner tree sampling (2.5 h)
 
+## meeting
+
+learned:
+
+- be specific about the algorithm, data structure
+- it's already a good problem, be ready to dive into the details, instead of thinking other high level ideas
+- don't rush
+
+- data structures designed on the paper
+
+next questions:
+
+- how to maintein the information incrementally?
+- write down the pseudo code
+
+## bottle neck of prediction-error based approach
+
+[two ways to address the scalability issue](november/active-learning-project-scaling-up.md)
 
 evening:
 
