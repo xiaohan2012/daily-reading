@@ -125,11 +125,19 @@ evening:
 
 # wednesday
 
-- 
+- frog (3h): 
+  - what information can be reused?
+  - how to reuse them?
+  - formalize the greedy algorithm with all the data structures
+- understand how wilson's algorithm works (1h)
+- adapt it to sampling steiner tree,  (1h)
+- sampling steiner tree by adapting (2.5h)
 
 # thursday
 
 frog:
+
+# friday
 
 - [ ] SLEEC (0.5h)
 - [ ] Robust Extreme Multi-label Learning (1h)
