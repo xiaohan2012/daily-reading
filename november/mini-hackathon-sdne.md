@@ -92,3 +92,6 @@ pre-training should be done on autoencoder
 
 - what are `loss`, `decoding-layer-0_loss_1`, `decoding-layer-0_loss_2` and `lambda_1_loss`?
 - where is `l2_param` reflected?
+- for link prediction on grqc dataset, what if removing edges cause disconnected component?
+  - also how to deal with directed edges?
+- why grqc have 28980 edges in the paper while on snap, it only has half?

@@ -5,9 +5,8 @@
 coding:
 
 - [X] try on larger dataset (1 h)
-- ~~steiner tree sampling algorithm in C++ (3 h)~~: 
-  - integrate (2h)
-  - give up becasue it's not the bottle neck  
+- steiner tree sampling algorithm in C++ (3 h)
+- integrate (2h)
 
 reading:
 
