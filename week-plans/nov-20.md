@@ -19,8 +19,8 @@ reading:
 
 reading:
 
-- [ ] [Fully Dynamic Algorithm for Top-k Densest Subgraphs](https://arxiv.org/pdf/1610.05897.pdf) (2h)
-- check paper [1] to get more ideas for pruning or computing good candidate nodes (which node is more likely?)
+- [X] [Fully Dynamic Algorithm for Top-k Densest Subgraphs](https://arxiv.org/pdf/1610.05897.pdf) (2h)
+- [ ] check paper [1] to get more ideas for pruning or computing good candidate nodes (which node is more likely?)
 
 thinking:
 
@@ -29,8 +29,8 @@ thinking:
   - however, the subgraph might not be in the inner most core
 - [X] single inter-core edge, we can use the quasi-clique pattern to determine the best node? (1h)
 - [X] adding multiple edges, detecting the quasi-clique version
-- prove hardness (1h)
-- design a smart data structure to keep all the information we need (incremental)
+- [ ] prove hardness (1h)
+- [X] design a smart data structure to keep all the information we need (incremental)
 
 coding: 
 
