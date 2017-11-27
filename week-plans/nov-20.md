@@ -145,3 +145,15 @@ frog:
 - [ ] Deep Extreme Multi-label Learning (1h)
 
 
+# summary
+
+main things done:
+
+active learning:
+
+- bottle neck on large graphs and [two ways to accelerate it](november/active-learning-project-scaling-up.md)
+
+
+core maximization:
+
+- pseudo code of greedy algorithm with incremental computation, [doc](http://193.166.24.212/core.pdf)
