@@ -9,7 +9,6 @@
 - `heap`: min heap
 - `treap`: tree + heap, the rank-order tree to calculate node's rank
   - it's tree abtractly. internally, it's a vector
-  - 
   - related to node's rank
 
 
@@ -23,10 +22,9 @@
   - `ext`?
 
 - variable `core` is a `vector<int>` passed as a referece into `ComputeCore`. it stores the core number
-- 
+
 
 ## questions
 
 - how to use namespace? 
 - `class GLIST final: public CoreMaintenance {`: what is `CoreMaintenance`?
-- 
