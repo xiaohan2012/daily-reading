@@ -28,7 +28,7 @@ faster steiner tree sampling:
 
 # tuesday
 
-- [ ] frog: review ICDE, VLDB and the arxiv paper. what are possible good candidate edges? (1.5)
+- [X] frog: review ICDE, VLDB and the arxiv paper. what are possible good candidate edges? (1.5)
 - [ ] what's wrong with november/quasi-clique-detection.md and the lemma in Section 5? (1h)
   - how could it be used?
 - [ ] ask about feedback from Lorenzo by Francesco (0.5h)
@@ -44,5 +44,11 @@ afternoon:
 - [ ] `core-bfs`: BFS guided by core number (1h)
   - test with small examples
 - [ ] meeting with Cigdem (1h)
+
+## frog
+
+(new underbound for the core maximization problem)[november/core-maximization-and-core-mainteinance.md]
+
+
 
 20 h ~= 3 days

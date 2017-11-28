@@ -1,7 +1,8 @@
 
 # Streaming Algorithms for k-core Decomposition
 
-http://www.vldb.org/pvldb/vol6/p433-sariyuce.pdf
+- [paper](http://www.vldb.org/pvldb/vol6/p433-sariyuce.pdf)
+- [a shorter summary](https://gitlab.com/xiaohan2012/daily-reading/blob/master/october/streaming-k-core.md#summary-from-order-based-paper-traversal-insertion-algorithm)
 
 transform the problem of maintaining k-core decomposition to maining the k values of each node. 
 
@@ -56,12 +57,17 @@ Algorithm 2: find the subcore (k-shell) by traversal and update the K value acco
 - essentially a variant of DFS that only visits edges whose endpoints have given a specific core number
 - meanwhile, it returns current degree ($`cd`$), which is used to track its degree in its max-core. 
 
+current degree `cd`: current degree of the node in its maximal core:
+
+- it will be tracked (as intermediate result)
+- if `cd(u)` is fewer than `K=core(u)+1`, then it should be excluded from core-`K`
+
 
 ## pure core
 
 goal: locate a smaller set of candidates
 
-$`MCD`$: maximum core degree of $`u`$: num of neighbors that have greater or equal $`K`$ values than $`K(u)`$
+$`MCD`$: maximum core degree of $`u`$: num of neighbors that have greater or equal $`K`$ values than $`K(u)`$ (same as `cd`?)
 
 - $`MCD(u) \ge K(u)`$: $`MCD`$ is an upperbound on $`K(u)`$
 - only when $`MCD(u)>K(u)`$, an adjacent edge addition could result in update
@@ -69,10 +75,11 @@ $`MCD`$: maximum core degree of $`u`$: num of neighbors that have greater or equ
 
 def:
 
-- pure core: subcore plus the extra condition, $`MCD(u)>K(u)`$
+- pure core: subcore plus **the extra condition**, $`MCD(u)>K(u)`$
 
 main theorem: only nodes in pure core may change their core number
 
+`pcd`: pure core degree
 ## algorithm: updating core number
 
 as both subcore and purecore gives *possible* nodes that change their core number, we need to determine them exactly. 
@@ -170,4 +177,3 @@ it's shown that (by experiment):
 
 - size of $`pc`$ has high variance and can sometimes be very large
 - so the problem of vldb paper is the search space can be large (for some nodes). 
-
