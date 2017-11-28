@@ -29,13 +29,13 @@ faster steiner tree sampling:
 # tuesday
 
 - [X] frog: review ICDE, VLDB and the arxiv paper. what are possible good candidate edges? (1.5)
-- [ ] what's wrong with november/quasi-clique-detection.md and the lemma in Section 5? (1h)
+- [X] what's wrong with november/quasi-clique-detection.md and the lemma in Section 5? (1h)
   - how could it be used?
-- [ ] ask about feedback from Lorenzo by Francesco (0.5h)
+- [X] ask about feedback from Lorenzo by Francesco (0.5h)
 
 afternoon:
 
-- [ ] check `networkkit` (1h)
+- [X] check `networkkit` (1h)
   - C++ interface: easy to extend?
   - comparison with `graphtool`: functionalities and usage
   - is ICDE 2017 code easy to integrate into `networkkit`?
@@ -49,6 +49,33 @@ afternoon:
 
 (new underbound for the core maximization problem)[november/core-maximization-and-core-mainteinance.md]
 
+## what's wrong with the finger prints?
+
+- for node with order $`i`$ in its $`nc`$, $`K-i+1`$ is a lower bound of $`\text{deg}^{+}`$ not an equality constraint. 
+
+other:
+
+1. being in $`k`$-core indicates the finger print ($`\ge`$ version)
+2. however, does the reverse hold? no, because the $`i`$th node does not have to connect to all previous $`i-1`$ nodes? 
+
+I think we still need some heuristic to guess. 
+
+
+## networkit vs graphtool
+
+- more contributors
+- better documentation (better guides on integration)
+- functionalities, similar
+- built with `Cython` and without `Boost`
+
+## `core-decompose`
+
+mapping of the variable in pseudo code to variable in C++
+
+- core -> `core`
+- degp -> `node.rem`
+- order -> `tree_`
 
 
 20 h ~= 3 days
+
