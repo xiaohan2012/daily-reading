@@ -1,5 +1,7 @@
 
-# intro
+# Streaming Algorithms for k-core Decomposition
+
+http://www.vldb.org/pvldb/vol6/p433-sariyuce.pdf
 
 transform the problem of maintaining k-core decomposition to maining the k values of each node. 
 
