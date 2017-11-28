@@ -39,15 +39,11 @@ afternoon:
   - C++ interface: easy to extend?
   - comparison with `graphtool`: functionalities and usage
   - is ICDE 2017 code easy to integrate into `networkkit`?
-- [ ] `core-decompose`: return core, degp, order (1h)
-  - test with same examples
-- [ ] `core-bfs`: BFS guided by core number (1h)
-  - test with small examples
-- [ ] meeting with Cigdem (1h)
 
 ## frog
 
-(new underbound for the core maximization problem)[november/core-maximization-and-core-mainteinance.md]
+(two tighter underbounds for the core maximization problem)[november/core-maximization-and-core-mainteinance.md]
+
 
 ## what's wrong with the finger prints?
 
@@ -75,6 +71,17 @@ mapping of the variable in pseudo code to variable in C++
 - core -> `core`
 - degp -> `node.rem`
 - order -> `tree_`
+
+# Wednesday
+
+- [ ] frog: integrate `core-decompose` of ICDE to networkit C++ (3h)
+  - compile/build networkit
+  - change the code (graph object) in ICDE to the classes in networkit C++
+  - expose the properties (core, deg+, order) to Python using Cython
+  - test with small examples
+- [ ] understand Wilson's paper: https://www.cs.cmu.edu/~15859n/RelatedWork/RandomTrees-Wilson.pdf (3h)
+- [ ] `core-bfs`: BFS guided by core number in C++ (1h)
+
 
 
 20 h ~= 3 days
