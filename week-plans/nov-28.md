@@ -21,10 +21,19 @@ thinking:
 
 faster steiner tree sampling:
 
-- [ ] understand Wilson's paper: https://www.cs.cmu.edu/~15859n/RelatedWork/RandomTrees-Wilson.pdf (3h)
+
 - [ ] understand boost implementation http://www.boost.org/doc/libs/1_65_1/boost/graph/random_spanning_tree.hpp (0.5h)
 - [ ] does the same lemma (determinant) hold if we terminate the algorithm when all terminals are visited? (2h)
 
+experiment with larger dataset
+
+- [ ] reuse the steiner trees (0.5h)
+- [X] run grqc data (without improved scalability) (0.25h)
+- [ ] plot the result
+
+think: 
+
+- [ ] incremental update (1h)
 
 # tuesday
 
@@ -75,14 +84,29 @@ mapping of the variable in pseudo code to variable in C++
 # Wednesday
 
 - [ ] frog: integrate `core-decompose` of ICDE to networkit C++ (3h)
-  - compile/build networkit
-  - change the code (graph object) in ICDE to the classes in networkit C++
+  - [X] compile/build networkit
+  - [X] change the code (graph object) in ICDE to the classes in networkit C++
   - expose the properties (core, deg+, order) to Python using Cython
   - test with small examples
-- [ ] understand Wilson's paper: https://www.cs.cmu.edu/~15859n/RelatedWork/RandomTrees-Wilson.pdf (3h)
+- [X] understand Wilson's paper: https://www.cs.cmu.edu/~15859n/RelatedWork/RandomTrees-Wilson.pdf (3h)
 - [ ] `core-bfs`: BFS guided by core number in C++ (1h)
 
 
+## frog
 
-20 h ~= 3 days
+- learned got to know how to compile and test networkit code using `scons` and `gtest`
+- changed the data types in ICDE code to match networkit
+
+next step:
+
+- compile the ICDE code using scons
+- write test examples in gtest for `ComputeCore`
+- make the test pass
+
+## Wilson's paper
+
+didn't understand the proofs
+
+## 
+
 

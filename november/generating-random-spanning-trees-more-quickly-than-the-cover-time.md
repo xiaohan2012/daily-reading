@@ -4,10 +4,15 @@ https://dl.acm.org/citation.cfm?id=237880
 
 # algorithm
 
+## rooted version
+
 1. intially current tree only contains the root
 2. for each node, do random walk until it touches the current 
    - mark all the nodes on the walk as visited and they become part of tree
 
+## unrooted version
+
+randomly select a root with some caveats
 
 # don't understand
 
