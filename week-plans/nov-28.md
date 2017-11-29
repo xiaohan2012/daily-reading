@@ -15,14 +15,13 @@ algorithms to implement:
 
 thinking:
 
-- [ ] np-hardness of the core maximization problem (2h)
 
 ## active learning project
 
 faster steiner tree sampling:
 
 
-- [ ] understand boost implementation http://www.boost.org/doc/libs/1_65_1/boost/graph/random_spanning_tree.hpp (0.5h)
+- [X] understand boost implementation http://www.boost.org/doc/libs/1_65_1/boost/graph/random_spanning_tree.hpp (0.5h)
 - [ ] does the same lemma (determinant) hold if we terminate the algorithm when all terminals are visited? (2h)
 
 experiment with larger dataset
@@ -34,6 +33,8 @@ experiment with larger dataset
 think: 
 
 - [ ] incremental update (1h)
+  - upperbound the prediction error?
+  - is the prediction error monotonically decreasing? if so, we can use lazy evaluation
 
 # tuesday
 
@@ -105,8 +106,28 @@ next step:
 
 ## Wilson's paper
 
-didn't understand the proofs
+- got the idea of the algorithm
+- but didn't understand the proofs
 
-## 
+## comments on Cigmdent's comment
+
+- similar to delay-bfs. tree building incrementally
+  - connect to current tree or specific node?
+- based on Wilson's algorithm?
 
 
+# Thursday
+
+- [ ] frog: np-hardness of the core maximization problem (1h)
+  - reduction from maximum set cover?
+- [ ] Wilson's paper (1h)
+  - understand the probability proof
+- [ ] order-respecting steiner tree sampling algorithm based on Wilson's algorithm (1h)
+- [ ] CIKM 2017 paper skimming (graph related) (0.5h)
+- coding (2h): 
+  - [ ] compile the ICDE code using scons
+  - [ ] write test examples in gtest for `ComputeCore`
+  - [ ] make the test pass
+- [ ] discussion with Cigdem (1.5h)
+  - incremental steiner tree growing algorithm
+  - scalability problem: complexity and ideas to reduce it
