@@ -125,7 +125,7 @@ next step:
 - [ ] order-respecting steiner tree sampling algorithm based on Wilson's algorithm (1h)
 - [ ] CIKM 2017 paper skimming (graph related) (0.5h)
 - coding (2h): 
-  - [ ] compile the ICDE code using scons
+  - [X] compile the ICDE code using scons
   - [ ] write test examples in gtest for `ComputeCore`
   - [ ] make the test pass
 - [ ] discussion with Cigdem (1.5h)
