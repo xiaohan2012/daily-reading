@@ -17,6 +17,7 @@ when using `--gtest_filter`, escape `*` by `\*`
 
 for example: `./NetworKit-Tests-Dbg --gtest_filter=\*GlobalGTest\*`
 
+`google mock` allows you to create mock objects (`ASSERT_THAT`)
 
 # scons
 

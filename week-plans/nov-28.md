@@ -127,14 +127,12 @@ next step:
   - [here](november/cikm2017.md)
 - coding (2h): 
   - [X] compile the ICDE code using scons
-  - [ ] write test examples in gtest for `ComputeCore`
-  - [ ] make the test pass
-- [ ] discussion with Cigdem (1.5h)
+  - [X] write test examples in gtest for `ComputeCore`
+  - [X] make the test pass
+- [X] discussion with Cigdem (1.5h)
   - incremental steiner tree growing algorithm
   - scalability problem: complexity and ideas to reduce it
 
 ## Wilson's algorithm
 
 for steiner tree, can we analyze the probability distribution using cycle-popping technique? 
-
-## 
