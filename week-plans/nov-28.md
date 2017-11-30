@@ -118,12 +118,13 @@ next step:
 
 # Thursday
 
-- [ ] frog: np-hardness of the core maximization problem (1h)
-  - reduction from maximum set cover?
-- [ ] Wilson's paper (1h)
+- [X] frog: np-hardness of the core maximization problem (1h)
+  - reduction from maximum set cover? promising
+- [X] Wilson's paper (1h)
   - understand the probability proof
-- [ ] order-respecting steiner tree sampling algorithm based on Wilson's algorithm (1h)
-- [ ] CIKM 2017 paper skimming (graph related) (0.5h)
+- [X] order-respecting steiner tree sampling algorithm based on Wilson's algorithm (1h)
+- [X] CIKM 2017 paper skimming (graph related) (0.5h)
+  - [here](november/cikm2017.md)
 - coding (2h): 
   - [X] compile the ICDE code using scons
   - [ ] write test examples in gtest for `ComputeCore`
@@ -131,3 +132,9 @@ next step:
 - [ ] discussion with Cigdem (1.5h)
   - incremental steiner tree growing algorithm
   - scalability problem: complexity and ideas to reduce it
+
+## Wilson's algorithm
+
+for steiner tree, can we analyze the probability distribution using cycle-popping technique? 
+
+## 
