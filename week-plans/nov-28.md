@@ -5,9 +5,7 @@
 
 algorithms to implement:
 
-- `affected-nodes(G, e)`: list of affected nodes because of edge addition, related to ICDE 2017 paper (without change core number and change the `O` linked list) (1h)
-   - `find-nc`: together with `affected-nodes`, return the nc id that the affected nodes should move to
-- `initialize`: init all the data structures (1h)
+- [ ] `initialize`: init all the data structures (1h)
 - `candidate-edge` (1h)
 - `best-edge` (1h)
 - `maintain` (1h)
@@ -84,13 +82,12 @@ mapping of the variable in pseudo code to variable in C++
 
 # Wednesday
 
-- [ ] frog: integrate `core-decompose` of ICDE to networkit C++ (3h)
+- [X] frog: integrate `core-decompose` of ICDE to networkit C++ (3h)
   - [X] compile/build networkit
   - [X] change the code (graph object) in ICDE to the classes in networkit C++
   - expose the properties (core, deg+, order) to Python using Cython
   - test with small examples
 - [X] understand Wilson's paper: https://www.cs.cmu.edu/~15859n/RelatedWork/RandomTrees-Wilson.pdf (3h)
-- [ ] `core-bfs`: BFS guided by core number in C++ (1h)
 
 
 ## frog
@@ -136,3 +133,19 @@ next step:
 ## Wilson's algorithm
 
 for steiner tree, can we analyze the probability distribution using cycle-popping technique? 
+
+# Friday
+
+- [ ] frog: NP-hardness (1h)
+  - how to make sure only certain edges can be selected?
+- [ ] understand the probability proof and level stuff (1h)
+- [ ] cikm papers selection (0.5h)
+- [ ] plot the result (0.5h)
+- [ ] discussion with Lorenzo (1h)
+  - np-hardness
+- [ ] `core-bfs`: BFS guided by core number in C++ (1.5h)
+  - return a list of `nc`s and `nc_id`
+  - test case
+- [ ] `affected-nodes(G, e)`: list of affected nodes because of edge addition, related to ICDE 2017 paper (without change core number and change the `O` linked list) (1.5h)
+   - `find-nc`: together with `affected-nodes`, return the nc id that the affected nodes should move to
+   - test case
