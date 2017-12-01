@@ -140,7 +140,7 @@ for steiner tree, can we analyze the probability distribution using cycle-poppin
   - how to make sure only certain edges can be selected?
 - [X] understand the probability proof and level stuff (1h)
 - [ ] cikm papers selection (0.5h)
-- [ ] plot the result (0.5h)
+- [X] plot the result (0.5h)
 - [ ] discussion with Lorenzo (1h)
   - np-hardness
 - [ ] `core-bfs`: BFS guided by core number in C++ (1.5h)
@@ -157,11 +157,19 @@ for steiner tree, can we analyze the probability distribution using cycle-poppin
 
 ## wilson's algorithm
 
+
 december/sampling-steiner-tree-using-cycle-popping.md
+
+- cycle popping for steiner tree
 
 next step:
 
-- explain it clearly to Cigdem
-- document it formally
+- imagine explaining it clearly to Cigdem
+
+think about the following:
+
+- needs to understand the equivalance between cycle popping and LERW
+- does termination within finite time hold?
+- does the probability distribution hold?
 
 
