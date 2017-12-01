@@ -33,6 +33,7 @@ think:
 - [ ] incremental update (1h)
   - upperbound the prediction error?
   - is the prediction error monotonically decreasing? if so, we can use lazy evaluation
+  - can be apply the similar incremental techniques in optimal active learning paper?
 
 # tuesday
 
@@ -139,14 +140,14 @@ for steiner tree, can we analyze the probability distribution using cycle-poppin
 - [X] frog: NP-hardness (1h)
   - how to make sure only certain edges can be selected?
 - [X] understand the probability proof and level stuff (1h)
-- [ ] cikm papers selection (0.5h)
-- [X] plot the result (0.5h)
-- [ ] discussion with Lorenzo (1h)
+- [X ] cikm papers selection (0.5h)
+- [ ] plot the result (0.5h)
+- [X] discussion with Lorenzo (1h)
   - np-hardness
-- [ ] `core-bfs`: BFS guided by core number in C++ (1.5h)
+- [X] `core-bfs`: BFS guided by core number in C++ (1.5h)
   - return a list of `nc`s and `nc_id`
   - test case
-- [ ] `affected-nodes(G, e)`: list of affected nodes because of edge addition, related to ICDE 2017 paper (without change core number and change the `O` linked list) (1.5h)
+- [X] `affected-nodes(G, e)`: list of affected nodes because of edge addition, related to ICDE 2017 paper (without change core number and change the `O` linked list) (1.5h)
    - `find-nc`: together with `affected-nodes`, return the nc id that the affected nodes should move to
    - test case
 
@@ -164,7 +165,7 @@ december/sampling-steiner-tree-using-cycle-popping.md
 
 next step:
 
-- imagine explaining it clearly to Cigdem
+- imagine explaining it to Cigdem
 
 think about the following:
 
@@ -173,3 +174,11 @@ think about the following:
 - does the probability distribution hold?
 
 
+## discussion with Lorenzo
+
+- prove that adding more than 1 edges increase node's core number by at most 1
+- prove that adding the target edges is the most beneficial than adding other edges
+
+## extra: prediction error monotinicity check
+
+december/active-learning-prediction-error-monotonicity.md
