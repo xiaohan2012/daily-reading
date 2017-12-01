@@ -1,6 +1,3 @@
-
-
-
 # networkit note 
 
 ## primitive types
@@ -27,6 +24,27 @@ in `build.conf`:
   - `/usr/local/include/`, not `/usr/local/include/gtest`
 - `lib`: the directory where `gtest` so files lies
 
+
+# `Insert` function
+
+what's updated:
+
+- `mcd_`
+- `node_[src].rem`: remaining degree
+- 
+
+why is `heap_` useful?
+
+# CPP notes
+
+[const function](https://stackoverflow.com/questions/5973427/error-passing-xxx-as-this-argument-of-xxx-discards-qualifiers) 
+- `discards qualifiers` --> `breaks const correctness`
+
+# misc
+
+- `Treap.Delete` cannot quit the loop
+
+
 # links
 
 - [building googletest using cmake](https://stackoverflow.com/questions/13513905/how-to-setup-googletest-as-a-shared-library-on-linux)
@@ -34,11 +52,3 @@ in `build.conf`:
   - `ldconfig` to refresh the linker info
 - 
 
-
-# breakpoint
-
-`make main.o` gives 
-
-```
-main.cpp:61:27: error: invalid new-expression of abstract class type ‘NetworKit::core::GLIST’
-```
