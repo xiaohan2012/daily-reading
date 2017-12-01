@@ -9,11 +9,20 @@ it asks "how many" rather than "are there any" (decision)
 
 # decision problem and optimization problem
 
+## relation
+
+every optimization can be converted to a decision problem using binary search
+
+- https://courses.csail.mit.edu/6.006/spring11/lectures/lec25.pdf
+
+## prove NP-hardness of optimization problems
+
 to prove the NP-hardness of an optimization problem, we can recast it into a decision problem. 
 
 if the decision problem can be solved in polynomial time, then optimization problem can also be solved in poly time (using binary search). 
 
 note that some decision problem can be easy (polynomial time solvable) but the counting problem can be hard. 
+
 
 # proving \#P-completeness
 
