@@ -20,6 +20,17 @@ randomly select a root with some caveats
 
 it's a different algorihm on surface but essentially identical to the loop-erasing algorithm (not sure why)
 
+## equivalence of cycle popping and LERW
+
+- random walk is defined by the stacks and their top elements. 
+- we start with some vertex, do a random walk using the stacks. 
+
+if we re-visited vertex (cycle encountered), we pop the cycles on that path until no cycles exist, then we redo the random walk from the same vertex. 
+
+we repeat the above random walk until the walk touches the current tree (initially the root) and we add the visited nodes and edges to the current tree. 
+
+then we switch to another unvisited node. 
+  
 ## main idea
 
 - each non-root node is a associated with a stack with its neighbors (randomly generated
@@ -45,6 +56,7 @@ the cycle being popped is independent with the tree be generated.
 
 example: disconnected components
 
+
 # learned
 
 some terms:
@@ -57,11 +69,6 @@ dealing non-stochastic weighted graph:
 - normalize the edge weights
 - adding cycling to itsself (unrooted version)
 
-# adapting to steiner tree
-
-replace 2 by:
-
-- "for each terminal nodes", instead of "for each node"
 
 # what's missing
 
@@ -70,3 +77,4 @@ replace 2 by:
 # links 
 
 - http://www.bigredbits.com/archives/226
+- http://staff.utia.cas.cz/swart/present/UST.pdf (maybe I should go through it)

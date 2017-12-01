@@ -136,9 +136,9 @@ for steiner tree, can we analyze the probability distribution using cycle-poppin
 
 # Friday
 
-- [ ] frog: NP-hardness (1h)
+- [X] frog: NP-hardness (1h)
   - how to make sure only certain edges can be selected?
-- [ ] understand the probability proof and level stuff (1h)
+- [X] understand the probability proof and level stuff (1h)
 - [ ] cikm papers selection (0.5h)
 - [ ] plot the result (0.5h)
 - [ ] discussion with Lorenzo (1h)
@@ -149,3 +149,19 @@ for steiner tree, can we analyze the probability distribution using cycle-poppin
 - [ ] `affected-nodes(G, e)`: list of affected nodes because of edge addition, related to ICDE 2017 paper (without change core number and change the `O` linked list) (1.5h)
    - `find-nc`: together with `affected-nodes`, return the nc id that the affected nodes should move to
    - test case
+
+## frog
+
+- fixed the graph construction
+- the other direction still to be proved
+
+## wilson's algorithm
+
+december/sampling-steiner-tree-using-cycle-popping.md
+
+next step:
+
+- explain it clearly to Cigdem
+- document it formally
+
+
