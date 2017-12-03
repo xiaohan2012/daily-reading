@@ -26,7 +26,7 @@ experiment with larger dataset
 
 - [ ] reuse the steiner trees (0.5h)
 - [X] run grqc data (without improved scalability) (0.25h)
-- [ ] plot the result
+- [X] plot the result
 
 think: 
 
@@ -182,3 +182,26 @@ think about the following:
 ## extra: prediction error monotinicity check
 
 december/active-learning-prediction-error-monotonicity.md
+
+# sunday
+
+- [X] plan for next week (1h)
+- [X] email for Sa's studio
+- [X] look at housing (1h)
+- [X] draw logo (1h)
+- [X] video for dawei (3h+1h)
+
+# summary
+
+core maximization
+
+- idea of proving np-hardness
+- integrated ICDE code to networkit
+- some other functions
+
+active learning
+
+- feasibility of closure based sampling
+- using wilson's algorithm
+- experiment on grqc dataset (prediction error based is the best w.r.t median however, need more rounds for stability)
+- some idea on monotonicity
