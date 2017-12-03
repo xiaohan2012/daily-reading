@@ -104,6 +104,10 @@ pre-training should be done on autoencoder
 - `l2_param`:  a very important one. for example, `0.001` obviously is better than `0.1`and `1e-5`. 
 - `epochs` and `pretrain_epochs` do not play an important role
 
+## link prediction
+
+- 50 epochs better than 25 epochs
+- `l2_param=0.000100`
 
 
 # questions
