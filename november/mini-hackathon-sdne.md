@@ -20,6 +20,9 @@ refer to [this](https://github.com/palash1992/GEM/blob/master/gem/embedding/sdne
 # links
 
 - [initialize embedding with values](https://github.com/fchollet/keras/issues/853#issuecomment-149644701)
+- [seaborn scatter plot](https://chrisalbon.com/python/seaborn_scatterplot.html)
+  - to hide axis: put `despine` after the plot call
+  - `plt.xticks([])` and `plt.xlabel('')`
 
 ## code and papers
 
@@ -83,15 +86,28 @@ pre-training should be done on autoencoder
 
 # todo
 
-- [ ] cross validation on the visualization of 20newsgroups
+- [X] use computation graph to check what the different loss variables
+  - where is `l2_param` reflected
+  - **answer**: reflected in `loss_1`
+- [X] use batch iterator on all edges of 20newsgroups dataset
+- [X] tsne hyperparameter tuning: `perplexity` and `n_iteration`
+  - https://stackoverflow.com/questions/41665390/is-it-possible-to-visualize-keras-embeddings-in-tensorboard
+- [X] cross validation on the visualization of 20newsgroups
 - [ ] tensorboard visualization of label embedding
 - [ ] link prediction on test data
 - [ ] write blog article
 
+# hyperparamter tuning
+
+## 20newsgroup
+
+- `l2_param`:  a very important one. for example, `0.001` obviously is better than `0.1`and `1e-5`. 
+- `epochs` and `pretrain_epochs` do not play an important role
+
+
+
 # questions
 
-- what are `loss`, `decoding-layer-0_loss_1`, `decoding-layer-0_loss_2` and `lambda_1_loss`?
-- where is `l2_param` reflected?
 - for link prediction on grqc dataset, what if removing edges cause disconnected component?
   - also how to deal with directed edges?
 - why grqc have 28980 edges in the paper while on snap, it only has half?
