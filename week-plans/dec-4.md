@@ -39,11 +39,10 @@ np-hardness (3h)
 
 # monday
 
-- [ ] frog: if correct, make the algorithm and proof formal (wilson's variant) (2h)
+- [X] frog: if correct, make the algorithm and proof formal (wilson's variant) (2h)
   - [X] try to understand equivalence between cycle popping and LERW again
   - [X] the probability part, why `\sum P(C)` is a constant? 
   - if possible write down the confusions, let's discuss with Cigdema and Aris
-  - refer to [this](december/sampling-steiner-tree-using-cycle-popping.md)
 - [ ] https://resources.mpi-inf.mpg.de/departments/d1/teaching/ws11/SGT/Lecture5.pdf (1h)
 - [ ] fix bug in `treap.remove` (1h)
 - [ ] `initialize`: init all the data structures (1h)
@@ -54,3 +53,7 @@ np-hardness (3h)
 ## frog
 
 `\sum_C P(C) = 1` because of probability theory
+
+formalized the idea in [this](december/sampling-steiner-tree-using-cycle-popping.md)
+
+## 
