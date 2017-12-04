@@ -43,11 +43,11 @@ np-hardness (3h)
   - [X] try to understand equivalence between cycle popping and LERW again
   - [X] the probability part, why `\sum P(C)` is a constant? 
   - if possible write down the confusions, let's discuss with Cigdema and Aris
-- [ ] https://resources.mpi-inf.mpg.de/departments/d1/teaching/ws11/SGT/Lecture5.pdf (1h)
+- [X] https://resources.mpi-inf.mpg.de/departments/d1/teaching/ws11/SGT/Lecture5.pdf (1h)
 - [ ] fix bug in `treap.remove` (1h)
 - [ ] `initialize`: init all the data structures (1h)
 - [ ] `candidate-edge` (1h)
-- [ ] abstract reading cikm (0.5) 
+- [X] abstract reading cikm (0.5) 
   - get the main idea and take down notes
 
 ## frog
@@ -56,4 +56,13 @@ np-hardness (3h)
 
 formalized the idea in [this](december/sampling-steiner-tree-using-cycle-popping.md)
 
-## 
+## markov chain reading
+
+december/thomas-random-walks-and-markov-chains.md
+
+## "bug" in `treap.remove`
+
+cannot understand the `Treap` code. just avoided the bug without fixing it. 
+
+need to under how node insertion/deletion works for binary search tree.
+
