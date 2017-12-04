@@ -16,28 +16,32 @@ randomly select a root with some caveats
 
 
 
-# cycle popping proof
+# cycle popping
 
-it's a different algorihm on surface but essentially identical to the loop-erasing algorithm (not sure why)
-
-## equivalence of cycle popping and LERW
-
-- random walk is defined by the stacks and their top elements. 
-- we start with some vertex, do a random walk using the stacks. 
-
-if we re-visited vertex (cycle encountered), we pop the cycles on that path until no cycles exist, then we redo the random walk from the same vertex. 
-
-we repeat the above random walk until the walk touches the current tree (initially the root) and we add the visited nodes and edges to the current tree. 
-
-then we switch to another unvisited node. 
-  
-## main idea
+## cycle popping algorithm
 
 - each non-root node is a associated with a stack with its neighbors (randomly generated
 - on top of each stack, it defines an directed edge. together, all edges define a directed graph
 - the graph can be a spanning tree or contains cycles
 
 if it contains cycles, pop the stacks associated with the cycle. continue the cycle popping until non cycle is found. 
+
+it's a different algorihm on surface but essentially identical to the loop-erasing algorithm 
+
+## equivalence of cycle popping and LERW
+
+
+- random walk is defined by the stacks and their top elements. 
+- we start with some vertex, do a random walk using the stacks. 
+
+if cycles are detected (revisit some vertex), we ignore the cycle and start from the same vertex again until it touches the current tree. 
+
+"Ignoring" internally pop the cycle (redefine the random walks on the nodes in the cycle). 
+
+It's also equivalent to loop erasing part of the LERW algorithm. 
+
+Note that the order of the cycles being removed does not matter (proved later). 
+  
 
 ## main theorems
 
@@ -55,7 +59,6 @@ the cycle being popped is independent with the tree be generated.
 ## infinite number of cycles
 
 example: disconnected components
-
 
 # learned
 

@@ -40,8 +40,8 @@ np-hardness (3h)
 # monday
 
 - [ ] frog: if correct, make the algorithm and proof formal (wilson's variant) (2h)
-  - [ ] try to understand equivalence between cycle popping and LERW again
-  - [ ] the probability part, why `\sum P(C)` is a constant? 
+  - [X] try to understand equivalence between cycle popping and LERW again
+  - [X] the probability part, why `\sum P(C)` is a constant? 
   - if possible write down the confusions, let's discuss with Cigdema and Aris
   - refer to [this](december/sampling-steiner-tree-using-cycle-popping.md)
 - [ ] https://resources.mpi-inf.mpg.de/departments/d1/teaching/ws11/SGT/Lecture5.pdf (1h)
@@ -50,3 +50,7 @@ np-hardness (3h)
 - [ ] `candidate-edge` (1h)
 - [ ] abstract reading cikm (0.5) 
   - get the main idea and take down notes
+
+## frog
+
+`\sum_C P(C) = 1` because of probability theory
