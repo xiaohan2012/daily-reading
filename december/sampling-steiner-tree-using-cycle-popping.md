@@ -7,7 +7,7 @@ adapting from spanning tree to steiner tree
 
 replace 2 in Algorithm 1 by:
 
->>> "for each terminal nodes", instead of "for each node"
+> "for each terminal nodes", instead of "for each node"
 
 [complete algorithm](http://193.166.24.212/loop_erasing.pdf)
 
@@ -15,8 +15,9 @@ replace 2 in Algorithm 1 by:
 
 stacks are defined in the same way as the spanning tree version
 
->>> 1) pop until there are no cycles involved with terminals nodes, resulting in $`G_s`$
->>> 2) return the edges that are traversed on $`G_s`$ starting from each terminal to the root, resuling in $`G_s^{'}`$
+> 1) pop until there are no cycles involved with terminals nodes, resulting in $`G_s`$
+
+> 2) return the edges that are traversed on $`G_s`$ starting from each terminal to the root, resuling in $`G_s^{'}`$
 
 
 **lemma**: $`G_s^{'}`$ returned by the above algorithm is a steiner tree. 
