@@ -12,11 +12,6 @@ code
 - [ ] experiment on grqc graph
 - [ ] present result to Lorenzo and Francesco (1h)
 
-np-hardness (3h)
-
-- [ ] prove that adding more than 1 edges increase node's core number by at most 1
-- [ ] prove that adding the target edges is the most beneficial than adding other edges
-
 
 ## active learning
 
@@ -26,14 +21,8 @@ np-hardness (3h)
 - [ ] think about incremental update (reusing information) and make it formal (2h) 
   - understand what's used in the mccalum's paper
 - [ ] closure-based sampling, what's the challenge to prove probability distribution (1h)
-- [ ] meeting:
-  - show the experiment result
-  - present the scalability idea (monotonicty and incremental update)
-  - wilson's algorithm
 - [ ] reading
-  - https://resources.mpi-inf.mpg.de/departments/d1/teaching/ws11/SGT/Lecture6.pdf (1h)
   - https://resources.mpi-inf.mpg.de/departments/d1/teaching/ws11/SGT/Lecture7.pdf (1h)
-
 
 ## paper reading
 
@@ -45,8 +34,6 @@ np-hardness (3h)
   - if possible write down the confusions, let's discuss with Cigdema and Aris
 - [X] https://resources.mpi-inf.mpg.de/departments/d1/teaching/ws11/SGT/Lecture5.pdf (1h)
 - [ ] fix bug in `treap.remove` (1h)
-- [ ] `initialize`: init all the data structures (1h)
-- [ ] `candidate-edge` (1h)
 - [X] abstract reading cikm (0.5) 
   - get the main idea and take down notes
 
@@ -66,3 +53,16 @@ cannot understand the `Treap` code. just avoided the bug without fixing it.
 
 need to under how node insertion/deletion works for binary search tree.
 
+# Tuesday
+
+- frog: hardness proof, if correct, make it formal
+  - [ ] prove that adding more than 1 edges increase node's core number by at most 1 (1h)
+  - [ ] prove that adding the target edges is the most beneficial than adding other edges (1h)
+- [ ] https://resources.mpi-inf.mpg.de/departments/d1/teaching/ws11/SGT/Lecture6.pdf (1h)
+- cikm 2017 (0.5h)
+- [ ] `initialize`: init all the data structures (1.5h)
+- [ ] `candidate-edge` (1h)
+- [ ] meeting (1h):
+  - show the experiment result
+  - present the scalability idea (monotonicty and incremental update)
+  - wilson's algorithm
