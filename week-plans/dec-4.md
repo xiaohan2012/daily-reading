@@ -4,9 +4,7 @@
 
 code
 
-- [ ] `best-edge` (1h)
 - [ ] `maintain` (1h)
-- [ ] `greedy` (1h)
 - [ ] exhausive search (2h)
 - [ ] experiment on dolphin graph (2h)
 - [ ] experiment on grqc graph
@@ -15,14 +13,9 @@ code
 
 ## active learning
 
-- [ ] reuse the steiner trees (1h)
-  - both query and inference algorithm
-- [ ] run grqc 500 rounds with 500 samples (0.5h)
-- [ ] think about incremental update (reusing information) and make it formal (2h) 
-  - understand what's used in the mccalum's paper
-- [ ] closure-based sampling, what's the challenge to prove probability distribution (1h)
-- [ ] reading
-  - https://resources.mpi-inf.mpg.de/departments/d1/teaching/ws11/SGT/Lecture7.pdf (1h)
+- [ ] closure version, how to assign the edge weights? is it equivalent to the wilson's algorithm
+- formalize wilson's proof
+- read the non-uniform random spanning tree generation. 
 
 ## paper reading
 
@@ -71,6 +64,18 @@ need to under how node insertion/deletion works for binary search tree.
 
 next:
 
-- closure version, how to assign the edge weights? is it equivalent to the wilson's algorithm
-- formalize wilson's proof
-- read the non-uniform random spanning tree generation. 
+
+
+# Wednesday
+
+- [ ] frog: think about incremental update (reusing information) and make it formal (1h) 
+  - understand what's used in the mccalum's paper
+- [ ] reuse the steiner trees (1h)
+  - both query and inference algorithm
+  - speed comparison for inference algorithm
+- [ ] run grqc 500 rounds, 500 samples and 500 queries (0.5h)
+- [ ] https://resources.mpi-inf.mpg.de/departments/d1/teaching/ws11/SGT/Lecture7.pdf (1h)
+- [ ] `best-edge` (1h)
+- [ ] `greedy` (1h)
+- [ ] cikm 2017 (0.5h)
+- [ ] lorenzo discussion (1h)
