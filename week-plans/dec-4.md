@@ -56,13 +56,21 @@ need to under how node insertion/deletion works for binary search tree.
 # Tuesday
 
 - frog: hardness proof, if correct, make it formal
-  - [ ] prove that adding more than 1 edges increase node's core number by at most 1 (1h)
-  - [ ] prove that adding the target edges is the most beneficial than adding other edges (1h)
-- [ ] https://resources.mpi-inf.mpg.de/departments/d1/teaching/ws11/SGT/Lecture6.pdf (1h)
-- cikm 2017 (0.5h)
-- [ ] `initialize`: init all the data structures (1.5h)
-- [ ] `candidate-edge` (1h)
-- [ ] meeting (1h):
+  - [X] prove that adding more than 1 edges increase node's core number by at most 1 
+  - [X] prove that adding the target edges is the most beneficial than adding other edges
+- [X] https://resources.mpi-inf.mpg.de/departments/d1/teaching/ws11/SGT/Lecture6.pdf (1h)
+- [X] cikm 2017 (0.5h)
+- [X] `initialize`: init all the data structures (1.5h)
+- [X] `candidate-edge` (1h)
+- [X] meeting (1h):
   - show the experiment result
   - present the scalability idea (monotonicty and incremental update)
   - wilson's algorithm
+
+## discussion
+
+next:
+
+- closure version, how to assign the edge weights? is it equivalent to the wilson's algorithm
+- formalize wilson's proof
+- read the non-uniform random spanning tree generation. 
