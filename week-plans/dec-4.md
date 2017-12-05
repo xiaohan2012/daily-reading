@@ -16,6 +16,7 @@ code
 - [ ] closure version, how to assign the edge weights? is it equivalent to the wilson's algorithm
 - formalize wilson's proof
 - read the non-uniform random spanning tree generation. 
+- coding Wilson's variant
 
 ## paper reading
 
