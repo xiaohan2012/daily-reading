@@ -4,9 +4,8 @@
 
 code
 
-- [ ] `maintain` (1h)
+- [ ] visualize the result (added edge, red)
 - [ ] exhausive search (2h)
-- [ ] experiment on dolphin graph (2h)
 - [ ] experiment on grqc graph
 - [ ] present result to Lorenzo and Francesco (1h)
 
@@ -14,8 +13,6 @@ code
 ## active learning
 
 - [ ] closure version, how to assign the edge weights? is it equivalent to the wilson's algorithm
-- formalize wilson's proof
-- read the non-uniform random spanning tree generation. 
 - coding Wilson's variant
 
 ## paper reading
@@ -69,14 +66,37 @@ next:
 
 # Wednesday
 
-- [ ] frog: think about incremental update (reusing information) and make it formal (1h) 
+- [X] frog: think about incremental update (reusing information) and make it formal (1h) 
   - understand what's used in the mccalum's paper
 - [ ] reuse the steiner trees (1h)
   - both query and inference algorithm
   - speed comparison for inference algorithm
-- [ ] run grqc 500 rounds, 500 samples and 500 queries (0.5h)
-- [ ] https://resources.mpi-inf.mpg.de/departments/d1/teaching/ws11/SGT/Lecture7.pdf (1h)
-- [ ] `best-edge` (1h)
+- [X] https://resources.mpi-inf.mpg.de/departments/d1/teaching/ws11/SGT/Lecture7.pdf (1h)
+- [X] `best-edge` (1h)
 - [ ] `greedy` (1h)
+- [X] cikm 2017 (0.5h)
+- [X] lorenzo discussion (1h)
+
+## frog
+
+december/mccallum-incremental-training.md
+
+idea basically the same
+
+## discussion
+
+need to make sure that after removing its neighbors, set nodes and stub nodes, its degree is bounded. 
+
+# Thursday
+
+- frog: [ ] read the non-uniform random spanning tree generation (1.5h)
+- [ ] understand the discussion (0.5h)
+- [ ] create an illustration and finalize the proof (1h)
 - [ ] cikm 2017 (0.5h)
-- [ ] lorenzo discussion (1h)
+- [ ] `maintain` (1h)
+- [ ] `greedy` (1h)
+- [ ] python interface and try on karate graph (1h)
+- [ ] discussion with Lorenzo (1h)
+
+
+
