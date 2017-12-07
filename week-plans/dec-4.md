@@ -2,6 +2,7 @@
 
 ## core maximization
 
+
 code
 
 - [ ] visualize the result (added edge, red)
@@ -89,14 +90,44 @@ need to make sure that after removing its neighbors, set nodes and stub nodes, i
 
 # Thursday
 
-- frog: [ ] read the non-uniform random spanning tree generation (1.5h)
-- [ ] understand the discussion (0.5h)
-- [ ] create an illustration and finalize the proof (1h)
-- [ ] cikm 2017 (0.5h)
+- frog: [X] read the non-uniform random spanning tree generation (1.5h)
+- [X] understand the discussion (0.5h)
+- [X] create an illustration and finalize the proof (1h)
+- [X] cikm 2017 (0.5h)
 - [ ] `maintain` (1h)
 - [ ] `greedy` (1h)
 - [ ] python interface and try on karate graph (1h)
-- [ ] discussion with Lorenzo (1h)
+- [X] discussion with Lorenzo (1h)
 
+## frog
 
+december/non-uniform-random-spanning-tree-on-weighted-graphs.md
 
+## viz
+
+- https://docs.google.com/drawings/d/1zkugV1PaxpSsJWV1-sakt7csSHwk2q9k5EdVvUe0u8M/edit
+- https://docs.google.com/drawings/d/1ntHYlC7aq7XJWZcSTSmoH8xBxnTnMwaw8rkWGK-1Gl8/edit
+- https://docs.google.com/drawings/d/1-dvVDV8IxJJfAv89GXO7zBhaEuy4wosw5hyXk24LdPc/edit
+
+## greedy code
+
+inserting intra-core edges, should return a new component id
+
+`fakeinsert`, the new nc id that should be returned
+
+- for inter-core edges, it's added to the nc of the high end node
+- for itner-core edges:
+  - if all nodes in nc are updated, nc id can remain either the same or to the new nc id
+  - if not all nodes in nc are updated, then a new nc is created. 
+
+let's just re-run the core-guided bfs for simplicity
+
+# Friday
+
+- [ ] frog: formalize wilson's algorithm and proof (1.5h)
+- [ ] non-uniform random spanning tree, automaton theory (1h)
+- [ ] polish the proof, specify which nodes' core are increased and how much, which nodes' core stay the same (1h)
+- [ ] `maintain` (1h)
+- [ ] `greedy` (1h)
+- [ ] python interface and try on karate graph (1h)
+- [ ] cikm 2017 (0.5h)
