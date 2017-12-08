@@ -8,6 +8,18 @@ given some weighted graph, if we define the transition matrix of some random wal
 
 then, using Broder's algorithm, the tree genereted is distributed by the product of the edge weight. 
 
+# automaton concepts
+
+- state, transition
+- language: a sequence of states that the antomaton accepts
+- accepts/recognizes: by running the state transition, it finally enters th state "SUCCESS" (terminates)
+
+## example
+
+parsing the string "nice"
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Fsm_parsing_word_nice.svg/440px-Fsm_parsing_word_nice.svg.png)
+
 # main idea
 
 using automaton theory (not sure why)
