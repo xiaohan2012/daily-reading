@@ -4,7 +4,41 @@ https://dl.acm.org/citation.cfm?id=237880
 
 # algorithm
 
+## general setting
+
+- weighted directed graph
+- returns a directed tree
+- goal: the tree probability is prop to product the edge weights
+
+## preprocessing
+
+goal: convert the graph into a markov chain
+
+if the graph is stochastic, good. 
+otherwise..
+
+**rooted version**: 
+
+our goal: $`P(T) \propto \prod_{(u, v) \in T, u \neq r} w(u, v)`$.
+
+the modification on $`w`$: normalize each edge's weight to $`w^{'}(u, v) = w(u, v) / \sum_{x \in N(u)} w(u, x) = w(u, v) / w(u)`$
+
+if we apply the same goal on this new graph, then 
+
+$`P^{'}(T) \propto \prod_{(u, v) \in T, u \neq r} w^{'}(u, v) = \prod_{(u, v) \in T, u \neq r} w(u, v) / w(u)`$
+
+as we know $`\prod_{(u, v) \in T, u \neq r} 1 / w(u)`$ is a constant, therefore $`P^{'}(T) \propto \prod_{(u, v) \in T, u \neq r} w(u, v) = P(T)`$. 
+
+**unrooted version**
+
+normalization $`w^{'}(u, v) = w(u, v) / \text{max}_u w(u)`$
+
+$`P^{'}(T) \propto \prod_{(u, v) \in T, u \neq r} w^{'}(u, v) = \prod_{(u, v) \in T, u \neq r} w(u, v) / \text{max}_u w(u) \propto \prod_{(u, v) \in T, u \neq r} w(u, v) = P(T)`$
+
+note that to make it stochastic, we need to make up for the "missing edges", thus creating self-loops is a natural decision. 
+
 ## rooted version
+
 
 1. intially current tree only contains the root
 2. for each node, do random walk until it touches the current 
@@ -73,8 +107,9 @@ dealing non-stochastic weighted graph:
 - adding cycling to itsself (unrooted version)
 
 
-# what's missing
+# I don't understand..
 
+- without root version
 - running time analysis (hitting time)
 
 # links 
