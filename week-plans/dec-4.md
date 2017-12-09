@@ -5,10 +5,6 @@
 
 code
 
-- [ ] visualize the result (added edge, red)
-- [ ] exhausive search (2h)
-- [ ] experiment on grqc graph
-- [ ] present result to Lorenzo and Francesco (1h)
 
 
 ## active learning
@@ -58,12 +54,6 @@ need to under how node insertion/deletion works for binary search tree.
   - show the experiment result
   - present the scalability idea (monotonicty and incremental update)
   - wilson's algorithm
-
-## discussion
-
-next:
-
-
 
 # Wednesday
 
@@ -124,10 +114,29 @@ let's just re-run the core-guided bfs for simplicity
 
 # Friday
 
-- [ ] frog: formalize wilson's algorithm and proof (1.5h)
+- [X] frog: formalize wilson's algorithm and proof (1.5h)
 - [ ] non-uniform random spanning tree, automaton theory (1h)
-- [ ] polish the proof, specify which nodes' core are increased and how much, which nodes' core stay the same (1h)
+- [X] polish the proof, specify which nodes' core are increased and how much, which nodes' core stay the same (1h)
 - [ ] `maintain` (1h)
 - [ ] `greedy` (1h)
 - [ ] python interface and try on karate graph (1h)
 - [ ] cikm 2017 (0.5h)
+
+## frog
+
+understood pre-processing for non-stochastic version. 
+
+to do:
+
+- [ ] time analysis
+- [ ] unrooted version
+
+## greedy: 
+
+big mistake: replacing `int` by `count` causes a lot of problem
+
+what's missing in the doc?
+
+- what's the new nc that should be moved to?
+- update of `bucket_1` and `bucket_2`
+- update of `usable`, which nodes are affected?
