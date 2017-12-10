@@ -25,16 +25,21 @@ coding:
 reading:
 
 - [ ] time analysis of wilson algorithm
-- [ ] unrooted version of wilson algorithm
 - [ ] non-uniform random spanning tree (understand the proof)
 
 
 # Sunday
 
-- frog: [ ] think about the nc id that should be attached (1h)
-- [ ] implement the above (1.5h)
-- [ ] cikm (0.5h)
-- [ ] `maintain` and `greedy` (2h)
-- [ ] python interface and try on karate graph (1h)
+- frog: [X] think about the nc id that should be attached (1h)
 
-# 
+
+# Monday
+
+- [ ] frog: unrooted version of wilson algorithm (1h)
+- [ ] make the test pass (3 h)
+- [ ] python interface and try on karate graph (1h)
+- [ ] cikm (0.5h)
+- [ ] meeting with Bapsite (1h)
+- [ ] meeting with Francesco and Lorenzo (1h)
+
+
