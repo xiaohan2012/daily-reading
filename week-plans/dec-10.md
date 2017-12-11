@@ -51,3 +51,15 @@ reading:
 - [ ] update the document
 
 ended up with more tests to pass
+
+## discussion
+
+- [ ] study inapproximability of np-hard problem
+
+# Tuesday
+
+- problem formulation
+- np-hardness, sub/super modularity (proof in appendix)
+- greedy algorithm
+- pruning strategy
+- incremental update
