@@ -35,11 +35,19 @@ reading:
 
 # Monday
 
-- [ ] frog: unrooted version of wilson algorithm (1h)
+- [X] frog: unrooted version of wilson algorithm (1h)
 - [ ] make the test pass (3 h)
 - [ ] python interface and try on karate graph (1h)
-- [ ] cikm (0.5h)
+- [X] cikm (0.5h)
 - [ ] meeting with Bapsite (1h)
-- [ ] meeting with Francesco and Lorenzo (1h)
+- [X] meeting with Francesco and Lorenzo (1h)
 
 
+## note
+
+- [X] remove lemma 1 in document
+- [ ] pseudo code: reflect using the edge score cache
+- [ ] get candidate should track which candidate are returned
+- [ ] update the document
+
+ended up with more tests to pass
