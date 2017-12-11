@@ -46,8 +46,14 @@ note that to make it stochastic, we need to make up for the "missing edges", thu
 
 ## unrooted version
 
-randomly select a root with some caveats
+the paper claims that sampling an unrooted spanning tree can be done by:
 
+1. sample a root w.r.t the stationary distribution
+2. call the rooted sampling process
+
+I'm not sure why Figure 2 adopts a different approach, since the above is more straightforward. 
+
+meanwhile, uniformally sampling a root should also give the same result for both weighted and unweighted graphs (using Broder's proof from directed tree to undirected tree, the summation). 
 
 
 # cycle popping
