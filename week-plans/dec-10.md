@@ -84,3 +84,35 @@ what to do next:
 - [ ] use Python for greedy algorithm and wrap the core update functionality since it should be the bottleneck.
   - maybe check how Cython is used
 
+## discussion with Cigdem
+
+to do during Christmas
+
+- [ ] transitive closure documentation
+- [ ] random spanning tree using coupling from the past paper (Section 6 and 7)
+- [ ] code the loop erased random walk and transitive closure
+- experiment: 
+  - [ ] comparison of different sampling approach, do they accord well with the desired distribution?
+  - [ ] active learning on larger graphs
+  - [ ] effect of sampling approach on sampling methods
+
+## dicussion with Lorenzo
+
+- [ ] fix hardness proof, using the frequency bounded version of set cover
+  - http://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/download/9674/9513
+  - `f \le max|S|`, where f is the frequency
+- when compansating edges, consider node-wise and use degree (c_{max}+2)or core to upperbound the number of edges. 
+
+## discussion with Francesco
+
+- [ ] disucss with Aris and ask if he wants to join. 
+- [ ] weak point: greedy is too simple
+
+possible directions:
+
+- pruning for edge batches?
+- figure of example of greedy's bad performance
+- how many edges are requried to increase the core of a subgraph?
+
+
+
