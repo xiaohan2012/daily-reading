@@ -39,7 +39,7 @@ reading:
 - [ ] make the test pass (3 h)
 - [ ] python interface and try on karate graph (1h)
 - [X] cikm (0.5h)
-- [ ] meeting with Bapsite (1h)
+- [X] meeting with Bapsite (1h)
 - [X] meeting with Francesco and Lorenzo (1h)
 
 
@@ -47,7 +47,7 @@ reading:
 
 - [X] remove lemma 1 in document
 - [ ] pseudo code: reflect using the edge score cache
-- [ ] get candidate should track which candidate are returned
+- [X] get candidate should track which candidate are returned
 - [ ] update the document
 
 ended up with more tests to pass
@@ -63,3 +63,24 @@ ended up with more tests to pass
 - greedy algorithm
 - pruning strategy
 - incremental update
+
+## np-hardness proof mistakes
+
+- [ ] a node's core might increase if we don't constrain the edges being added
+
+solution: we don't have to compansate edges for nodes that are already compansated. 
+
+- [ ] make sure that selecting sets do not mistakenly include extra elements. 
+
+# Wednesday
+
+- [X] polished document
+- [X] thinking `update_subcore` and `update_bucket`
+  - [doc](december/core-max-incremental-update.md)
+
+
+what to do next:
+
+- [ ] use Python for greedy algorithm and wrap the core update functionality since it should be the bottleneck.
+  - maybe check how Cython is used
+
