@@ -94,7 +94,7 @@ pre-training should be done on autoencoder
   - https://stackoverflow.com/questions/41665390/is-it-possible-to-visualize-keras-embeddings-in-tensorboard
 - [X] cross validation on the visualization of 20newsgroups
 - [ ] tensorboard visualization of label embedding
-- [ ] link prediction on test data
+- [X] link prediction on test data
 - [ ] write blog article
 
 # hyperparamter tuning
@@ -107,8 +107,15 @@ pre-training should be done on autoencoder
 ## link prediction
 
 - 50 epochs better than 25 epochs
-- `l2_param=0.000100`
+- `l2_param=0.0001`
 
+## embedding visualization
+
+
+- [how to add labels to tensorboard](https://github.com/anujshah1003/Tensorboard-own-image-data-image-features-embedding-visualization/blob/master/own-data-embedding-visualization.py)
+
+- trained 100 epochs
+- when visualize in tensorboard, use `sphereize data`
 
 # questions
 

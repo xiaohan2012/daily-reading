@@ -10,3 +10,11 @@ documentation: https://www.tensorflow.org/versions/r0.12/how_tos/embedding_viz/
 - to show by category color, create a column with integers representing the labels in the `tsv` file
 
 - `du -hs * | sort -h`: sort by size
+
+# update (dec-14, 2017)
+
+the main idea:
+
+- save the variable into the checkpoint
+- set `embedding.tensor_name`
+- set `embedding.metadata_path`

@@ -116,3 +116,9 @@ possible directions:
 
 
 
+# week summary
+
+- np-hardness proof: cases that break the proof and possible ways to fix it
+
+- cleaned the document
+- 
