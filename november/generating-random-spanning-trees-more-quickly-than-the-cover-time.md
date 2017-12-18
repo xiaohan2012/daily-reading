@@ -55,6 +55,23 @@ I'm not sure why Figure 2 adopts a different approach, since the above is more s
 
 meanwhile, uniformally sampling a root should also give the same result for both weighted and unweighted graphs (using Broder's proof from directed tree to undirected tree, the summation). 
 
+**update Dec, 18, 2018**
+
+this above approach can be used to sample undirected and Eularian graphs.
+
+however, for general directed graphs, image adding a dummy vertex $`v^{*}`$ that every node connects to. and we want to sample a tree rooted at $`v^{*}`$. 
+
+if removing $`v^{*}`$ gives a forest (multiple nodes connect to $`v^{*}`$), then it's not a valid tree. otherwise, the remaining is a spanning tree.  
+
+in other words, the only node that connects to $`v^{*}`$ is the root. 
+
+in the new algorithm, for each node it has $`\delta`$ probability to connect to $`v^{*}`$ and $`1-\delta`$ probability to visit other nodes. 
+
+if there are multiple nodes visiting $`v^{*}`$, then the tree is invalid. and we make $`\delta`$ smaller to try again. 
+
+the smaller the $`\delta`$, the more likely the algorithm succeeds, however, the longer time it takes to run. 
+
+
 
 # cycle popping
 
@@ -100,6 +117,20 @@ the cycle being popped is independent with the tree be generated.
 
 example: disconnected components
 
+# runnning time analysis
+
+definition:
+
+- $`E_i T_j`$: expected number of steps to start from $`i`$ to reach $`j`$ using random walk
+- mean commute time between $`i`$ and $`j`$: $`E_i T_j + E_j T_i`$
+- mean hitting time, the time to go from a $`\pi`$-random node to another $`\pi`$-random node: $`\sum\limits_{ij} \pi(i) \pi(j) E_i T_j`$
+
+for $`RandomTreeWithRoot`$, it takes mean commute time to visit a $`\pi`$-random vertex. 
+
+$`\sum_i \pi(i) E_i T_r + E_r T_i`$ (proof of theorem 14)
+
+
+
 # learned
 
 some terms:
@@ -112,13 +143,17 @@ dealing non-stochastic weighted graph:
 - normalize the edge weights
 - adding cycling to itsself (unrooted version)
 
+algorithm to use for different cases:
+
+- dealing with rooted tree and undirected graph (even for unrooted tree): use $`RandomTreeWithRoot`$
+- for general graph and unrooted tree: use $`RandomTree`$
 
 # I don't understand..
 
-- without root version
-- running time analysis (hitting time)
+- proof of theorem 14 (CFTP paper): why considering the walk started at `u` visits `u` before `r`? why not start from `u` and reach `r`
 
 # links 
 
 - http://www.bigredbits.com/archives/226
 - http://staff.utia.cas.cz/swart/present/UST.pdf (maybe I should go through it)
+- coupling from the past paper (on unrooted version)
