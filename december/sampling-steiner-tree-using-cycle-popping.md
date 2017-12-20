@@ -51,3 +51,49 @@ if a cycle is detected, "ignore/pop" it. if the current tree is touched, add the
 therefore, the tree is distributed by product of edge weights
 
 
+# update Dec, 20
+
+## probability of steiner tree
+
+if we do the weight normalization, edge weights become `\frac{w(u, v)}{w(u)}`
+
+Consider rooted version, the probability is:
+
+`P(T_r(X)) \propto \prod\limits_{u \neq r, (u, v)\in T_r{X} } \frac{w(u, v)}{w(u)}`
+
+this is not very easy to interpret because different trees may have different denumerator. 
+
+even for unweighted graph, 
+
+`P(T_r(X)) \propto \prod\limits_{u \neq r, u \in T_r{X} } \frac{1}{\deg(u)}`
+
+the interpretation can be:
+
+1. in general, the more edges the tree has, the less likely, (because the multiplying <1 values gives even smaller quantity). note that for regular graphs, this is true strictly
+2. given the same number of edges, the smaller degree of the node, the more likely the tree.
+
+## independence of popped cycles and tree
+
+the probability to produce a tree $`T`$ is:
+
+$`\sum\limits_{S \mid T} \sum\limits_{C \mid S} P(C \cap T) = \sum\limits_{S \mid T} \sum\limits_{C \mid S} P(C) P(T) = P(T)`$
+
+
+first of all, given a stack configuraiton, it returns a fixed tree (regardless of order of cycles being popped). 
+
+- cycles are popped in partial order (non-overlapping cycles does not have a order, while containing cycles have order)
+
+following:
+
+- $`S \mid T`$: the set of stack configurations that produce $`T`$
+- $`C \mid S`$: given $`S`$, the set of cycles being popped that produces $`T`$
+- because the tree is fixed given $`S`$, thus $`T`$ does not depend on the cycles being popped
+
+
+## another word on equivalance of cycle popping and LERW
+
+LERW essentially pops cycles by loop erasing. 
+
+Note that the order of the cycle being popped does not matter. 
+
+Therefore, LERW simulates the cycle popping algorithm. 
