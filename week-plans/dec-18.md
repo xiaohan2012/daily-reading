@@ -15,9 +15,7 @@ edge addition method:
 
 coding:
 
-- [ ] (Cython tutorial)(http://cython.readthedocs.io/en/latest/src/tutorial/cython_tutorial.html) (1h)
-- [ ] [language basics](http://cython.readthedocs.io/en/latest/src/userguide/language_basics.html#language-basics) (2h)
-- [ ] python interface to $`glist`$ using Cython (1h)
+
 - [ ] translate the greedy algorithm in Cython and Python (3h)
 - [ ] translate test cases from google test to Python (2h)
 
@@ -47,21 +45,7 @@ coding:
 
 ## frog
 
-one counter example, 
-
-a very large set of $`n+1`$ elements (so $`c_{max}=n`$) and $`(x, y_1)`$, $`(x, y_2)`$ $`(x, y_3)`$, $`(x, y_4)`$, ..., $`(x, y_n)`$ and $`(y_1, z_1)`$, $`(y_2, z_2)`$, $`(y_3, z_3)`$, ... $`(y_n, z_n)`$
-
-by our graph construction:
-
-- also $`x`$ receives $`n-1`$ compensating edges (because of the $`n+1`$-element set)
-
-suppose the set $`(y_1, z_1)`$, $`(y_2, z_2)`$, .. are selected. then:
-
-- $`x`$ has $`n`$ higher order edges (one end of the edge is of a higher core), received from covered set
-
-together, $`x`$ has $`2n-1`$ edges which the other end is in a higher core. 
-
-therefore, even though $`x`$ is not selected, its core number increases, which shouldn't happen.
+[more](december/core-max-hardness-counter-example.md)
 
 ## code
 
@@ -98,16 +82,37 @@ one issue: should we enumerate over all combinatorial structures? I don't think 
 # Wednesday
 
 - frog: 
-  - [ ] counter-intuitive: if the weight is larger than 1, then it encourages larger trees? how to solve this problem? should we constrain to certain cases of weights? (0.5h)
-  - [ ] why *independence* between cycles popped and the tree? (0.5h)
-  - [ ] why the *equivalence* between cycle popping and loop erased random walk (0.5h)
-- [ ] think about: given a subgraph, how to determine the number of edges (or lower-bound) to increase the core (1+1 hr)
+  - [X] counter-intuitive: if the weight is larger than 1, then it encourages larger trees? how to solve this problem? should we constrain to certain cases of weights? (0.5h)
+  - [X] why *independence* between cycles popped and the tree? (0.5h)
+  - [X] why the *equivalence* between cycle popping and loop erased random walk (0.5h)
+- [X] think about: given a subgraph, how to determine the number of edges (or lower-bound) to increase the core (1+1 hr)
   - how to define such subgraph? subcore?
   - possible direction: based on degree from higher order nodes? my previous thinking? based on the finger prints?
-- [ ] python wrapper (eliminate the type conversion stuff) (0.5h)
+  - [subcore algorithm](december/subcore-algorithm.md)
+- [X] python wrapper (eliminate the type conversion stuff) (0.5h)
 - [ ] measure whether the loop erased random walk obeys the desired distribution (1h)
 - [ ] wrapper for steiner tree sample pool and refactoring (1+1h)
-- [ ] cikm 2017 (0.5h)
+- [X] cikm 2017 (0.5h)
 
+## frog
+
+- the problem formulation does not match the result
+- fix on probability distribution: which turns out to be not so intuitive now
+- [ ] formalize it in document
 
 30 hours (4 days)
+
+# Thursday
+
+- frog: 
+  - [ ] (Cython tutorial)(http://cython.readthedocs.io/en/latest/src/tutorial/cython_tutorial.html) (1h)
+  - [ ] [language basics](http://cython.readthedocs.io/en/latest/src/userguide/language_basics.html#language-basics) (1h)
+- [ ] cikm 2017 (0.5h)
+- [ ] example/illustration of the upperbound (0.5h)
+  - background: def of subcore, results on subcore, why use subcore
+- [ ] understand how Cython is used for interfacing in networkit (1h)
+- [ ] python interface to $`glist`$ using Cython (2h)
+  - function 1 `affected_nodes`: input -- graph, edge, output -- nodes affected
+  - function 2: `insert_edge`: input -- graph, edge, output -- nodes affected, core numbers
+  - function 3: `core`, the core numbers
+- [ ] meeting (1h)
