@@ -5,18 +5,14 @@
 hardness proof:
 
 
-- [ ] if so, write down the proof (1h)
-
 edge addition method: 
 
 
 - [X] ask feedback from Aris (1h)
-- [ ] meeting with ISI (1h)
 
 coding:
 
 
-- [ ] translate the greedy algorithm in Cython and Python (3h)
 - [ ] translate test cases from google test to Python (2h)
 
 ## active learning
@@ -105,14 +101,42 @@ one issue: should we enumerate over all combinatorial structures? I don't think 
 # Thursday
 
 - frog: 
-  - [ ] (Cython tutorial)(http://cython.readthedocs.io/en/latest/src/tutorial/cython_tutorial.html) (1h)
-  - [ ] [language basics](http://cython.readthedocs.io/en/latest/src/userguide/language_basics.html#language-basics) (1h)
-- [ ] cikm 2017 (0.5h)
-- [ ] example/illustration of the upperbound (0.5h)
+  - [X] (Cython tutorial)(http://cython.readthedocs.io/en/latest/src/tutorial/cython_tutorial.html) (1h)
+  - [X] [language basics](http://cython.readthedocs.io/en/latest/src/userguide/language_basics.html#language-basics) (1h)
+- [X] cikm 2017 (0.5h)
+- [X] example/illustration of the upperbound (0.5h)
   - background: def of subcore, results on subcore, why use subcore
-- [ ] understand how Cython is used for interfacing in networkit (1h)
-- [ ] python interface to $`glist`$ using Cython (2h)
+- [X] understand how Cython is used for interfacing in networkit (1h)
+- [X] python interface to $`glist`$ using Cython (2h)
   - function 1 `affected_nodes`: input -- graph, edge, output -- nodes affected
   - function 2: `insert_edge`: input -- graph, edge, output -- nodes affected, core numbers
   - function 3: `core`, the core numbers
-- [ ] meeting (1h)
+- [X] meeting (1h)
+
+## meeting
+
+1. [ ] hardness
+2. [ ] inapproximability
+3. [ ] the problem version with one given node
+4. [ ] computing how many edges are needed to promote a whole substructure
+
+## subcore algorithm
+
+- [update](december/subcore-algorithm.md)
+- the upperbound is not tight as well
+- defined another optiamization problem and proposed greedy solution. is it optimal?
+- not sure why connecting within subcore. 
+
+# Friday
+
+- [ ] document my finding (independence and probability) (1h)
+- [ ] communicate it to Aris and Cigdem (0.5h)
+- [ ] the problem version with one given node (0.5h)
+- [ ] wrap `NCComponent` in Cython (name should be `subcore`) (1h)
+- [ ] test Cython `Glist`, `insert`, `remove`, `core` (0.5h)
+- [ ] greedy without incremental update and test on toy example (1h)
+- [ ] cut algorithm in Boost and interface with Python (2h)
+- [ ] cikm (0.5h)
+
+
+## 
