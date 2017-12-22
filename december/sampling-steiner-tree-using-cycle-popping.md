@@ -53,19 +53,19 @@ therefore, the tree is distributed by product of edge weights
 
 # update Dec, 20
 
-## probability of steiner tree
+## probability of steiner tree (rooted)
 
 if we do the weight normalization, edge weights become $`\frac{w(u, v)}{w(u)}`$
 
 Consider rooted version, the probability is:
 
-$`P(T_r(X)) \propto \prod\limits_{u \neq r, (u, v)\in T_r{X} } \frac{w(u, v)}{w(u)}`$
+$`P(T_r(X)) \propto \prod\limits_{u \neq r, (u, v)\in T_r(X) } \frac{w(u, v)}{w(u)}`$
 
 this is not very easy to interpret because different trees may have different denumerator. 
 
-even for unweighted graph, 
+for unweighted graph, 
 
-$`P(T_r(X)) \propto \prod\limits_{u \neq r, u \in T_r{X} } \frac{1}{\deg(u)}`$
+$`P(T_r(X)) \propto \prod\limits_{u \neq r, u \in T_r(X) } \frac{1}{\deg(u)}`$
 
 the interpretation can be:
 

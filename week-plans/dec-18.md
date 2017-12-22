@@ -129,14 +129,17 @@ one issue: should we enumerate over all combinatorial structures? I don't think 
 
 # Friday
 
-- [ ] document my finding (independence and probability) (1h)
-- [ ] communicate it to Aris and Cigdem (0.5h)
-- [ ] the problem version with one given node (0.5h)
-- [ ] wrap `NCComponent` in Cython (name should be `subcore`) (1h)
-- [ ] test Cython `Glist`, `insert`, `remove`, `core` (0.5h)
+- [X] document my finding (independence and probability) (1h)
+- [X] communicate it to Aris and Cigdem (0.5h)
+- [X] the problem version with one given node (0.5h)
+- [X] cikm (0.5h)
+- [X] wrap `NCComponent` in Cython (name should be `subcore`) (1h)
+- [X] test Cython `Glist`, `insert`, `remove`, `core` (0.5h)
 - [ ] greedy without incremental update and test on toy example (1h)
 - [ ] cut algorithm in Boost and interface with Python (2h)
-- [ ] cikm (0.5h)
 
 
-## 
+## single node
+
+- non-submodular: [doc](december/core-maximization-one-node.md)
+- [ ] can we adapt the failed proof to this case?
