@@ -13,3 +13,6 @@
 
 
 
+# links
+
+- NIPS 2017  xml workship: https://nips.cc/Conferences/2017/Schedule?showEvent=8759

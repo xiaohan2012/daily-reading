@@ -105,6 +105,9 @@ objective is similar to "word2vec", in terms of prediction probability:
 
 learning projection matrix is done by linear regression
 
+- the parameter to learn here is the regression matrix `V_c`
+- the embdding `z` is computed by multiplying `V_c` with `x`
+
 ## prediction
 
 1. uses ball tree for approximate nearest neighbor search. 
