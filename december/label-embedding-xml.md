@@ -45,6 +45,7 @@ approximate nearest neighbor search on labels (eculidean distance, etc)
 - explicitly model label relation: easier to understand the result
 - KNN needs to store all the training data embeddings and labels
   - here, we store label embeddings (still large, asymtotically the same for XML problems)
+  - learn sparse embedding to save space and improve model?
 - if there are more trainig data points, then prediction should be faster if we use label embeddings to compare against
 
 
@@ -53,5 +54,15 @@ approximate nearest neighbor search on labels (eculidean distance, etc)
 - [ ] KNN is safe in the way that it incorporetas label frequency bias implicitly: how can we incorporate such bias?
 - [ ] ensemble learning, how can produce an ensemble of learners?
   - as the negative samples are randomly selected, there is some randomness of each learner
+- [ ] what if the constructed graph is not a connected component? only keep the largest cc?
+
+
+# as a small project
+
+todo:
+
+- construct the label graph, check if they are connected component, if not, how many labels need to be dropped and frequency of such label
+- the model, noisy contrastive learning + CNN
+- start with [Wiki10-31K](http://manikvarma.org/downloads/XC/XMLRepository.html)
 
 
