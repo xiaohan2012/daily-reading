@@ -87,7 +87,6 @@ one issue: should we enumerate over all combinatorial structures? I don't think 
   - [subcore algorithm](december/subcore-algorithm.md)
 - [X] python wrapper (eliminate the type conversion stuff) (0.5h)
 - [ ] measure whether the loop erased random walk obeys the desired distribution (1h)
-- [ ] wrapper for steiner tree sample pool and refactoring (1+1h)
 - [X] cikm 2017 (0.5h)
 
 ## frog
