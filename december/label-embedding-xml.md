@@ -54,7 +54,9 @@ approximate nearest neighbor search on labels (eculidean distance, etc)
 - [ ] KNN is safe in the way that it incorporetas label frequency bias implicitly: how can we incorporate such bias?
 - [ ] ensemble learning, how can produce an ensemble of learners?
   - as the negative samples are randomly selected, there is some randomness of each learner
-- [ ] what if the constructed graph is not a connected component? only keep the largest cc?
+- [ ] what if the constructed graph is not a connected component? 
+  - only keep the largest cc?
+  - or use the feature space to connect the disconnected cc?
 
 
 # as a small project
