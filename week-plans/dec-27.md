@@ -35,10 +35,21 @@ more
 
 # Wednesday
 
-- [ ] try to prove hardness of one node version (1h)
-- [ ] supermodularity of one node version (1h)
-- [ ] cikm (0.5h)
-- [ ] cut algorithm in Boost and Cython (3h)
+- frog: [X] try to prove hardness of one node version (1h)
+- [X] supermodularity of one node version (1h)
+- [X] cikm (0.5h)
+- [X] cut algorithm in Boost and Cython (3h)
 - [ ] summarize https://arxiv.org/pdf/1709.05584.pdf (1h)
   - read summary/comparison of different methods
 - [ ] wrapper for steiner tree sample pool and refactoring (1+1h)
+
+## frog
+
+some thinking on fixing the hardness proof of the core max problem. 
+
+using the example I sent to Lorenzo. as `x` receives too many higher order edges. one way to fix is to avoid compansating edge for it. 
+
+however, if `x` is connected to some node in the big clique (`n+1` nodes), then selecting the set will not promote `x`.
+
+it's a dilemma. 
+
