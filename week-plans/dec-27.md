@@ -54,12 +54,12 @@ it's a dilemma.
 # Friday
 
 - [ ] can we use dynamic programming to solve it? (1h)
-- [ ] exhausive search algorithm Cython (1h)
-- [ ] comparison between the two in terms of objective on karate club (1h)
-- [ ] plot the result and gain intuition (1h)
+- [X] exhausive search algorithm Cython (1h)
+- [X] comparison between the two in terms of objective on karate club (1h)
+- [X] plot the result and gain intuition (1h)
 - [ ] integrate `random_steiner_tree` to sampling pool (1h)
   -  speed comparison
 - [ ] experiment: varying sampling method (fixed query methoad) (1h)
 - [ ] experiment: varying query method (fix sampling method) (1h)
-- [ ] subgraph embedding https://arxiv.org/pdf/1709.05584.pdf (1h)
+- [X] subgraph embedding https://arxiv.org/pdf/1709.05584.pdf (1h)
 - [ ] http://ai.tencent.com/ailab/media/publications/Minimizing_Dependence_between_Graphs.pdf (1h)

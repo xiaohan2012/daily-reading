@@ -136,9 +136,76 @@ example methods:
 - graphwave
 
 
+# subgraph representation learning
+
+problem: learn embedding of a subgraph
+
+related problem:
+
+- learn embedding for directed tree (cascade)
+
+## sum-based approach
+
+- learn embedding of nodes
+- for the subgraph embedding, just sum up the nodes' embedding
+
+paper
+
+-  [ ] Discriminative embeddings of latent variable models for structured data, ICML 2016
+
+## graph-coarsening approach
+
+1. cluster nodes (graph is coarsened) and combine the embeddings of nodes in the same cluster (max-pooling, etc)
+2. repeat step 1 for the coarsened graph 
+
+papers:
+
+- [ ] Spectral networks and locally connected networks on graphs, ICLR 2014
+- [ ] Convolutional neural networks on graphs with fast localized spectral filtering, NIPS 2016
 
 
+## graph neural networks
 
+the topology defines "computation graph",  closely related to Algorithm 1.
+
+for a node `v`, its embedding is aggregated from the embeddings from its neighbors. 
+
+this is done recursively
+
+chanllenges:
+
+- ensuring convergence (careful initialization)
+- scalability
+
+papers:
+
+- [ ] A new model for learning in graph domains. In IEEE International Joint Conference on Neural Networks 2005
+- [ ] The graph neural network model. IEEE Transactions on Neural Networks, 20(1):61–80, 2009.
+- [ ] Gated graph sequence neural networks. In ICLR, 2015.
+
+## applications
+
+- classification of subgraphs (molecules' properties)
+- predict effect of drugs
+  - [ ] Molecular graph convolutions: moving beyond fingerprints. Journal of Computer-Aided Molecular Design, 2016.
+
+# summary
+
+## challenges
+
+- lack of theoretical framework
+- lack of meaningful and consistent benchmark tasks
+
+## open problems
+
+- scalability (large graph, distributed setting)
+- higher-order decoder functions: instead of pairwise ones
+- dynamic temporal graphs: edge with timestamp, edge addition/removal 
+  - how to counter-effect the removed edge?
+- reasoning over large set of subgraphs: how to **discover** subgraphs with certain properties (without enumerating all possibilities)
+  - how could embedding for useful for that? searching subgraph in the embedding space?
+  - mapping/reconstruct embedding to subgraph?
+- better benchmarks: to interpret the limitation/bias within the algorithm
 
 
 
