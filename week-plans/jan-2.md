@@ -55,10 +55,22 @@ why `isolate_disconnected_components`?
 
 # Wednesday
 
-- [ ] frog: search papers on how to prove inapproximability (1 h)
+- [X] frog: search papers on how to prove inapproximability (1 h)
 - [ ] improve the plot (node color consistent with core number, easy to interpret the change) (1h)
-- [ ] make `test_query_selection` pass why `isolate_disconnected_cc`? 
+- [X] make `test_query_selection` pass why `isolate_disconnected_cc`? 
 - [ ] experiment: varying sampling method (fixed query methoad) (1h)
 - [ ] experiment: varying query method (fix sampling method) (1h)
-- [ ] search for other related inference methods (1h)
+- [X] search for other related inference methods (1h)
 - [ ] entity linking paper (LSTM, pair-linking, experiment) (1h)
+
+## related inference methods
+
+- Polina's paper: reconstructing an epidemic cascade over time
+  - https://github.com/polinapolina/reconstructing-an-epidemic-over-time
+  - in Python
+- Hidden hazards: Finding missing nodes in large graph epidemics.
+  - http://www.cs.vt.edu/~badityap/CODE/netfill-code.tgz
+  - in Matlab
+- our SDM 2018 method
+
+three is enough
