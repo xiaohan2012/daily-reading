@@ -10,19 +10,13 @@
 - [ ] report the result 
 - [ ] `inference.py` using the `sample_pool.py` with incremental support (1h)
 - [ ] measure the score using the sampling based inference method (0.5h)
-- [ ] integrate our order-based steiner into the method (1h)
+
 
 
 **presentation**
 
-- [ ] basic structure according to the survey paper (2h) 
-  - direct method
-  - neighborhood
-  - convolution-based (why the name)
-  - subgraph embedding
-  - open challenges (with my thinking and my own problems)
 - [ ] more technical details
-- [ ] GraphSage: https://arxiv.org/pdf/1706.02216.pdf (2h)
+
 
 **label embedding xml**
 
@@ -56,12 +50,9 @@ why `isolate_disconnected_components`?
 # Wednesday
 
 - [X] frog: search papers on how to prove inapproximability (1 h)
-- [ ] improve the plot (node color consistent with core number, easy to interpret the change) (1h)
 - [X] make `test_query_selection` pass why `isolate_disconnected_cc`? 
-- [ ] experiment: varying sampling method (fixed query methoad) (1h)
-- [ ] experiment: varying query method (fix sampling method) (1h)
 - [X] search for other related inference methods (1h)
-- [ ] entity linking paper (LSTM, pair-linking, experiment) (1h)
+- [X] entity linking paper (LSTM, pair-linking, experiment) (1h)
 
 ## related inference methods
 
@@ -74,3 +65,18 @@ why `isolate_disconnected_components`?
 - our SDM 2018 method
 
 three is enough
+
+
+# Thursday
+
+- frog: [ ] GraphSage: https://arxiv.org/pdf/1706.02216.pdf (2h)
+- [ ] improve the plot (node color consistent with core number, easy to interpret the change) (1h)
+- [ ] integrate our order-based steiner into the method (1h)
+- [ ] experiment: varying sampling method (fixed query methoad) (1h)
+- [ ] experiment: varying query method (fix sampling method) (1h)
+- [ ] basic structure according to the survey paper (1+1h) 
+  - direct method
+  - neighborhood
+  - convolution-based (why the name)
+  - subgraph embedding
+  - open challenges (with my thinking and my own problems)
