@@ -2,7 +2,7 @@
 
 **core maximization**
 
-- [ ] put them in the doc and email the people about the result
+- [X] put them in the doc and email the people about the result
 - [ ] hardness proof: search related problem of core-number maximization / resilience maximization (1h)
 
 **active learning**
@@ -12,11 +12,15 @@
 - [ ] measure the score using the sampling based inference method (0.5h)
 
 
+**SDM**
+
+- [ ] tweet it using hashtag
+- [ ] put it in arxiv
 
 **presentation**
 
 - [ ] more technical details
-
+- [ ] [matrix as factorization](https://arxiv.org/pdf/1710.02971.pdf)
 
 **label embedding xml**
 
@@ -69,8 +73,8 @@ three is enough
 
 # Thursday
 
-- frog: [ ] GraphSage: https://arxiv.org/pdf/1706.02216.pdf (2h)
-- [ ] improve the plot (node color consistent with core number, easy to interpret the change) (1h)
+- frog: [X] GraphSage: https://arxiv.org/pdf/1706.02216.pdf (2h)
+- [X] improve the plot (node color consistent with core number, easy to interpret the change) (1h)
 - [ ] integrate our order-based steiner into the method (1h)
 - [ ] experiment: varying sampling method (fixed query methoad) (1h)
 - [ ] experiment: varying query method (fix sampling method) (1h)
