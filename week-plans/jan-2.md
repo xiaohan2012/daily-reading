@@ -20,15 +20,10 @@
 **presentation**
 
 - [ ] more technical details
-- [ ] [matrix as factorization](https://arxiv.org/pdf/1710.02971.pdf)
 
 **label embedding xml**
 
 - [ ] visualize the embedding (1h)
-- [ ] search papers on metric learning on bipartite graph? (0.5h)
-- [ ] problem and method (1h)
-  - what's the training objective of learning the projection matrix using the probabilistic approach?
-  - how to do the traning in keras using negative sampling?
 
 
 # Tuesday
@@ -75,12 +70,22 @@ three is enough
 
 - frog: [X] GraphSage: https://arxiv.org/pdf/1706.02216.pdf (2h)
 - [X] improve the plot (node color consistent with core number, easy to interpret the change) (1h)
-- [ ] integrate our order-based steiner into the method (1h)
-- [ ] experiment: varying sampling method (fixed query methoad) (1h)
-- [ ] experiment: varying query method (fix sampling method) (1h)
-- [ ] basic structure according to the survey paper (1+1h) 
+- [X] basic structure according to the survey paper (1+1h) 
   - direct method
   - neighborhood
   - convolution-based (why the name)
   - subgraph embedding
   - open challenges (with my thinking and my own problems)
+
+
+# Friday
+
+- frog: [ ] search papers on metric learning on bipartite graph? (1h)
+- [ ] [matrix as factorization](https://arxiv.org/pdf/1710.02971.pdf) (1h)
+- [ ] optimize `query_score` method using Cython (2h, do better than 6.4ms, or 13 secs per run)
+- [ ] outline the experiment sections, what experiments should we include (1h)
+- [ ] run experiment: dataset=grqc, strategy=predition_error with  different sampling methods (0.5h)
+- [ ] integrate our order-based steiner into the method (1h)
+- [ ] problem and method for label embedding-based xml (0.5h)
+  - write down the training objective of learning the projection matrix using the probabilistic approach?
+
