@@ -27,3 +27,14 @@ words --> embedding look-up --> aggregator (mean, max-pooling) --> FC --> `z_t`
 # feature vector
 
 feature vector --> FC (one or more layers) --> `z_t`
+
+# papers on learning on bipartite graphs
+
+- [Graph Convolutional Matrix Completion, arxiv, 2017](https://arxiv.org/pdf/1706.02263.pdf): ued graph autoencoders
+- [Supervised Bipartite Graph Inference, NIPS 2009](https://papers.nips.cc/paper/3428-supervised-bipartite-graph-inference.pdf)
+- [Scalable Metric Learning for Co-embedding, ECML PKDD, 2015](https://pdfs.semanticscholar.org/79eb/875562967957abbbfce54a079b38195a5794.pdf)
+
+# related questions
+
+- Given a graph, where certain nodes have features while some does not, how to learn the embedding?
+  - can we adapt the formulation of GraphSage to this setting?
