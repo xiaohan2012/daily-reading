@@ -80,12 +80,15 @@ three is enough
 
 # Friday
 
-- frog: [ ] search papers on metric learning on bipartite graph? (1h)
+- frog: [X] search papers on metric learning on bipartite graph? (1h)
 - [ ] [matrix as factorization](https://arxiv.org/pdf/1710.02971.pdf) (1h)
-- [ ] optimize `query_score` method using Cython (2h, do better than 6.4ms, or 13 secs per run)
-- [ ] outline the experiment sections, what experiments should we include (1h)
-- [ ] run experiment: dataset=grqc, strategy=predition_error with  different sampling methods (0.5h)
-- [ ] integrate our order-based steiner into the method (1h)
-- [ ] problem and method for label embedding-based xml (0.5h)
+- [X] optimize `query_score` method using Cython (2h, do better than 6.4ms, or 13 secs per run)
+- [X] outline the experiment sections, what experiments should we include (1h)
+- [X] run experiment: dataset=grqc, strategy=predition_error with  different sampling methods (0.5h)
+- [X] integrate our order-based steiner into the method (1h)
+- [X] problem and method for label embedding-based xml (0.5h)
   - write down the training objective of learning the projection matrix using the probabilistic approach?
 
+## note on optimization
+
+to gather the statistics, `matching_trees`, (can we use a bipartite graph?)
