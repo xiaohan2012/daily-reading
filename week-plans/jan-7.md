@@ -38,7 +38,7 @@
 
 **internship**
 
-one algorithm on leetcode per-day
+one algorithm on [leetcode](https://leetcode.com/problemset/all/) per-day
 
 - using python
 - related to data structure (number theory is not very interesting)
