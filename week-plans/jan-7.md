@@ -87,14 +87,19 @@ for SDM paper:
 
 # Tursday
 
-- [ ] distribute the topics using 40 pages (0.5h)
-- [ ] slides making: move what's on the paper to google presentation, add notes on random walk based approach as matrix factorization (1.5h)
-- [ ] using bipartite graph as the data structure for faster statistic calculation (1h)
+- [X] distribute the topics using 40 pages (0.5h)
+- [X] slides making: move what's on the paper to google presentation, add notes on random walk based approach as matrix factorization (1.5h)
+- [X] using bipartite graph as the data structure for faster statistic calculation (1h)
   - algorithm and time analysis (should be better than quadratic except indexing)
   - efficiently update (remove/and add trees)
-- [ ] search for real cascade data (1h)
+- [X] search for real cascade data (1h)
 - [ ] why the code never stops and consumes no CPU resources (1h)
 - [ ] `inference.py` with incremental support (1h)
-- [ ] [Representation Learning of Knowledge Graphs with Entity Descriptions](https://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/download/12216/12004) (0.5h)
-- [ ] skim 5 papers in [WWW2018](https://www2018.thewebconf.org/program/social-network-analysis/)
-- [ ] interview coding exercise (1h)
+- [X] [Representation Learning of Knowledge Graphs with Entity Descriptions](https://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/download/12216/12004) (0.5h)
+- [X] skim 5 papers in [WWW2018](https://www2018.thewebconf.org/program/social-network-analysis/)
+- [X] interview coding exercise (1h)
+
+
+## incremental update
+
+how to avoid re-counting tree
