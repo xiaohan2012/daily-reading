@@ -92,6 +92,7 @@ for SDM paper:
   - efficiently update (remove/and add trees)
 - [X] search for real cascade data (1h)
 - [ ] why the code never stops and consumes no CPU resources (1h)
+  - `cascade/grqc-s0.2-o0.1/91.pkl` never stops
 - [ ] `inference.py` with incremental support (1h)
 - [X] [Representation Learning of Knowledge Graphs with Entity Descriptions](https://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/download/12216/12004) (0.5h)
 - [X] skim 5 papers in [WWW2018](https://www2018.thewebconf.org/program/social-network-analysis/)
@@ -104,14 +105,32 @@ how to avoid re-counting tree
 
 # Wednesday
 
-- [ ] finish slides making (1h)
+- [X] finish slides making (1h)
   - some text on deepcas
-- [ ] simulate what to say during presentation (1h)
-- [ ] search papers on cascade embedding (0.5h)
+- [X] simulate what to say during presentation (1h)
+- [X] search papers on cascade embedding (0.5h)
+  - [here](jan/cascade-embedding-papers.md)
 - [ ] select two real datasets (0.5h)
 - [ ] process one dataset (1h)
 - [ ] add more texts on scalability (1h)
-- [ ] skim 5 papers in [WWW2018](https://www2018.thewebconf.org/program/social-network-analysis/) (0.5h)
-- [ ] meeting (1h)
-- [ ] case study, check other related paper on case studies (0.5h)
-  - like news site dataset: does reconstructed tree reflect the infection order?
+- [X] skim 5 papers in [WWW2018](https://www2018.thewebconf.org/program/social-network-analysis/) (0.5h)
+- [X] meeting (1h)
+- [ ] case study, check other related papers on case studies (0.5h)
+  - like news site dataset: does reconstructed tree reflect the infection order
+
+
+## meeting
+
+
+- [Towards identity anonymization on graphs](https://dl.acm.org/citation.cfm?id=1376629)
+- what's the minimum number of edges to add to promote a single subcore
+
+action points:
+
+- optimal solution for karate club: 
+  - two edges span different subcores
+  - identify subcore but do not limit us to the subcore (neighboring nodes can be benefited as well). a bit different from the previous intuition
+- try other graphs to gain more intuition
+- prove inapproximability: L-reduction
+  - approximation preserving reduction
+  - basad on reduction but preserve the approximation
