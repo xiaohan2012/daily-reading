@@ -25,7 +25,6 @@
 
 **presentation**
 
-- [ ] some thinking on cascade embedding or network alignment
 - [ ] representation learning on bipartite graphs (with partial feature information)
 
 4h
@@ -82,8 +81,7 @@ for SDM paper:
 - [ ] the idea of model invariant should be stated more clearly (Polina’s paper)
 - [ ] compare with NetFill under different cascade model
 - [ ] experiment with small cascade
-- [ ] case study, check other related paper on case studies
-  - like news site dataset: does reconstructed tree reflect the infection order?
+
 
 # Tursday
 
@@ -103,3 +101,17 @@ for SDM paper:
 ## incremental update
 
 how to avoid re-counting tree
+
+# Wednesday
+
+- [ ] finish slides making (1h)
+  - some text on deepcas
+- [ ] simulate what to say during presentation (1h)
+- [ ] search papers on cascade embedding (0.5h)
+- [ ] select two real datasets (0.5h)
+- [ ] process one dataset (1h)
+- [ ] add more texts on scalability (1h)
+- [ ] skim 5 papers in [WWW2018](https://www2018.thewebconf.org/program/social-network-analysis/) (0.5h)
+- [ ] meeting (1h)
+- [ ] case study, check other related paper on case studies (0.5h)
+  - like news site dataset: does reconstructed tree reflect the infection order?
