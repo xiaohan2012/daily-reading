@@ -8,17 +8,15 @@
 
 **active learning**
 
-- [ ] learn how to run NetFill (1h)
 - [ ] experiment: SDM2018 under different query strategies on grqc (0.5h)
 - [ ] summarize the comparison between cut and loop_erased (1h)
-- [ ] Python interface for NetFill (2h)
 
 
 8.5h 
 
 **SDM paper**
 
-- [ ] upload to arxiv if no modificatio needed (0.5h)
+- [ ] upload to arxiv if no modification needed (0.5h)
 - [ ] tweet on Twitter and Weibo about it if arxiv id done (0.5h)
 
 1.5h
@@ -44,7 +42,7 @@ more sites:
 
 **reading**
 
-- [Representation Learning of Knowledge Graphs with Entity Descriptions](https://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/download/12216/12004) (0.5h)
+- [X] [Representation Learning of Knowledge Graphs with Entity Descriptions](https://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/download/12216/12004) (0.5h)
 - [Words are Malleable: Computing  Semantic Shifts in Political and  Media Discourse](https://arxiv.org/abs/1711.05603) (0.5+0.5h)
 
 # monday
@@ -176,11 +174,28 @@ what's next:
 
 # Friday
 
-- [ ] frog: case study, check other related papers on case studies (1h)
+- [X] frog: case study, check other related papers on case studies (1h)
   - like news site dataset: does reconstructed tree reflect the infection order
-- [ ] update the subcore algorithm, change the setting to given a candidate edge set, and invalidate any subcores (1h)
-- [ ] add prediction error to `tree_stat` (1h)
-- [ ] integrate matrix method into query selection (1h)
-- [ ] speed comparison (0.5h)
-- [ ] record the deleted nodes, simulate the isolation process on the grqc graph, see what will happen (1h)
+- [X] update the subcore algorithm, change the setting to given a candidate edge set, and invalidate any subcores (1h)
+  - [here](jan/promoting-subcore.md)
+- [X] add prediction error to `tree_stat` (1h)
+- [X] integrate matrix method into query selection (1h)
+- [X] speed comparison (0.5h)
+  - 2x faster than original impl on `grqc`
+- [X] record the deleted nodes, simulate the isolation process on the grqc graph, see what will happen (1h)
 - [ ] run algorithm on digg data set (1h)
+
+## frog
+
+- investigate on a small cascade on Digg, 
+  - visualize the true cascade (on the small subgraph), node color as infection time
+  - visualize also the reconstructed cascade (using 50% of the samples), node color as infection time 
+  - does the two visualization match each other?
+  - some example visualziation: https://research.fb.com/wp-content/uploads/2016/11/information_evolution_in_social_networks.pdf
+
+- started to run experiments on small cascade
+
+# Sunday
+
+- takes a long time to sample one tree
+  - related to how root are sampled
