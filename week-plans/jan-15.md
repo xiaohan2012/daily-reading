@@ -7,10 +7,11 @@
 
 ## SDM paper
 
-- [ ] report experiment on small datasets
-- [ ] case study on small datasets	
-  - graph topology visualization
-  - node states viz
+- copy right form
+- follow instructions
+
+- [ ] report experiment on small datasets (0.5h)
+
 
 ## KDD submission
 
@@ -20,9 +21,7 @@ goal: by next Friday.
 - experiment comparing different sampling strategies
 - the algorithm/implementation is optimized
 
-- [ ] writing for query stretagy part 
-- [ ] unify the inconsitent sampling problems
-
+- [ ] writing for query stretagy part (0.5h)
 
 ## core maximization
 
@@ -30,6 +29,8 @@ goal: some algorithm inspires from the optimal solution on karate club (based on
 
 - [ ] state the difference between version with given candidate set of edges and with the complementary edge set 
 - [ ] subcore algorithm: after matching as many nodes, what to do with the rest unmatched nodes? how to maximize the gain?
+- [ ] greedy algorithm
+- [ ] experiment on graphs with reasonable size
 
 
 # monday
@@ -79,4 +80,16 @@ the first node takes a longer time connect and it also gives larger standard dev
 - two edges give the boost, even though there is not inter-core edges
 
 
+# thursday
 
+- [ ] check the problem for the peer (0.5h)
+- [ ] mock-up (1.5h)
+- [ ] time-profiling the pure version (1h)
+- [ ] unify the inconsistent sampling problems (0.5h)
+- [ ] document promote-node: which has `\deg^{+} == K` and core number smaller than (0.5h)
+- [ ] write algorithm:
+  - calculate minimum number of edges required to promote a subcore (1h)
+  - subcore which returns the subcore (1h)
+- [ ] case study on small datasets (1h)
+  - graph topology visualization
+  - node states viz
