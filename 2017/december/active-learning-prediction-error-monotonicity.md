@@ -15,14 +15,10 @@ at time point $`t_2 > t_1`$, denote:
 - $`P_{t_2}(y_q=1)=p_2`$, therefore $`P_{t_2}(y_q=0)=1-p_2`$
 - prediction error corresponding to $`y_q=1`$ is $`a_2`$, for the other case, it's $`b_2`$
 
-
-
 then the score for $`q`$:
 
 - at $`t_1`$ is $`p_1 a_1 + (1-p_1)b_1`$
 - at $`t_2`$ is $`p_2 a_2 + (1-p_2)b_2`$
-
-
 
 it should be true that:
 
