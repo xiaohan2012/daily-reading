@@ -31,6 +31,8 @@ goal: some algorithm inspires from the optimal solution on karate club (based on
 - [ ] subcore algorithm: after matching as many nodes, what to do with the rest unmatched nodes? how to maximize the gain?
 - [ ] greedy algorithm
 - [ ] experiment on graphs with reasonable size
+- [ ] matching based core update paper
+
 
 
 # monday
