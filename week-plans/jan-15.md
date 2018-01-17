@@ -9,7 +9,7 @@
 - copy right form
 - follow instructions
 
-- [ ] report experiment on small datasets (0.5h)
+- [ ] evaluation without observation
 
 
 ## KDD submission
@@ -136,15 +136,69 @@ blossom algorithm:
 
 # Wednesday
 
-- [ ] frog: prepare for the subcore/matching problem (1.5h)
+- [X] frog: prepare for the subcore/matching problem (1.5h)
   - motivation: plot the complementary graph, show what subcore/matching algorithm gives (0.5h)
   - state the matching problem formally (0.5h)
   - write down the bullet points for meeting (0.5h)
-- [ ] is the score decreasing as iteration number? (0.5h)
+- [X] is the score decreasing as iteration number? (0.5h)
   - if necessary, plot the trend
 - [ ] if so, integrate the lazy evaluation strategy (1h)
 - [ ] run the experiment on one smaller graph (grqc if it does not take too much time) (0.5h)
-- [ ] learn how to run NetFill (1h)
-- [ ] meeting: Barbbar (0.5h)
-- [ ] plot for small cascade and writing (0.5h)
-- [ ] meeting: Francesco (1h)
+- [X] learn how to run NetFill (1h)
+- [X] meeting: Barbbar (0.5h)
+- [X] plot for small cascade and writing (0.5h)
+- [X] meeting: Francesco (1h)
+
+## meeting prep
+
+part 1:
+
+- optimal vs greedy on karate (Figure 5)
+- Figure 6: K=4, goal: make it 5
+  - a:
+    - why degree from inner most core: edges from them are *always* valid to promote
+  - b: 
+- can we gain any intuition from this example?
+
+part 2: subcore
+
+- main question: how to promote one subcore (without considering external nodes)
+  - using the Figure 6 as the motivation (ideally, we just add two edges to match two nodes)
+  - Figure 4: (complementary graph on pink nodes)
+    - only need to operate on the pink nodes
+
+## lazy evaluation
+
+- inapplicable for `argmin prederror(query)`
+- wondering why not `argmax`
+
+## notes on NetFill
+
+- `ssh tal`
+- `ssh triton`
+
+in `DEMO.m`:
+
+- `G`: adjacency list
+
+- `D`: true infection state vector
+- `SD`: observed state vector
+- `p`: the `q` parameter in our case
+- `C_netfill`: predicted infection states???
+- `S_netfill`: predicted seeds???
+
+## discussion with Rohit
+
+number of points per label indicates the performance of different methods:
+
+- the larger the number, the more likely for labels to co-occur, therefore better for methods that model label correlation
+- however, the sparser the label graph, the better one-vs-rest works
+
+
+## meeting with Francesco and Lorenzo
+
+- bin matching (each node has a capacity to match)
+  - bipartite matching: modified from max flow algorithm (using source and sink node)
+- lorenzo's idea on identifying the influential node and try to match them 
+  - "influential node v" by the number of nodes that will get promoted if `v` is promoted
+
