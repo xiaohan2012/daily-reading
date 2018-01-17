@@ -9,8 +9,6 @@
 - copy right form
 - follow instructions
 
-- [ ] evaluation without observation
-
 
 ## KDD submission
 
@@ -19,8 +17,6 @@ goal: by next Friday.
 - experiment comparing different query strategies
 - experiment comparing different sampling strategies
 - the algorithm/implementation is optimized
-
-- [ ] writing for query stretagy part (0.5h)
 
 ## core maximization
 
@@ -31,7 +27,6 @@ goal: some algorithm inspires from the optimal solution on karate club (based on
 - [ ] greedy algorithm
 - [ ] experiment on graphs with reasonable size
 - [ ] matching based core update paper
-
 
 
 # monday
@@ -194,11 +189,35 @@ number of points per label indicates the performance of different methods:
 - the larger the number, the more likely for labels to co-occur, therefore better for methods that model label correlation
 - however, the sparser the label graph, the better one-vs-rest works
 
+- can we combine the good parts on both one-vs-all and embedding based method?
 
 ## meeting with Francesco and Lorenzo
 
 - bin matching (each node has a capacity to match)
   - bipartite matching: modified from max flow algorithm (using source and sink node)
-- lorenzo's idea on identifying the influential node and try to match them 
+- [ ] lorenzo's idea on identifying the influential node and try to match them 
   - "influential node v" by the number of nodes that will get promoted if `v` is promoted
+- [ ] compare greedy, subcore and Lorenzo's algorithm on larger graphs
+
+## mockup
+
+lessons
+
+- talk more so to think
+- write the basic skeleton/signature first and fill in the details
+
+# Thursday
+
+- frog: [ ] infection probability with incremental support and using tree_stat (1h)
+- [ ] experiment using random and pagerank
+- [ ] experiment using cut algorithm on grqc
+- [ ] plot result on grqc (random, pagerank, entropy, prederror-min, prederror-max) (0.5h)
+- [ ] plot evaluation excluding the observation (0.5h)
+  - [ ] update figure (0.5h)
+- [ ] writing for query stretagy part (1h)
+- [ ] understand blossom algorithm for matching (1h)
+  - [c++ code](http://codeforces.com/blog/entry/49402)
+- [ ] the bin matching idea: search papers, instead of capacity, use demand (relation to flow problem with min requirement?)
+- [ ] why one-vs-rest performs well? how to improve its prediction accuracy?
+  - DiSMEC - Distributed Sparse Machines for Extreme Multi-label Classification
 
