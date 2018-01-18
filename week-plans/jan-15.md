@@ -208,16 +208,39 @@ lessons
 
 # Thursday
 
-- frog: [ ] infection probability with incremental support and using tree_stat (1h)
-- [ ] experiment using random and pagerank
-- [ ] experiment using cut algorithm on grqc
+- frog: [X] infection probability with incremental support and using tree_stat (1h)
+- [X] query experiment using random and pagerank
+- [X] probability inference on `loop_erased` and all query methods
+- [X] experiment using cut algorithm on grqc (entropy, prediction error min, max)
 - [ ] plot result on grqc (random, pagerank, entropy, prederror-min, prederror-max) (0.5h)
-- [ ] plot evaluation excluding the observation (0.5h)
-  - [ ] update figure (0.5h)
-- [ ] writing for query stretagy part (1h)
-- [ ] understand blossom algorithm for matching (1h)
+- [X] plot evaluation excluding the observation (0.5h)
+  - [X] update figure (0.5h)
+- [X] understand blossom algorithm for matching (1h)
   - [c++ code](http://codeforces.com/blog/entry/49402)
-- [ ] the bin matching idea: search papers, instead of capacity, use demand (relation to flow problem with min requirement?)
+  - didn't understand yer. covered augmenting path and def of blossom
+- [X] the bin matching idea: search papers, instead of capacity, use demand (relation to flow problem with min requirement?)
 - [ ] why one-vs-rest performs well? how to improve its prediction accuracy?
   - DiSMEC - Distributed Sparse Machines for Extreme Multi-label Classification
 
+## papers on matching with demand
+
+- max flow with node demand: http://courses.cs.vt.edu/cs5114/spring2013/lectures/lecture19-network-flow-applications.pdf
+- max flow with edge demand: https://web.engr.illinois.edu/~jeffe/teaching/algorithms/2009/notes/18-maxflowext.pdf
+- https://cs.uwaterloo.ca/research/tr/2006/CS-2006-33.pdf
+
+## sdm paper
+
+
+- found that facebook on si model, recall is very strange
+
+# Friday
+
+- frog: [ ] inference using sdm method on `{cut, loop_erased} x {prediction_error-max, prediction_error-min, entropy}` + `{random, pagerank}` on grqc (1h)
+  - curious to see if `prediction_error-max` works
+- [ ] plot result on grqc (random, pagerank, entropy, prederror-min, prederror-max) on `{loop_erased, cut}` (0.5h)
+- [ ] why recall of si+facebook is strange? fix it (0.5h)
+- [ ] check Cigdem's email (0.5h)
+- [ ] update the problem formulation and writing for query strategy part (1h)
+- [ ] formalize the order respecting version using loop_erased random walk (0.5h)
+- [ ] follow instructions of the camera ready version, list what to do (1h)
+  - print/sign/scan the copyright form
