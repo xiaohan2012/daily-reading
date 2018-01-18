@@ -244,3 +244,4 @@ lessons
 - [ ] formalize the order respecting version using loop_erased random walk (0.5h)
 - [ ] follow instructions of the camera ready version, list what to do (1h)
   - print/sign/scan the copyright form
+- [ ] print flight ticket
