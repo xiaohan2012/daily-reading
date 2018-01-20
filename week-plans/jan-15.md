@@ -235,13 +235,40 @@ lessons
 
 # Friday
 
-- frog: [ ] inference using sdm method on `{cut, loop_erased} x {prediction_error-max, prediction_error-min, entropy}` + `{random, pagerank}` on grqc (1h)
+- frog: [X] integrate  sdm method in inference  
+- [X] run inference on on `{cut, loop_erased}` x `{inf_probas, order-steiner-tree}` on grqc
   - curious to see if `prediction_error-max` works
-- [ ] plot result on grqc (random, pagerank, entropy, prederror-min, prederror-max) on `{loop_erased, cut}` (0.5h)
-- [ ] why recall of si+facebook is strange? fix it (0.5h)
-- [ ] check Cigdem's email (0.5h)
-- [ ] update the problem formulation and writing for query strategy part (1h)
+- [ ] plot result on grqc `{loop_erased, cut}` x `{inf_probas, order-steiner-tree}`(0.5h)
+  - 4 plots
+- [X] why recall of si+facebook is strange? fix it (0.5h)
+  - to run `./scripts/gen_eval_cmd.sh`
+- [X] check Cigdem's email (0.5h)
+- [X] update the problem formulation
+- [X] writing for query strategy part (1h)
 - [ ] formalize the order respecting version using loop_erased random walk (0.5h)
-- [ ] follow instructions of the camera ready version, list what to do (1h)
-  - print/sign/scan the copyright form
-- [ ] print flight ticket
+- [X] follow instructions of the camera ready version, list what to do (1h)
+- [X] print flight ticket
+
+
+## bug when running greedy
+
+> processing cascade/grqc/95.pkl started, query_method=pagerank, inference_method=order_steiner_tree
+
+
+## SDM
+
+- January 24, 2018, by 11:59 PM PT:  final version
+  - 9 pages max
+  - abstract maximum of 300 words
+  - max 6 keywords
+  - agree the copyright transfer form  
+- January 26: travel grant application
+- Feb 5: Submit presentation information
+- April 3: preregister
+
+todo: 
+
+- [ ] small cascade experiment, re-run, eval, plot, update figure
+- [ ] large cascade experiment, re-run, eval, plot, update figure
+- [ ] fix x-axis for large cascade
+- [ ] update text in experiment
