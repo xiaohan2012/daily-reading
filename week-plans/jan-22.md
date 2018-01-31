@@ -1,20 +1,5 @@
 # weekly plan
 
-**core maximization**
-
-randomly remove 
-
-- [ ] implement subcore algorithm
-  - using maximal matching (2-approximation to maximum matching)
-  - [networkx implementation](https://networkx.github.io/documentation/networkx-1.10/reference/generated/networkx.algorithms.matching.maximal_matching.html#networkx.algorithms.matching.maximal_matching)
-
-- [ ] compare greedy and subcore on grqc dataset
-
-
-experiment setting:
-
-- remove a random set of edges from the original graph
-- use these removed edges as the candidate edges
 
 **kdd2018**
 
@@ -26,6 +11,7 @@ weighted
   - on the same small graph as in the `random_steiner_tree` package
   - [ ] the tree edges are assigned probability
   - [ ] unweighted version
+
 
 - [ ] approximate query selection (with two different levels of approximation, candidate pruning fraction and nodes-for-estimation fractions)
   - so two figures (each legend correspond to a different fraction)
@@ -118,4 +104,15 @@ Research/Background (Jedi): Dive into your research and background. Good to be a
 
 Statistics (Ninja): This portion of the interview asks questions about probability and statistics basic topics
 
+
+## empirical support for pruning low-proba nodes
+
+[illustration](http://193.166.24.212:9999/notebooks/infection-proba-vs-prediction-error.ipynb)
+
+- this means we can use infection probability to prune the nodes
+- the closer to 0.5, the better (usually, it's beflow 0.5)
+
+## experiment
+
+to check if `cascade/grqc-msi-s0.01-o0.1/41.pkl` passes
 
