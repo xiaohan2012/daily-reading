@@ -58,3 +58,4 @@ intuition: 2 mins for 0, 56 secs for 0.05
 
 - [ ] realized tree probability is *proportional* to `\prod w(u, v) / w(u)`
 - [ ] check the proof again
+
