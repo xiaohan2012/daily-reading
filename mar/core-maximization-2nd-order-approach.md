@@ -37,6 +37,9 @@ this is related to:
 - k-anchored problem as in their case $`\Delta c=\infty`$
 - collapsible core problem as in their case, nodes are "demoted" instead of promoted
 
-however, how to promote a node $`n`$ by $`\Delta c`$ is not very clear.
+however, issues are below:
+
+- how to promote a node $`n`$ by $`\Delta c`$ is not very clear.
+- does not take into account of the effects of promoting multiple nodes
 
 
