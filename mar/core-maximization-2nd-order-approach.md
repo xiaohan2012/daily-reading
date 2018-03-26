@@ -43,3 +43,24 @@ however, issues are below:
 - does not take into account of the effects of promoting multiple nodes
 
 
+
+# question
+
+- if the intersection is large, will it contribute a lot to objective?
+- counter examples of when it works or not
+
+# todo
+
+- add todo list in SVN
+- coordinate it with Lorenzo
+
+by "systematic", it means:
+
+- graphs (size, topology)
+- budgets
+- methods
+
+interesting things:
+
+- non-submodular: like bounces of the objective
+
