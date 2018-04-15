@@ -8,3 +8,4 @@
   - probabilistic minimum spanning tree
   - MCMC version of tree sampling
 - grading
+- apply for more resources from CSC
