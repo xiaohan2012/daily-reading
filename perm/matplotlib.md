@@ -7,7 +7,7 @@ tricks of matplotlib
 - [legend outside of the plot](https://stackoverflow.com/a/4700762/557067)
 - [only one marker](https://stackoverflow.com/questions/6146778/matplotlib-legend-markers-only-once?rq=1)
   - use `numpoints=1`
-- [legend font size](
+
 
 # axis
 
