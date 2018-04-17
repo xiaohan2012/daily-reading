@@ -23,3 +23,12 @@
 - larger cascade
 - why p2p rises the entropy? 
 - why cond-entropy not good on entropy in GRQC?
+
+
+# Tuesday
+
+- [X] illustration of edge dependency
+- todo:
+  - [X] [definition of edge-dag, node, edge, dependency](apr/edge-dag-def.pdf)
+  - [ ] how to get the set of dependent active edges
+  - [ ] update the code
