@@ -32,3 +32,15 @@
   - [X] [definition of edge-dag, node, edge, dependency](apr/edge-dag-def.pdf)
   - [ ] how to get the set of dependent active edges
   - [ ] update the code
+
+## meeting for core max
+
+- [ ] more graphs
+- [ ] random edges (MF creates a bias)
+- [ ] candidate = non-edges
+- [ ] dense subgraphs: take the dense cores and add edges to the core
+  - largest subgraphs such that add k edges and it become and clique
+- [ ] for GRQC, does the size-40 clique plays a big role in the objective?
+- [ ] why the difference between condmat and grqc? 
+
+- edge_dag: maybe good when the edge order is given
