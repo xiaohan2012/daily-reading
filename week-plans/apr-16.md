@@ -44,3 +44,13 @@
 - [ ] why the difference between condmat and grqc? 
 
 - edge_dag: maybe good when the edge order is given
+
+# Thursday
+
+meeting feedback
+
+- for closure, show the shortest path
+- greedy: 
+  - some example
+  - why with the same timestamp?
+- understand the proofs
