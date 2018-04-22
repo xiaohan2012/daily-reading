@@ -1,0 +1,2 @@
+- [Polysemous codes, ECCV 2016](https://arxiv.org/pdf/1609.01882.pdf)
+- [Faiss](https://arxiv.org/pdf/1702.08734.pdf)

@@ -1,14 +1,15 @@
 # week plan
 
-- slides for group presentation
-- writing and experiment for core maximization
+- [X] slides for group presentation
+- [X] writing for core maximization
 - how to sample from `\Prod P(u, v)`
   - non-local verion of random walk 
   - probabislistic shortest path
   - probabilistic minimum spanning tree
   - [X] MCMC version of tree sampling
 - grading
-- apply for more resources from CSC
+- [X] apply for more resources from CSC
+- more experiment: active learning
 
 # monday
 
@@ -54,3 +55,10 @@ meeting feedback
   - some example
   - why with the same timestamp?
 - understand the proofs
+
+
+more experiment:
+
+- [ ] l1 loss and squared loss
+- [ ] stochastic graph
+- [ ] larger cascade
