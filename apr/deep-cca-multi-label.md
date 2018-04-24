@@ -47,7 +47,6 @@ I don't see how..
 - adapting to the extreme multi-label case? as experimented with datasets with moderate size and label space and evaluated with F1 scores only
   - the second part of problem formulation should be rank-related
 
-
 # learned
 
 - applying (deep) CCA for multi-label classification
