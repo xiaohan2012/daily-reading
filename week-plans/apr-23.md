@@ -1,15 +1,34 @@
-- example solution grading assignment 2
+- [X] example solution grading assignment 2
 - example solution grading assignment 3
-- PCA (eigen value)
-- other applications of eigen value (pagerank, mixing time of markov chain, graph spectral, etc)
-- CCA, the paper 
-- FastXml paper, slides and code
+- [X] PCA (eigen value)
+- other applications of eigen value (pagerank, mixing time of markov chain, graph spectral, laplacian, etc)
+- [X] CCA
+- [X] the CCA paper for multi-label
+- [X] FastXml paper, slides and code
 - polish the slides for SDM
-- poster for SDM
+- [X] poster for SDM
 
 # monday
 
-- frog: example solution for assignment 2
-- PCA (eigen value)
-- FastXml paper, slides and code
-- grading 28
+- [X] frog: example solution for assignment 2
+- [X] PCA (eigen value)
+- [X] FastXml paper, slides
+- grading 31
+
+# tuesday
+
+- [X] CCA
+- [ ] www papers
+- [X] poster making
+- [X] fastxml code
+- [ ] experiment for core max
+
+
+# wednesday
+
+- [X] plot and try to interpret the result for active cascade reconstruction
+- 
+
+# thursday
+
+- [ ] what are the queries on infectious? does it spread everywhere? visualize them
