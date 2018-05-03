@@ -8,6 +8,8 @@
 # tabular
 
 - [verticle alignment in tabular](https://tex.stackexchange.com/a/7318/36412)
+- [align image and text in tabular to top](https://tex.stackexchange.com/questions/11630/aligning-image-and-text-on-top-with-minipages)
+  - use `\vspace{0pt}`
 
 # font 
 
