@@ -11,8 +11,8 @@ http://www.cs.yale.edu/homes/spielman/561/lect01-15.pdf
 - $`p`$: the probabiltiy vector (a row)
 - $`p W`$: one transition of the system
   - $`W`$ can be viewed as operator
-- eigen values: $`\lambda_1 \le \dots, \le \lambda_n`$
-- eigen vectors: $`\phi_1  \dotse \phi_n`$
+- eigen values: $`\lambda_1 \le \cdots, \le \lambda_n`$
+- eigen vectors: $`\phi_1  \cdots \phi_n`$
 
 # spectral theorem
 
@@ -42,7 +42,7 @@ what's the relationship between the $`x^T L x`$ and $`\frac{x^T L x}{x^T x}`$?
   - for connected graph, $`\lambda_1=0`$ 
 - assume graph is connected, $`\lambda_2`$ is called *algebraic connectivity of a graph*
   - the larger, the more connected
-  - bipartite graph has $`\lamdba_2 = 0`$
+  - bipartite graph has $`\lambda_2 = 0`$
 
 ## visualization of line graph
 
