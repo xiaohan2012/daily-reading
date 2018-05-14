@@ -38,7 +38,7 @@ Meeting summary:
 - try IC model
 - query method comparison observing whether leaves or nodes close to root?
 - manual checking query process on small graphs (karate club, dolphin , etc)
-- other evaluation metric other than p@k that does not give favor random?
+- [X] other evaluation metric other than p@k that does not give favor random?
   - number of nodes (including queried nodes) with p>0.5 that are actual infections
 - experiment with the weighted conditional entropy strategy
 

@@ -68,3 +68,21 @@ o/w, use L
 
 
 
+# programming
+
+- 4.1: 10
+  - 5
+  - 5
+- 4.2: 20
+  - 5
+  - 15: 
+    - cosine sim function def: 5
+    - extract pairs: 5
+    - get consine sim: 5
+  - what if no all pairs can be computed (due to hardware constraint?)
+    - result not shown, -5
+- 4.3: 20
+  - 7: get top-k
+  - 7: score computation 
+  - 3: sort
+  - 3: save to file
