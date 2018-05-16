@@ -25,25 +25,35 @@ if not symmetric:
 
 ## Rayleigh quotient
 
-theorem: the value that maximizes the Rayleigh quotient is the eigen vector that corresponds to the largest eigen value, $`\lambda_n`$
+defined as
+
+`\frac{x^T M x}{x^T x}`
+
+theorem: the value that maximizes the Rayleigh quotient is the eigen vector that corresponds to the largest eigen value, $`\lambda_n`$ of `M`
 
 - the Rayleigh quotient $`\le \lambda_n`$
 - for the minimization case, it corresponds to the smallest eigen value, $`\lambda_1`$
 
 check the proofs
 
-what's the relationship between the $`x^T L x`$ and $`\frac{x^T L x}{x^T x}`$?
+why divided by `x^T x`? 
 
-- if $`x`$ is unit, then they are the same
+1. any *rescaling* of the vector `x` produces the same answer
+
 
 # eigen value of laplacian
 
 - number of zero eigen values = number of connected components
   - for connected graph, $`\lambda_1=0`$ 
 - assume graph is connected, $`\lambda_2`$ is called *algebraic connectivity of a graph*
-  - the larger, the more connected
-  - bipartite graph has $`\lambda_2 = 0`$
+  - related to how well connected a graph is
+  - bipartite graph has $`\lambda_2 = 0`
 
 ## visualization of line graph
 
 [notebook](data/line-spectral.ipynb) to get some intuition
+
+# main questions
+
+- how to interpret algebraic connectivity `\lambda_2`? 
+- why bipartite graph has `\lambda_2=`, what does the eigen-vector look like?
