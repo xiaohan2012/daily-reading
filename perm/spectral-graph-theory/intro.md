@@ -55,5 +55,6 @@ why divided by `x^T x`?
 
 # main questions
 
-- how to interpret algebraic connectivity `\lambda_2`? 
-- why bipartite graph has `\lambda_2=`, what does the eigen-vector look like?
+- [X] how to interpret algebraic connectivity `\lambda_2`? 
+  - refer to [2-laplacian.md](2-laplacian.md)
+- why bipartite graph has `\lambda_2=0`, what does the eigen-vector look like?
