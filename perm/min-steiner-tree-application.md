@@ -65,3 +65,17 @@ However, the tree needs to stick to certain rules therefore the algorithm is ad-
 
 http://www.columbia.edu/~khl2114/files/74.pdf
 
+## graph search
+
+https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=4812461
+
+example:
+
+- knowledge base
+- relationship search: given a set of two, three, or more entities (nodes), find their closest relationships (edges or paths) that connect the entities in the strongest possible wa
+
+### [STAR: Steiner-Tree Approximation in Relationship Graphs](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=4812461)
+
+goal: return top-k min Steiner trees
+
+
