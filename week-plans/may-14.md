@@ -21,3 +21,23 @@ active cascade reconstruction
 
 - how good is the inference algorithm? how does the heatmap look like?
 - what's the optimal query strategy given the ground truth (oracle)?
+
+
+# Thursday
+
+- [X] application of random spanning tree
+- [X] application of steiner tree (even the random version)
+- [X] graph search and steiner tree (knowledge base)
+
+## random steiner tree variants
+
+**node weights**
+
+- introduce node weight in the tree to reflect node importance
+
+**with constraint**
+
+- random steiner tree with pattern consraint? 
+  - API recommendation with rules (at least one IoT device needs to be included)
+  - recipe recommendation: given ingredients, recommend other ingredient to form a recipe. however, certain ingredient must be included (some seasoning, salt) / excluded (if the user is allergic to some other food)
+
