@@ -24,6 +24,10 @@ tricks of matplotlib
   - `plot(markersize=size)`
 - [scatter plot marker size](https://stackoverflow.com/questions/14827650/pyplot-scatter-plot-marker-size)
   - `scatter(s=size)`
+- [fill_between](https://matplotlib.org/examples/pylab_examples/fill_between_demo.html)
+  - for example, to give the 25/75 quantile or confidence interval
+- [get color of recent ploted line](https://stackoverflow.com/questions/36699155/how-to-get-color-of-most-recent-plotted-line-in-pythons-plt)
+  - `p=plt.plot(...); color = p[0].get_color()`
 
 
 # colorbar

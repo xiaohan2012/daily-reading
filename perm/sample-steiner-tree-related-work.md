@@ -6,3 +6,8 @@ edge weights are random
 
 used randomized rounding
 
+
+cascade reconstruction: 
+
+- [Spotting Culprits in Epidemics: How Many and Which Ones? ](Spotting Culprits in Epidemics: How Many and Which Ones?)
+- 
