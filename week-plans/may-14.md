@@ -41,3 +41,7 @@ active cascade reconstruction
   - API recommendation with rules (at least one IoT device needs to be included)
   - recipe recommendation: given ingredients, recommend other ingredient to form a recipe. however, certain ingredient must be included (some seasoning, salt) / excluded (if the user is allergic to some other food)
 
+# Friday
+
+- [X] check result of SI model
+- [X] understand L1 score
