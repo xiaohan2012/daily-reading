@@ -1,6 +1,6 @@
 http://www.cs.yale.edu/homes/spielman/561/lect03-15.pdf
 
-$`\mu_1 \ge \mu_2 \ge \cdots \ge \mu_n`$
+$`\mu_1 \ge \mu_2 \ge \cdots \ge \mu_n`$ (opposite to the case of laplacian, $`L`$)
 
 for d-regular graph, $`\mu_1=d`$ and $`\phi_i = \text{constant}`$
 
@@ -36,3 +36,6 @@ for bipartite graph, $`\mu_1 = - \mu_n`$
 for laplacian, $`\phi_n`$ corresponds to the largest eigen value, it assigns as different "colors" to neighboring vertices. 
 
 
+# questions
+
+- how the largest eigen value of $`A`$ corresponds to the smallest eigen value of `L`
