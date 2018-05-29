@@ -3,7 +3,7 @@ http://www.cs.yale.edu/homes/spielman/561/lect02-15.pdf
 # laplacian
 another way to look at lapalacian: 
 
-sum over (u, v) of $`(\delta_u - \delta_v) (\delta_u - \delta_v)^T`$, where $`delta_`$u is indicatetor vector at $`u`$
+sum over (u, v) of $`(\delta_u - \delta_v) (\delta_u - \delta_v)^T`$, where $`\delta_u`$ is indicatetor vector at $`u`$
 
 $`x L_G x^T = \sum\limits_{(u, v) \in E} w_{u, v} (x(u) - x(v))^2`$
 

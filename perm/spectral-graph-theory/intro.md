@@ -27,18 +27,18 @@ if not symmetric:
 
 defined as
 
-`\frac{x^T M x}{x^T x}`
+$`\frac{x^T M x}{x^T x}`$
 
-theorem: the value that maximizes the Rayleigh quotient is the eigen vector that corresponds to the largest eigen value, $`\lambda_n`$ of `M`
+theorem: the value that maximizes the Rayleigh quotient is the eigen vector that corresponds to the largest eigen value, $`\lambda_n`$ of $`M`$
 
 - the Rayleigh quotient $`\le \lambda_n`$
 - for the minimization case, it corresponds to the smallest eigen value, $`\lambda_1`$
 
 check the proofs
 
-why divided by `x^T x`? 
+why divided by $`x^T x`$? 
 
-1. any *rescaling* of the vector `x` produces the same answer
+1. any *rescaling* of the vector $`x`$ produces the same answer
 
 
 # eigen value of laplacian
@@ -47,7 +47,7 @@ why divided by `x^T x`?
   - for connected graph, $`\lambda_1=0`$ 
 - assume graph is connected, $`\lambda_2`$ is called *algebraic connectivity of a graph*
   - related to how well connected a graph is
-  - bipartite graph has $`\lambda_2 = 0`
+  - bipartite graph has $$`\lambda_2 = 0`$
 
 ## visualization of line graph
 
@@ -55,6 +55,6 @@ why divided by `x^T x`?
 
 # main questions
 
-- [X] how to interpret algebraic connectivity `\lambda_2`? 
+- [X] how to interpret algebraic connectivity $`\lambda_2`$? 
   - refer to [2-laplacian.md](2-laplacian.md)
-- why bipartite graph has `\lambda_2=0`, what does the eigen-vector look like?
+- why bipartite graph has $`\lambda_2=0`$, what does the eigen-vector look like?
