@@ -41,7 +41,7 @@ why divided by $`x^T x`$?
 1. any *rescaling* of the vector $`x`$ produces the same answer
 
 
-# eigen value of laplacian
+# eigen value of graph laplacian
 
 - number of zero eigen values = number of connected components
   - for connected graph, $`\lambda_1=0`$ 

@@ -42,6 +42,6 @@ note that $`\lambda_2=n`$, relate this to Cheeger's Inequality, this means compl
 
 ## star graph
 
-$`\lambda_1=1, \lambda_2 = \cdots \lambda_{n-1} = 1, \lamba_n=n`$
+$`\lambda_1=1, \lambda_2 = \cdots \lambda_{n-1} = 1, \lambda_n=n`$
 
 uses the fact that $`\text{Tr}(M) = \sum\limits_{i=1, \ldots, n} \lambda_i`$ 
