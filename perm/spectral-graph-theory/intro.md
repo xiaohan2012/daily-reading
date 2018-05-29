@@ -56,5 +56,5 @@ why divided by $`x^T x`$?
 # main questions
 
 - [X] how to interpret algebraic connectivity $`\lambda_2`$? 
-  - refer to [2-laplacian.md](2-laplacian.md)
+  - related to *isoperimetry number*, refer to [2-laplacian.md](2-laplacian.md)
 - why bipartite graph has $`\lambda_2=0`$, what does the eigen-vector look like?
