@@ -35,7 +35,39 @@ for bipartite graph, $`\mu_1 = - \mu_n`$
 
 for laplacian, $`\phi_n`$ corresponds to the largest eigen value, it assigns as different "colors" to neighboring vertices. 
 
+# graph coloring
+
+- problem of graph coloring: color each node so that neighboring nodes does not have the same color
+- a graph is $`k`$-colorable if it has $`k`$ coloring
+- chromatic number of graph, $`\chi(G)`$, minimum $`k`$ s.t. the graph is $`k`$-colorable
+
+trivial results:
+
+- any graph is $`d_{max}`$-colorable
+  - algorithm: color each vertex with different color to its neighbors
+- generalization of the above algorithm:
+  1. order the nodes in some way
+  2. color each node in order s.t its color is different to its previous neighbors
+
+## upperbound: Wif's bound
+
+$`\chi(G) \le floor(\mu_1) + 1`$
+
+main idea:
+
+- using the generalized algorithm
+- show any the max node degree of any subgraph is smaller than $`\mu_1`$ (using previous lemma)
+- any such max degree upper bounds the $`\chi(G)`$
+
+## lowerbound: Hoffman's bound
+
+$`\chi(G) \ge 1 + \frac{\mu_1}{-\mu_n}`$
+
+main idea (check the proof)
+
+- working on block-form of matrix
+- using the relationship on min/max eigenvalues of the matrix and its blocks. 
 
 # questions
 
-- how the largest eigen value of $`A`$ corresponds to the smallest eigen value of `L`
+- how the largest eigen value of $`A`$ corresponds to the smallest eigen value of $`L`$ 
