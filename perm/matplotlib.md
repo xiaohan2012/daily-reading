@@ -28,7 +28,8 @@ tricks of matplotlib
   - for example, to give the 25/75 quantile or confidence interval
 - [get color of recent ploted line](https://stackoverflow.com/questions/36699155/how-to-get-color-of-most-recent-plotted-line-in-pythons-plt)
   - `p=plt.plot(...); color = p[0].get_color()`
-
+- [set number of ticks](https://stackoverflow.com/questions/6682784/how-to-reduce-number-of-ticks-with-matplotlib)
+  - `pyplot.locator_params(nbins=4)`
 
 # colorbar
 
@@ -48,3 +49,7 @@ cbar.outline.set_visible(False)  # hide the border
 ```
 
 [more example](http://193.166.24.212:9999/notebooks/legend_and_colorbars.ipynb)
+
+# custom style
+
+refer to [the full list](https://matplotlib.org/users/customizing.html)
