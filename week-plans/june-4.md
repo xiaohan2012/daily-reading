@@ -28,5 +28,7 @@ understand:
   - [example of using metis in C++](https://gist.github.com/erikzenker/c4dc42c8d5a8c1cd3e5a)
 
 - [X] label graph construction
-- [ ] dump to file and read by metis in C++
+- [X] dump to file to metis graph format and partition it using command linea
+- [ ] C++: read graph by path and partition it
+  - example: `/home/cloud-user/Downloads/metis-5.1.0/programs/gpmetis.c`
 - [ ] recurive partition in C++, replace the `balanced_kmeans` function
