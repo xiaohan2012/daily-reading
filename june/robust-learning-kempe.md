@@ -4,8 +4,15 @@
 
 learn the correct model using as few queries as possible
 
+## main contribution of this paper
 
-# model
+1. a query strategy that finds the "median" node with query complexity guarantee in form `\log M`, where `M` is the family of possible models
+2. by definition of "median" node, the "model" graph framework where each node is a model and edge corresponds to feedback
+   - also one assumption about the graph, the feedback edge must lie on the shortest path to `s^{*}`
+3. addressing the computational issues to find the median node: for example via sampling oracle
+4. three examples: ranking, clustering and classification
+
+# framework
 
 query and feedback
 
@@ -152,6 +159,8 @@ same query complexity
 
 # questions
 
-- what's the focus of this paper? query strategy or learning the model or both?
 - how to interpret the "shortest path" in different settings? classification, ranking, etc
 
+# learned
+
+- the idea of "halving algorthm": reduce the belief space by a certain fraction `\beta`, for binary search `\beta=1/2`
