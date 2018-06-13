@@ -43,3 +43,11 @@ interactively detect controversial/debatable topical cascades?
 - reading on papers that cite the anchored k-core problem
 - learning inapproximability
 - speed-up of greedy
+
+# thursday
+
+- find some papers on collective classification, think of formulating the cascade reconstruction problem as a collective classification problem
+- k-core paper reading
+  - create a reading list
+  - skim through the papers and add some comments
+- parabel
