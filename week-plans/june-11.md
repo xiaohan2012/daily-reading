@@ -37,3 +37,9 @@ issues on defining a cascade? reshare cascade? if we know who reshare, we know w
 - how about the effect of network sampling?
 
 interactively detect controversial/debatable topical cascades?
+
+## discussion: core maximization
+
+- reading on papers that cite the anchored k-core problem
+- learning inapproximability
+- speed-up of greedy
