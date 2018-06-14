@@ -8,7 +8,7 @@
 
 # tuesday
 
-- metis: read the graph from file and partion
+- metis: read the graph from file and partition
 - plug it into parabel code
 
 # wednesday
@@ -51,3 +51,23 @@ interactively detect controversial/debatable topical cascades?
   - create a reading list
   - skim through the papers and add some comments
 - parabel
+
+## diffusion prediction over time
+
+general goal: modeling/predicting the popularity of a post
+
+I have read:
+
+- [spikeM, kdd12](../june/spikeM-kdd-2012.md)
+- [seismic, kdd15](../june/seismic-kdd15.md)
+
+I have learned:
+
+- self-exciting point process seems to be a popular tool in modeling popularity of diffusion process
+
+what might be interesting:
+
+- can we model the evolution of controversial diffusion process? for example, how does the level of controversy evolve over time
+
+
+
