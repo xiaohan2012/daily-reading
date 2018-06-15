@@ -1,0 +1,2 @@
+- [Collective Classification of Spam Campaigners on Twitter: A Hierarchical Meta-Path Based Approach](https://arxiv.org/pdf/1802.04168.pdf)
+- [Collective Classificationin Network Data](http://eliassi.org/papers/ai-mag-tr08.pdf)

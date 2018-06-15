@@ -1,3 +1,11 @@
+# in general
+
+- [Information diffusion in online social networks: a survey](https://dl.acm.org/citation.cfm?id=2503797): [summary](../june/information-diffusion-survey.md)
+  
+
+
+
+
 # point process modeling / popularity prediction
 
 - [spikeM, kdd12](../june/spikeM-kdd-2012.md)
@@ -10,3 +18,4 @@
 # controversy/polarization
 
 - [Automatic controversy detection in social media: A content-independent motif-based approach](../june/controversy-detection-motif-osnem17.md)
+
