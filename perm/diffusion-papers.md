@@ -2,9 +2,9 @@
 
 - [Information diffusion in online social networks: a survey](https://dl.acm.org/citation.cfm?id=2503797): [summary](../june/information-diffusion-survey.md)
   
+# unclassified
 
-
-
+- [A predictive model for the temporal dynamics of information diffusion in online social networks](https://dl.acm.org/citation.cfm?id=2188254)
 
 # point process modeling / popularity prediction
 

@@ -71,3 +71,8 @@ what might be interesting:
 
 
 
+# friday
+
+- cascade reconstruction under realistic cascade models
+  - motiation: data acquisition constraint (API limit),  observe only a fraction.
+  - considers continous time IC model, but how good is in practice?
