@@ -6,6 +6,19 @@
 
 - [A predictive model for the temporal dynamics of information diffusion in online social networks](https://dl.acm.org/citation.cfm?id=2188254)
 
+# twitter sampling
+
+- [How Does the Data Sampling Strategy Impact the Discovery of Information Diffusion in Social Media](http://www.contrib.andrew.cmu.edu/~aislingk/papers/dechoudhury_ICWSM10.pdf)
+- [Is the Sample Good Enough? Comparing Data from Twitter’s Streaming API with Twitter’s Firehose](https://www.aaai.org/ocs/index.php/ICWSM/ICWSM13/paper/download/6071/6379)
+- [When is it Biased? Assessing the Representativeness of Twitter’s Streaming API](https://arxiv.org/pdf/1401.7909.pdf)
+- [Should We Use the Sample? Analyzing Datasets Sampled from Twitter’s Stream API](https://dl.acm.org/citation.cfm?id=2788341.2746366)
+- [Twitter analytics: some thoughts on sampling, tools, data, ethics and user requirements](https://www.slideshare.net/Flygirltwo/twitter-analytics-some-thoughts-on-sampling-tools-data-ethics-and-user-requirements)
+- [Random Sampling from a Search Engine’s Index](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.149.4535&rep=rep1&type=pdf)
+
+- [Many Random Walks Are Faster Than One](https://arxiv.org/pdf/0705.0467.pdf)
+- [Lifting Markov Chains To Mix Faster: Limits and Opportunities](https://arxiv.org/pdf/1705.08253.pdf)
+- [Non-backtracking random walks mix faster](https://pdfs.semanticscholar.org/fc3a/3f317ccf5a8cb5ed03e2c35fdcc4842ca631.pdf)
+
 # point process modeling / popularity prediction
 
 - [spikeM, kdd12](../june/spikeM-kdd-2012.md)
