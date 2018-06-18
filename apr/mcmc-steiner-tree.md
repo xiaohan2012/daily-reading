@@ -20,8 +20,8 @@ this only solves the problem of generating a sample, but what's the form of $`q(
 
 ok, 
 
-- $`q(T^{'} | T)`$ should be the probability of taking the removed path, $`\prod\limits_{(u, v) \in \{u_1, \ldots, u_k\}} p(u, v) / p(u)`$
-- $`q(T | T^{'})`$ should be the probability of taking the removed path
+- $`q(T^{'} | T)`$ should be the probability of taking the new path, $`\prod\limits_{(u, v) \in \{u_1, \ldots, u_k\}} p(u, v) / p(u)`$
+- $`q(T | T^{'})`$ should be the probability of taking the old path, (similar form as above)
 
 
 # basic principle of choosing $`q`$
