@@ -22,13 +22,12 @@ in experiment, the ground-truth graph is obtained via crawling (also sampling) a
 
 Dimensions to compare between sampled version and firehose version:
 
-- hashtag
-- topic
-- induced network
-- geographical location
+- hashtag (with bias)
+- topic (with bias)
+- induced network (with bias)
+- geographical location (no obvious bias)
 
 note on experiment:
-
 
 - focused on a given set of keywords, geolocation box, etc
 - compares against *uniform sampling*
@@ -39,7 +38,9 @@ note on experiment:
 
 # [When is it Biased? Assessing the Representativeness of Twitter’s Streaming API](https://arxiv.org/pdf/1401.7909.pdf)
 
-problem: finding  sample  bias  without  the  need  for “gold standard” Firehose  data
+problem: finding sample bias  **without** the need for “gold standard” Firehose data.
+
+- a hashtag is biased if the relative trend is statistically significantly over-represented or underrepresented in contrast to its true trend on Twitter.
 
 
 
