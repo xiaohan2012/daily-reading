@@ -29,6 +29,7 @@ Rajesh Chitnis and Nimrod Talmon [Can We Create Large k-Cores by Adding Few Edge
   - when parametrized by `b+k+p`, it's `W[1]`-hard ([W hierarchy](https://en.wikipedia.org/wiki/Parameterized_complexity), concept in parameterized complexity)
   - proposes a dynamic programming algorithm which is [FPT (fixed parameter tractable)](https://stackoverflow.com/questions/19643939/what-is-fixed-parameter-tractability-why-is-it-useful)
   - no inapproximability result
+  - [my note](july/anchored-k-core-adding-edge-edges.md)
 
 
 
