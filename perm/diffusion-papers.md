@@ -37,3 +37,6 @@
 
 - [Automatic controversy detection in social media: A content-independent motif-based approach](../june/controversy-detection-motif-osnem17.md)
 
+# embedding and diffusion modeling
+
+- [Learning social network embeddings for predicting information diffusion, WSDM 2014](https://dl.acm.org/citation.cfm?id=2556216)
