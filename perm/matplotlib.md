@@ -29,12 +29,16 @@ tricks of matplotlib
 - [get color of recent ploted line](https://stackoverflow.com/questions/36699155/how-to-get-color-of-most-recent-plotted-line-in-pythons-plt)
   - `p=plt.plot(...); color = p[0].get_color()`
 - [set number of ticks](https://stackoverflow.com/questions/6682784/how-to-reduce-number-of-ticks-with-matplotlib)
-  - `pyplot.locator_params(nbins=4)`
+  - `pyplot.locator_params(nbins=4)` or `ax.locator_params(...)`
+- [adjust title offset](https://stackoverflow.com/a/23338363/557067)
+  - `plt.title(figure_title, y=1.08)` or `ax.set_title(..., y=1.08)`
 
 # barplot
 
-- with legends, in seaborn, use `hue`
+- with legends, in [seaborn.barplot](https://seaborn.pydata.org/generated/seaborn.barplot.html), use `hue`
   - `sns.barplot(x="x", y="y", hue="legend", data=df)`
+- change label, 
+  - `ax.set(xlabel='common xlabel', ylabel='common ylabel')`
 
 # colorbar
 
