@@ -31,6 +31,11 @@ tricks of matplotlib
 - [set number of ticks](https://stackoverflow.com/questions/6682784/how-to-reduce-number-of-ticks-with-matplotlib)
   - `pyplot.locator_params(nbins=4)`
 
+# barplot
+
+- with legends, in seaborn, use `hue`
+  - `sns.barplot(x="x", y="y", hue="legend", data=df)`
+
 # colorbar
 
 - [standalone cb](https://stackoverflow.com/a/16599889/557067)

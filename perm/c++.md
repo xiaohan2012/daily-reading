@@ -27,3 +27,8 @@ used in C code to make it linkable to C++ program
 - [difference between LIBRARY_PATH and LD_LIBRARY_PATH](https://stackoverflow.com/questions/4250624/ld-library-path-vs-library-path)
   - former used during *linking*
   - latter used during *running*
+
+# pdg
+
+- [variable optimized out](http://ask.xmodulo.com/print-optimized-out-value-gdb.html)
+  - turn off optimization using `-O[0|1]` or `volatile`
